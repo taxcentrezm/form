@@ -8,7 +8,7 @@ export async function GET() {
   for (const blob of blobs.blobs) {
     const res = await fetch(blob.url);
     const data = await res.json();
-    submissions.push(data);
+    submissions.push({...data, blobName: blob.pathname});
 }
 
   return NextResponse.json(submissions);
@@ -23,5 +23,5 @@ export async function POST(req) {
     access: 'public',
 });
 
-  return NextResponse.json({ success: true, url: blob.url});
+  return NextResponse.json({ success: true, url: blob.url, blobName: blob.pathname});
 }
