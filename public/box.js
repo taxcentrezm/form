@@ -115,7 +115,7 @@ function addMessage(sender, text) {
   // Play sound
   const sound = document.getElementById("chat-sound");
   if (sound) sound.play();
-}
+
 
 // Bot response logic with fuzzy matching
 function getBotResponse(message) {
