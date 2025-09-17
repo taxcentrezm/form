@@ -501,6 +501,12 @@ document.addEventListener("DOMContentLoaded", () => {
   loadFormData();
   loadTrainingTable();
 });
+
+  fetch('/api/chat', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json'},
+  body: JSON.stringify({ sender: 'user', text: 'Hello there!'})
+});
 </script>
 </body>
 </html>
