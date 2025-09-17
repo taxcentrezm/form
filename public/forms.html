@@ -1511,23 +1511,24 @@ body {
     // Run on load in case of browser autofill
     toggleAppendixARequired();
   }
-
 document.getElementById('invoiceForm').addEventListener('submit', function (e) {
   e.preventDefault();
 
   const formData = new FormData(this);
+  const jsonData = Object.fromEntries(formData.entries());
 
   fetch('https://form-nu-smoky.vercel.app/api/form', {
     method: 'POST',
-    body: formData,
+    headers: {
+      'Content-Type': 'application/json'
+},
+    body: JSON.stringify(jsonData)
 })
 .then(response => {
     if (response.ok) {
-      // Show success popup
       const popup = document.getElementById('successPopup');
       popup.style.display = 'block';
 
-      // Wait 6 seconds, then redirect
       setTimeout(() => {
         window.location.href = 'index.html';
 }, 6000);
@@ -1548,4 +1549,5 @@ document.getElementById('invoiceForm').addEventListener('submit', function (e) {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
+
 
