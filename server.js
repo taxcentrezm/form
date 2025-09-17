@@ -1,23 +1,31 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const cors = require('cors'); // Optional, if you're submitting from a different origin
+export default async function handler(req, res) {
+  // Set CORS headers
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
-const app = express();
-const port = process.env.PORT || 3000;
+  // Handle preflight request
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+}
 
-// Middleware
-app.use(cors()); // Allow cross-origin requests if needed
-app.use(bodyParser.urlencoded({ extended: true}));
-app.use(bodyParser.json());
+  // Handle POST request
+  if (req.method === 'POST') {
+    try {
+      const data = req.body;
 
-// Handle form submission
-app.post('/form/', (req, res) => {
-  console.log('Received form data:', req.body);
-  // You can validate, store, or process the data here
-  res.status(200).send('Form submitted successfully!');
-});
+      // Log the received data
+      console.log('Received form data:', data);
 
-// Start server
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
+      // You can add validation, storage, or email logic here
+
+      return res.status(200).send('Form submitted successfully!');
+} catch (error) {
+      console.error('Error processing form:', error);
+      return res.status(500).send('Internal Server Error');
+}
+}
+
+  // Handle unsupported methods
+  return res.status(405).send('Method Not Allowed');
+}
