@@ -1,0 +1,62 @@
+.services-wrapper {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0; /* No horizontal padding */
+}
+
+.services-grid-buttons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  width: 100%; /* Fill the parent container */
+}
+
+.service-card-btn {
+  display: block;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.service-card-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  color: #ffffff;
+   min-width: max-content;
+  overflow: visible;
+  text-overflow: unset;
+}
+
+@media (max-width: 900px) {
+.services-grid-buttons {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+}
+}
+
+@media (max-width: 600px) {
+.services-grid-buttons {
+    grid-template-columns: 1fr; /* Stack vertically on phones */
+    padding: 0 10px;
+}
+
+.service-card-btn {
+    width: 100%;
+    font-size: 0.85rem;
+    padding: 12px;
+}
+}
+
+
+

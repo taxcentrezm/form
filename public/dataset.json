@@ -1,0 +1,1403 @@
+[
+{
+
+  "section": "1",
+  "title": "SUMMARY OF AMENDMENTS – THE INCOME TAX (AMENDMENT) ACT NO. 22 OF 2024",
+  "dataset": [
+    {
+      "reference": "Section 2",
+      "changes": [
+        "Deletes the definition of approved annuity contract",
+        "Deletes the definition of approved pension fund",
+        "Defines an approved fund with reference to the Pension Scheme Regulations Act",
+        "Extends the scope of pensionable terms to other approved funds",
+        "Introduces the definitions of Private fund and Securities and Exchange Commission"
+      ]
+},
+    {
+      "reference": "Section 30",
+      "change": "Limits the deductibility of losses to a maximum of 50% of taxable income in a charge year for any business"
+},
+    {
+      "reference": "Section 37",
+      "change": "Removes reference to the Fourth Schedule, repealed in 2023"
+},
+    {
+      "reference": "Section 43E",
+      "change": "Allows deduction of Skills Development Levy even if unpaid to the Commissioner-General"
+},
+    {
+      "reference": "Section 45B",
+      "change": "Broadens entities mandated to request a TPIN"
+},
+    {
+      "reference": "Section 46A(5)",
+      "change": "Empowers Commissioner-General to waive underestimation penalties"
+},
+    {
+      "reference": "Section 64A(2)",
+      "changes": [
+        "Increases Turnover Tax threshold from K800,000 to K5,000,000",
+        "Specifically applies to gig economy businesses"
+      ]
+},
+    {
+      "reference": "Section 81B",
+      "change": "Makes general tax clearance certificate mandatory for certain transactions"
+},
+    {
+      "reference": "Section 81C(1A)",
+      "change": "Introduces Advance Income Tax for exports and remittances above $2,000 without valid tax clearance certificate"
+},
+    {
+      "reference": "Section 82A(1E)",
+      "change": "Empowers Commissioner-General to exempt royalties from withholding tax"
+},
+    {
+      "reference": "Section 84(6) & (7)",
+      "change": "Introduces due date and penalty for declared agents failing to remit withheld tax"
+},
+    {
+      "reference": "Section 84(8)",
+      "change": "Renumbers subsection due to new insertions"
+},
+    {
+      "reference": "Second Schedule Para 5(l)",
+      "change": "Extends income tax exemption to private funds"
+},
+    {
+      "reference": "Ninth Schedule Part I",
+      "change": "Increases presumptive tax on passenger motor vehicles by 20%"
+},
+    {
+      "reference": "Ninth Schedule Part II",
+      "change": "Increases turnover tax rate to 5% from 4% for income above K12,000 up to K5,000,000"
+},
+    {
+      "reference": "Ninth Schedule Part III",
+      "change": "Sets 15% substantive tax rate on betting and lottery winnings (brick and mortar)"
+},
+    {
+      "reference": "Charging Schedule Para 5(c)",
+      "change": "Increases export tax on non-traditional products to 20% from 15%"
+},
+    {
+      "reference": "Charging Schedule Para 5(e)",
+      "change": "Increases rental income tax to 16% from 12.5% for income above K800,000"
+},
+    {
+      "reference": "Charging Schedule Para 5(f)",
+      "change": "Increases tax to 20% from 15% on income from copper cathode product manufacturing"
+},
+    {
+      "reference": "Charging Schedule Para 5(l)",
+      "change": "Clarifies 5-year reduced rate period for Special Purpose Vehicles (SPVs)"
+},
+    {
+      "reference": "Charging Schedule Para 6(2)",
+      "change": "Prescribes Advance Income Tax rate of 15% on exports and remittances"
+},
+    {
+      "reference": "Charging Schedule Para 7",
+ "change": "Reduces withholding tax on gaming, lottery, and betting winnings to 15% from 20%"
+}
+  ]
+},
+
+  {"section": "Property Transfer Tax",
+  "title": "PROPERTY TRANSFER TAX (AMENDMENT) ACT NO. 27 OF 2024",
+  "dataset": [
+    {
+      "reference": "Title and Commencement",
+      "changes": [
+        "Aligns the definition of intellectual property with relevant Acts",
+        "Introduces definitions of 'building society' and 'money-lender'"
+      ]
+},
+    {
+      "reference": "Tax Rate Adjustment",
+      "change": "Increases property transfer tax rate to 8% from 5% on the transfer of land, shares, intellectual property, and mining rights for exploration licences"
+},
+    {
+      "reference": "Valuation Method",
+      "change": "Extends use of actual price as realised value for foreclosed property to building societies and money-lenders"
+}
+  ]
+},
+
+{
+  "section": "Value Added Tax",
+  "title": "THE VALUE ADDED TAX (AMENDMENT) ACT NO. 23 OF 2024",
+  "dataset": [
+    {
+      "reference": "Title and Commencement",
+      "change": "Empowers the Commissioner-General to allow a taxable supplier to use alternative documentation or equipment instead of an electronic invoicing system, subject to prescribed conditions"
+},
+    {
+      "reference": "Reverse VAT Mechanism",
+      "change": "Clarifies that imported services outside the scope of Cross Border Electronic Services are taxable under reverse VAT or via an appointed agent"
+},
+    {
+      "reference": "Input Tax Documentation",
+      "changes": [
+        "Deletes paragraph (a) and (b) which allowed manual invoices and invoices from approved computer packages to support input tax claims",
+        "Restricts input tax claims to invoices from electronic invoicing systems (smart invoice) or from suppliers exempted from smart invoice use"
+      ]
+},
+    {
+      "reference": "Renumbering",
+      "change": "Renumbers subparagraphs (c), (d), and (e) as (a), (b), and (c) following deletion of earlier subparagraphs"
+},
+    {
+      "reference": "Administrative Update",
+      "change": "Replaces the job title 'Assistant Commissioner' with 'Assistant Director'"
+}
+  ]
+},
+
+{
+  "section": "VAT General Regulations",
+  "title": "VALUE ADDED TAX (GENERAL) (AMENDMENT) REGULATIONS, STATUTORY INSTRUMENT NO. 95 OF 2024",
+  "dataset": [
+    {
+      "reference": "Title and Commencement",
+      "change": "Corrects the threshold amount for open market value of items supplied for promotional or publicity purposes"
+},
+    {
+      "reference": "Zero-Rated Supplier Threshold",
+      "change": "Corrects the threshold amount for turnover of a registered taxable supplier engaged in making zero-rated supplies"
+},
+    {
+      "reference": "Renumbering",
+      "change": "Renumbers subregulation (3) as subregulation (2) following deletion of subregulation (2)"
+}
+  ]
+},
+
+{
+  "section": "VAT Electronic Invoicing System",
+  "title": "VALUE ADDED TAX (ELECTRONIC INVOICING SYSTEM) (AMENDMENT) REGULATIONS, STATUTORY INSTRUMENT NO. 94 OF 2024",
+  "dataset": [
+    {
+      "reference": "Title and Commencement",
+      "change": "Clarifies that all manually recorded transactions must be uploaded to the electronic invoicing system within 72 hours after restoration of the system"
+},
+    {
+      "reference": "Input Tax Claim Extension",
+      "change": "Extends provision for claiming input tax to taxable suppliers exempted from using the electronic invoicing system"
+},
+    {
+      "reference": "Discontinuation Conditions",
+      "change": "Allows reasons other than cessation of business for a taxable supplier to discontinue use of an approved invoicing system"
+},
+    {
+      "reference": "System Transfer Restriction",
+      "change": "Clarifies that a taxable supplier who registers an approved invoicing system for personal use must not transfer it to another taxable supplier"
+}
+  ]
+},
+
+{
+  "section": "VAT Exemption",
+  "title": "VALUE ADDED TAX (EXEMPTION) (AMENDMENT) ORDER, STATUTORY INSTRUMENT NO. 93 OF 2024",
+  "amendments": [
+    {
+      "reference": "Title and Commencement",
+      "change": "Removes the definition of 'life policy'"
+}
+  ]
+},
+
+{
+  "section": "Advance Income Tax",
+  "title": "THE INCOME TAX (ADVANCE INCOME TAX) REGULATIONS, STATUTORY INSTRUMENT NO. 96 OF 2024",
+  "dataset": [
+    {
+      "reference": "Title and Commencement",
+      "change": "Introduces regulations governing Advance Income Tax"
+},
+    {
+      "reference": "Interpretation",
+      "change": "Provides definitions and interpretive guidance for application of Advance Income Tax rules"
+}
+  ]
+},
+
+{
+  "section": "Advance Income Tax via Banks",
+  "title": "Deduction of Advance Income Tax by Bank on Remittances under Section 81C of the Income Tax Act",
+  "dataset": [
+    {
+      "reference": "Section 81C",
+      "change": "Requires banks to deduct Advance Income Tax on remittances outside the Republic"
+},
+    {
+      "reference": "Submission of Return and Payment",
+      "change": "Mandates submission of return and payment of deducted tax by the bank"
+}
+  ]
+},
+
+{
+  "section": "Customs and Excise – Internet Services",
+  "title": "THE CUSTOMS AND EXCISE (SUSPENSION) (INTERNET SERVICES) REGULATIONS, STATUTORY INSTRUMENT NO. 91 OF 2024",
+ "dataset": [
+    {
+      "reference": "Title and Commencement",
+      "change": "Establishes suspension of excise duty on internet services"
+},
+    {
+      "reference": "Interpretation",
+      "change": "Defines terms relevant to the suspension regulation"
+},
+    {
+      "reference": "Suspension",
+      "change": "Suspends excise duty on internet services"
+},
+    {
+      "reference": "Revocation",
+      "change": "Revokes Statutory Instrument No. 68 of 2023"
+}
+  ]
+},
+
+{
+  "section": "Insurance Premium Levy",
+  "title": "THE INSURANCE PREMIUM LEVY (AMENDMENT) ACT NO. 28 OF 2024",
+  "dataset": [
+    {
+      "reference": "Title and Commencement",
+      "changes": [
+        "Deletes the definition of 'electronic fiscal device'",
+        "Introduces the definition of 'electronic invoicing system' with reference to the VAT Act",
+        "Replaces all instances of 'electronic fiscal device' with 'electronic invoicing system'"
+      ]
+}
+  ]
+},
+
+{
+  "section": "Customs and Excise",
+  "title": "THE CUSTOMS AND EXCISE (AMENDMENT) ACT NO. 24 OF 2024",
+  "dataset": [
+    {
+      "reference": "Title and Commencement",
+      "change": "Amends provisions under the Customs and Excise Act"
+}
+    
+  ]
+},
+
+{
+  "section": "Excise Duty",
+  "title": "Excise Duty Amendments – Statutory Instrument (2024)",
+  "dataset": [
+    {
+      "reference": "Title and Commencement",
+      "changes": [
+        "Replaces 'Revenue Appeal Tribunal' with 'Tax Appeals Tribunal Act'",
+        "Replaces 'Revenue Appeals Tribunal' with 'Tax Appeals Tribunal'"
+      ]
+},
+    {
+      "reference": "Excise Duty Exemption",
+      "change": "Exempts production of electrical energy up to 100kWh for personal or domestic use from licensing and excise duty"
+},
+    {
+      "reference": "Payment Timeline",
+      "change": "Reduces number of days from 5 to 3 for licensed manufacturers to pay estimated assessments and penalties for failure to file a return"
+},
+    {
+      "reference": "Penalty Calculation",
+      "change": "Clarifies use of excisable value in charging general penalties for licensed manufacturers of excisable goods"
+},
+    {
+      "reference": "Renumbering",
+      "change": "Renumbers subsections (4) and (5) as (5) and (6) respectively"
+},
+    {
+      "reference": "HS Heading 2009",
+      "change": "Increases excise duty to K1.00 per litre from 60 Ngwee per litre"
+},
+    {
+      "reference": "HS Heading 2201",
+      "change": "Increases excise duty to K1.00 per litre from 30 Ngwee per litre"
+},
+    {
+      "reference": "HS Heading 2202",
+      "change": "Increases excise duty to K1.00 per litre from 30 Ngwee per litre"
+},
+    {
+      "reference": "Tobacco Products",
+      "changes": [
+        "Increases excise duty on cigars, cheroots, cigarillos, and cigarettes to K452 per mille from K400 per mille",
+        "Increases excise duty on water pipe tobacco, cutrag, and other manufactured tobacco products to K452 per kilogram from K400 per kilogram"
+      ]
+}
+  ]
+},
+
+{
+  "section": "Excise Duty – Additional Amendments",
+  "title": "Additional Excise Duty Amendments – Statutory Instrument (2024)",
+  "dataset": [
+    {
+      "reference": "Hydrocarbons",
+      "change": "Increases the specific excise duty on hydrocarbons"
+},
+    {
+      "reference": "HS Heading 2202 – Local Beverages",
+      "change": "Reduces excise duty payable on locally produced non-alcoholic beverages to one tenth from one sixth"
+}
+  ]
+},
+
+{
+  "section": "Mobile Money Transaction Levy",
+  "title": "THE MOBILE MONEY TRANSACTION LEVY ACT NO. 25 OF 2024",
+  "dataset": [
+    {
+      "reference": "Title and Commencement",
+      "change": "Defines words and expressions used in the Mobile Money Transaction Levy Act"
+},
+    {
+      "reference": "Administration",
+      "changes": [
+        "Provides that the Act shall be administered by the Zambia Revenue Authority",
+        "Empowers the Commissioner-General to administer the Mobile Money Transactions Act"
+      ]
+},
+    {
+      "reference": "Levy Provisions",
+      "changes": [
+        "Imposes a levy on payment or transfer of electronic money between individuals",
+        "Provides due date for submission of returns and remittance of collected levies",
+        "Provides for penalties for non-compliance"
+      ]
+},
+    {
+      "reference": "Ministerial Powers",
+      "change": "Empowers the Minister to exempt persons from paying the levy via statutory instrument"
+},
+    {
+      "reference": "Record-Keeping Obligations",
+      "change": "Obligates mobile money service providers to keep operational records and outlines penalties for non-compliance"
+},
+    {
+      "reference": "Inspection Powers",
+      "change": "Empowers the Commissioner-General to access any premises without prior notice"
+},
+    {
+      "reference": "Administrative Rules",
+      "change": "Empowers the Commissioner-General to issue administrative rules to support the Act"
+}
+  ]
+},
+
+{
+  "section": "Mobile Money Transaction Levy",
+  "title": "THE MOBILE MONEY TRANSACTION LEVY ACT NO. 25 OF 2024",
+  "dataset": [
+    {
+      "reference": "Title and Commencement",
+      "change": "Defines words and expressions used in the Mobile Money Transaction Levy Act"
+},
+    {
+      "reference": "Administration",
+      "change": [
+        "Provides that the Act shall be administered by the Zambia Revenue Authority",
+        "Empowers the Commissioner-General to administer the Mobile Money Transactions Act",
+        "Empowers the Commissioner-General to issue administrative rules to support the Act",
+        "Empowers the Minister to issue Regulations to support administration of the Act"
+      ]
+},
+    {
+      "reference": "Repeal",
+      "change": "Repeals the Mobile Money Transaction Levy Act"
+}
+  ]
+},
+{
+  "section": "Income Tax",
+  "title": "THE INCOME TAX (AMENDMENT) ACT NO. 22 OF 2024",
+  "dataset": [
+    {
+      "reference": "Section 1",
+      "change": "This Act shall come into operation on 1st January, 2025."
+},
+    {
+      "reference": "Section 2(1)",
+      "changes": [
+        "Deletes the definition of 'approved annuity contract' due to regulation under the Pension Scheme Regulation Act.",
+        "Deletes the definition of 'approved pension fund' as approval now falls under the Pension Scheme Regulation Act.",
+        "Replaces the definition of 'approved fund' to mean a pension scheme registered under the Pension Scheme Regulation Act.",
+        "Replaces the definition of 'pensionable terms' to include broader approved funds such as gratuity and savings funds.",
+        "Introduces definitions of 'private fund' and 'Securities and Exchange Commission' under the Securities Act, 2016."
+      ]
+},
+    {
+      "reference": "Section 30",
+      "change": "Limits the deductibility of losses to a maximum of 50% of taxable income in a charge year for any business. Excess losses may be carried forward and deducted from 50% of income in subsequent years."
+}
+  ]
+} , 
+
+{
+  "section": "Income Tax",
+  "title": "THE INCOME TAX (AMENDMENT) ACT NO. 22 OF 2024",
+  "dataset": [
+    {
+      "reference": "Section 37",
+      "change": "Removes reference to the Fourth Schedule and allows employers to deduct contributions to approved funds when calculating gains or profits."
+},
+    {
+      "reference": "Section 43E",
+      "change": "Allows deduction of Skills Development Levy even if unpaid, as long as it is payable under the Skills Development Levy Act, 2016."
+},
+    {
+      "reference": "Section 45B",
+      "change": "Broadens the list of entities required to request a TPIN for account opening, membership registration, and land title deed registration. Includes water utilities, mobile money operators, internet providers, NHIMA, NAPSA, professional bodies, and local authorities."
+},
+    {
+      "reference": "Section 30 – Illustrative Example: Agriculture",
+      "change": "Demonstrates how the 50% loss deduction rule applies to Tilima Ltd. in agriculture. Taxable amounts: 2025 – K75,000 (Tax: K7,500), 2026 – K0, 2027 – K250,000 (Tax: K25,000)."
+},
+    {
+      "reference": "Section 30 – Illustrative Example: Manufacturing",
+      "change": "Demonstrates how the 50% loss deduction rule applies to Tipanga Ltd. in manufacturing. Taxable amounts: 2025 – K150,000 (Tax: K45,000), 2026 – K50,000 (Tax: K15,000), 2027 – K400,000 (Tax: K120,000)."
+}
+  ]
+},
+{
+  "section": "Income Tax",
+  "title": "THE INCOME TAX (AMENDMENT) ACT NO. 22 OF 2024",
+  "dataset": [
+    {
+      "reference": "Section 46A(5)",
+      "change": "Empowers the Commissioner-General to impose a 25% penalty on underpaid tax due to understated income in provisional returns, and to waive the whole or part of the penalty if justified."
+},
+    {
+      "reference": "Section 64A(2)",
+      "change": "Increases Turnover Tax threshold from K800,000 to K5,000,000 for businesses other than consultancy, mining, or voluntarily VAT-registered entities. These remain excluded from Turnover Tax."
+},
+    {
+      "reference": "Section 64A(2A)(a)",
+      "change": "Increases Turnover Tax threshold from K800,000 to K5,000,000 for gig economy businesses."
+},
+    {
+      "reference": "Section 81B",
+      "change": "Makes tax clearance certificate mandatory for registration of property transfers, motor vehicle ownership, trading licences, mining permits, and government-issued licences. Also required for supplier transactions and professional registrations, with exceptions allowed by the Minister."
+}
+  ]
+},
+{
+  "section": "Income Tax",
+  "title": "THE INCOME TAX (AMENDMENT) ACT NO. 22 OF 2024",
+  "dataset": [
+    {
+      "reference": "Section 81C(1A)",
+      "change": "Introduces Advance Income Tax for exports and remittances above $2,000 (or kwacha equivalent) without a valid tax clearance certificate. Applies to commercial exports and bank remittances."
+},
+    {
+      "reference": "Section 82A(1E)",
+      "change": "Empowers the Commissioner-General to exempt royalties from withholding tax, expanding previous exemptions which covered interest, commission, and consultancy fees."
+},
+    {
+      "reference": "Section 84(6) & (7)",
+      "change": "Introduces due date and penalty for declared agents failing to remit withheld tax. Tax must be remitted two days before the due date; penalty is 1% per month of the unpaid amount."
+},
+    {
+      "reference": "Section 84(8)",
+      "change": "Renumbers subsection (6) as subsection (8) following the insertion of new subsections."
+},
+    {
+      "reference": "Second Schedule Para 5(l)",
+      "change": "Extends income tax exemption to private funds such as private equity, hedge, venture capital, and real estate funds, in addition to approved collective investment schemes."
+},
+    {
+      "reference": "Ninth Schedule Part I",
+      "change": "Increases presumptive tax on passenger motor vehicles by seating capacity. For example, 64-seaters rise from K12,960 to K15,552 per annum."
+},
+    {
+      "reference": "Ninth Schedule Part II",
+      "change": "Increases turnover tax rate to 5% from 4% for income above K12,000 up to K5,000,000."
+},
+    {
+      "reference": "Ninth Schedule Part III",
+      "change": "Sets new monthly tax rates for betting and gaming. Brick-and-mortar lottery winnings taxed at 15%, online betting at 25%, and casino tables at K5,000 per table."
+}
+  ]
+},
+{
+  "section": "Income Tax",
+  "title": "THE INCOME TAX (AMENDMENT) ACT NO. 22 OF 2024",
+  "dataset": [
+    {
+      "reference": "Charging Schedule Para 5(c)",
+      "change": "Increases export tax on non-traditional products to 20% from 15%, except for exports from farming or agro-processing which remain taxed at 10%."
+},
+    {
+      "reference": "Charging Schedule Para 5(e)",
+      "change": "Increases rental income tax to 16% from 12.5% for income above K800,000. Retains 0% for income up to K12,000 and 4% for income between K12,000 and K800,000."
+},
+    {
+      "reference": "Charging Schedule Para 5(f)",
+      "change": "Increases tax to 20% from 15% on income from copper cathode product manufacturing."
+},
+    {
+      "reference": "Charging Schedule Para 5(l)",
+      "change": "Clarifies 5-year reduced rate period for Special Purpose Vehicles (SPVs) under PPP projects begins in the first profit year and continues for four consecutive years regardless of profitability."
+},
+    {
+      "reference": "Charging Schedule Para 6(2)",
+      "change": "Prescribes Advance Income Tax rate of 15% on exports and remittances made without a valid tax clearance certificate."
+},
+    {
+      "reference": "Charging Schedule Para 7",
+      "change": "Reduces withholding tax on gaming, lottery, and betting winnings to 15% from 20%."
+}
+  ]
+},
+{
+  "section": "Property Transfer Tax",
+  "title": "PROPERTY TRANSFER TAX (AMENDMENT) ACT NO. 27 OF 2024",
+  "dataset": [
+    {
+      "reference": "Section 1",
+      "change": "This Act shall come into operation on 1st January, 2025."
+},
+    {
+      "reference": "Section 2",
+      "changes": [
+        "Aligns the definition of 'intellectual property' with relevant Acts including patents, designs, trademarks, and copyrights.",
+        "Introduces definitions of 'building society' and 'money-lender' as defined under the Building Societies Act and Money-Lenders Act."
+      ]
+},
+    {
+      "reference": "Section 4",
+      "change": "Increases property transfer tax rate to 8% from 5% on the transfer of land, shares, intellectual property, and mining rights for exploration licences. Sets 10% rate for mining licences and mineral processing licences."
+},
+    {
+      "reference": "Section 5",
+      "change": "Extends use of actual price as realised value for foreclosed property to building societies and money-lenders, not just financial service providers."
+}
+  ]
+},
+{
+  "section": "Value Added Tax",
+  "title": "THE VALUE ADDED TAX (AMENDMENT) ACT NO. 23 OF 2024",
+  "dataset": [
+    {
+      "reference": "Section 18(3)",
+      "changes": [
+        "Deletes paragraphs (a) and (b) which allowed manual invoices and invoices from approved computer packages to support input tax claims.",
+        "Restricts input tax claims to invoices issued from the electronic invoicing system or by suppliers exempted under section 7A(2)."
+      ]
+},
+    {
+      "reference": "Section 18(3) Renumbering",
+      "change": "Renumbers paragraphs (c), (d), and (e) as (a), (b), and (c) respectively, following deletion of earlier paragraphs."
+},
+    {
+      "reference": "Section 38A",
+      "change": "Replaces the job title 'Assistant Commissioner' with 'Assistant Director' in subsections (1) and (2)."
+}
+  ]
+},
+{
+  "section": "VAT General Regulations",
+  "title": "VALUE ADDED TAX (GENERAL) (AMENDMENT) REGULATIONS, STATUTORY INSTRUMENT NO. 95 OF 2024",
+  "dataset": [
+    {
+      "reference": "Regulation 3(1)(b)",
+      "change": "Corrects the threshold amount for open market value of promotional items to one hundred kwacha, following currency rebasing."
+},
+    {
+      "reference": "Regulation 15",
+      "change": "Corrects the turnover threshold for zero-rated suppliers to two hundred thousand kwacha per annum, following currency rebasing."
+},
+    {
+      "reference": "Regulation 19(2)",
+      "change": "Deletes penalty provisions for failure to use a cash register, removing fines for first, second, and subsequent offences."
+},
+    {
+      "reference": "Regulation 19 Renumbering",
+      "change": "Renumbers subregulation (3) as subregulation (2) following the deletion of the original subregulation (2)."
+}
+  ]
+},
+{
+  "section": "VAT Electronic Invoicing System",
+  "title": "VALUE ADDED TAX (ELECTRONIC INVOICING SYSTEM) (AMENDMENT) REGULATIONS, STATUTORY INSTRUMENT NO. 94 OF 2024",
+  "dataset": [
+    {
+      "reference": "Regulation 5(3)",
+      "change": "Clarifies that all manually recorded transactions must be uploaded to the electronic invoicing system within 72 hours after restoration."
+}
+  ]
+},
+{
+  "section": "Income Tax",
+  "title": "THE INCOME TAX (AMENDMENT) ACT NO. 22 OF 2024",
+  "dataset": [
+    {
+      "reference": "Section 81B",
+      "change": "Clarifies that a general tax clearance certificate is mandatory for property transfers, motor vehicle ownership, trading and mining licences, government-issued permits, supplier transactions, and professional registrations. Exemptions apply to students and non-business applicants. Threshold exemptions include goods/services below ZMW200 and agricultural produce below ZMW10,000."
+},
+{
+  "section": "Income Tax",
+  "title": "THE INCOME TAX (AMENDMENT) ACT NO. 22 OF 2024",
+  "dataset": [
+    {
+      "reference": "Second Schedule Para 5(l)",
+      "change": "Extends income tax exemption to private funds such as private equity, hedge, venture capital, and real estate funds, in addition to approved collective investment schemes."
+},
+    {
+      "reference": "Ninth Schedule Part I",
+      "change": "Increases presumptive tax on passenger motor vehicles by seating capacity. For example, 64-seaters rise from K12,960 to K15,552 per annum."
+},
+    {
+      "reference": "Ninth Schedule Part II",
+      "change": "Increases turnover tax rate to 5% from 4% for income above K12,000 up to K5,000,000."
+},
+    {
+      "reference": "Ninth Schedule Part III",
+      "change": "Sets new monthly tax rates for betting and gaming. Brick-and-mortar lottery winnings taxed at 15%, online betting at 25%, and casino tables at K5,000 per table."
+},
+    {
+      "reference": "Charging Schedule Para 5(c)",
+      "change": "Increases export tax on non-traditional products to 20% from 15%, except for exports from farming or agro-processing which remain taxed at 10%."
+},
+    {
+      "reference": "Charging Schedule Para 5(e)",
+      "change": "Increases rental income tax to 16% from 12.5% for income above K800,000. Retains 0% for income up to K12,000 and 4% for income between K12,000 and K800,000."
+},
+    {
+      "reference": "Charging Schedule Para 5(f)",
+      "change": "Increases tax to 20% from 15% on income from copper cathode product manufacturing."
+},
+    {
+      "reference": "Charging Schedule Para 5(l)",
+      "change": "Clarifies 5-year reduced rate period for Special Purpose Vehicles (SPVs) under PPP projects begins in the first profit year and continues for four consecutive years regardless of profitability."
+},
+    {
+      "reference": "Charging Schedule Para 6(2)",
+      "change": "Prescribes Advance Income Tax rate of 15% on exports and remittances made without a valid tax clearance certificate."
+},
+    {
+      "reference": "Charging Schedule Para 7",
+      "change": "Reduces withholding tax on gaming, lottery, and betting winnings to 15% from 20%."
+}
+  ]
+},
+    {
+      "reference": "Section 81C(1A)",
+      "change": "Introduces Advance Income Tax on exports and remittances above $2,000 (or kwacha equivalent) made without a valid tax clearance certificate. Taxpayers must lodge AIT claims through income or turnover tax returns."
+},
+    {
+      "reference": "Section 82A(1E)",
+      "change": "Empowers the Commissioner-General to exempt royalties from withholding tax, expanding previous exemptions which covered interest, commission, and consultancy fees."
+},
+    {
+      "reference": "Section 84(6) & (7)",
+      "change": "Introduces a due date and penalty for declared agents failing to remit withheld tax. Tax must be remitted two days before the due date; penalty is 1% per month of the unpaid amount."
+},
+    {
+      "reference": "Section 84(8)",
+      "change": "Renumbers subsection (6) as subsection (8) following the insertion of new subsections."
+}
+  ]
+},
+{
+  "section": "VAT General Regulations",
+  "title": "VALUE ADDED TAX (GENERAL) (AMENDMENT) REGULATIONS, STATUTORY INSTRUMENT NO. 95 OF 2024",
+  "dataset": [
+    {
+      "reference": "Regulation 3(1)(b)",
+      "change": "Corrects the threshold amount for open market value of promotional items to one hundred kwacha, following currency rebasing."
+},
+    {
+      "reference": "Regulation 15",
+      "change": "Corrects the turnover threshold for zero-rated suppliers to two hundred thousand kwacha per annum, following currency rebasing."
+},
+    {
+      "reference": "Regulation 19(2)",
+      "change": "Deletes penalty provisions for failure to use a cash register, removing fines for first, second, and subsequent offences."
+},
+    {
+      "reference": "Regulation 19 Renumbering",
+      "change": "Renumbers subregulation (3) as subregulation (2) following the deletion of the original subregulation (2)."
+}
+  ]
+},
+{
+  "section": "Value Added Tax",
+  "title": "THE VALUE ADDED TAX (AMENDMENT) ACT NO. 23 OF 2024",
+  "dataset": [
+    {
+      "reference": "Section 18(3)",
+      "changes": [
+        "Deletes paragraphs (a) and (b) which allowed manual invoices and invoices from approved computer packages to support input tax claims.",
+        "Restricts input tax claims to invoices issued from the electronic invoicing system or by suppliers exempted under section 7A(2)."
+      ]
+},
+    {
+      "reference": "Section 18(3) Renumbering",
+      "change": "Renumbers paragraphs (c), (d), and (e) as (a), (b), and (c) respectively, following deletion of earlier paragraphs."
+},
+    {
+      "reference": "Section 38A",
+      "change": "Replaces the job title 'Assistant Commissioner' with 'Assistant Director' in subsections (1) and (2)."
+}
+  ]
+}, {
+  "section": "Property Transfer Tax",
+  "title": "PROPERTY TRANSFER TAX (AMENDMENT) ACT NO. 27 OF 2024",
+  "dataset": [
+    {
+      "reference": "Section 1",
+      "change": "This Act shall come into operation on 1st January, 2025."
+},
+    {
+      "reference": "Section 2",
+      "changes": [
+        "Aligns the definition of 'intellectual property' with relevant Acts including patents, designs, trademarks, and copyrights.",
+        "Introduces definitions of 'building society' and 'money-lender' as defined under the Building Societies Act and Money-Lenders Act."
+      ]
+},
+    {
+      "reference": "Section 4",
+      "change": "Increases property transfer tax rate to 8% from 5% on the transfer of land, shares, intellectual property, and mining rights for exploration licences. Sets 10% rate for mining licences and mineral processing licences."
+},
+    {
+      "reference": "Section 5",
+      "change": "Extends use of actual price as realised value for foreclosed property to building societies and money-lenders, not just financial service providers."
+}
+  ]
+},{
+  "section": "VAT Exemption",
+  "title": "VALUE ADDED TAX (EXEMPTION) (AMENDMENT) ORDER, STATUTORY INSTRUMENT NO. 93 OF 2024",
+  "dataset": [
+    {
+      "reference": "Paragraph 2",
+      "change": "Removes the definition of 'life policy' from the VAT Exemption Order due to redundancy."
+}
+  ]
+},{
+  "section": "VAT Electronic Invoicing System",
+  "title": "VALUE ADDED TAX (ELECTRONIC INVOICING SYSTEM) (AMENDMENT) REGULATIONS, STATUTORY INSTRUMENT NO. 94 OF 2024",
+  "dataset": [
+    {
+      "reference": "Regulation 5(3)",
+      "change": "Clarifies that all manually recorded transactions must be uploaded to the electronic invoicing system within 72 hours after restoration."
+},
+    {
+      "reference": "Regulation 6(b)",
+      "change": "Extends provision for claiming input tax to invoices issued manually or via computer, where the supplier is exempted from using the electronic invoicing system."
+},
+    {
+      "reference": "Regulation 10",
+      "change": "Allows taxable suppliers to discontinue use of an approved invoicing system for reasons beyond cessation of business. Requires written request and record retention; non-compliance attracts a penalty of up to 30,000 units."
+},
+    {
+      "reference": "Regulation 11",
+      "change": "Prohibits transfer of an approved invoicing system registered for use by a taxable supplier to another party."
+}
+  ]
+},
+{
+  "section": "Customs and Excise – Internet Services",
+  "title": "THE CUSTOMS AND EXCISE (SUSPENSION) (INTERNET SERVICES) REGULATIONS, STATUTORY INSTRUMENT NO. 91 OF 2024",
+  "dataset": [
+    {
+      "reference": "Regulation 1",
+      "change": "These Regulations come into operation on 1st January 2025."
+},
+    {
+      "reference": "Regulation 2",
+      "change": "Defines terms including public institution, public research institution, public secondary school, and Zambia Research and Education Network."
+},
+    {
+      "reference": "Regulation 3",
+      "change": "Suspends excise duty to 0% on internet services supplied by Zambia Research and Education Network to qualifying public institutions."
+},
+    {
+      "reference": "Regulation 4",
+      "change": "Revokes the Customs and Excise (Suspension) (Internet Services) Regulations, Statutory Instrument No. 68 of 2023."
+}
+  ]
+},{
+  "section": "Advance Income Tax",
+  "title": "THE INCOME TAX (ADVANCE INCOME TAX) REGULATIONS, STATUTORY INSTRUMENT NO. 96 OF 2024",
+  "dataset": [
+    {
+      "reference": "Regulation 1",
+      "change": "These Regulations come into operation on 1st January 2025."
+},
+    {
+      "reference": "Regulation 2",
+      "change": "Defines 'bank' and 'Commissioner General' for the purposes of these regulations."
+},
+    {
+      "reference": "Regulation 3",
+      "change": "Mandates banks to deduct Advance Income Tax on remittances above $2,000 made without a valid tax clearance certificate."
+},
+    {
+      "reference": "Regulation 4",
+      "change": "Requires banks to submit a return and pay Advance Income Tax within 14 days after the end of the month in which the transaction occurred."
+}
+  ]
+},{
+  "section": "Insurance Premium Levy",
+  "title": "THE INSURANCE PREMIUM LEVY (AMENDMENT) ACT NO. 28 OF 2024",
+  "dataset": [
+    {
+      "reference": "Section 1",
+      "change": "This Act shall come into operation on 1st January, 2025."
+},
+    {
+      "reference": "Section 2",
+      "changes": [
+        "Deletes the definition of 'electronic fiscal device'.",
+        "Introduces the definition of 'electronic invoicing system' as defined in the VAT Act."
+      ]
+},
+    {
+      "reference": "Section 4(3)",
+      "change": "Requires insurers, agents, and brokers to use the electronic invoicing system (Smart Invoice) to record levy payments and issue tax invoices."
+}
+  ]
+},{
+  "section": "Customs and Excise",
+  "title": "THE CUSTOMS AND EXCISE (AMENDMENT) ACT NO. 24 OF 2024",
+  "dataset": [
+    {
+      "reference": "Section 1",
+      "change": "This Act shall come into operation on 1st January, 2025."
+},
+    {
+      "reference": "Section 2",
+      "change": "Replaces the definition of 'Tribunal' with 'Tax Appeals Tribunal' following repeal of the Revenue Appeals Tribunal Act."
+},
+    {
+      "reference": "Section 94(1)(c)",
+      "change": "Allows production of electrical energy up to 100kWh for personal or domestic use without licence or excise duty."
+},
+    {
+      "reference": "Section 99",
+      "change": "Replaces 'Revenue Appeals Tribunal' with 'Tax Appeals Tribunal'."
+},
+    {
+      "reference": "Section 108(10)",
+      "change": "Reduces payment deadline for penalties and estimated assessments from five days to three days."
+},
+    {
+      "reference": "Section 155(4)",
+      "change": "Introduces general penalties for licensed manufacturers of excisable goods, including fines up to treble excisable value or 20,000 units, and/or imprisonment up to five years."
+},
+    {
+      "reference": "Section 155 Renumbering",
+      "change": "Renumbers subsections (4) and (5) as (5) and (6) following insertion of new subsection (4)."
+},
+    {
+      "reference": "Second Schedule Heading 1",
+      "change": "Increases excise duty on specified non-alcoholic beverages to K1.00 per litre from 60 Ngwee."
+},
+    {
+      "reference": "Second Schedule Heading 2",
+      "change": "Increases excise duty on mineral waters to K1.00 per litre from 30 Ngwee."
+},
+    {
+      "reference": "Second Schedule Heading 3",
+      "change": "Increases excise duty on non-alcoholic beverages to K1.00 per litre from 30 Ngwee. Locally produced beverages taxed at one tenth of this rate."
+},
+    {
+      "reference": "Second Schedule Heading 7 (24.01 & 24.02)",
+      "change": "Increases excise duty on cigars, cheroots, cigarillos, and cigarettes to K452 per mille from K400."
+},
+    {
+      "reference": "Second Schedule Heading 7 (2403 series)",
+      "change": "Increases excise duty on water pipe tobacco, cutrag, and other manufactured tobacco products to K452 per kilogram from K400."
+}
+  ]
+}, {
+  "section": "Customs and Excise",
+  "title": "THE CUSTOMS AND EXCISE (AMENDMENT) ACT NO. 24 OF 2024",
+  "dataset": [
+    {
+      "reference": "Second Schedule Heading 9",
+      "change": "Increases specific excise duty on petroleum products. For example, petrol rises from K2.07 to K2.34 per litre, diesel from K0.66 to K0.75, and kerosene-type jet fuel from K0.48 to K0.54 per litre."
+},
+    {
+      "reference": "Sixth Schedule Paragraph 1(4)",
+      "change": "Reduces excise duty on locally produced non-alcoholic beverages (excluding headings 20.09 and 22.01) to one tenth from one sixth of the specific duty rate in the Second Schedule."
+}
+  ]
+},{
+  "section": "Mobile Money Transaction Levy",
+  "title": "THE MOBILE MONEY TRANSACTION LEVY ACT NO. 25 OF 2024",
+  "dataset": [
+    {
+      "reference": "Section 1",
+      "change": "This Act shall come into operation on 1st January, 2025."
+},
+    {
+      "reference": "Section 2",
+      "change": "Defines key terms used in the Act, including 'Bank of Zambia', 'betting', 'electronic money', 'levy', 'merchant', 'mobile money service provider', 'person-to-person transfer', 'repealed Act', and 'Zambia Revenue Authority'."
+}
+  ]
+},
+{
+  "section": "Mobile Money Transaction Levy",
+  "title": "THE MOBILE MONEY TRANSACTION LEVY ACT NO. 25 OF 2024",
+  "dataset": [
+    {
+      "reference": "Section 3",
+      "change": "Provides that the Mobile Money Transaction Levy Act shall be administered by the Zambia Revenue Authority."
+},
+    {
+      "reference": "Section 4",
+      "change": "Empowers the Commissioner-General to enforce the Act using powers conferred under the Zambia Revenue Authority Act and the Income Tax Act."
+},
+    {
+      "reference": "Section 5",
+      "change": "Imposes a levy on person-to-person mobile money transfers, payable by the sender. Mobile money service providers must submit returns and remit levies monthly. Penalties apply for non-compliance, with discretion for waiver by the Commissioner-General."
+},
+    {
+      "reference": "Section 6",
+      "change": "Empowers the Minister to exempt persons from paying the levy via statutory instrument. In absence of exemptions, levy applies to transfers involving government, utility payments, merchants, and bank-to-wallet transactions."
+},
+    {
+      "reference": "Section 7",
+      "change": "Requires mobile money service providers to maintain operational records for six years, with possible extension by the Commissioner-General. Penalties apply for non-compliance, with discretionary waiver."
+},
+    {
+      "reference": "Section 8",
+      "change": "Authorizes the Commissioner-General to inspect premises without prior notice, verify returns, and request additional information to ensure compliance."
+},
+    {
+      "reference": "Section 9",
+      "change": "Empowers the Commissioner-General to issue administrative rules for recordkeeping, returns, and other matters necessary for administering the Act."
+}
+  ]
+},{
+  "section": "Mobile Money Transaction Levy",
+  "title": "THE MOBILE MONEY TRANSACTION LEVY ACT NO. 25 OF 2024",
+  "dataset": [
+    {
+      "reference": "Section 10",
+      "change": "Authorizes the Minister to issue Regulations via statutory instrument to support the administration of the Act."
+},
+    {
+      "reference": "Section 11",
+      "change": "Repeals the Mobile Money Transaction Levy Act, 2023. Requires mobile money service providers to remit levies to ZRA and mandates Bank of Zambia to transmit related records to ZRA."
+},
+    {
+      "reference": "Schedule",
+      "change": "Introduces tiered levy rates for person-to-person mobile money transfers, ranging from ZMW 0.16 for transfers up to ZMW 150, to ZMW 3.60 for transfers above ZMW 10,000."
+}
+  ]
+},{
+  "section": "Employment Benefits",
+  "title": "TAX TREATMENT OF EMPLOYMENT BENEFITS",
+  "dataset": [
+    {
+      "reference": "Section 44(l)",
+      "change": "Clarifies that non-convertible benefits are non-deductible to the employer and not taxable to the employee. Convertible benefits are taxable under PAYE."
+},
+    {
+      "reference": "Convertible Benefits",
+      "change": "Examples include payment of employee bills, housing allowance, and goods/services provided below market value. These are taxable under PAYE and deductible to the employer."
+},
+    {
+      "reference": "Non-Convertible Benefits",
+      "change": "Examples include free housing, airtime, and fuel with restrictive use. These are not taxable to the employee but are non-deductible to the employer."
+},
+    {
+      "reference": "Accommodation Provided by Employer",
+      "change": "Disallows 37% of taxable income paid to employee unless independently valued. Peppercorn rent also triggers disallowance of 37%."
+},
+    {
+      "reference": "Leased Housing",
+      "change": "Single-occupant housing is taxable under PAYE; multi-occupant housing is fully disallowed in employer’s tax computation."
+},
+    {
+      "reference": "Motor Vehicle Benefits",
+      "change": "Disallowed amounts based on engine capacity: K57,600 (≥2800cc), K43,200 (1800–2799cc), K25,200 (<1800cc) per annum."
+},
+    {
+      "reference": "Cash Allowances",
+      "change": "All cash allowances (e.g. education, housing, transport, utilities, car, settling-in, professional) are taxable under PAYE."
+}
+  ]
+},{
+  "section": "Tax Guidance",
+  "title": "EMPLOYMENT AND BUSINESS TAX TREATMENT GUIDANCE",
+  "dataset": [
+    {
+      "reference": "Section 24.1",
+      "change": "Lists payments exempt from PAYE including ex-gratia, medical and funeral expenses, councillor sitting allowances, Labour Day awards, and per diem/travel allowances."
+},
+    {
+      "reference": "Section 25.1",
+      "change": "Disallows entertainment, hospitality, and gift expenses except in specific business contexts or where gifts are promotional and cost less than K100 per person annually."
+},
+    {
+      "reference": "Section 25.2",
+      "change": "Disallows employer expenses on canteen meals and food rations unless legally required. Such benefits are not taxable to employees."
+},
+    {
+      "reference": "Section 26.0",
+      "change": "Lists payments on cessation of employment. Pension-related items are exempt; monthly salary, accrued leave, and service bonuses are taxable under PAYE."
+},
+    {
+      "reference": "Section 26.1",
+      "change": "Exempts payments made on medical discharge from tax when supported by a registered medical practitioner."
+},
+    {
+      "reference": "Section 27.0",
+      "change": "Exempts advances against gratuity, pensions, and employee pension withdrawals from tax as they constitute pension benefits."
+},
+    {
+      "reference": "Section 28.0",
+      "change": "Settling-in allowances paid to new or transferred employees are taxable under PAYE."
+},
+    {
+      "reference": "Section 29.0",
+      "change": "Grants rural enterprises a 1/5 reduction in income tax for the first five charge years. Defines rural enterprise and rural area per the Income Tax Act."
+}
+  ]
+},{  "section": "Tax Guidance",
+  "title": "EMPLOYMENT AND BUSINESS TAX TREATMENT GUIDANCE",
+  "dataset": [
+    {
+      "reference": "Section 30.0",
+      "change": "Clarifies that forfeiture or surrender of shares does not attract Property Transfer Tax (PTT). However, subsequent transfer of such shares by the company is taxable. No provisional return is required from the original shareholder, but the company must submit one."
+},
+    {
+      "reference": "Section 31.0",
+      "change": "Outlines conditions under which PAYE refunds may be claimed, including payroll errors, unemployment, and eligible deductions. Refunds are based on annual tax bands versus monthly cumulative tax paid."
+},
+    {
+      "reference": "Section 31.0 Example 3",
+      "change": "Demonstrates PAYE refund calculation for an employee who stops working mid-year. Shows how annual tax bands yield lower tax liability than cumulative monthly bands."
+},
+    {
+      "reference": "Section 31.0 Example 4",
+      "change": "Illustrates tax refund calculation for a donation to an approved public benefit organisation. Deduction capped at 15% of taxable income; refund calculated based on reduced taxable amount."
+}
+  ]
+},{
+  "section": "Tax Guidance",
+  "title": "EMPLOYMENT AND BUSINESS TAX TREATMENT GUIDANCE",
+  "dataset": [
+    {
+      "reference": "Section 32.0(i)",
+      "change": "Employees registered with the Zambia Agency for Persons with Disabilities are entitled to a tax credit of K7,200 per annum (K600/month). Employers must apply the credit when computing PAYE."
+},
+    {
+      "reference": "Section 32.0(ii)",
+      "change": "Employers are entitled to a K2,000 annual deduction per full-time employee with a disability, provided the employee is registered with the Zambia Agency for Persons with Disabilities."
+},
+    {
+      "reference": "Section 33.0(i)",
+      "change": "Payments to non-resident contractors for haulage from Zambia to another country are deemed sourced in Zambia and subject to income tax and withholding tax. WHT is not final."
+},
+    {
+      "reference": "Section 33.0(ii)",
+      "change": "Haulage operations between two foreign countries are not sourced in Zambia. No WHT or income tax applies."
+},
+    {
+      "reference": "Section 33.0(iii)",
+      "change": "Haulage from a foreign country to Zambia is not deemed sourced in Zambia. No WHT or income tax applies."
+},
+    {
+      "reference": "Section 33.0(iv)",
+      "change": "Haulage within Zambia is deemed sourced in Zambia. WHT applies. If the non-resident contractor has a Permanent Establishment, profits attributed to it are taxable at 30%."
+}
+  ]
+},{
+  "section": "Tax Guidance",
+  "title": "EMPLOYMENT AND BUSINESS TAX TREATMENT GUIDANCE",
+  "dataset": [
+    {
+      "reference": "Section 34.0",
+      "change": "Employment income earned in Zambia is taxable under PAYE regardless of the employer’s residency or payment location. Source-based taxation applies per Section 14 and 18 of the Income Tax Act."
+},
+    {
+      "reference": "Section 35.0",
+      "change": "Taxpayers exceeding the K5,000,000 Turnover Tax threshold must notify ZRA but continue paying TOT until year-end. Migration to Income Tax occurs the following year, with credits granted for TOT paid."
+},
+    {
+      "reference": "Section 36.0(i)",
+      "change": "Non-monetary winnings (e.g. cars) are taxed based on net proceeds as determined by the Commissioner-General. Presumptive Tax applies per Section 64 and the Ninth Schedule."
+},
+    {
+      "reference": "Section 36.0(ii)",
+      "change": "One-time lottery organisers promoting their business via product purchases are exempt from Presumptive Tax. If lottery tickets are sold, registration and tax compliance are required."
+},
+    {
+      "reference": "Section 36.0(iii)",
+      "change": "Slot route operators (machine owners) are responsible for Presumptive Tax and Withholding Tax, not the location owners."
+},
+    {
+      "reference": "Section 37.0",
+      "change": "Tax treaty relief is accessed via a Limited Deduction Direction (LDD) issued by the Commissioner-General. Requires contract, WHT Form 3, and Tax Residence Certificate."
+},
+    {
+      "reference": "Section 38.1",
+      "change": "Hire of equipment for loading/offloading aircraft passengers is subject to standard VAT. It is not exempt or zero-rated like air transport services."
+}
+  ]
+},{
+  "section": "Tax Guidance",
+  "title": "EMPLOYMENT AND BUSINESS TAX TREATMENT GUIDANCE",
+  "dataset": [
+    {
+      "reference": "Section 38.2–38.6",
+      "change": "Services such as loading/export cargo, offloading imports, cold chain, clearing and forwarding are standard rated. Transshipment services remain zero-rated."
+},
+    {
+      "reference": "Section 39.0",
+      "change": "Finance leases must apportion input tax between standard-rated principal and exempt interest using VAT Administrative Rules."
+},
+    {
+      "reference": "Section 40.0",
+      "change": "Reverse VAT does not apply to exempt services, privileged persons, or suppliers below registration threshold. Proof of tax paid in exporting country may exempt recipient."
+},
+    {
+      "reference": "Section 41.0",
+      "change": "VAT charged on exempt supplies or by non-registered suppliers is recoverable by the Government."
+},
+    {
+      "reference": "Section 42.0",
+      "change": "Input tax claims must be supported by valid tax invoices with mandatory features as prescribed by the Commissioner-General."
+},
+    {
+      "reference": "Section 43.0",
+      "change": "Privileged persons must present VAT LPOs at time of purchase to benefit from zero-rating. Late submission does not qualify for refund."
+},
+    {
+      "reference": "Section 44.0",
+      "change": "Commission earned by insurance brokers is not subject to Insurance Premium Levy as it does not qualify as an insurance premium."
+},
+    {
+      "reference": "Section 45.0",
+      "change": "Government vouchers used to clear goods from bond are treated like border clearance. VAT LPOs are not applicable until goods are fully cleared."
+},
+    {
+      "reference": "Section 46.0",
+      "change": "Underdeclaration of tourism levy attracts a 5% penalty on the omitted amount. Example shows calculation based on audit findings."
+}
+  ]
+},{
+  "section": "Tax Guidance",
+  "title": "TAX RATE STRUCTURE AND INCENTIVES",
+  "dataset": [
+    {
+      "reference": "Personal Income Tax",
+      "change": "Rates: 0% on first K61,200; 20% on income up to K85,200; 30% up to K110,400; 37% above K110,400."
+},
+    {
+      "reference": "Turnover Tax",
+      "change": "Rates: 0% for turnover up to K12,000; 5% for turnover between K12,000 and K5,000,000."
+},
+    {
+      "reference": "Rental Income Tax",
+      "change": "Rates: 0% up to K12,000; 4% between K12,000 and K800,000; 16% above K800,000."
+},
+    {
+      "reference": "Presumptive Tax – Passenger Vehicles",
+      "change": "Annual rates range from K1,296 (below 12-seater) to K15,552 (64-seater and above)."
+},
+    {
+      "reference": "Presumptive Tax – Artisanal Mining",
+      "change": "Rate: 4% on gross turnover less mineral royalty paid."
+},
+    {
+      "reference": "Base Tax",
+      "change": "Flat rate of K365 per annum."
+},
+    {
+      "reference": "Other Income Tax Rates",
+      "changes": [
+        "Mineral processing, mining, manufacturing: 30%",
+        "Copper cathode manufacturing: 20%",
+        "Electronic communication: 35%",
+        "Lapidary/jewelry: 25%",
+        "Public Benefit Organisations (business income): 15%",
+        "Agro-processing and farming: 10%",
+        "Non-traditional exports: 10% (agro/farming), 20% (others)",
+        "Fertilizer manufacturing: 15%",
+        "Trusts, deceased/bankrupt estates: 30%"
+      ]
+},
+    {
+      "reference": "Rural Enterprise Incentive",
+      "change": "Tax reduced by 1/5 for first 5 years of operation."
+},
+    {
+      "reference": "Cotton Sector Incentives",
+      "change": "Cotton seed production/ginning: 0% for first 5 years; spinning/weaving: 0% for first 10 years."
+},
+    {
+      "reference": "Sector-Specific ZDA Incentives",
+      "change": "Various reduced rates and exemptions for enterprises in priority sectors, rural areas, and economic zones based on licence date and activity. Includes 0% for initial years, then phased reductions (50%, 25%) or accelerated wear-and-tear claims."
+},
+    {
+      "reference": "PPP Special Purpose Vehicles",
+      "change": "Tax rate of 15% for first 5 years of profit declaration."
+}
+  ]
+},{
+  "section": "Tax Guidance",
+  "title": "TAX RATE STRUCTURE AND INCENTIVES",
+  "dataset": [
+    {
+      "reference": "Withholding Tax Rates",
+      "change": "Standard rates: 15% for residents, 20% for non-residents. Exemptions apply for specific sectors and ZDA-licensed entities. Final tax applies to commissions, entertainment fees, and contractor payments."
+},
+    {
+      "reference": "VAT Rates",
+      "change": "Standard rate: 16%. Zero-rated: 0%. Exempt supplies are not taxable."
+},
+    {
+      "reference": "Local Excise Tariffs",
+      "change": "Excise duties vary by product. Examples: tobacco products at K452/kg or 145%, beer at 10–60%, fuel levies (e.g. petrol at K2.34/litre), airtime at 17.5%, cosmetics at 20%, cement at K40/tonne."
+},
+    {
+      "reference": "Property Transfer Tax Rates",
+      "change": "Rates: 8% for land, shares, intellectual property, and exploration licences; 10% for mining licences and mineral processing licences."
+},
+    {
+      "reference": "Mineral Royalty Rates",
+      "change": "Copper royalty rates range from 4% (<US$4,000) to 10% (≥US$7,000) based on norm price bands."
+}
+  ]
+},{
+  "section": "Tax Guidance",
+  "title": "TAX RATE STRUCTURE AND INCENTIVES",
+  "dataset": [
+    {
+      "reference": "Mineral Royalty – Other Minerals",
+      "changes": [
+        "Base metals (excluding copper, cobalt, vanadium): 5% of norm value",
+        "Energy and industrial minerals: 5% of gross value",
+        "Gemstones: 6% of gross value",
+        "Precious metals: 6% of norm value",
+        "Cobalt and vanadium: 8% of norm value"
+      ]
+},
+    {
+      "reference": "Tax on Betting and Gaming",
+      "changes": [
+        "Online casino live games: 20% of gross takings",
+        "Online casino machine games: 35% of gross takings",
+        "Brick-and-mortar casino games: K5,000 per table",
+        "Online lottery winnings: 35% of net proceeds",
+        "Brick-and-mortar lottery winnings: 15% of net proceeds",
+        "Online betting: 25% of gross takings",
+        "Betting: 15% of gross takings",
+        "Gaming machines: K500 per machine"
+      ]
+},
+    {
+      "reference": "Other Levies",
+      "changes": [
+        "Insurance Premium Levy: 5%",
+        "Skills Development Levy: 0.5%",
+        "Tourism Levy: 1.5%"
+      ]
+},
+    {
+      "reference": "Penalty Units",
+      "change": "One penalty unit equals K0.40."
+},
+    {
+      "reference": "Local Content Allowance Schedule",
+      "change": "Agricultural products qualifying for local content allowance include cassava, pineapple, mango, tomato, sorghum, and millet."
+}
+  ]
+},{
+  "section": "Tax Guidance",
+  "title": "ADMINISTRATIVE PROCEDURES AND SUPPORT",
+  "dataset": [
+    {
+      "reference": "TPIN Application",
+      "change": "TPINs can be applied via ZRA website, USSD (*858#), or TaxOnApp. Required documents vary by taxpayer type. Approvals are automated and sent via email/SMS."
+},
+    {
+      "reference": "Tax Clearance Certificate (TCC)",
+      "change": "Apply via ZRA portal by logging in, navigating to Compliance> Tax Clearance Certificate> Apply. TCC can be printed or saved."
+},
+    {
+      "reference": "Smart Invoice Support",
+      "change": "Email smartinvoice@zra.org.zm for assistance with Electronic Fiscal Devices (EFDs)."
+},
+    {
+      "reference": "TaxOnline System Support",
+      "change": "Email advice@zra.org.zm for help with TaxOnline system issues."
+},
+    {
+      "reference": "Tax Resources",
+      "change": "Leaflets and tutorials available at https://www.zra.org.zm under 'General Tax Information' and 'Tutorials'."
+},
+    {
+      "reference": "Reporting Unethical Conduct",
+      "change": "Report to ZRA Integrity Committee via zraic@zra.org.zm, phone +260978701701, or suggestion boxes at ZRA stations."
+}
+  ]
+}, {
+  "section": "Tax Guidance",
+  "title": "ZRA Contact Addresses",
+  "dataset": [
+    {
+      "location": "National Call Centre",
+      "address": "New Revenue Hall, P.O. Box 35710, Lusaka",
+      "contacts": {
+        "Zamtel": "(0211) 381111",
+        "MTN": "0960 091111",
+        "Airtel": "0971 281111",
+        "Short Code": "5972",
+        "Website": "http://www.zra.org.zm"
+}
+},
+    {
+      "location": "Taxpayer Services Centre",
+      "address": "Nchanga House, P.O. Box 20855, Kitwe",
+      "contacts": {
+        "Zamtel": "(0211) 384529",
+        "MTN": "0960 094529",
+        "Airtel": "0971 284529",
+        "Website": "http://www.zra.org.zm"
+}
+},
+    {
+      "location": "Assistant Director – Direct Taxes LSTO",
+      "address": "Returns, Payments & Taxpayer Services, P.O. Box 35710, Lusaka",
+      "contacts": {
+        "Zamtel": "(0211) 382649",
+        "MTN": "0960 092649",
+        "Airtel": "0971 282649"
+}
+},
+    {
+      "location": "Assistant Director – Domestic Tax Policy",
+      "address": "P.O. Box 35710, Lusaka",
+      "contacts": {
+        "Zamtel": "(0211) 382520",
+        "MTN": "0960 092520",
+        "Airtel": "0971 282520"
+}
+},
+    {
+      "location": "Assistant Director – International Tax Policy",
+      "address": "P.O. Box 35710, Lusaka",
+      "contacts": {
+        "Zamtel": "(0211) 382544",
+        "MTN": "0960 092544",
+        "Airtel": "0971 282544"
+}
+}
+  ]
+}]

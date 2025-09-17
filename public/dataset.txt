@@ -1,0 +1,419 @@
+[
+{
+
+  "section": "1",
+  "title": "SUMMARY OF AMENDMENTS – THE INCOME TAX (AMENDMENT) ACT NO. 22 OF 2024",
+  "dataset": [
+    {
+      "reference": "Section 2",
+      "changes": [
+        "Deletes the definition of approved annuity contract",
+        "Deletes the definition of approved pension fund",
+        "Defines an approved fund with reference to the Pension Scheme Regulations Act",
+        "Extends the scope of pensionable terms to other approved funds",
+        "Introduces the definitions of Private fund and Securities and Exchange Commission"
+      ]
+},
+    {
+      "reference": "Section 30",
+      "change": "Limits the deductibility of losses to a maximum of 50% of taxable income in a charge year for any business"
+},
+    {
+      "reference": "Section 37",
+      "change": "Removes reference to the Fourth Schedule, repealed in 2023"
+},
+    {
+      "reference": "Section 43E",
+      "change": "Allows deduction of Skills Development Levy even if unpaid to the Commissioner-General"
+},
+    {
+      "reference": "Section 45B",
+      "change": "Broadens entities mandated to request a TPIN"
+},
+    {
+      "reference": "Section 46A(5)",
+      "change": "Empowers Commissioner-General to waive underestimation penalties"
+},
+    {
+      "reference": "Section 64A(2)",
+      "changes": [
+        "Increases Turnover Tax threshold from K800,000 to K5,000,000",
+        "Specifically applies to gig economy businesses"
+      ]
+},
+    {
+      "reference": "Section 81B",
+      "change": "Makes general tax clearance certificate mandatory for certain transactions"
+},
+    {
+      "reference": "Section 81C(1A)",
+      "change": "Introduces Advance Income Tax for exports and remittances above $2,000 without valid tax clearance certificate"
+},
+    {
+      "reference": "Section 82A(1E)",
+      "change": "Empowers Commissioner-General to exempt royalties from withholding tax"
+},
+    {
+      "reference": "Section 84(6) & (7)",
+      "change": "Introduces due date and penalty for declared agents failing to remit withheld tax"
+},
+    {
+      "reference": "Section 84(8)",
+      "change": "Renumbers subsection due to new insertions"
+},
+    {
+      "reference": "Second Schedule Para 5(l)",
+      "change": "Extends income tax exemption to private funds"
+},
+    {
+      "reference": "Ninth Schedule Part I",
+      "change": "Increases presumptive tax on passenger motor vehicles by 20%"
+},
+    {
+      "reference": "Ninth Schedule Part II",
+      "change": "Increases turnover tax rate to 5% from 4% for income above K12,000 up to K5,000,000"
+},
+    {
+      "reference": "Ninth Schedule Part III",
+      "change": "Sets 15% substantive tax rate on betting and lottery winnings (brick and mortar)"
+},
+    {
+      "reference": "Charging Schedule Para 5(c)",
+      "change": "Increases export tax on non-traditional products to 20% from 15%"
+},
+    {
+      "reference": "Charging Schedule Para 5(e)",
+      "change": "Increases rental income tax to 16% from 12.5% for income above K800,000"
+},
+    {
+      "reference": "Charging Schedule Para 5(f)",
+      "change": "Increases tax to 20% from 15% on income from copper cathode product manufacturing"
+},
+    {
+      "reference": "Charging Schedule Para 5(l)",
+      "change": "Clarifies 5-year reduced rate period for Special Purpose Vehicles (SPVs)"
+},
+    {
+      "reference": "Charging Schedule Para 6(2)",
+      "change": "Prescribes Advance Income Tax rate of 15% on exports and remittances"
+},
+    {
+      "reference": "Charging Schedule Para 7",
+ "change": "Reduces withholding tax on gaming, lottery, and betting winnings to 15% from 20%"
+}
+  ]
+},
+
+  {"section": "Property Transfer Tax",
+  "title": "PROPERTY TRANSFER TAX (AMENDMENT) ACT NO. 27 OF 2024",
+  "dataset": [
+    {
+      "reference": "Title and Commencement",
+      "changes": [
+        "Aligns the definition of intellectual property with relevant Acts",
+        "Introduces definitions of 'building society' and 'money-lender'"
+      ]
+},
+    {
+      "reference": "Tax Rate Adjustment",
+      "change": "Increases property transfer tax rate to 8% from 5% on the transfer of land, shares, intellectual property, and mining rights for exploration licences"
+},
+    {
+      "reference": "Valuation Method",
+      "change": "Extends use of actual price as realised value for foreclosed property to building societies and money-lenders"
+}
+  ]
+},
+
+{
+  "section": "Value Added Tax",
+  "title": "THE VALUE ADDED TAX (AMENDMENT) ACT NO. 23 OF 2024",
+  "dataset": [
+    {
+      "reference": "Title and Commencement",
+      "change": "Empowers the Commissioner-General to allow a taxable supplier to use alternative documentation or equipment instead of an electronic invoicing system, subject to prescribed conditions"
+},
+    {
+      "reference": "Reverse VAT Mechanism",
+      "change": "Clarifies that imported services outside the scope of Cross Border Electronic Services are taxable under reverse VAT or via an appointed agent"
+},
+    {
+      "reference": "Input Tax Documentation",
+      "changes": [
+        "Deletes paragraph (a) and (b) which allowed manual invoices and invoices from approved computer packages to support input tax claims",
+        "Restricts input tax claims to invoices from electronic invoicing systems (smart invoice) or from suppliers exempted from smart invoice use"
+      ]
+},
+    {
+      "reference": "Renumbering",
+      "change": "Renumbers subparagraphs (c), (d), and (e) as (a), (b), and (c) following deletion of earlier subparagraphs"
+},
+    {
+      "reference": "Administrative Update",
+      "change": "Replaces the job title 'Assistant Commissioner' with 'Assistant Director'"
+}
+  ]
+},
+
+{
+  "section": "VAT General Regulations",
+  "title": "VALUE ADDED TAX (GENERAL) (AMENDMENT) REGULATIONS, STATUTORY INSTRUMENT NO. 95 OF 2024",
+  "dataset": [
+    {
+      "reference": "Title and Commencement",
+      "change": "Corrects the threshold amount for open market value of items supplied for promotional or publicity purposes"
+},
+    {
+      "reference": "Zero-Rated Supplier Threshold",
+      "change": "Corrects the threshold amount for turnover of a registered taxable supplier engaged in making zero-rated supplies"
+},
+    {
+      "reference": "Renumbering",
+      "change": "Renumbers subregulation (3) as subregulation (2) following deletion of subregulation (2)"
+}
+  ]
+},
+
+{
+  "section": "VAT Electronic Invoicing System",
+  "title": "VALUE ADDED TAX (ELECTRONIC INVOICING SYSTEM) (AMENDMENT) REGULATIONS, STATUTORY INSTRUMENT NO. 94 OF 2024",
+  "dataset": [
+    {
+      "reference": "Title and Commencement",
+      "change": "Clarifies that all manually recorded transactions must be uploaded to the electronic invoicing system within 72 hours after restoration of the system"
+},
+    {
+      "reference": "Input Tax Claim Extension",
+      "change": "Extends provision for claiming input tax to taxable suppliers exempted from using the electronic invoicing system"
+},
+    {
+      "reference": "Discontinuation Conditions",
+      "change": "Allows reasons other than cessation of business for a taxable supplier to discontinue use of an approved invoicing system"
+},
+    {
+      "reference": "System Transfer Restriction",
+      "change": "Clarifies that a taxable supplier who registers an approved invoicing system for personal use must not transfer it to another taxable supplier"
+}
+  ]
+},
+
+{
+  "section": "VAT Exemption",
+  "title": "VALUE ADDED TAX (EXEMPTION) (AMENDMENT) ORDER, STATUTORY INSTRUMENT NO. 93 OF 2024",
+  "amendments": [
+    {
+      "reference": "Title and Commencement",
+      "change": "Removes the definition of 'life policy'"
+}
+  ]
+},
+
+{
+  "section": "Advance Income Tax",
+  "title": "THE INCOME TAX (ADVANCE INCOME TAX) REGULATIONS, STATUTORY INSTRUMENT NO. 96 OF 2024",
+  "dataset": [
+    {
+      "reference": "Title and Commencement",
+      "change": "Introduces regulations governing Advance Income Tax"
+},
+    {
+      "reference": "Interpretation",
+      "change": "Provides definitions and interpretive guidance for application of Advance Income Tax rules"
+}
+  ]
+},
+
+{
+  "section": "Advance Income Tax via Banks",
+  "title": "Deduction of Advance Income Tax by Bank on Remittances under Section 81C of the Income Tax Act",
+  "dataset": [
+    {
+      "reference": "Section 81C",
+      "change": "Requires banks to deduct Advance Income Tax on remittances outside the Republic"
+},
+    {
+      "reference": "Submission of Return and Payment",
+      "change": "Mandates submission of return and payment of deducted tax by the bank"
+}
+  ]
+},
+
+{
+  "section": "Customs and Excise – Internet Services",
+  "title": "THE CUSTOMS AND EXCISE (SUSPENSION) (INTERNET SERVICES) REGULATIONS, STATUTORY INSTRUMENT NO. 91 OF 2024",
+ "dataset": [
+    {
+      "reference": "Title and Commencement",
+      "change": "Establishes suspension of excise duty on internet services"
+},
+    {
+      "reference": "Interpretation",
+      "change": "Defines terms relevant to the suspension regulation"
+},
+    {
+      "reference": "Suspension",
+      "change": "Suspends excise duty on internet services"
+},
+    {
+      "reference": "Revocation",
+      "change": "Revokes Statutory Instrument No. 68 of 2023"
+}
+  ]
+},
+
+{
+  "section": "Insurance Premium Levy",
+  "title": "THE INSURANCE PREMIUM LEVY (AMENDMENT) ACT NO. 28 OF 2024",
+  "dataset": [
+    {
+      "reference": "Title and Commencement",
+      "changes": [
+        "Deletes the definition of 'electronic fiscal device'",
+        "Introduces the definition of 'electronic invoicing system' with reference to the VAT Act",
+        "Replaces all instances of 'electronic fiscal device' with 'electronic invoicing system'"
+      ]
+}
+  ]
+},
+
+{
+  "section": "Customs and Excise",
+  "title": "THE CUSTOMS AND EXCISE (AMENDMENT) ACT NO. 24 OF 2024",
+  "dataset": [
+    {
+      "reference": "Title and Commencement",
+      "change": "Amends provisions under the Customs and Excise Act"
+}
+    
+  ]
+},
+
+{
+  "section": "Excise Duty",
+  "title": "Excise Duty Amendments – Statutory Instrument (2024)",
+  "dataset": [
+    {
+      "reference": "Title and Commencement",
+      "changes": [
+        "Replaces 'Revenue Appeal Tribunal' with 'Tax Appeals Tribunal Act'",
+        "Replaces 'Revenue Appeals Tribunal' with 'Tax Appeals Tribunal'"
+      ]
+},
+    {
+      "reference": "Excise Duty Exemption",
+      "change": "Exempts production of electrical energy up to 100kWh for personal or domestic use from licensing and excise duty"
+},
+    {
+      "reference": "Payment Timeline",
+      "change": "Reduces number of days from 5 to 3 for licensed manufacturers to pay estimated assessments and penalties for failure to file a return"
+},
+    {
+      "reference": "Penalty Calculation",
+      "change": "Clarifies use of excisable value in charging general penalties for licensed manufacturers of excisable goods"
+},
+    {
+      "reference": "Renumbering",
+      "change": "Renumbers subsections (4) and (5) as (5) and (6) respectively"
+},
+    {
+      "reference": "HS Heading 2009",
+      "change": "Increases excise duty to K1.00 per litre from 60 Ngwee per litre"
+},
+    {
+      "reference": "HS Heading 2201",
+      "change": "Increases excise duty to K1.00 per litre from 30 Ngwee per litre"
+},
+    {
+      "reference": "HS Heading 2202",
+      "change": "Increases excise duty to K1.00 per litre from 30 Ngwee per litre"
+},
+    {
+      "reference": "Tobacco Products",
+      "changes": [
+        "Increases excise duty on cigars, cheroots, cigarillos, and cigarettes to K452 per mille from K400 per mille",
+        "Increases excise duty on water pipe tobacco, cutrag, and other manufactured tobacco products to K452 per kilogram from K400 per kilogram"
+      ]
+}
+  ]
+},
+
+{
+  "section": "Excise Duty – Additional Amendments",
+  "title": "Additional Excise Duty Amendments – Statutory Instrument (2024)",
+  "dataset": [
+    {
+      "reference": "Hydrocarbons",
+      "change": "Increases the specific excise duty on hydrocarbons"
+},
+    {
+      "reference": "HS Heading 2202 – Local Beverages",
+      "change": "Reduces excise duty payable on locally produced non-alcoholic beverages to one tenth from one sixth"
+}
+  ]
+},
+
+{
+  "section": "Mobile Money Transaction Levy",
+  "title": "THE MOBILE MONEY TRANSACTION LEVY ACT NO. 25 OF 2024",
+  "dataset": [
+    {
+      "reference": "Title and Commencement",
+      "change": "Defines words and expressions used in the Mobile Money Transaction Levy Act"
+},
+    {
+      "reference": "Administration",
+      "changes": [
+        "Provides that the Act shall be administered by the Zambia Revenue Authority",
+        "Empowers the Commissioner-General to administer the Mobile Money Transactions Act"
+      ]
+},
+    {
+      "reference": "Levy Provisions",
+      "changes": [
+        "Imposes a levy on payment or transfer of electronic money between individuals",
+        "Provides due date for submission of returns and remittance of collected levies",
+        "Provides for penalties for non-compliance"
+      ]
+},
+    {
+      "reference": "Ministerial Powers",
+      "change": "Empowers the Minister to exempt persons from paying the levy via statutory instrument"
+},
+    {
+      "reference": "Record-Keeping Obligations",
+      "change": "Obligates mobile money service providers to keep operational records and outlines penalties for non-compliance"
+},
+    {
+      "reference": "Inspection Powers",
+      "change": "Empowers the Commissioner-General to access any premises without prior notice"
+},
+    {
+      "reference": "Administrative Rules",
+      "change": "Empowers the Commissioner-General to issue administrative rules to support the Act"
+}
+  ]
+},
+
+{
+  "section": "Mobile Money Transaction Levy",
+  "title": "THE MOBILE MONEY TRANSACTION LEVY ACT NO. 25 OF 2024",
+  "dataset": [
+    {
+      "reference": "Title and Commencement",
+      "change": "Defines words and expressions used in the Mobile Money Transaction Levy Act"
+},
+    {
+      "reference": "Administration",
+      "change": [
+        "Provides that the Act shall be administered by the Zambia Revenue Authority",
+        "Empowers the Commissioner-General to administer the Mobile Money Transactions Act",
+        "Empowers the Commissioner-General to issue administrative rules to support the Act",
+        "Empowers the Minister to issue Regulations to support administration of the Act"
+      ]
+},
+    {
+      "reference": "Repeal",
+      "change": "Repeals the Mobile Money Transaction Levy Act"
+}
+  ]
+}]

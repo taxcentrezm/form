@@ -1,0 +1,1530 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Invoice Commitment Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+	<link rel="stylesheet" href="box.css"  />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <style>
+      :root {
+  --primary: #384c3b;
+  --accent: #384c3b;
+  --bg: #f0f4f8;
+  --text: #343a40;
+  --radius: 12px;
+  --transition: 0.3s ease;
+}
+
+body {
+  background: var(--bg);
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 2rem;
+  color: var(--text);
+}
+
+.form-container {
+  max-width: 1000px;
+  margin: auto;
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.form-section {
+  display: none;
+  animation: fadeIn var(--transition);
+  gap: 2rem;
+}
+
+.form-section.active {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.form-group {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.8rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  transition: border var(--transition), box-shadow var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.2rem rgba(76, 110, 245, 0.25);
+  outline: none;
+}
+
+.btn-group {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background:#1E4E8C;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #1E4E8C;
+}
+
+.btn-secondary {
+  background: #dee2e6;
+  color: var(--text);
+}
+
+.btn-secondary:hover {
+  background: #ced4da;
+}
+
+.btn-success {
+  background: #1E4E8C;
+  color: #fff;
+}
+
+.btn-success:hover {
+  background: #1E4E8C;
+}
+
+.btn[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ========== Progressbar ========== */
+.progressbar {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  counter-reset: step;
+  margin-bottom: 3rem;
+  list-style: none;
+  padding: 0;
+}
+
+.progressbar::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #e9ecef;
+  z-index: 0;
+}
+
+.progressbar li {
+  position: relative;
+  text-align: center;
+  flex: 1;
+  counter-increment: step;
+  z-index: 1;
+}
+
+.progressbar li::before {
+  content: counter(step);
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  border-radius: 50%;
+  background: #e9ecef;
+  color: #adb5bd;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 1;
+  transition: background var(--transition), color var(--transition), border var(--transition);
+}
+
+.progressbar li::after {
+  content: attr(data-label);
+  display: block;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+  color: #6c757d;
+}
+
+.progressbar li.active::before,
+.progressbar li.current::before {
+  background: #1E4E8C;
+  color: #fff;
+}
+
+.progressbar li.active::after,
+.progressbar li.current::after {
+  color: #1E4E8C;
+}
+
+/* ========= Signature Pad (if any) ========= */
+#signature-pad {
+  border: 2px dashed #ccc;
+  border-radius: var(--radius);
+  width: 100%;
+  height: 200px;
+  cursor: crosshair;
+  background-color: #f8f9fa;
+  margin-top: 1rem;
+}
+
+.clear-btn {
+  margin-top: 0.5rem;
+  display: inline-block;
+  font-size: 0.9rem;
+  color: var(--primary);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .form-section.active {
+    flex-direction: column;
+  }
+
+  .form-group {
+    flex: 1 1 100%;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .progressbar li::before {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.form-check-input {
+  accent-color: var(--primary);
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.form-check-label {
+  font-weight: 500;
+  color: #495057;
+}
+
+/* Mobile-specific checkbox styling */
+@media (max-width: 576px) {
+  .form-check {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+    padding: 0.5rem 0;
+  }
+  
+  .form-check-input {
+    flex-shrink: 0;
+    margin-right: 0.75rem;
+    margin-top: 0.125rem;
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+  
+  .form-check-label {
+    flex: 1;
+    line-height: 1.4;
+    font-size: 0.95rem;
+    padding-top: 0;
+    margin-top: 0;
+  }
+  
+  /* Ensure proper alignment for commitment checkboxes */
+  .form-check.mb-2 {
+    margin-bottom: 0.75rem !important;
+  }
+  
+  /* Better spacing for service selection checkboxes */
+  .form-check.mb-2:last-child {
+    margin-bottom: 1rem !important;
+  }
+}
+
+.date-field {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+      width: 50%;
+}
+
+.date-field:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.2rem rgba(76, 110, 245, 0.25);
+  outline: none;
+}
+
+#signature-pad {
+  border: 2px dashed #ccc;
+  border-radius: var(--radius);
+  width: 100%;
+  height: 150px;
+  background-color: #f8f9fa;
+}
+.w-100 {
+    width: 50% !important;
+  }
+/* MOBILE FIRST ADJUSTMENTS */
+@media (max-width: 576px) {
+  body {
+    padding: 1rem;           /* less side padding */
+  }
+  .form-container {
+    padding: 1.5rem;         /* tighter container */
+  }
+
+  /* Make each “col-6 col-md-3” go full-width */
+  .form-section .row > [class*="col-"] {
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Flatten nested address row to single column too */
+  .form-section .row .row > [class*="col-"] {
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Stack buttons and make them full width */
+  .form-section .d-flex.gap-3 {
+    flex-direction: column !important;
+  }
+  .form-section .d-flex.gap-3 .btn {
+    width: 100%;
+    padding: 0.75rem;
+  }
+
+  /* Increase line‑height and touch area on inputs */
+  .form-control,
+  .form-select {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  /* Progress bar icons smaller */
+  .progressbar li::before {
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 0.9rem;
+  }
+  
+  /* Enhanced checkbox touch targets for mobile */
+  .form-check-input {
+    min-width: 20px;
+    min-height: 20px;
+    touch-action: manipulation;
+    margin-left: 0 !important; /* Override Bootstrap's -1.5em margin that causes alignment issues */
+  }
+  
+  /* Better spacing for checkbox groups */
+  .mb-4 .form-check {
+    margin-bottom: 0.75rem;
+  }
+  
+  /* Add breathing room between form section title and first checkbox */
+  .mb-4 {
+    margin-top: 1rem !important;
+  }
+  
+  /* Ensure proper spacing for the first checkbox */
+  .mb-4 .form-check:first-child {
+    margin-top: 0.5rem;
+  }
+  
+  /* Improve text readability on mobile */
+  .form-check-label {
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+}
+
+/* MEDIUM SCREENS (TABLETS) */
+@media (min-width: 577px) and (max-width: 767px) {
+  .form-section .row > [class*="col-"] {
+    flex: 1 1 48%;
+    max-width: 48%;
+  }
+}
+
+/* ABOVE MD – keep your existing col-md rules */
+
+/* Extra breathing space between sections on all screens */
+.form-section {
+  margin-bottom: 2rem;
+}
+
+/* Signature canvas fill width on mobile */
+#signature-pad {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 150px;
+}
+
+/* Ensure the logos container shrinks nicely on mobile */
+.d-flex.justify-content-center img {
+  max-width: 120px;
+}
+
+
+/* ===== Logos, Title & Progressbar on Mobile ===== */
+@media (max-width: 576px) {
+  /* Stack logos vertically with a bit of breathing room */
+  .form-container .d-flex.justify-content-center {
+    flex-direction: column !important;
+    gap: 1rem;
+    margin-top: 2rem !important;  /* tighten the top on mobile */
+    margin-bottom: 1.5rem !important;
+  }
+  .form-container .d-flex.justify-content-center img {
+    max-width: 100px !important;
+    width: 40%;
+    margin: 0 auto !important;
+    display: block;
+  }
+
+  /* Shrink & re‑space the heading */
+  .form-container h4.text-center {
+    font-size: 1.25rem;
+    margin-top: 1rem !important;
+    margin-bottom: 1.5rem !important;
+    padding: 0 1rem;
+  }
+
+  /* Tighter, multi‑line progressbar */
+  .progressbar {
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  .progressbar li {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .progressbar li::before {
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 0.9rem;
+  }
+  .progressbar li::after {
+    font-size: 0.75rem;
+    white-space: normal;   /* allow labels to wrap */
+    width: 50px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 576px) {
+  /* Prevent wrapping, allow horizontal scroll */
+  .progressbar {
+    display: flex;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    padding: 0 1rem;           /* give some side padding */
+    margin-bottom: 2rem;
+  }
+
+  /* Rail spans full flex container width */
+  .progressbar::before {
+    width: 100% !important;
+    left: 0;
+  }
+
+  /* Each step stays auto‑sized, with a little gap */
+  .progressbar li {
+    flex: 0 0 auto;
+    margin-right: 1rem;
+  }
+  .progressbar li:last-child {
+    margin-right: 0;
+  }
+
+  /* Tweak icon size and label wrap */
+  .progressbar li::before {
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 0.9rem;
+  }
+  .progressbar li::after {
+    font-size: 0.75rem;
+    white-space: normal;
+    width: 50px;
+    margin: 0.25rem auto 0;
+  }
+}
+
+
+    </style>
+  </head>
+  <body>
+
+
+
+    <div class="container py-5">
+      <div class="form-container">
+        <!-- Logos side by side -->
+        <div class="d-flex justify-content-center align-items-center mt-5 mb-4">
+          <img
+            src="zra.png"
+            alt="ZRA Logo"
+            class="img-fluid me-4"
+            style="max-width: 150px;"
+          />
+          <img
+            src="tros1.png"
+            alt="Taxman Zambia logo"
+            class="img-fluid"
+            style="max-width: 150px;"
+          />
+        </div>
+    
+        <h4 class="text-center mt-5 mb-5">SMART INVOICE COMMITMENT FORM</h4>
+       
+
+           <!-- —— PROGRESS BAR —— -->
+     <ul class="progressbar">
+  <li data-label="Business Info"></li>
+  <li data-label="Owner/Director"></li>
+  <li data-label="Solution & Branch"></li>
+  <li data-label="Vendor & Commitment"></li>
+  <li data-label="Appendix A"></li>
+  <li data-label="Services"></li>
+</ul>
+
+        <form method="post" action="https://form-nu-smoky.vercel.app/api/form" id="invoiceForm">
+          <input type="hidden" name="csrfmiddlewaretoken" value="0Q0CpIkx1vSNkMLvXJ6pjvhcIfSmcyo4RYQLh16DRmHPyifqPqWBUN6IseqDRO0a">
+
+          <!-- Section 1 -->
+          <div class="form-section active" id="section1">
+            <h5 class="mb-3">1. Company/Business Information</h5>
+            <div class="row g-3 mb-4">
+              <div class="col-md-4">
+                <label class="form-label">Company Name/ Business Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="business_name"
+                  required
+                />
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">TPIN</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="business_tpin"
+                  required
+                />
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">PACRA Number</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="business_pacra"
+                  placeholder="e.g. 12345678"
+                  required
+                />
+              </div>
+              <!-- Physical Address broken into 4 fields -->
+ <!-- Physical Address split -->
+ <div class="col-12">
+  <label class="form-label">Physical Address</label>
+  <div class="row g-3">
+    <div class="col-6 col-md-3">
+      <label class="form-label small">Plot No.</label>
+      <input
+        type="text"
+        class="form-control"
+        name="plot_no"
+        placeholder="e.g. 4974"
+        required
+      />
+    </div>
+    <div class="col-6 col-md-3">
+      <label class="form-label small">Street Name</label>
+      <input
+        type="text"
+        class="form-control"
+        name="street_name"
+        placeholder="e.g. Kabelenga Rd"
+        required
+      />
+    </div>
+    <div class="col-6 col-md-3">
+      <label class="form-label small">Town</label>
+      <input
+        type="text"
+        class="form-control"
+        name="town"
+        placeholder="e.g. Lusaka"
+        required
+      />
+    </div>
+    <div class="col-6 col-md-3">
+      <label class="form-label small">Country</label>
+      <select class="form-select" name="country" required>
+        <option value="" disabled selected>Select country</option>
+        <option value="Zambia">Zambia</option>
+        <option value="Afghanistan">Afghanistan</option>
+        <option value="Albania">Albania</option>
+        <option value="Algeria">Algeria</option>
+        <option value="Andorra">Andorra</option>
+        <option value="Angola">Angola</option>
+        <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+        <option value="Argentina">Argentina</option>
+        <option value="Armenia">Armenia</option>
+        <option value="Australia">Australia</option>
+        <option value="Austria">Austria</option>
+        <option value="Azerbaijan">Azerbaijan</option>
+        <option value="Bahamas">Bahamas</option>
+        <option value="Bahrain">Bahrain</option>
+        <option value="Bangladesh">Bangladesh</option>
+        <option value="Barbados">Barbados</option>
+        <option value="Belarus">Belarus</option>
+        <option value="Belgium">Belgium</option>
+        <option value="Belize">Belize</option>
+        <option value="Benin">Benin</option>
+        <option value="Bhutan">Bhutan</option>
+        <option value="Bolivia">Bolivia</option>
+        <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+        <option value="Botswana">Botswana</option>
+        <option value="Brazil">Brazil</option>
+        <option value="Brunei">Brunei</option>
+        <option value="Bulgaria">Bulgaria</option>
+        <option value="Burkina Faso">Burkina Faso</option>
+        <option value="Burundi">Burundi</option>
+        <option value="Cabo Verde">Cabo Verde</option>
+        <option value="Cambodia">Cambodia</option>
+        <option value="Cameroon">Cameroon</option>
+        <option value="Canada">Canada</option>
+        <option value="Central African Republic">Central African Republic</option>
+        <option value="Chad">Chad</option>
+        <option value="Chile">Chile</option>
+        <option value="China">China</option>
+        <option value="Colombia">Colombia</option>
+        <option value="Comoros">Comoros</option>
+        <option value="Congo, Democratic Republic of the">Congo, Democratic Republic of the</option>
+        <option value="Congo, Republic of the">Congo, Republic of the</option>
+        <option value="Costa Rica">Costa Rica</option>
+        <option value="Cote d'Ivoire">Cote d'Ivoire</option>
+        <option value="Croatia">Croatia</option>
+        <option value="Cuba">Cuba</option>
+        <option value="Cyprus">Cyprus</option>
+        <option value="Czech Republic">Czech Republic</option>
+        <option value="Denmark">Denmark</option>
+        <option value="Djibouti">Djibouti</option>
+        <option value="Dominica">Dominica</option>
+        <option value="Dominican Republic">Dominican Republic</option>
+        <option value="East Timor (Timor-Leste)">East Timor (Timor-Leste)</option>
+        <option value="Ecuador">Ecuador</option>
+        <option value="Egypt">Egypt</option>
+        <option value="El Salvador">El Salvador</option>
+        <option value="Equatorial Guinea">Equatorial Guinea</option>
+        <option value="Eritrea">Eritrea</option>
+        <option value="Estonia">Estonia</option>
+        <option value="Eswatini">Eswatini</option>
+        <option value="Ethiopia">Ethiopia</option>
+        <option value="Fiji">Fiji</option>
+        <option value="Finland">Finland</option>
+        <option value="France">France</option>
+        <option value="Gabon">Gabon</option>
+        <option value="Gambia">Gambia</option>
+        <option value="Georgia">Georgia</option>
+        <option value="Germany">Germany</option>
+        <option value="Ghana">Ghana</option>
+        <option value="Greece">Greece</option>
+        <option value="Grenada">Grenada</option>
+        <option value="Guatemala">Guatemala</option>
+        <option value="Guinea">Guinea</option>
+        <option value="Guinea-Bissau">Guinea-Bissau</option>
+        <option value="Guyana">Guyana</option>
+        <option value="Haiti">Haiti</option>
+        <option value="Honduras">Honduras</option>
+        <option value="Hungary">Hungary</option>
+        <option value="Iceland">Iceland</option>
+        <option value="India">India</option>
+        <option value="Indonesia">Indonesia</option>
+        <option value="Iran">Iran</option>
+        <option value="Iraq">Iraq</option>
+        <option value="Ireland">Ireland</option>
+        <option value="Israel">Israel</option>
+        <option value="Italy">Italy</option>
+        <option value="Jamaica">Jamaica</option>
+        <option value="Japan">Japan</option>
+        <option value="Jordan">Jordan</option>
+        <option value="Kazakhstan">Kazakhstan</option>
+        <option value="Kenya">Kenya</option>
+        <option value="Kiribati">Kiribati</option>
+        <option value="Korea, North">Korea, North</option>
+        <option value="Korea, South">Korea, South</option>
+        <option value="Kosovo">Kosovo</option>
+        <option value="Kuwait">Kuwait</option>
+        <option value="Kyrgyzstan">Kyrgyzstan</option>
+        <option value="Laos">Laos</option>
+        <option value="Latvia">Latvia</option>
+        <option value="Lebanon">Lebanon</option>
+        <option value="Lesotho">Lesotho</option>
+        <option value="Liberia">Liberia</option>
+        <option value="Libya">Libya</option>
+        <option value="Liechtenstein">Liechtenstein</option>
+        <option value="Lithuania">Lithuania</option>
+        <option value="Luxembourg">Luxembourg</option>
+        <option value="Madagascar">Madagascar</option>
+        <option value="Malawi">Malawi</option>
+        <option value="Malaysia">Malaysia</option>
+        <option value="Maldives">Maldives</option>
+        <option value="Mali">Mali</option>
+        <option value="Malta">Malta</option>
+        <option value="Marshall Islands">Marshall Islands</option>
+        <option value="Mauritania">Mauritania</option>
+        <option value="Mauritius">Mauritius</option>
+        <option value="Mexico">Mexico</option>
+        <option value="Micronesia">Micronesia</option>
+        <option value="Moldova">Moldova</option>
+        <option value="Monaco">Monaco</option>
+        <option value="Mongolia">Mongolia</option>
+        <option value="Montenegro">Montenegro</option>
+        <option value="Morocco">Morocco</option>
+        <option value="Mozambique">Mozambique</option>
+        <option value="Myanmar (Burma)">Myanmar (Burma)</option>
+        <option value="Namibia">Namibia</option>
+        <option value="Nauru">Nauru</option>
+        <option value="Nepal">Nepal</option>
+        <option value="Netherlands">Netherlands</option>
+        <option value="New Zealand">New Zealand</option>
+        <option value="Nicaragua">Nicaragua</option>
+        <option value="Niger">Niger</option>
+        <option value="Nigeria">Nigeria</option>
+        <option value="North Macedonia">North Macedonia</option>
+        <option value="Norway">Norway</option>
+        <option value="Oman">Oman</option>
+        <option value="Pakistan">Pakistan</option>
+        <option value="Palau">Palau</option>
+        <option value="Palestine">Palestine</option>
+        <option value="Panama">Panama</option>
+        <option value="Papua New Guinea">Papua New Guinea</option>
+        <option value="Paraguay">Paraguay</option>
+        <option value="Peru">Peru</option>
+        <option value="Philippines">Philippines</option>
+        <option value="Poland">Poland</option>
+        <option value="Portugal">Portugal</option>
+        <option value="Qatar">Qatar</option>
+        <option value="Romania">Romania</option>
+        <option value="Russia">Russia</option>
+        <option value="Rwanda">Rwanda</option>
+        <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+        <option value="Saint Lucia">Saint Lucia</option>
+        <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+        <option value="Samoa">Samoa</option>
+        <option value="San Marino">San Marino</option>
+        <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+        <option value="Saudi Arabia">Saudi Arabia</option>
+        <option value="Senegal">Senegal</option>
+        <option value="Serbia">Serbia</option>
+        <option value="Seychelles">Seychelles</option>
+        <option value="Sierra Leone">Sierra Leone</option>
+        <option value="Singapore">Singapore</option>
+        <option value="Slovakia">Slovakia</option>
+        <option value="Slovenia">Slovenia</option>
+        <option value="Solomon Islands">Solomon Islands</option>
+        <option value="Somalia">Somalia</option>
+        <option value="South Africa">South Africa</option>
+        <option value="South Sudan">South Sudan</option>
+        <option value="Spain">Spain</option>
+        <option value="Sri Lanka">Sri Lanka</option>
+        <option value="Sudan">Sudan</option>
+        <option value="Suriname">Suriname</option>
+        <option value="Sweden">Sweden</option>
+        <option value="Switzerland">Switzerland</option>
+        <option value="Syria">Syria</option>
+        <option value="Taiwan">Taiwan</option>
+        <option value="Tajikistan">Tajikistan</option>
+        <option value="Tanzania">Tanzania</option>
+        <option value="Thailand">Thailand</option>
+        <option value="Togo">Togo</option>
+        <option value="Tonga">Tonga</option>
+        <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+        <option value="Tunisia">Tunisia</option>
+        <option value="Turkey">Turkey</option>
+        <option value="Turkmenistan">Turkmenistan</option>
+        <option value="Tuvalu">Tuvalu</option>
+        <option value="Uganda">Uganda</option>
+        <option value="Ukraine">Ukraine</option>
+        <option value="United Arab Emirates">United Arab Emirates</option>
+        <option value="United Kingdom">United Kingdom</option>
+        <option value="United States">United States</option>
+        <option value="Uruguay">Uruguay</option>
+        <option value="Uzbekistan">Uzbekistan</option>
+        <option value="Vanuatu">Vanuatu</option>
+        <option value="Vatican City">Vatican City</option>
+        <option value="Venezuela">Venezuela</option>
+        <option value="Vietnam">Vietnam</option>
+        <option value="Yemen">Yemen</option>
+        <option value="Zambia">Zambia</option>
+        <option value="Zimbabwe">Zimbabwe</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<!-- Email & Mobile fields -->
+<div class="col-6 col-md-3">
+  <label class="form-label">Email One</label>
+  <input
+    type="email"
+    class="form-control"
+    name="business_email1"
+    placeholder="e.g. name@company.com"
+    required
+  />
+</div>
+<div class="col-6 col-md-3">
+  <label class="form-label">Email Two</label>
+  <input
+    type="email"
+    class="form-control"
+    name="business_email2"
+    placeholder="optional"
+  />
+</div>
+<div class="col-6 col-md-3">
+  <label class="form-label">Mobile One</label>
+  <input
+    type="tel"
+    class="form-control"
+    name="business_mobile1"
+    placeholder="e.g. +260 95X XXX XXX"
+    required
+  />
+</div>
+<div class="col-6 col-md-3">
+  <label class="form-label">Mobile Two</label>
+  <input
+    type="tel"
+    class="form-control"
+    name="business_mobile2"
+    placeholder="optional"
+  />
+</div>
+            </div>
+            <div
+              class="d-flex gap-3 justify-content-center justify-content-md-end"
+            >
+              <button
+                type="button"
+                class="btn btn-secondary"
+                onclick="previousSection()"
+                disabled
+              >
+                Back
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                onclick="nextSection()"
+              >
+                Next
+              </button>
+            </div>
+          </div>
+
+          <!-- Section 2 -->
+          <div class="form-section" id="section2">
+            <h5 class="mb-3">2. Owner/ Director/ Legal Representative</h5>
+            <div class="row g-3 mb-4">
+              <div class="col-md-6">
+                <label class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="owner_name"
+                  required
+                />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Position</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="owner_position"
+                  required
+                />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Postal Address</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="owner_postal_address"
+                  required
+                />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Telephone No.</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="owner_phone"
+                  required
+                />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Landline (Optional)</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="owner_phone2"
+                  placeholder="Landline number"
+                />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Additional Phone (Optional)</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="owner_phone3"
+                  placeholder="Additional phone number"
+                />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  name="owner_email"
+                  required
+                />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">NRC/Passport No*</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="owner_nrc"
+                  required
+                />
+              </div>
+            </div>
+            <div
+              class="d-flex gap-3 justify-content-center justify-content-md-end"
+            >
+              <button
+                type="button"
+                class="btn btn-secondary"
+                onclick="previousSection()"
+              >
+                Back
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                onclick="nextSection()"
+              >
+                Next
+              </button>
+            </div>
+          </div>
+
+          <!-- Section 3 -->
+          <div class="form-section" id="section3">
+            <h5 class="mb-3">3. Smart Invoice Solution Required</h5>
+            <div class="mb-4">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="solution[]"
+                  value="Desktop/Laptop (Windows)"
+                />
+                Desktop/Laptop (Windows)
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="solution[]"
+                  value="Tablet (Android)"
+                />
+                Tablet (Android)
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="solution[]"
+                  value="PDA (Android)"
+                />
+                PDA (Android)
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="solution[]"
+                  value="Smartphone (Android)"
+                />
+                Smartphone (Android)
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="solution[]"
+                  value="Online Portal"
+                />
+                Online Portal
+              </div>
+            </div>
+
+            <h5 class="mb-3">4. Addition of Branches</h5>
+            <p class="mb-4">
+              To add a branch, complete
+              <strong>Appendix A – Application Form to add Branch</strong>
+            </p>
+            <div class="form-check mb-3">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="addBranchCheckbox"
+                name="add_branch"
+              />
+              <label class="form-check-label" for="addBranchCheckbox"
+                >Do you want to add a branch?</label
+              >
+            </div>
+
+            <div
+              class="d-flex gap-3 justify-content-center justify-content-md-end"
+            >
+              <button
+                type="button"
+                class="btn btn-secondary"
+                onclick="previousSection()"
+              >
+                Back
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                onclick="nextSection()"
+              >
+                Next
+              </button>
+            </div>
+          </div>
+
+         <!-- Section 4 -->
+<!-- Section 4 -->
+<div class="form-section" id="section4">
+  <h5 class="mb-4">5. Integration and Certified Software Vendor Details</h5>
+
+  <div class="row g-3 mb-4">
+    <div class="col-md-6">
+      <label class="form-label">Certified Software Vendor / Self Details: TPIN</label>
+      <input type="text" class="form-control" name="vendor_tpin" required />
+    </div>
+    <div class="col-md-6">
+      <label class="form-label">Name</label>
+      <input type="text" class="form-control" name="vendor_name" required />
+    </div>
+    <div class="col-md-6">
+      <label class="form-label">Applicable Invoicing System Name</label>
+      <input type="text" class="form-control" name="invoicing_system_name" required />
+    </div>
+    <div class="col-md-6">
+      <label class="form-label">Applicable Invoicing System Version</label>
+      <input type="text" class="form-control" name="invoicing_system_version" required />
+    </div>
+  </div>
+
+  <h5 class="mb-3">6. Commitment by Taxpayer Applying for Smart Invoice Software</h5>
+
+  <div class="row g-3 mb-4">
+  <!-- TPIN Number for Commitment -->
+  <div class="col-md-6">
+    <label class="form-label">TPIN Number for Commitment</label>
+    <input type="text" class="form-control" name="commitment_tpin" required />
+  </div>
+
+  <!-- Date of Application -->
+  <div class="col-md-6">
+    <label class="form-label">Date of Application</label>
+    <input type="date" class="form-control date-field" name="signature_date" required />
+    <p class="mt-2"><em>*For foreigners, use Passport number in lieu of NRC</em></p>
+  </div>
+</div>
+
+
+  <!-- Commitment Checkboxes -->
+  <div class="mb-4">
+    <label class="form-label d-block mb-2">Please confirm the following:</label>
+    <div class="form-check mb-2">
+      <input class="form-check-input" type="checkbox" id="commitment1" name="commitment[]" value="ready_to_use" required>
+      <label class="form-check-label" for="commitment1">
+        I confirm that I am ready to receive and properly use the Smart Invoice software.
+      </label>
+    </div>
+    <div class="form-check mb-2">
+      <input class="form-check-input" type="checkbox" id="commitment2" name="commitment[]" value="no_format_reset" required>
+      <label class="form-check-label" for="commitment2">
+        I will not format/reset the device without prior authorization from the Zambia Revenue Authority.
+      </label>
+    </div>
+    <div class="form-check mb-2">
+      <input class="form-check-input" type="checkbox" id="commitment3" name="commitment[]" value="return_device" required>
+      <label class="form-check-label" for="commitment3">
+        I must return any Electronic Fiscal Device(s) within five (5) working days of installation.
+      </label>
+    </div>
+    <div class="form-check mb-2">
+      <input class="form-check-input" type="checkbox" id="commitment4" name="commitment[]" value="confidential_info_secure" required>
+      <label class="form-check-label" for="commitment4">
+        I will keep all provided confidential information secure.
+      </label>
+    </div>
+    <div class="form-check mb-2">
+      <input class="form-check-input" type="checkbox" id="commitment5" name="commitment[]" value="intended_use" required>
+      <label class="form-check-label" for="commitment5">
+        I will use confidential information solely for its intended purpose.
+      </label>
+    </div>
+  </div>
+
+  <!-- Signature Section -->
+  <div class="row g-3 mb-4">
+    <div class="col-md-6">
+      <label class="form-label">Name</label>
+      <input type="text" class="form-control" name="signature_name" required />
+    </div>
+
+    <div class="col-md-6">
+      <label for="signature" class="form-label">Signature</label><br>
+      <canvas id="signature-pad" width="300" height="150"></canvas>
+      <input type="hidden" name="signature_data" id="signature-data">
+      <button type="button" onclick="clearSignature()" class="btn btn-sm btn-warning mt-2">Clear</button>
+    </div>
+  </div>
+
+    <!-- Disclaimer (live‑updating) -->
+    <div class="mb-4">
+      <p id="disclaimer" class="text-muted small">
+        I, <span id="disclaimer-name">Your Full Name</span>, confirm that by submitting this form, I am providing my consent and acknowledge that this serves as my electronic signature.
+      </p>
+    </div>
+  
+
+  <!-- Calendar Date Input 
+  <div class="mb-4">
+    <label class="form-label">Date of Application</label>
+    <input type="date" class="form-control date-field" name="signature_date" required />
+    <p class="mt-2"><em>*For foreigners, use Passport number in lieu of NRC</em></p>
+  </div>-->
+
+   <div class="d-flex gap-3 justify-content-center justify-content-md-end">
+    <button type="button" class="btn btn-secondary" onclick="previousSection()">Back</button>
+    <button type="button" class="btn btn-primary" onclick="nextSection()">Next</button>
+    <!-- Submit button removed from here, will be in step 6 -->
+  </div>
+</div>
+
+<!-- Section 5: Appendix A (Optional) -->
+<div class="form-section" id="section5" style="display: none;">
+  <h5 class="mb-3">Appendix A: Application Form to Add Branch</h5>
+  <p class="mb-4">
+    If you wish to add a branch, please complete this form and submit it to the Zambia Revenue Authority.
+  </p>
+  <div class="row g-3 mb-4">
+    <div class="col-md-6">
+      <label class="form-label">Branch Name</label>
+      <input type="text" class="form-control appendix-a-field" name="branch_name" />
+    </div>
+    <div class="col-md-6">
+      <label class="form-label">Branch TPIN</label>
+      <input type="text" class="form-control appendix-a-field" name="branch_tpin" />
+    </div>
+    <div class="col-md-6">
+      <label class="form-label">Branch Physical Address</label>
+      <input type="text" class="form-control appendix-a-field" name="branch_physical_address" />
+    </div>
+    <div class="col-md-6">
+      <label class="form-label">Branch Email</label>
+      <input type="email" class="form-control appendix-a-field" name="branch_email" />
+    </div>
+    <div class="col-md-6">
+      <label class="form-label">Branch Mobile</label>
+      <input type="tel" class="form-control appendix-a-field" name="branch_mobile" />
+    </div>
+  </div>
+  <div class="d-flex gap-3 justify-content-center justify-content-md-end">
+    <button type="button" class="btn btn-secondary" onclick="previousSection()">Back</button>
+    <button type="button" class="btn btn-primary" onclick="nextSection()">Next</button>
+  </div>
+</div>
+
+<!-- Section 6: Services Selection -->
+<div class="form-section" id="section6" style="display: none;">
+  <h5 class="mb-3">7. Please select the services you're interested in</h5>
+  <div class="mb-4">
+    <div class="form-check mb-2">
+      <input class="form-check-input" type="checkbox" id="service1" name="services[]" value="Association of Building and Civil Engineering Contractors">
+      <label class="form-check-label" for="service1">Association of Building and Civil Engineering Contractors</label>
+    </div>
+    <div class="form-check mb-2">
+      <input class="form-check-input" type="checkbox" id="service2" name="services[]" value="Cash Book Journal Ledger Posting">
+      <label class="form-check-label" for="service2">Cash Book Journal Ledger Posting</label>
+    </div>
+    <div class="form-check mb-2">
+      <input class="form-check-input" type="checkbox" id="service3" name="services[]" value="Complete Sage Accounting Systems Configuration">
+      <label class="form-check-label" for="service3">Complete Sage Accounting Systems Configuration</label>
+    </div>
+    <div class="form-check mb-2">
+      <input class="form-check-input" type="checkbox" id="service4" name="services[]" value="Debtors and Creditors Reconciliation">
+      <label class="form-check-label" for="service4">Debtors and Creditors Reconciliation</label>
+    </div>
+    <div class="form-check mb-2">
+      <input class="form-check-input" type="checkbox" id="service5" name="services[]" value="Incomplete Record Processing">
+      <label class="form-check-label" for="service5">Incomplete Record Processing</label>
+    </div>
+    <div class="form-check mb-2">
+      <input class="form-check-input" type="checkbox" id="service6" name="services[]" value="National Council for Construction">
+      <label class="form-check-label" for="service6">National Council for Construction</label>
+    </div>
+    <div class="form-check mb-2">
+      <input class="form-check-input" type="checkbox" id="service7" name="services[]" value="Other">
+      <label class="form-check-label" for="service7">Other (please specify in comments)</label>
+    </div>
+    <div class="form-check mb-2">
+      <input class="form-check-input" type="checkbox" id="service8" name="services[]" value="Payroll Management to Include Historical Processing">
+      <label class="form-check-label" for="service8">Payroll Management to Include Historical Processing</label>
+    </div>
+    <div class="form-check mb-2">
+      <input class="form-check-input" type="checkbox" id="service9" name="services[]" value="Smart Invoicing Consultancy">
+      <label class="form-check-label" for="service9">Smart Invoicing Consultancy</label>
+    </div>
+    <div class="form-check mb-2">
+      <input class="form-check-input" type="checkbox" id="service10" name="services[]" value="Supporting Agro & SME Based Companies in Business Systems Development">
+      <label class="form-check-label" for="service10">Supporting Agro & SME Based Companies in Business Systems Development</label>
+    </div>
+    <div class="form-check mb-2">
+      <input class="form-check-input" type="checkbox" id="service11" name="services[]" value="Website Development">
+      <label class="form-check-label" for="service11">Website Development</label>
+    </div>
+    <div class="form-check mb-2">
+      <input class="form-check-input" type="checkbox" id="service12" name="services[]" value="Zambia Development Agency">
+      <label class="form-check-label" for="service12">Zambia Development Agency</label>
+    </div>
+    <div class="form-check mb-2">
+      <input class="form-check-input" type="checkbox" id="service13" name="services[]" value="Zambia Environmental Management Authority">
+      <label class="form-check-label" for="service13">Zambia Environmental Management Authority</label>
+    </div>
+    <div class="form-check mb-2">
+      <input class="form-check-input" type="checkbox" id="service14" name="services[]" value="Zambia Revenue Authority Agency">
+      <label class="form-check-label" for="service14">Zambia Revenue Authority Agency</label>
+    </div>
+    <textarea class="form-control mt-2" name="service_comments" placeholder="If 'Other', please specify..."></textarea>
+  </div>
+  <div class="d-flex gap-3 justify-content-center justify-content-md-end">
+    <button type="button" class="btn btn-secondary" onclick="previousSection()">Back</button>
+    <button id="submitBtn" type="submit" class="btn btn-success">
+      <span id="submitBtnText">Submit</span>
+      <span id="submitLoader" class="spinner-border spinner-border-sm ms-2" style="display:none;" role="status" aria-hidden="true"></span>
+    </button>
+  </div>
+</div>
+
+  
+        </form>
+      </div>
+    </div>
+
+<!-- Chatbot Avatar with Pop-Up Message -->
+<div id="chatbot-container">
+  <div id="chatbot-avatar" onclick="toggleChatbox()">
+    <video autoplay muted loop playsinline disablePictureInPicture controlsList="nodownload nofullscreen noremoteplayback">
+      <source src="chatbot-avatar.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div id="chatbot-tooltip">💬 Tap me for assistance</div>
+</div>
+
+<!-- Chatbox Modal -->
+<div id="chatbox-modal" class="chatbox">
+  <div class="chat-header">
+   <span>
+  <img src="tros1.png" alt="Taxman Logo" style="height: 20px; vertical-align: middle;" />
+  Taxman Assistant</span>
+  <div class="chat-controls">
+    <button id="minimize-btn">–</button>
+    <button id="maximize-btn">▢</button>
+  </div>
+</div>
+  <div class="chat-body" id="chat-body"></div>
+  <div class="chat-input">
+    <input type="text" id="userInput" placeholder="Type your message..." />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+  <div id="typing-indicator" class="chat-message bot" style="display: none;">
+    <img class="chat-avatar" src="bot.png" alt="Bot Avatar" />
+    <div class="chat-bubble typing">
+      <span id="typing-text">⏳ Gathering your answer...</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- Notification Sound -->
+<audio id="chat-sound" src="ding.mp3" preload="auto"></audio>
+<script>   function toggleChatbox() {
+    const chatbox = document.getElementById("chatbox-modal");
+    chatbox.style.display = chatbox.style.display === "flex"? "none": "flex";
+    chatbox.style.flexDirection = "column";
+}
+</script>
+    <script>
+    
+
+  const formSections = document.querySelectorAll(".form-section");
+  const progressSteps = document.querySelectorAll(".progressbar li");
+  const addBranchCheckbox = document.getElementById("addBranchCheckbox");
+  const canvas = document.getElementById("signature-pad");
+  const ctx = canvas?.getContext("2d");
+  let drawing = false;
+  let currentSection = 0;
+
+  // Show the correct form section and update progress bar
+  function showSection(index) {
+    formSections.forEach((section, i) => {
+      section.style.display = i === index ? "block" : "none";
+    });
+
+    updateProgressBar(index);
+    currentSection = index;
+  }
+
+  // Progress bar logic
+  function updateProgressBar(index) {
+    progressSteps.forEach((step, i) => {
+      step.classList.remove("active", "current");
+      if (i < index) step.classList.add("active");
+      else if (i === index) step.classList.add("current");
+    });
+  }
+
+  // Go to next section, considering Appendix A condition
+  function nextSection() {
+    const inputs = formSections[currentSection].querySelectorAll('input, select, textarea');
+    for (let input of inputs) {
+      if (!input.checkValidity()) {
+        input.reportValidity();
+        return;
+      }
+    }
+    // Step logic:
+    // 0: Section 1
+    // 1: Section 2
+    // 2: Section 3 (add branch?)
+    // 3: Section 4
+    // 4: Section 5 (Appendix A, optional)
+    // 5: Section 6 (Services)
+    if (currentSection === 2 && addBranchCheckbox && addBranchCheckbox.checked) {
+      showSection(4); // Go to Appendix A
+    } else if (currentSection === 2) {
+      showSection(3); // Go to Section 4
+    } else if (currentSection === 4 && addBranchCheckbox && addBranchCheckbox.checked) {
+      showSection(3); // After Appendix A, go to Section 4
+    } else if ((currentSection === 3 && (!addBranchCheckbox || !addBranchCheckbox.checked)) || (currentSection === 4 && !addBranchCheckbox.checked)) {
+      showSection(5); // Go to Services
+    } else if (currentSection === 3 && addBranchCheckbox && addBranchCheckbox.checked) {
+      showSection(5); // If just finished Section 4 after Appendix A, go to Services
+    } else if (currentSection === 5) {
+      // Do nothing, handled by submit
+    } else if (currentSection < formSections.length - 1) {
+      showSection(currentSection + 1);
+    }
+  }
+
+  // Go to previous section, considering Appendix A
+  function previousSection() {
+    // Step logic for going back
+    if (currentSection === 5) {
+      // From Services, go back to Section 4 (or Appendix A if addBranch checked)
+      if (addBranchCheckbox && addBranchCheckbox.checked) {
+        showSection(3); // Go back to Section 4
+      } else {
+        showSection(3); // Go back to Section 4
+      }
+    } else if (currentSection === 4 && addBranchCheckbox && addBranchCheckbox.checked) {
+      showSection(2); // From Appendix A, go back to Section 3
+    } else if (currentSection === 3 && addBranchCheckbox && addBranchCheckbox.checked) {
+      showSection(4); // From Section 4, go back to Appendix A
+    } else if (currentSection > 0) {
+      showSection(currentSection - 1);
+    }
+  }
+
+  // Signature drawing handlers
+  if (canvas) {
+    canvas.addEventListener("mousedown", () => drawing = true);
+    canvas.addEventListener("mouseup", () => drawing = false);
+    canvas.addEventListener("mouseout", () => drawing = false);
+    canvas.addEventListener("mousemove", draw);
+  }
+
+  function draw(e) {
+    if (!drawing || !ctx) return;
+    ctx.lineWidth = 2;
+    ctx.lineCap = "round";
+    ctx.strokeStyle = "#000";
+    ctx.lineTo(e.offsetX, e.offsetY);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(e.offsetX, e.offsetY);
+  }
+
+  function clearSignature() {
+    if (ctx && canvas) ctx.clearRect(0, 0, canvas.width, canvas.height);
+  }
+
+  // Save signature on form submit
+  const form = document.querySelector("form");
+  const submitBtn = document.getElementById("submitBtn");
+  const submitBtnText = document.getElementById("submitBtnText");
+  const submitLoader = document.getElementById("submitLoader");
+  let submitting = false;
+  form?.addEventListener("submit", function (e) {
+    if (submitting) {
+      e.preventDefault();
+      return false;
+    }
+    if (canvas && ctx) {
+      document.getElementById("signature-data").value = canvas.toDataURL("image/png");
+    }
+    // Show loader, disable button
+    submitting = true;
+    submitBtn.disabled = true;
+    submitBtnText.textContent = "Submitting...";
+    submitLoader.style.display = "inline-block";
+  });
+
+  // Initialize on load
+  document.addEventListener("DOMContentLoaded", function () {
+    showSection(0);
+  });
+
+   // grab the name input and the disclaimer‑name span
+   const nameInput       = document.querySelector('input[name="signature_name"]');
+  const disclaimerName  = document.getElementById('disclaimer-name');
+
+  // on each keystroke, update the disclaimer
+  nameInput.addEventListener('input', () => {
+    const val = nameInput.value.trim();
+    disclaimerName.textContent = val || 'Your Full Name';
+  });
+
+  // Toggle required for Appendix A fields based on addBranchCheckbox
+  function toggleAppendixARequired() {
+    const appendixAFields = document.querySelectorAll('.appendix-a-field');
+    if (addBranchCheckbox && addBranchCheckbox.checked) {
+      appendixAFields.forEach(f => f.setAttribute('required', 'required'));
+    } else {
+      appendixAFields.forEach(f => f.removeAttribute('required'));
+    }
+  }
+  if (addBranchCheckbox) {
+    addBranchCheckbox.addEventListener('change', toggleAppendixARequired);
+    // Run on load in case of browser autofill
+    toggleAppendixARequired();
+  }
+
+document.getElementById('invoiceForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const formData = new FormData(this);
+
+  fetch('https://form-nu-smoky.vercel.app/api/form', {
+    method: 'POST',
+    body: formData,
+})
+.then(response => {
+      if (response.ok) {
+        // Redirect to thank-you page
+        window.location.href = 'index.html';
+} else {
+        alert('Submission failed.');
+}
+})
+.catch(error => {
+      alert('Error: ' + error.message);
+});
+});
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<script src="box.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,184 @@
+/* ===== PARTNERS SECTION ===== */
+.partners {
+  background-color: #F5F9FF;      /* very pale blue to flow into footer */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.partners h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #1E4E8C;                 /* matches your top‑footer blue */
+  letter-spacing: 1px;
+}
+
+/* ===== PARTNERS SECTION (Tighter Spacing) ===== */
+.partner-carousel {
+  overflow: hidden;
+  max-width: 400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  animation: scrollPartners 12s linear infinite;
+}
+
+.partner-logo {
+  flex: 0 0 50%; /* Show 2 logos at a time */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  opacity: 0.9;
+  transition: transform 0.3s ease;
+}
+
+.partner-logo img {
+  max-width: 120px;
+  height: auto;
+  object-fit: contain;
+  background-color: transparent;
+}
+
+.partner-logo:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+@keyframes scrollPartners {
+  0% { transform: translateX(0);}
+  100% { transform: translateX(-100%);}
+}
+
+@media (max-width: 600px) {
+.partner-carousel {
+    max-width: 100%;
+}
+
+.partner-logo img {
+    max-width: 90px;
+}
+}
+
+
+/* Hide on desktop, show on mobile */
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .mobile-only {
+    display: block;
+  }
+}
+
+/* === Services Section === */
+.form-services-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-header h1 {
+  font-size: 2.5rem;
+  color: #1E4E8C;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* === Grid Layout === */
+.form-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* === Individual Card === */
+.form-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  background-color: #f0f8ff;
+}
+
+/* === Icon Styling === */
+.form-card i {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+  color: #117A65; /* Zambian green */
+}
+
+/* === Title & Description === */
+.form-card h3 {
+  font-size: 1.2rem;
+  margin: 12px 0 8px;
+  color: #1E4E8C;
+  font-weight: 600;
+}
+
+.form-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* === Responsive Layout === */
+@media (max-width: 992px) {
+.form-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.section-header h1 {
+    font-size: 2rem;
+}
+
+.section-header p {
+    font-size: 1rem;
+}
+}
+
+@media (max-width: 600px) {
+.form-card-grid {
+    grid-template-columns: 1fr;
+}
+
+.form-card {
+    padding: 24px 16px;
+}
+
+.form-card i {
+    font-size: 1.8rem;
+}
+
+.form-card h3 {
+    font-size: 1.1rem;
+}
+
+.form-card p {
+    font-size: 0.9rem;
+}
+}

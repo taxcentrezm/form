@@ -1,0 +1,459 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Portal Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script src="jspdf.umd.min.js"></script>
+<script src="xlsx.full.min.js"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom right, #f0f4f8, #dde5f3);
+      margin: 0;
+      padding: 0;
+      color: #333;
+}
+
+.header {
+      background: linear-gradient(to right, #3b82f6, #2563eb);
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 1.75rem;
+      font-weight: 600;
+}
+
+.tabs {
+      display: flex;
+      justify-content: center;
+      background: #f0f0f5;
+}
+
+.tabs button {
+      flex: 1;
+      padding: 1rem;
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #2563eb;
+}
+
+.tabs button.active {
+      background: #2563eb;
+      color: white;
+}
+
+.panel {
+      display: none;
+      padding: 2rem;
+      animation: fadeIn 0.5s ease;
+}
+
+.panel.active {
+      display: block;
+}
+
+.dashboard-cards {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+}
+
+.card {
+      flex: 1;
+      min-width: 250px;
+      background: white;
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.card h4 {
+      margin: 0 0 0.5rem;
+      font-size: 18px;
+      color: #1e3a8a;
+}
+
+.count {
+      font-size: 32px;
+      font-weight: bold;
+      color: #2563eb;
+}
+
+.progress-bar {
+      height: 8px;
+      background: #e5e7eb;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-top: 10px;
+}
+
+.progress-fill {
+      height: 100%;
+      background: linear-gradient(to right, #3b82f6, #2563eb);
+      width: 0%;
+}
+
+.search-bar {
+      margin-bottom: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+}
+
+    input[type="text"] {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      min-width: 280px;
+      font-size: 15px;
+}
+
+    button.export-btn {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+}
+
+    button.export-btn:hover {
+      background: #1d4ed8;
+}
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+    th, td {
+      padding: 12px 14px;
+      border-bottom: 1px solid #e5e7eb;
+      font-size: 14px;
+}
+
+    th {
+      background: #f9fafb;
+      text-align: left;
+}
+
+    tr:nth-child(even) td {
+      background-color: #f3f6fc;
+}
+
+    input[type="checkbox"] {
+      transform: scale(1.2);
+}
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px);}
+      to { opacity: 1; transform: translateY(0);}
+}
+
+    @media (max-width: 768px) {
+.dashboard-cards {
+        flex-direction: column;
+}
+
+      input[type="text"], button.export-btn {
+        width: 100%;
+}
+}.export-group {
+  position: relative;
+}
+
+.export-popup {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 6px;
+  display: none;
+  z-index: 10;
+}
+
+.export-popup button {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 8px;
+  text-align: left;
+  cursor: pointer;
+  font-weight: 500;
+  color: #2563eb;
+}
+
+.export-popup button:hover {
+  background: #f0f4ff;
+}
+  </style>
+</head>
+<body>
+
+  <div class="header"> Admin Portal Dashboard</div>
+
+
+<div class="tabs">
+  <button onclick="showPanel('chat')">💬 Chat History</button>
+  <button onclick="showPanel('form')">📝 Submissions</button>
+  <button onclick="showPanel('training')">🧠 Training</button>
+</div>
+
+
+  <div id="chat" class="panel active">
+    <div class="dashboard-cards">
+      <div class="card">
+        <h4>Total Chat Messages</h4>
+        <div class="count" id="chatCount">0</div>
+        <div class="progress-bar"><div class="progress-fill" id="chatProgress"></div></div>
+      </div>
+    </div>
+    <div class="search-bar">
+      <input type="text" id="chatSearch" placeholder="Search messages..." oninput="filterChat()" />
+      <button class="export-btn" onclick="exportChatCSV()">Export CSV</button>
+      <button class="export-btn" onclick="exportChatPDF()">Export PDF</button>
+    </div>
+    <table id="chatTable">
+      <thead><tr><th>Sender</th><th>Message</th><th>Timestamp</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <div id="form" class="panel">
+    <div class="dashboard-cards">
+      <div class="card">
+        <h4>Form Submissions</h4>
+        <div class="count" id="formCount">0</div>
+        <div class="progress-bar"><div class="progress-fill" id="formProgress"></div></div>
+      </div>
+    </div>
+    <div class="search-bar">
+      <input type="text" id="formSearch" placeholder="Search name or TPIN..." oninput="filterForm()" />
+<div class="export-group">
+  <button class="export-btn" onclick="toggleExportPopup()">Export Selected ▼</button>
+  <div id="exportPopup" class="export-popup">
+    <button onclick="exportSelected('csv')">CSV</button>
+    <button onclick="exportSelected('excel')">Excel</button>
+    <button onclick="exportSelected('pdf')">PDF</button>
+  </div>
+</div>
+ <button class="export-btn" onclick="deleteSelectedForms()">Delete Selected</button>
+    </div>
+    <table id="formTable">
+      <thead>
+        <tr>
+          <th>Select</th><th>Name</th><th>TPIN</th><th>Date</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div><div id="training" class="panel">
+  <div class="dashboard-cards">
+    <div class="card">
+      <h4>Training Entries</h4>
+      <div class="count" id="trainingCount">0</div>
+      <div class="progress-bar"><div class="progress-fill" id="trainingProgress"></div></div>
+    </div>
+  </div>
+  <div id="trainingTableContainer"></div>
+</div>
+<script>
+const chatData = JSON.parse(localStorage.getItem("chatLog") || "[]");
+let allForms = JSON.parse(localStorage.getItem("commitmentForms") || "[]"); // store multiple forms
+
+function showPanel(id) {
+  document.querySelectorAll(".panel").forEach(p => p.classList.remove("active"));
+  document.querySelectorAll(".tabs button").forEach(btn => btn.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+  event.target.classList.add("active");
+}
+
+function loadChatTable() {
+  const tbody = document.querySelector("#chatTable tbody");
+  const count = document.getElementById("chatCount");
+  const progress = document.getElementById("chatProgress");
+  tbody.innerHTML = "";
+  let msgCount = 0;
+
+  chatData.forEach(entry => {
+    if (entry.user) {
+      tbody.innerHTML += `<tr><td>User</td><td>${entry.user}</td><td>${new Date(entry.timestamp || Date.now()).toLocaleString()}</td></tr>`;
+      msgCount++;
+}
+    if (entry.bot) {
+      tbody.innerHTML += `<tr><td>AI</td><td>${entry.bot}</td><td>${new Date(entry.timestamp || Date.now()).toLocaleString()}</td></tr>`;
+      msgCount++;
+}
+});
+
+  if (count) count.textContent = msgCount;
+  if (progress) progress.style.width = Math.min(msgCount * 5, 100) + "%";
+}
+
+function loadFormTable() {
+  const tbody = document.querySelector("#formTable tbody");
+  const count = document.getElementById("formCount");
+  const progress = document.getElementById("formProgress");
+  tbody.innerHTML = "";
+
+  allForms.forEach((entry, index) => {
+    tbody.innerHTML += `<tr>
+      <td><input type="checkbox" class="formCheckbox" data-index="${index}"></td>
+      <td>Form No. ${index + 1}: ${entry.signature_name || ""}</td>
+      <td>${entry.commitment_tpin || ""}</td>
+      <td>${entry.signature_date || ""}</td>
+    </tr>`;
+});
+
+  if (count) count.textContent = allForms.length;
+  if (progress) progress.style.width = Math.min(allForms.length * 10, 100) + "%";
+}
+
+function getSelectedForms() {
+  const selected = [...document.querySelectorAll('.formCheckbox:checked')].map(cb => parseInt(cb.dataset.index));
+  return selected.map(i => allForms[i]);
+}
+
+function exportSelectedFormsCSV() {
+  const selectedData = getSelectedForms();
+  if (selectedData.length === 0) return alert("Select at least one form to export.");
+
+  let csv = "Name,TPIN,Date\n";
+  selectedData.forEach(entry => {
+    csv += `${entry.signature_name || ""},${entry.commitment_tpin || ""},${entry.signature_date || ""}\n`;
+});
+
+  const blob = new Blob([csv], { type: "text/csv"});
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "selected-submissions.csv";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
+function deleteSelectedForms() {
+  const selected = [...document.querySelectorAll('.formCheckbox:checked')].map(cb => parseInt(cb.dataset.index));
+  if (selected.length === 0) return alert("Select forms to delete.");
+  if (!confirm("Are you sure you want to delete selected forms?")) return;
+
+  allForms = allForms.filter((_, i) =>!selected.includes(i));
+  localStorage.setItem("commitmentForms", JSON.stringify(allForms));
+  loadFormTable();
+}
+
+function filterChat() {
+  const q = document.getElementById("chatSearch").value.toLowerCase();
+  document.querySelectorAll("#chatTable tbody tr").forEach(row => {
+    row.style.display = row.textContent.toLowerCase().includes(q)? "": "none";
+});
+}
+
+function filterForm() {
+  const q = document.getElementById("formSearch").value.toLowerCase();
+  document.querySelectorAll("#formTable tbody tr").forEach(row => {
+    row.style.display = row.textContent.toLowerCase().includes(q)? "": "none";
+});
+}
+
+function exportChatCSV() {
+ let csv = "Sender,Message,Timestamp\n";
+  chatData.forEach(entry => {
+    if (entry.user) csv += `User,"${entry.user}",${new Date(entry.timestamp || Date.now()).toLocaleString()}\n`;
+    if (entry.bot)  csv += `AI,"${entry.bot}",${new Date(entry.timestamp || Date.now()).toLocaleString()}\n`;
+});
+  const blob = new Blob([csv], { type: "text/csv"});
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "chat-log.csv";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
+async function exportChatPDF() {
+  const { jsPDF} = window.jspdf;
+  const doc = new jsPDF();
+  doc.setFontSize(12);
+  let y = 10;
+  chatData.forEach(entry => {
+    if (entry.user) {
+      doc.text(`User: ${entry.user}`, 10, y); y += 8;
+}
+    if (entry.bot) {
+      doc.text(`AI: ${entry.bot}`, 10, y); y += 8;
+}
+    doc.text(`Timestamp: ${new Date(entry.timestamp || Date.now()).toLocaleString()}`, 10, y); y += 10;
+});
+  doc.save("chat-log.pdf");
+}
+
+function exportExcel() {
+  const data = [{ user: "hello", bot: "Hi there"}];
+  const sheet = XLSX.utils.json_to_sheet(data);
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, sheet, "ChatLog");
+  XLSX.writeFile(wb, "chatbot.xlsx");
+}
+
+function toggleExportPopup() {
+  const popup = document.getElementById("exportPopup");
+  popup.style.display = popup.style.display === "block"? "none": "block";
+}
+
+function exportSelected(type) {
+  const selected = [...document.querySelectorAll('.formCheckbox:checked')].map(cb => parseInt(cb.dataset.index));
+  const selectedData = selected.map(i => allForms[i]);
+  if (selectedData.length === 0) return alert("Select at least one form to export.");
+switch(type) {
+  case "csv": exportDataToCSV(selectedData); break;
+  case "excel": exportDataToExcel(selectedData); break;
+  case "pdf": exportDataToPDF(selectedData); break;
+  default: alert("Unknown export type.");
+}
+}
+function loadTrainingTable() {
+  const data = JSON.parse(localStorage.getItem("chatTrainingData") || "[]");
+  const container = document.getElementById("trainingTableContainer");
+  const count = document.getElementById("trainingCount");
+  const progress = document.getElementById("trainingProgress");
+
+  let table = `<table><thead><tr><th>User</th><th>Bot</th><th>Intent</th><th>Rating</th><th>Suggested Reply</th></tr></thead><tbody>`;
+  data.forEach(entry => {
+    table += `<tr>
+      <td>${entry.user}</td>
+      <td>${entry.bot}</td>
+      <td>${entry.intent || ""}</td>
+      <td>${entry.feedback || ""}</td>
+      <td>${entry.suggested_reply || ""}</td>
+    </tr>`;
+});
+  table += `</tbody></table>`;
+  container.innerHTML = table;
+
+  if (count) count.textContent = data.length;
+  if (progress) progress.style.width = Math.min(data.length * 10, 100) + "%";
+}
+// Initialize dashboard
+loadChatTable();
+loadFormTable();
+</script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+
+/* 🌐 Base Page Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f0f2f5;
+  margin: 0;
+}
+
+/* 💬 Chat + Voice Button Wrapper */
+.button-wrapper {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  gap: 12px;
+  z-index: 1000;
+}
+
+/* 💬 Floating Buttons (Unified Style) */
+.floating-btn {
+  min-width: 160px;
+  padding: 12px 16px;
+  border-radius: 50px;
+  background-color: #2c3e50;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.floating-btn:hover {
+  background-color: #34495e;
+  transform: scale(1.05);
+}
+
+/* 💻 Chat Window Container */
+#chatWindow {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  width: 320px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+}
+
+#chatWindow.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* 🧠 Chat Header */
+.chat-header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  cursor: move;
+  user-select: none;
+}
+
+/* 🧾 Chat Body */
+.chat-body {
+  padding: 10px;
+  height: 220px;
+  overflow-y: auto;
+  font-size: 14px;
+  background-color: #fafafa;
+  scroll-behavior: smooth;
+}
+
+/* 🧑‍💬 Chat Bubbles */
+.chat-body.bubble {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.chat-body.bubble.user {
+  justify-content: flex-end;
+}
+
+.chat-body.bubble.bot {
+  justify-content: flex-start;
+}
+
+.bubble img.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.bubble.user img.avatar {
+  margin-left: 8px;
+  margin-right: 0;
+}
+
+.bubble.message {
+  max-width: 70%;
+  padding: 8px 12px;
+  border-radius: 18px;
+  background-color: #007acc;
+  color: white;
+  font-size: 14px;
+  word-wrap: break-word;
+}
+
+.bubble.bot.message {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+/* 👀 Typing Indicator */
+#typingIndicator {
+  font-style: italic;
+  color: #666;
+  margin: 4px 12px;
+  animation: pulseTyping 1.5s infinite;
+}
+
+@keyframes pulseTyping {
+  0% { opacity: 0.3;}
+  50% { opacity: 1;}
+  100% { opacity: 0.3;}
+}
+
+/* ⌨️ Input Section */
+.chat-input {
+  display: flex;
+  border-top: 1px solid #ddd;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+.chat-input button {
+  background-color: #2c3e50;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-left: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.chat-input button:hover {
+  background-color: #34495e;
+}
+
+/* 🎙️ Voice Recording Pulse Feedback */
+.floating-btn.recording {
+  background-color: #e74c3c;
+  box-shadow: 0 0 20px rgba(231, 76, 60, 0.6);
+}
+
+/* 🔴 Pulsing Dot Inside Voice Button */
+.floating-btn.recording::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 1;
+}
+  50% {
+    transform: scale(1.4);
+    opacity: 0.4;
+}
+  100% {
+    transform: scale(0.9);
+    opacity: 1;
+}
+}
+
