@@ -1332,7 +1332,21 @@ body {
     </div>
   </div>
 </div>
-
+<div id="successPopup" style="
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 16px;
+  z-index: 9999;
+">
+  form submitted successfully!
+</div>
 
 <!-- Notification Sound -->
 <audio id="chat-sound" src="ding.mp3" preload="auto"></audio>
@@ -1508,15 +1522,21 @@ document.getElementById('invoiceForm').addEventListener('submit', function (e) {
     body: formData,
 })
 .then(response => {
-      if (response.ok) {
-        // Redirect to thank-you page
+    if (response.ok) {
+      // Show success popup
+      const popup = document.getElementById('successPopup');
+      popup.style.display = 'block';
+
+      // Wait 6 seconds, then redirect
+      setTimeout(() => {
         window.location.href = 'index.html';
+}, 2000);
 } else {
-        alert('Submission failed.');
+      alert('Submission failed.');
 }
 })
 .catch(error => {
-      alert('Error: ' + error.message);
+    alert('Error: ' + error.message);
 });
 });
 
