@@ -29,6 +29,7 @@ export async function GET() {
       headers: { 'Access-Control-Allow-Origin': ALLOWED_ORIGIN},
 });
 } catch (error) {
+    console.error("❌ GET /api/form error:", error);
     return NextResponse.json({ error: 'Server error'}, { status: 500});
 }
 }
@@ -47,6 +48,7 @@ export async function POST(req) {
       headers: { 'Access-Control-Allow-Origin': ALLOWED_ORIGIN},
 });
 } catch (error) {
+    console.error("❌ POST /api/form error:", error);
     return NextResponse.json({ error: 'Server error'}, { status: 500});
 }
 }
