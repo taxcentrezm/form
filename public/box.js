@@ -86,7 +86,7 @@ function sendMessage() {
 function addMessage(sender, text) {
   const chatBody = document.getElementById("chat-body");
   const msg = document.createElement("div");
-msg.className = `chat-message ${sender} highlighted`;
+  msg.className = `chat-message ${sender} highlighted`;
 
   const avatar = document.createElement("img");
   avatar.className = "chat-avatar";
@@ -99,8 +99,18 @@ msg.className = `chat-message ${sender} highlighted`;
   msg.appendChild(avatar);
   msg.appendChild(bubble);
   chatBody.appendChild(msg);
-
   chatBody.scrollTop = chatBody.scrollHeight;
+
+  const sound = document.getElementById("chat-sound");
+  if (sound) sound.play();
+
+  // Save to backend
+  fetch('/api/chat', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json'},
+    body: JSON.stringify({ sender, text})
+});
+}
 
   // Play sound
   const sound = document.getElementById("chat-sound");
