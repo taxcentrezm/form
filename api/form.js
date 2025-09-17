@@ -1,17 +1,27 @@
-export default async function handler(req, res) {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+import { put, list} from '@vercel/blob';
+import { NextResponse} from 'next/server';
 
-  if (req.method === 'OPTIONS') {
-    return res.status(200).end();
+export async function GET() {
+  const blobs = await list({ prefix: 'forms/'});
+  const submissions = [];
+
+  for (const blob of blobs.blobs) {
+    const res = await fetch(blob.url);
+    const data = await res.json();
+    submissions.push(data);
 }
 
-  if (req.method === 'POST') {
-    const data = req.body;
-    console.log('Received form data:', data);
-    return res.status(200).send('Form submitted successfully!');
+  return NextResponse.json(submissions);
 }
 
-  return res.status(405).send('Method Not Allowed');
+export async function POST(req) {
+  const formData = await req.json();
+  const timestamp = Date.now();
+  const filename = `forms/${timestamp}-submission.json`;
+
+  const blob = await put(filename, JSON.stringify({...formData, timestamp}), {
+    access: 'public',
+});
+
+  return NextResponse.json({ success: true, url: blob.url});
 }
