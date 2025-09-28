@@ -398,6 +398,292 @@ footer {
         font-weight: bold;
       }
     footer a { color:#ff9800; text-decoration:none; }
+
+/* Services Section */
+.form-services-section {
+  padding: 80px 20px;
+  background: #f9fafc;
+}
+
+.section-header {
+  max-width: 900px;
+  margin: 0 auto 50px auto;
+  text-align: center;
+}
+
+.section-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 15px;
+}
+
+.section-header p {
+  font-size: 1.15rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* Service Card Grid */
+.form-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.form-card {
+  padding: 30px 20px;
+  border-radius: 16px;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.form-card i {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.form-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.form-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Hover Effect */
+.form-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+/* Color Variants */
+.form-card:nth-child(1) { background: var(--green); }
+.form-card:nth-child(2) { background: var(--red); }
+.form-card:nth-child(3) { background: var(--blue); }
+.form-card:nth-child(4) { background: var(--orange); }
+.form-card:nth-child(5) { background: #673ab7; }   /* deep purple */
+.form-card:nth-child(6) { background: #009688; }   /* teal */
+.form-card:nth-child(7) { background: #795548; }   /* brown */
+.form-card:nth-child(8) { background: #3f51b5; }   /* indigo */
+.form-card:nth-child(9) { background: #c2185b; }   /* magenta */
+.form-card:nth-child(10){ background: #607d8b; }   /* slate */
+
+
+.contact-us-section {
+  background: #f9fafc;
+  padding: 80px 20px;
+}
+.contact-us-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: var(--blue);
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.contact-info-block {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+.contact-info-block h3 {
+  margin-bottom: 10px;
+  color: var(--orange);
+}
+.contact-icon {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  color: va(--orange);
+}
+
+.chambers-ribbon-section {
+  position: relative;
+  width: 100%;
+  padding: 90px 20px;
+  text-align: center;
+  color: #333;
+  overflow: hidden;
+}
+
+/* Subtle diagonal ribbons inspired by Zambian flag */
+.chambers-ribbon-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+ background: 
+ linear-gradient(135deg, rgb(0 107 63) 20%, #0000007d 20%), /* Green */ linear-gradient(135deg, rgb(239 51 64) 40%, transparent 40%), /* Red */ linear-gradient(135deg, rgb(0 0 0) 60%, #0000004f 60%), /* Black */ linear-gradient(135deg, rgb(255 184 28) 80%, #00000080 80%);
+background-size: 200% 200%;
+  animation: ribbonMove 12s linear infinite;
+  z-index: 0;
+}
+
+/* Animate ribbons slowly */
+@keyframes ribbonMove {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+
+/* Keep content above background */
+.chambers-ribbon-header,
+.chambers-ribbon {
+  position: relative;
+  z-index: 1;
+}
+
+.chambers-ribbon-header h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+.chambers-ribbon-subtitle {
+  color: #444;
+  font-size: 1.15rem;
+  margin-bottom: 40px;
+}
+
+.chambers-ribbon {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+/* Badge styling */
+.chamber-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s forwards;
+}
+.chamber-badge:nth-child(1) { animation-delay: 0.1s; }
+.chamber-badge:nth-child(2) { animation-delay: 0.3s; }
+.chamber-badge:nth-child(3) { animation-delay: 0.5s; }
+.chamber-badge:nth-child(4) { animation-delay: 0.7s; }
+.chamber-badge:nth-child(5) { animation-delay: 0.9s; }
+
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Medal styles */
+.chamber-medal {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  border: 4px solid #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.chamber-medal.gold {
+  background: linear-gradient(135deg, #FFD700, #FFF8DC);
+  border-color: #DAA520;
+}
+.chamber-medal.silver {
+  background: linear-gradient(135deg, #C0C0C0, #F5F5F5);
+  border-color: #A9A9A9;
+}
+.chamber-medal.bronze {
+  background: linear-gradient(135deg, #CD7F32, #FFE4B5);
+  border-color: #B87333;
+}
+.chamber-medal.blue {
+  background: linear-gradient(135deg, #1E4E8C, #87CEFA);
+  border-color: #1E4E8C;
+  color: #fff;
+}
+.chamber-medal.green {
+  background: linear-gradient(135deg, #006400, #90EE90);
+  border-color: #006400;
+  color: #fff;
+}
+.chamber-medal:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.25);
+}
+
+/* Badge names */
+.chamber-badge-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  background: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+/* ===== Responsive Fixes ===== */
+@media (max-width: 1024px) {
+  .hero .slide h1 { font-size: 2.2rem; }
+  .hero .slide p { font-size: 1rem; }
+}
+
+@media (max-width: 768px) {
+  /* Sidebar auto-collapse */
+  .sidebar { width: 0; }
+  .sidebar.open { width: 220px; }
+
+  .sidebar-toggle { left: 0; }
+
+  /* Hero text scaling */
+  .slide h1 { font-size: 1.8rem; }
+  .slide-content { padding: 10px; }
+
+  /* About section stacks */
+  .about-wrapper { flex-direction: column; }
+  .about-image, .about-text { flex: 1 1 100%; }
+
+  /* Services */
+  .form-card-grid { grid-template-columns: 1fr; }
+
+  /* Charts */
+  .chart-grid { grid-template-columns: 1fr; }
+
+  /* Team */
+  .team-grid { grid-template-columns: 1fr; }
+
+  /* Chambers */
+  .chambers-ribbon { flex-direction: column; gap: 20px; }
+
+  /* Partners logos scale */
+  .partner-card img { max-height: 40px; }
+
+  /* Contact */
+  .contact-row { flex-direction: column; }
+  .contact-info-block { width: 100%; }
+  .footer-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .slide h1 { font-size: 1.4rem; }
+  .slide p { font-size: 0.9rem; }
+  button, .hero-buttons a { padding: 10px 16px; font-size: 0.9rem; }
+}
+
   </style>
 </head>
 <body>
@@ -486,24 +772,39 @@ footer {
   </section>
 
   <!-- Services -->
-  <section id="services">
-    <h2>Our Services</h2>
-    <div class="service-cards">
-      <div class="service-card design"><h3>Tax Records</h3><p>Reconstruction of missing data for compliance.</p></div>
-      <div class="service-card payroll"><h3>Payroll</h3><p>Automated payroll, NAPSA, PAYE & HR systems.</p></div>
-      <div class="service-card invoicing"><h3>Smart Invoicing</h3><p>ZRA-compliant invoices with tax automation.</p></div>
-      <div class="service-card zra"><h3>ZRA Agency</h3><p>Filing, registration & Smart Invoice setup.</p></div>
-    </div>
-  </section>
+  <section id="services" class="form-services-section" data-aos="fade-up">
+  <div class="section-header" data-aos="fade-up">
+    <h1>What We Do</h1>
+    <p>
+      We simplify tax and financial management for individuals, SMEs, and organizations across Zambia. 
+      Our platform offers smart, secure, and ZRA-compliant tools that streamline bookkeeping, payroll, invoicing, and business registration. 
+      Whether you're starting up or scaling up, we provide the systems and support to help you thrive.
+    </p>
+  </div>
+
+  <div class="form-card-grid">
+    <div class="form-card" data-aos="zoom-in" data-aos-delay="100"><i class="fas fa-file-alt"></i><h3>Incomplete Records</h3><p>We help reconstruct missing financial data to ensure accurate reporting and compliance.</p></div>
+    <div class="form-card" data-aos="zoom-in" data-aos-delay="200"><i class="fas fa-exchange-alt"></i><h3>Debtors & Creditors</h3><p>Track who owes you and who you owe with clear reconciliation tools and reports.</p></div>
+    <div class="form-card" data-aos="zoom-in" data-aos-delay="300"><i class="fas fa-book"></i><h3>Cash Book & Ledger</h3><p>Maintain organized records of all transactions for full financial visibility.</p></div>
+    <div class="form-card" data-aos="zoom-in" data-aos-delay="400"><i class="fas fa-users"></i><h3>Payroll Management</h3><p>Automate payroll, NAPSA, and PAYE calculations with secure employee data handling.</p></div>
+    <div class="form-card" data-aos="zoom-in" data-aos-delay="500"><i class="fab fa-sass"></i><h3>SAGE Setup</h3><p>Get professional configuration and onboarding for your SAGE accounting system.</p></div>
+    <div class="form-card" data-aos="zoom-in" data-aos-delay="600"><i class="fas fa-building"></i><h3>ZRA Agency</h3><p>We act as your ZRA liaison, simplifying tax registration, filing, and Smart Invoice setup.</p></div>
+    <div class="form-card" data-aos="zoom-in" data-aos-delay="700"><i class="fas fa-receipt"></i><h3>Smart Invoicing</h3><p>Generate ZRA-compliant invoices with automated tax calculations and digital tracking.</p></div>
+    <div class="form-card" data-aos="zoom-in" data-aos-delay="800"><i class="fas fa-seedling"></i><h3>Agro & SME Systems</h3><p>Custom tools for agriculture and small businesses to manage operations and growth.</p></div>
+    <div class="form-card" data-aos="zoom-in" data-aos-delay="900"><i class="fas fa-hard-hat"></i><h3>National Council Of Construction</h3><p>Support for registration, compliance, and digital systems tailored to construction firms.</p></div>
+    <div class="form-card" data-aos="zoom-in" data-aos-delay="1000"><i class="fas fa-network-wired"></i><h3>Web, System Dev & ERPs</h3><p>Build custom websites, business systems, and ERP platforms to streamline your workflow.</p></div>
+  </div>
+</section>
+
 
   <!-- Reports -->
   <section id="reports" data-aos="fade-up">
     <h2>Reports & Analytics</h2>
     <center><p class="section-subtitle">Live dashboards at your fingertips</p></center>
     <div class="chart-grid">
-      <div class="chart-card"><h3>Revenue vs Expenses</h3><canvas id="lineChart"></canvas></div>
-      <div class="chart-card"><h3>Service Distribution</h3><canvas id="pieChart"></canvas></div>
-      <div class="chart-card"><h3>Compliance Trends</h3><canvas id="barChart"></canvas></div>
+      <div class="chart-card"data-aos="zoom-in" data-aos-delay="100"><h3>Revenue vs Expenses</h3><canvas id="lineChart"></canvas></div>
+      <div class="chart-card" data-aos="zoom-in" data-aos-delay="250"><h3>Service Distribution</h3><canvas id="pieChart"></canvas></div>
+      <div class="chart-card" data-aos="zoom-in" data-aos-delay="400"><h3>Compliance Trends</h3><canvas id="barChart"></canvas></div>
     </div>
   </section>
 
@@ -511,19 +812,19 @@ footer {
   <section id="team" data-aos="fade-up">
     <h2>Meet Our Team</h2>
     <div class="team-grid">
-      <div class="team-card">
+      <div class="team-card" data-aos="zoom-in" data-aos-delay="100">
         <div class="team-inner">
           <div class="team-front"><img src="taxation2.png" alt=""></div>
           <div class="team-back"><h3>Jane Doe</h3><p>Managing Partner</p></div>
         </div>
       </div>
-      <div class="team-card">
+      <div class="team-card" data-aos="zoom-in" data-aos-delay="200">
         <div class="team-inner">
           <div class="team-front"><img src="taxation2.png" alt=""></div>
           <div class="team-back"><h3>John Smith</h3><p>Tax Specialist</p></div>
         </div>
       </div>
-      <div class="team-card">
+      <div class="team-card" data-aos="zoom-in" data-aos-delay="300">
         <div class="team-inner">
           <div class="team-front"><img src="taxation2.png" alt=""></div>
           <div class="team-back"><h3>Mary Banda</h3><p>HR & Payroll Lead</p></div>
@@ -531,6 +832,42 @@ footer {
       </div>
     </div>
   </section>
+
+ 
+<!-- ===== CHAMBERS OF COMMERCE SECTION (PRESTIGE RIBBON) ===== -->
+<section id="chambers" class="chambers-ribbon-section" data-aos="fade-up">
+  <div class="chambers-ribbon-header">
+    <h2>Our Chamber Memberships</h2>
+    <p class="chambers-ribbon-subtitle">
+      TROS is a proud, trusted member of these leading Chambers of Commerce across Zambia.
+    </p>
+  </div>
+
+  <div class="chambers-ribbon">
+    <div class="chamber-badge">
+      <div class="chamber-medal gold">🏛️</div>
+      <div class="chamber-badge-name">Lusaka Chamber of Commerce</div>
+    </div>
+    <div class="chamber-badge">
+      <div class="chamber-medal silver">🌾</div>
+      <div class="chamber-badge-name">Mazabuka Chamber of Commerce</div>
+    </div>
+    <div class="chamber-badge">
+      <div class="chamber-medal bronze">🌊</div>
+      <div class="chamber-badge-name">Livingstone Chamber of Commerce</div>
+    </div>
+    <div class="chamber-badge">
+      <div class="chamber-medal blue">🏭</div>
+      <div class="chamber-badge-name">Kabwe Chamber of Commerce</div>
+    </div>
+    <div class="chamber-badge">
+      <div class="chamber-medal green">🌍</div>
+      <div class="chamber-badge-name">Mongu Chamber of Commerce</div>
+    </div>
+  </div>
+</section>
+
+ 
 
   <!-- Partners -->
   <section id="partners" data-aos="fade-up">
@@ -553,6 +890,75 @@ footer {
   </div>
 </section>
 
+<section id="contact" class="contact-us-section" data-aos="fade-up">
+  <div class="contact-us-wrapper">
+    <h2 class="contact-us-heading">Contact Us</h2>
+
+    <div class="contact-row">
+      <div class="contact-info-block">
+        <i class="fas fa-phone-alt contact-icon"></i>
+        <h3>Phone</h3>
+        <p>Office: +26 211 232 022</p>
+        <p>Mobile: +260 976 152 586</p>
+      </div>
+
+      <div class="contact-info-block">
+        <i class="fas fa-envelope contact-icon"></i>
+        <h3>Email</h3>
+        <p>info@tax-centre.com</p>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .contact-us-section {
+  padding: 80px 20px;
+  background: #f9fafc;
+  text-align: center;
+}
+
+.contact-us-heading {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: var(--blue);
+}
+
+.contact-row {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 800px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.contact-info-block {
+  flex: 1 1 50%;
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-info-block:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.contact-icon {
+  font-size: 2rem;
+  color: var(--orange);
+  margin-bottom: 12px;
+}
+
+.contact-info-block h3 {
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+  color: var(--green);
+}
+
+</style>
 
     <!-- Footer / Contact -->
   <footer id="contact">
@@ -568,8 +974,8 @@ footer {
       </div>
 
       <div class="map">
-        <h2>Our Location</h2>
-        <div id="map" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></div>
+        <h2>Tax-Centre Main Office</h2>
+        <div id="map" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></div><p>4974 Kabelenga Rd, Lusaka Zambia</p>
       </div>
     </div>
     <div class="footer-bottom">
@@ -579,6 +985,7 @@ footer {
 
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script>
+
     feather.replace();
     AOS.init({ duration: 1000, once: true });
 
