@@ -1,938 +1,411 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="icon" href="tros1.png" type="image/jpg" />
-    <title>Taxman Zambia</title>
-     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-	<link rel="stylesheet" href="service-buttons.css"/>
-	<link rel="stylesheet" href="about-section.css"/>
-	<link rel="stylesheet" href="more.css"/>
-    <style>
-    .contact-info p {
-  margin: 0.5rem 0;
-  font-size: 1rem;
-}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TROS | Tax Return Online Solutions</title>
+  <link rel="icon" href="tros1.png" type="image/png" />
 
-.contact-info i {
-  color: #004c99;
-  margin-right: 0.5rem;
-}
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+  <!-- Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-/* ====== Map ====== */
-#map {
-  height: 300px;
-  margin-top: 1rem;
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    :root {
+      --green: #006400;
+      --red: #e53935;
+      --orange: #ff9800;
+      --blue: #0078d7;
+      --dark: #111;
+    }
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: #f9fafc;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    h1,h2,h3 { font-family: 'Poppins', sans-serif; }
+
+h2{font-size: 2rem;
+  margin-bottom: 40px;
+  color: var(--black);
+  text-align: center; /* Center-align heading */
+}
+    /* ===== Sidebar Nav ===== */
+ .sidebar {
+  position: fixed;
+  top: 0; left: 0;
+  width: 10px;
+  height: 100vh;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(10px);
+  transition: width 0.4s ease;
+  overflow: hidden;
+  z-index: 1000;
+}
+.sidebar.open { width: 280px; }
+ 
+    .sidebar ul { list-style: none; margin:0; padding:0; }
+    .sidebar li {
+      padding: 18px; display:flex; align-items:center;
+      transition: background 0.3s;
+    }
+    .sidebar li:hover { background: rgba(255,255,255,0.1); }
+    .sidebar a {
+      color:#fff; text-decoration:none; display:flex; align-items:center;
+    }
+    .sidebar i { margin-right:12px; color: var(--orange); }
+
+    /* ===== Hero Slideshow ===== */
+    .hero {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .slide {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      display: flex; align-items:center; justify-content:center;
+      text-align: center;
+      color:#fff;
+      opacity:0; transition: opacity 1s ease;
+    }
+    .slide.active { opacity:1; z-index:1; }
+    .slide::before {
+      content:""; position:absolute; inset:0;
+      background: rgba(0,0,0,0.6);
+    }
+    .slide-content {
+      position:relative; z-index:2;
+      max-width:800px; padding:20px;
+    }
+    .slide h1 { font-size:3rem; margin-bottom:20px; }
+    
+    /* ===== Buttons (Global) ===== */
+button, 
+.hero-buttons a, 
+.contact-form button {
+  background: #ff9800;              /* Orange flag color */
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
   border-radius: 8px;
-}
-
-      /* Reset and basic typography */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        font-family: "Helvetica Neue", Arial, sans-serif;
-        line-height: 1.6;
-        color: #333;
-      }
-
-.nav-right {
-  margin-left: auto;
-}
-
-      .commitment-btn {
-  color: #1E4E8C;
   font-weight: 600;
   text-decoration: none;
-  padding: 10px 20px;
-  border: 2px solid #1E4E8C;
-  border-radius: 8px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 16px;
   display: inline-block;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.commitment-btn:hover {
-  background-color: #1E4E8C;
-  color: #fff;
-  text-decoration: none; /* Ensure no underline on hover */
-}
-.bottom-navbar a:last-child {
-  color: #C0392B; /* Red accent for commitment */
+button:hover, 
+.hero-buttons a:hover, 
+.contact-form button:hover {
+  transform: scale(1.08);           /* Expand on hover */
+  box-shadow: 0 6px 18px rgba(255, 152, 0, 0.4); /* Glow effect */
 }
 
-.bottom-navbar a:last-child:hover {
-  color: #E74C3C;
+    /* ===== Section Styles ===== */
+    section { padding:80px 20px; }
+    .section-subtitle { color:#666; margin-bottom:40px; }
+
+    /* About */
+    .about-wrapper {
+      display:flex; flex-wrap:wrap; gap:40px; align-items:center; max-width:1200px; margin:0 auto;
+    }
+    .about-image { flex:1; }
+    .about-image img { width:100%; border-radius:12px; }
+    .about-text { flex:2; }
+
+    /* Services */
+    .service-cards {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:30px; max-width:1200px; margin:0 auto;
+    }
+    .service-card {
+      padding:30px; border-radius:16px; color:#fff;
+      box-shadow:0 12px 24px rgba(0,0,0,0.15);
+      transition:transform 0.3s; text-align:left;
+    }
+    .service-card:hover { transform:translateY(-6px); }
+    .design { background: var(--red); }
+    .payroll { background: var(--blue); }
+    .invoicing { background: var(--green); }
+    .zra { background: var(--orange); }
+
+    /* Reports */
+    .chart-grid {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:30px; max-width:1200px; margin:40px auto;
+    }
+    .chart-card {
+      background:#fff; padding:20px; border-radius:16px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    }
+    .chart-card h3 { margin-bottom:15px; color:var(--blue); }
+
+    /* Team */
+    .team-grid {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:30px; max-width:1000px; margin:0 auto;
+    }
+    .team-card {
+      perspective:1000px; cursor:pointer;
+    }
+    .team-inner {
+      position:relative; width:100%; height:350px;
+      transition: transform 0.8s; transform-style: preserve-3d;
+    }
+    .team-card:hover .team-inner { transform: rotateY(180deg); }
+    .team-front, .team-back {
+      position:absolute; inset:0; backface-visibility:hidden;
+      border-radius:16px; overflow:hidden;
+      box-shadow:0 8px 20px rgba(0,0,0,0.1);
+      display:flex; flex-direction:column; justify-content:center; align-items:center; padding:20px;
+    }
+    .team-front img { width:100%; height:100%; object-fit:cover; }
+    .team-back { background:#f5f7fa; transform: rotateY(180deg); }
+
+ /* ===== Partners Section ===== */
+#partners {
+  padding: 80px 20px;
+  background: #f5f7fa;
+  text-align: center;
+}
+#partners h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-align: center; /* Center-align heading */
 }
 
-/* Top Navbar */
-.navbar {
+.partner-carousel {
+  overflow: hidden;
+  width: 100%;
+}
+
+.partner-track {
+  display: flex;
+  gap: 40px; /* space between logos */
+  animation: scroll 20s linear infinite;
+}
+
+.partner-card {
+  flex: 0 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 1rem;
-  height: 90px;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
+  min-width: 160px;
 }
 
-/* Flag Stripe */
+.partner-card img {
+  max-height: 60px;
+  object-fit: contain;
+  filter: none;
+  transition: filter 0.3s;
+}
+.partner-card img:hover {
+  filter: grayscale(100%);
+}
+
+/* Infinite scrolling animation */
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+
+    /* Footer */
+    footer {
+      background: var(--dark); color:#fff;
+      padding:40px 20px; text-align:center;
+      border-top:5px solid var(--green);
+    }
+
+    /* ===== Footer / Contact ===== */
+footer {
+  background: var(--dark);
+  color: #fff;
+  padding: 60px 20px 20px;
+  border-top: 5px solid var(--green);
+}
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+.contact-form h2, .map h2 {
+  color: var(--orange);
+  margin-bottom: 20px;
+}
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact-form input, .contact-form textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-family: inherit;
+}
+.contact-form textarea { resize: vertical; min-height: 120px; }
+  {
+  background: linear-gradient(45deg, var(--green), var(--orange));
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer18  transition: transform 0.3s;
+}
+  { transform: scale(1.05); }
+#map{
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  width: 100%;
+  height: 318px;
+  border-radius: 12px;
+}
+ 
+.footer-bottom {
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 15px;
+}
+
+/* Sidebar Flag Stripe */
+/* Sidebar Flag Stripe */
 .flag-stripe {
   position: absolute;
   left: 0;
   top: 0;
   height: 100%;
-  width: 16px;
+  width: 12px;
   display: flex;
   flex-direction: column;
+  z-index: 1100;
 }
-
-.stripe {
+.flag-stripe .stripe {
   flex: 1;
+  transform: translateX(-100%);   /* hidden initially */
+  transition: transform 0.5s ease;
 }
-.stripe.green { background-color: #117A65;}
-.stripe.red { background-color: #C0392B;}
-.stripe.black { background-color: #000000;}
-.stripe.orange { background-color: #F39C12;}
-
-/* Brand */
-.navbar-brand {
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
+.sidebar.open .flag-stripe .stripe {
+  transform: translateX(0);       /* slide in when expanded */
 }
 
-.brand-logo {
-  height: 40px;
-  margin-left: 10px;
-}
+/* Add a little stagger effect */
+.sidebar.open .flag-stripe .stripe:nth-child(1) { transition-delay: 0s; }
+.sidebar.open .flag-stripe .stripe:nth-child(2) { transition-delay: 0.1s; }
+.sidebar.open .flag-stripe .stripe:nth-child(3) { transition-delay: 0.2s; }
+.sidebar.open .flag-stripe .stripe:nth-child(4) { transition-delay: 0.3s; }
 
-.brand-title {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #1E4E8C;
-}
+.stripe.green { background: #006400; }
+.stripe.red { background: #e53935; }
+.stripe.black { background: #111; }
+.stripe.orange { background: #ff9800; }
 
-/* Nav Links Centered */
-.nav-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  gap: 1rem;
-  flex: 1;
+/* Toggle Arrow */
+.sidebar-toggle {
+  position: fixed;  /* fixed to viewport so it moves with sidebar width */
+  top: 50%;
+  left: 10px;       /* matches collapsed sidebar width */
+  transform: translateY(-50%);
+  background: #ff9800;
+  color: #fff;
+  border-radius: 50%;
+  width: 30px; height: 30px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  transition: left 0.4s ease, transform 0.3s ease;
+  z-index: 1200;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
-
-.nav-flag {
-  text-decoration: none;
-  font-size: 0.95rem;
+/* When sidebar is open */
+.sidebar.open ~ .sidebar-toggle {
+  left: 220px; /* push toggle outward with sidebar */
+}
+.sidebar.open ~ .sidebar-toggle i {
+  transform: rotate(180deg); /* arrow points left */
+}
+.commitment-btn {
+  background: transparent;
+  color: #ff9800;
   font-weight: 600;
-  padding: 8px 14px;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 2px solid #ff9800;
   border-radius: 8px;
   transition: all 0.3s ease;
-  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  display: inline-block;
 }
-
-.nav-flag.green { background-color: #117A65;}
-.nav-flag.red { background-color: #C0392B;}
-.nav-flag.black { background-color: #000000;}
-.nav-flag.orange { background-color: #F39C12;}
-
-.nav-flag:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+.commitment-btn:hover {
+  background-color: #ff9800;
+  color: #fff;
+  transform: scale(1.05); /* subtle expand effect */
 }
-
-/* Bottom Navbar (Mobile Only) */
-.bottom-navbar {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
-  padding: 10px 0;
-  justify-content: space-around;
-  align-items: center;
-  z-index: 999;
-}
-
-.bottom-navbar a {
-  color: #1E4E8C;
-  font-size: 1.4rem;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.bottom-navbar a:hover {
-  color: #2A6ACB;
-  transform: scale(1.1);
-}
-
-/* Show bottom navbar only on mobile */
-@media (max-width: 768px) {
-.bottom-navbar {
-    display: flex;
-}
-
-.nav-links {
-    display: none;
-}
-}
-
-
-      /* Mobile Styles */
-      @media (max-width: 900px) {
-        .nav-links {
-          position: absolute;
-          top: 100px; /* below the navbar */
-          left: 0;
-          right: 0;
-          background-color: #fff;
-          flex-direction: column;
-          gap: 1rem;
-          padding: 1rem;
-          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-          display: none; /* hidden by default */
-        }
-        .nav-links.show {
-          display: flex; /* show when toggled */
-        }
-
-        .hamburger {
-          display: flex; /* show hamburger on mobile */
-        }
-
-        .nav-right {
-          display: none; /* hide portal + search in the top row on mobile */
-        }
-      }
-     /* HERO SECTION */
-.new-hero {
-  position: relative;
-  background: url("tax.jpg") center/cover no-repeat;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+ 
+/* Sidebar footer button */
+.sidebar-footer {
+  margin-top: auto;
   padding: 20px;
   text-align: center;
-  overflow: hidden;
 }
-
-/* Dark overlay */
-.new-hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1;
-}
-
-/* Content styling */
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 1200px; /* Use this instead of 700px */
-  margin: 0 auto;
-  padding: 40px 30px;
-  box-sizing: border-box;
-  border-radius: 20px;
-  color: #ffffff; /* Keep white text for contrast */
-}
-
-
-.hero-content h1 {
-  font-size: 3rem;
-  line-height: 1.2;
+ 
+.about-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
   margin-bottom: 20px;
-  font-weight: 700;
 }
 
-.hero-content p {
-  font-size: 1.3rem;
-  margin-bottom: 30px;
-  color: #f0f0f0;
+.about-highlights {
+  list-style: none;
+  padding: 0;
 }
 
-
-/* Responsive */
-@media (max-width: 768px) {
-.hero-content h1 {
-    font-size: 2rem;
+.about-highlights li {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
 }
 
-.hero-content p {
-    font-size: 1rem;
-}
-}
-
-
-
-/* Ensure content stays above overlay */
-.hero-content {
-  position: relative;
-  z-index: 2;
-  
-  color: #212A31;
-  max-width: 700px;
-  padding: 40px 30px;
-  border-radius: 20px;
-
+.about-highlights i {
+  color: #ff9800;
+  margin-right: 10px;
+  font-size: 1.2rem;
 }
 
-   
-
-      /* ----- Section Container ----- */
-      .about-section {
-        width: 100%;
-        background-color: #f8f9fa;
-        padding: 50px 0;
-      }
-      .about-container {
-        /* This centers the content and limits the max width */
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        padding: 0 20px; /* small horizontal padding */
-      }
-
-      /* ----- Image Wrapper ----- */
-      .about-image {
-  width: 500px;
-  height: 500px;
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.about-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;    /* Ensures image fills block without distortion */
-  display: block;
-}
-
-      /* ----- Text Wrapper ----- */
-      .about-text {
-        flex: 1;
-        padding-left: 40px;
-      }
-      .about-text h2 {
+ .about-text h2 {
         font-size: 2rem;
         margin-bottom: 15px;
         font-weight: bold;
       }
-      .about-text p {
-        font-size: 1rem;
-        color: #333;
-        line-height: 1.6;
-        margin-bottom: 1rem;
-      }
-
-      /* ----- Responsive Styles ----- */
-      @media (max-width: 768px) {
-        .about-container {
-          flex-direction: column; /* Stack image and text */
-        }
-        .about-text {
-          padding: 20px 0 0 0; /* Remove left padding, add top spacing */
-        }
-      }
-
-      footer {
-  width: 100%;
-  margin-top: 50px;
-  /* color here is overridden in the sections */
-}
-
-/* ===== TOP FOOTER SECTION ===== */
-.footer-top {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Center all columns */
-  background-color: #1E4E8C; /* deep, muted blue */
-  padding: 40px 20px;
-  color: #ffffff; /* white text for contrast */
-}
-
-.footer-column {
-  flex: 1;
-  min-width: 200px;
-  margin: 10px;
-  padding: 0 10px;
-  text-align: center; /* Center text in each column */
-}
-
-.footer-column h3 {
-  margin-bottom: 15px;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.footer-column p,
-.footer-column li {
-  font-size: 0.9rem;
-  line-height: 1.6;
-  margin-bottom: 8px;
-}
-
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto; /* Center the list */
-}
-
-.footer-column ul li {
-  margin: 5px 0; /* Less spacing between links */
-}
-
-/* Link styles in top footer */
-.footer-top a {
-  color: #ffffff;
-  text-decoration: none;
-}
-.footer-top a:hover {
-  text-decoration: underline;
-}
-
-/* ===== BOTTOM FOOTER SECTION ===== */
-.footer-bottom {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  background-color: #D9E6F2; /* very light, complementary blue */
-  padding: 15px 20px;
-  text-align: center;
-  color: #000000; /* black text for readability on light BG */
-}
-
-.footer-bottom div {
-  margin: 5px;
-  font-size: 0.9rem;
-}
-
-/* Link styles in bottom footer */
-.footer-bottom a {
-  color: #000000;
-  text-decoration: none;
-}
-.footer-bottom a:hover {
-  text-decoration: underline;
-}
-
-/* ===== MEDIA QUERIES ===== */
-@media (max-width: 768px) {
-  .footer-top {
-    padding: 20px;
-  }
-  .footer-column {
-    flex: 1 1 100%;
-    margin: 10px 0;
-    padding: 0;
-  }
-  .footer-bottom {
-    flex-direction: column;
-  }
-}
-
-
-      .services-container {
-        max-width: 1200px;
-        margin: 50px auto;
-        padding: 0 20px;
-      }
-
-      .section-header {
-        text-align: center;
-        margin-bottom: 60px;
-      }
-
-      .section-header h1 {
-        font-size: 2.8rem;
-        color: #2c3e50;
-        margin-bottom: 20px;
-        font-weight: 700;
-      }
-
-      .section-header p {
-        font-size: 1.2rem;
-        color: #666;
-        max-width: 800px;
-        margin: 0 auto;
-        line-height: 1.8;
-      }
-
-      .services-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
-      }
-
-      .service-card {
-        background: #ffffff;
-        padding: 40px;
-        border-radius: 8px;
-        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
-        border-left: 4px solid #4099f1 ;
-        transition: transform 0.3s ease;
-      }
-
-      .service-card:hover {
-        transform: translateY(-5px);
-      }
-
-      .service-card h3 {
-        font-size: 1.5rem;
-        color: #2c3e50;
-        margin-bottom: 20px;
-        padding-bottom: 15px;
-        position: relative;
-      }
-
-      .service-card h3::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 50px;
-        height: 2px;
-        background: #4099f1;
-      }
-
-      .service-card p {
-        color: #555;
-        line-height: 1.8;
-        font-size: 1.05rem;
-      }
-
-      @media (max-width: 992px) {
-        .services-grid {
-          grid-template-columns: 1fr;
-          gap: 30px;
-        }
-
-        .service-card {
-          padding: 30px;
-        }
-
-        .section-header h1 {
-          font-size: 2.4rem;
-        }
-      }
-
-      @media (max-width: 576px) {
-        .section-header h1 {
-          font-size: 2rem;
-        }
-
-        .section-header p {
-          font-size: 1rem;
-        }
-
-        .service-card {
-          padding: 25px;
-        }
-
-        .service-card h3 {
-          font-size: 1.3rem;
-        }
-      }
-
-      /* Contact Us Section */
-      .contact-us {
-        background-color: #f8f9fa;
-        padding: 4rem 2rem;
-        text-align: center;
-      }
-
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-
-      .section-title {
-        font-family: "Poppins", sans-serif;
-        font-size: 2rem;
-        color: #333;
-        font-weight: bold;
-        margin-bottom: 1rem;
-      }
-
-      .section-subtitle {
-        font-size: 1.2rem;
-        color: #555;
-        margin-bottom: 3rem;
-      }
-
-      .contact-details {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-        flex-wrap: wrap;
-      }
-
-      .contact-item {
-        background: #fff;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        padding: 2rem;
-        width: 300px;
-        text-align: left;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .contact-item:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      }
-
-      .icon {
-        font-size: 2rem;
-        color: #9173a7;
-        margin-bottom: 1rem;
-      }
-
-      .contact-item h3 {
-        font-size: 1.4rem;
-        color: #333;
-        margin-bottom: 0.5rem;
-      }
-
-      .contact-item p {
-        font-size: 1rem;
-        color: #555;
-        margin: 0.2rem 0;
-      }
-
-      .contact-item a {
-        color: #9173a7;
-        text-decoration: none;
-      }
-
-      .contact-item a:hover {
-        text-decoration: underline;
-      }
-
-      /* Responsive Design */
-      @media (max-width: 768px) {
-        .contact-item {
-          width: 100%;
-        }
-
-        .section-title {
-          font-size: 1.8rem;
-        }
-
-        .section-subtitle {
-          font-size: 1rem;
-        }
-      }
-
-      /* Info Cards Section */
-      .info-cards-section {
-        padding: 4rem 10%;
-        background-color: #f7f7f7; /* Light Grey */
-      }
-
-      .info-cards-section .container {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 2rem;
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-
-      .info-cards-section .card {
-        background-color: #ffffff; /* White */
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .contact-us-section {
-  padding: 4rem 2rem;
-  background-color: #f9f9f9;
-}
-
-.contact-us-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Section Heading */
-.contact-us-heading {
-  text-align: center;
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 2rem;
-  text-transform: uppercase;
-}
-
-/* Contact Info Grid */
-.contact-info-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-
-.contact-info-block {
-  background: #fff;
-  border-radius: 8px;
-  padding: 1.5rem;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.contact-info-block:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-/* Icons */
-.contact-icon {
-  font-size: 2rem;
-  color: #579DFF;
-  margin-bottom: 1rem;
-}
-
-/* Contact Info Titles and Text */
-.contact-info-title {
-  font-size: 1.2rem;
-  color: #333;
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-}
-
-.contact-info-text {
-  font-size: 0.9rem;
-  color: #666;
-  line-height: 1.6;
-}
-
-/* Map */
-.contact-map {
-  margin-top: 2rem;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsive Design */
-@media (max-width: 992px) {
-  .contact-info-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .contact-info-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .contact-info-block {
-    padding: 1.2rem;
-  }
-
-  .contact-us-heading {
-    font-size: 1.8rem;
-  }
-}
-
-      .info-cards-section .card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-      }
-
-      .info-cards-section .card img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-      }
-
-      .info-cards-section .content {
-        padding: 1.5rem;
-        text-align: left;
-      }
-
-      .info-cards-section .content h1 {
-        font-size: 2rem;
-        color: #003366; /* Navy Blue */
-        margin: 0;
-      }
-
-
-
-/* Hero Section Mobile Adjustments */
-@media (max-width: 600px) {
-.new-hero {
-    height: auto;
-    padding: 40px 20px;
-    background-position: center;
-    background-size: cover;
-}
-
-.hero-content {
-    padding: 20px;
-    max-width: 100%;
-    text-align: center;
-}
-
-.hero-content h1 {
-    font-size: 2rem;
-    margin-top: 20px;
-}
-
-.hero-content p {
-    font-size: 1rem;
-    margin-bottom: 20px;
-}
-
-
-      .info-cards-section .content h2 {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: #001f4d;
-        margin: 0.5rem 0;
-      }
-
-      .info-cards-section .content p {
-        font-size: 1rem;
-        color: #666666; /* Charcoal Grey for text */
-        line-height: 1.6;
-        margin-bottom: 1rem;
-      }
-
-      .info-cards-section .learn-more {
-        font-size: 1rem;
-        color: #003366; /* Navy Blue */
-        text-decoration: none;
-        font-weight: bold;
-        border-bottom: 1px solid #003366;
-        transition: color 0.3s ease, border-bottom 0.3s ease;
-      }
-
-      .info-cards-section .learn-more:hover {
-        color: #001f4d; /* Darker Navy Blue for hover */
-        border-bottom: 1px solid #001f4d;
-      }
-
-      /* Responsive Design */
-      @media (max-width: 992px) {
-        .info-cards-section .container {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 1.5rem;
-        }
-      }
-
-      @media (max-width: 768px) {
-        .info-cards-section .container {
-          grid-template-columns: 1fr;
-        }
-
-        .info-cards-section .card {
-          margin-bottom: 1.5rem;
-        }
-      }
-
-      .commitment-btn {
-  color: #1E4E8C;
-  font-weight: 600;
-  text-decoration: none;
-  padding: 10px 20px;
-  border: 2px solid #1E4E8C;
-  border-radius: 8px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 16px;
-  display: inline-block;
-}
-
-.commitment-btn:hover {
-  background-color: #1E4E8C;
-  color: #fff;
-  text-decoration: none; /* Ensure no underline on hover */
-}
-
-.hero-btn {
-    color: #d4e7d7;
-    font-weight: 600;
-    text-decoration: none;
-    padding: 10px 20px;
-    border: 2px solid #0dd82b;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 16px;
-    display: inline-block;
-}
-
-.hero-btn:hover {
-  background-color: #bb6569;
-}
-
-
-
-html, body {
-  overflow-x: hidden;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  scroll-behavior: smooth;
-}
-
-.form-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 2rem;
-  flex-wrap: wrap; /* Optional: allows wrapping on smaller screens */
-  margin-bottom: 2rem;
-}
-
-.form-group {
-  flex: 1;
-  min-width: 280px; /* Ensures readability on smaller screens */
-}
-
-@media (max-width: 768px) {
-.form-row {
-    flex-direction: column;
-}
-}
-
-    </style>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  </head>
-  <body>
-<nav class="navbar">
-  <nav class="navbar">
+    footer a { color:#ff9800; text-decoration:none; }
+  </style>
+</head>
+<body>
+
+ 
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+  <!-- Zambian Flag Stripe -->
   <div class="flag-stripe">
     <div class="stripe green"></div>
     <div class="stripe red"></div>
@@ -940,475 +413,235 @@ html, body {
     <div class="stripe orange"></div>
   </div>
 
-</br>
-  <div class="navbar-brand">
-    <a href="/" class="brand-link">
-      <img src="tros1.png" alt="Taxman Logo" class="brand-logo" />
-    </a>
-  </div>
-
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#home" class="nav-flag green">Home</a></li>
-    <li><a href="#about" class="nav-flag red">About</a></li>
-    <li><a href="#services" class="nav-flag black">Services</a></li>
-    <li><a href="#contact" class="nav-flag orange">Contact</a></li>
+  <ul>
+    <li><a href="#home"><i data-feather="home"></i><span>Home</span></a></li>
+    <li><a href="#about"><i data-feather="info"></i><span>About</span></a></li>
+    <li><a href="#services"><i data-feather="layers"></i><span>Services</span></a></li>
+    <li><a href="#reports"><i data-feather="bar-chart-2"></i><span>Reports</span></a></li>
+    <li><a href="#team"><i data-feather="users"></i><span>Team</span></a></li>
+    <li><a href="#partners"><i data-feather="briefcase"></i><span>Partners</span></a></li>
+    <li><a href="#contact"><i data-feather="send"></i><span>Contact</span></a></li>
   </ul>
-  
-  <div class="nav-right">
-  <a href="forms.html" class="commitment-btn">Commitment Form</a>
-</div>
-</nav>
 
-        <!--<div class="search-container">
-          <input type="text" placeholder="Search..." />
-          <button>Go</button>
-        </div>-->
-      </div>
-    </nav>
-
-   <section id="home" class="new-hero">
-  <div class="hero-content">
-    <h1 style="color:white">Tax Return Online Solutions</h1>
-   
-        <p>
-          <strong style="color:red">T.R.O.S</strong> is your trusted partner in navigating the complexities of taxes and financial management. 
-		  Fast, secure, and fully compliant with 
-		  ZRA standards — we simplify taxes for individuals and businesses across Zambia.
-        </p>
-<div class="services-wrapper">
-  <div class="services-grid-buttons">
-    <a href="/incomplete-records/" class="service-card-btn">Incomplete Records</a>
-    <a href="" class="service-card-btn">Debtors & Creditors</a>
-    <a href="" class="service-card-btn">Cash Book & Ledger</a>
-    <a href="" class="service-card-btn">Payroll Management</a>
-    <a href="" class="service-card-btn">SAGE Setup</a>
-    <a href="" class="service-card-btn">ZRA Agency</a>
-    <a href="" class="service-card-btn">Smart Invoicing</a>
-    <a href="" class="service-card-btn">Agro & SME Systems</a>
-    <a href="" class="service-card-btn">National Council Of Contractors</a>
-    <a href="" class="service-card-btn">Web, System Dev & ERPs</a>
+  <!-- Commitment Button -->
+  <div class="sidebar-footer">
+    <a href="forms.html" class="commitment-btn">Commitment Form</a>
   </div>
-</div>
-      </div>
-    </section>
+</aside>
 
-<section id="about" class="about-section">
-  <div class="about-wrapper">
-    <div class="about-text">
-      <h2>Who We Are</h2>
-      <p>
+<!-- Toggle must come AFTER sidebar -->
+<div class="sidebar-toggle" id="sidebarToggle">
+  <i class="fas fa-chevron-right"></i>
+</div>
+
+
+  <!-- Hero Slideshow -->
+  <section id="home" class="hero">
+    <div class="slide active" style="background-image:url('image (2).jpg');">
+      <div class="slide-content">
+        <h1>Smart Tax Compliance</h1>
+        <p>Empowering Zambian businesses with automated, ZRA-approved tax solutions.</p>
+        <div class="hero-buttons">
+          <a href="#">Book An Appointment</a>
+          <a href="forms.html">Commitment Form</a>
+        </div>
+      </div>
+    </div>
+    <div class="slide" style="background-image:url('image (8).jpg');">
+      <div class="slide-content">
+        <h1>Payroll & HR Automation</h1>
+        <p>Seamless payroll, NAPSA, PAYE & HR services tailored for SMEs and corporates.</p>
+        <div class="hero-buttons">
+          <a href="#">Explore Payroll</a>
+        </div>
+      </div>
+    </div>
+    <div class="slide" style="background-image:url('image (4).jpg');">
+      <div class="slide-content">
+        <h1>Smart Invoicing</h1>
+        <p>Generate ZRA-compliant smart invoices with instant tax calculations.</p>
+        <div class="hero-buttons">
+          <a href="#">Try Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" data-aos="fade-up"><h2>Who We Are</h2>
+    <div class="about-wrapper">
+      <div class="about-image"><img src="taxacc.jpg" alt=""></div>
+      <div class="about-text">
+      <p>Tax Return Online Solutions (TROS) is one of Zambia’s leading financial tech service provider, combining compliance with innovation.<br/><br/>
          A registered financial solutions provider offering smart, secure, and scalable tools for tax, payroll, and business systems. We empower individuals and SMEs to stay compliant, grow sustainably, and operate with confidence.
       </p>
-
-      <ul class="about-highlights">
+     <ul class="about-highlights">
         <li><i class="fas fa-check-circle"></i> ZRA-Compliant Tax Filing</li>
         <li><i class="fas fa-users-cog"></i> Payroll & HR Automation</li>
         <li><i class="fas fa-chart-line"></i> Business Intelligence Tools</li>
         <li><i class="fas fa-handshake"></i> SME & Startup Support</li>
       </ul>
+      </div>
     </div>
+  </section>
 
-    <div class="about-image">
-      <img src="taxacc.jpg" alt="About Us Image" />
+  <!-- Services -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <div class="service-card design"><h3>Tax Records</h3><p>Reconstruction of missing data for compliance.</p></div>
+      <div class="service-card payroll"><h3>Payroll</h3><p>Automated payroll, NAPSA, PAYE & HR systems.</p></div>
+      <div class="service-card invoicing"><h3>Smart Invoicing</h3><p>ZRA-compliant invoices with tax automation.</p></div>
+      <div class="service-card zra"><h3>ZRA Agency</h3><p>Filing, registration & Smart Invoice setup.</p></div>
     </div>
-  </div>
-</section>
+  </section>
 
-    </section>
-
-   <section id="services" class="form-services-section">
-  <div class="section-header">
-    <h1>What We Do</h1>
-    <p>
-       We simplify tax and financial management for individuals, SMEs, and organizations across Zambia. Our platform offers smart, secure, and ZRA-compliant tools that streamline bookkeeping, payroll, invoicing, and business registration. Whether you're starting up or scaling up, we provide the systems and support to help you thrive.
-    </p>
-  </div>
-
-  <div class="form-card-grid">
-    <div class="form-card">
-      <i class="fas fa-file-alt"></i>
-      <h3>Incomplete Records</h3>
-      <p>We help reconstruct missing financial data to ensure accurate reporting and compliance.</p>
+  <!-- Reports -->
+  <section id="reports" data-aos="fade-up">
+    <h2>Reports & Analytics</h2>
+    <center><p class="section-subtitle">Live dashboards at your fingertips</p></center>
+    <div class="chart-grid">
+      <div class="chart-card"><h3>Revenue vs Expenses</h3><canvas id="lineChart"></canvas></div>
+      <div class="chart-card"><h3>Service Distribution</h3><canvas id="pieChart"></canvas></div>
+      <div class="chart-card"><h3>Compliance Trends</h3><canvas id="barChart"></canvas></div>
     </div>
+  </section>
 
-    <div class="form-card">
-      <i class="fas fa-exchange-alt"></i>
-      <h3>Debtors & Creditors</h3>
-      <p>Track who owes you and who you owe with clear reconciliation tools and reports.</p>
+  <!-- Team -->
+  <section id="team" data-aos="fade-up">
+    <h2>Meet Our Team</h2>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-inner">
+          <div class="team-front"><img src="taxation2.png" alt=""></div>
+          <div class="team-back"><h3>Jane Doe</h3><p>Managing Partner</p></div>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-inner">
+          <div class="team-front"><img src="taxation2.png" alt=""></div>
+          <div class="team-back"><h3>John Smith</h3><p>Tax Specialist</p></div>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-inner">
+          <div class="team-front"><img src="taxation2.png" alt=""></div>
+          <div class="team-back"><h3>Mary Banda</h3><p>HR & Payroll Lead</p></div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="form-card">
-      <i class="fas fa-book"></i>
-      <h3>Cash Book & Ledger</h3>
-      <p>Maintain organized records of all transactions for full financial visibility.</p>
-    </div>
-
-    <div class="form-card">
-      <i class="fas fa-users"></i>
-      <h3>Payroll Management</h3>
-      <p>Automate payroll, NAPSA, and PAYE calculations with secure employee data handling.</p>
-    </div>
-
-    <div class="form-card">
-      <i class="fab fa-sass"></i>
-      <h3>SAGE Setup</h3>
-      <p>Get professional configuration and onboarding for your SAGE accounting system.</p>
-    </div>
-
-    <div class="form-card">
-      <i class="fas fa-building"></i>
-      <h3>ZRA Agency</h3>
-      <p>We act as your ZRA liaison, simplifying tax registration, filing, and Smart Invoice setup.</p>
-    </div>
-
-    <div class="form-card">
-      <i class="fas fa-receipt"></i>
-      <h3>Smart Invoicing</h3>
-      <p>Generate ZRA-compliant invoices with automated tax calculations and digital tracking.</p>
-    </div>
-
-    <div class="form-card">
-      <i class="fas fa-seedling"></i>
-      <h3>Agro & SME Systems</h3>
-      <p>Custom tools for agriculture and small businesses to manage operations and growth.</p>
-    </div>
-
-    <div class="form-card">
-      <i class="fas fa-hard-hat"></i>
-      <h3>National Council Of Construction</h3>
-      <p>Support for registration, compliance, and digital systems tailored to construction firms.</p>
-    </div>
-
-    <div class="form-card">
-      <i class="fas fa-network-wired"></i>
-      <h3>Web, System Dev & ERPs</h3>
-      <p>Build custom websites, business systems, and ERP platforms to streamline your workflow.</p>
-    </div>
-  </div>
-</section>
-
-    <!-- ===== PARTNERS SECTION ===== -->
-<section id="partners" class="partners">
-  <h2>Our Trusted Partners</h2>
+  <!-- Partners -->
+  <section id="partners" data-aos="fade-up">
+  <h2>Our Partners</h2>
   <div class="partner-carousel">
-    <div class="carousel-track">
-      <div class="partner-logo"><img src="sage.png" alt="SAGE"></div>
-      <div class="partner-logo"><img src="smi.png" alt="SMI"></div>
-      <div class="partner-logo"><img src="flex.png" alt="Flex"></div>
-      <div class="partner-logo"><img src="zams.png" alt="ZAMS"></div>
-      <!-- Add more logos as needed -->
+    <div class="partner-track">
+      <div class="partner-card"><img src="flex.png" alt="flex-payroll"></div>
+      <div class="partner-card"><img src="zams.png" alt="zamSmart"></div>
+      <div class="partner-card"><img src="sage.png" alt="Sage"></div>
+      <div class="partner-card"><img src="smi.png" alt="SmartInvoice"></div>
+      <div class="partner-card"><img src="zra.png" alt="Zambia Revenue Agency"></div>
+
+      <!-- duplicate logos   -->
+      <div class="partner-card"><img src="flex.png" alt="flex-payroll"></div>
+      <div class="partner-card"><img src="zams.png" alt="zamSmart"></div>
+      <div class="partner-card"><img src="sage.png" alt="Sage"></div>
+      <div class="partner-card"><img src="smi.png" alt="SmartInvoice"></div>
+      <div class="partner-card"><img src="zra.png" alt="Zambia Revenue Agency"></div>
     </div>
   </div>
 </section>
-    
-<!-- ===== CHAMBERS OF COMMERCE SECTION (PRESTIGE RIBBON) ===== -->
-<section id="chambers" class="chambers-ribbon-section">
-  <div class="chambers-ribbon-header">
-    <h2>Our Chamber Memberships</h2>
-    <p class="chambers-ribbon-subtitle">TROS is a proud, trusted member of these leading Chambers of Commerce across Zambia.</p>
-  </div>
-  <div class="chambers-ribbon">
-    <div class="chamber-badge fade-in">
-      <div class="chamber-medal gold">🏛️</div>
-      <div class="chamber-badge-name">Lusaka Chamber of Commerce</div>
+
+
+    <!-- Footer / Contact -->
+  <footer id="contact">
+    <div class="footer-container">
+      <div class="contact-form">
+        <h2>Get in Touch</h2>
+        <form action="#" method="post">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <div class="map">
+        <h2>Our Location</h2>
+        <div id="map" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></div>
+      </div>
     </div>
-    <div class="chamber-badge fade-in">
-      <div class="chamber-medal silver">🌾</div>
-      <div class="chamber-badge-name">Mazabuka Chamber of Commerce</div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 TROS | Tax Return Online Solutions. All Rights Reserved.</p>
     </div>
-    <div class="chamber-badge fade-in">
-      <div class="chamber-medal bronze">🌊</div>
-      <div class="chamber-badge-name">Livingstone Chamber of Commerce</div>
-    </div>
-    <div class="chamber-badge fade-in">
-      <div class="chamber-medal blue">🏭</div>
-      <div class="chamber-badge-name">Kabwe Chamber of Commerce</div>
-    </div>
-    <div class="chamber-badge fade-in">
-      <div class="chamber-medal green">🌊</div>
-      <div class="chamber-badge-name">Mongu Chamber of Commerce</div>
-    </div>
-  </div>
-</section>
-<div class="bottom-navbar">
-  <a href="#home" title="Home"><i class="fas fa-home"></i></a>
-  <a href="#about" title="About"><i class="fas fa-info-circle"></i></a>
-  <a href="#services" title="Services"><i class="fas fa-briefcase"></i></a>
-  <a href="#contact" title="Contact"><i class="fas fa-envelope"></i></a>
-  <a href="forms.html" title="Commitment"><i class="fas fa-file-signature"></i></a>
-</div>
-<style>
-.chambers-ribbon-section {
-  background: linear-gradient(120deg, #eaf1fb 0%, #f8f9fa 100%);
-  padding: 60px 0 40px 0;
-  text-align: center;
-}
-.chambers-ribbon-header h2 {
-  font-size: 2.2rem;
-  color: #1E4E8C;
-  font-weight: 800;
-  margin-bottom: 8px;
-  letter-spacing: 1.2px;
-}
-.chambers-ribbon-subtitle {
-  color: #555;
-  font-size: 1.13rem;
-  margin-bottom: 36px;
-}
-.chambers-ribbon {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  gap: 48px;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  max-width: 1100px;
-}
-.chamber-badge {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 1s forwards;
-  animation-delay: 0.2s;
-}
-.chamber-badge:nth-child(2) { animation-delay: 0.4s; }
-.chamber-badge:nth-child(3) { animation-delay: 0.6s; }
-.chamber-badge:nth-child(4) { animation-delay: 0.8s; }
-.chamber-badge:nth-child(5) { animation-delay: 1s; }
+  </footer>
 
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    feather.replace();
+    AOS.init({ duration: 1000, once: true });
+
+    // Hero Slideshow
+    let slides = document.querySelectorAll('.slide');
+    let idx = 0;
+    setInterval(()=>{
+      slides[idx].classList.remove('active');
+      idx = (idx+1)%slides.length;
+      slides[idx].classList.add('active');
+    },5000);
+
+    // Charts
+    new Chart(document.getElementById('lineChart'), {
+      type:'line',
+      data:{labels:['Jan','Feb','Mar','Apr'],datasets:[
+        {label:'Revenue',data:[12000,15000,18000,22000],borderColor:'#4caf50',fill:true,backgroundColor:'rgba(76,175,80,0.2)'},
+        {label:'Expenses',data:[8000,10000,11000,13000],borderColor:'#f44336',fill:true,backgroundColor:'rgba(244,67,54,0.2)'}
+      ]}, options:{responsive:true}
+    });
+    new Chart(document.getElementById('pieChart'), {
+      type:'pie',
+      data:{labels:['Payroll','Invoicing','Tax Filing','Consulting'],
+      datasets:[{data:[40,25,20,15],backgroundColor:['#3f51b5','#009688','#ff9800','#9c27b0']}]}
+    });
+    new Chart(document.getElementById('barChart'), {
+      type:'bar',
+      data:{labels:['Q1','Q2','Q3','Q4'],
+      datasets:[{label:'Compliance %',data:[85,92,88,95],backgroundColor:'#2196f3'}]},
+      options:{scales:{y:{beginAtZero:true,max:100}}}
+    });
+
+ 
+if (document.getElementById('map')) {
+  // Initialize map
+  const map = L.map('map').setView([-15.4111, 28.2861], 13);
+
+  // Add OpenStreetMap tiles
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  // Add marker for office
+  L.marker([-15.4111, 28.2861]).addTo(map)
+    .bindPopup('<b>Main Office</b><br>Taxman Zambia')
+    .openPopup();
 }
-.chamber-medal {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.5rem;
-  margin-bottom: 14px;
-  box-shadow: 0 4px 18px rgba(30,78,140,0.10);
-  border: 4px solid #fff;
-  background: #eaf1fb;
-  transition: box-shadow 0.2s, transform 0.2s;
-}
-.chamber-medal.gold { background: linear-gradient(135deg, #ffe082 60%, #fffde7 100%); border-color: #ffd600; }
-.chamber-medal.silver { background: linear-gradient(135deg, #e0e0e0 60%, #f5f5f5 100%); border-color: #bdbdbd; }
-.chamber-medal.bronze { background: linear-gradient(135deg, #ffb300 60%, #ffe0b2 100%); border-color: #ff9800; }
-.chamber-medal.blue { background: linear-gradient(135deg, #1E4E8C 60%, #eaf1fb 100%); border-color: #1E4E8C; color: #fff; }
-.chamber-medal.green { background: linear-gradient(135deg, #12E666 60%, #eaf1fb 100%); border-color: #12E666; color: #fff; }
-.chamber-badge-name {
-  font-size: 1.08rem;
-  color: #1E4E8C;
-  font-weight: 700;
-  background: #fff;
-  border-radius: 10px;
-  padding: 8px 18px;
-  box-shadow: 0 2px 8px rgba(30,78,140,0.06);
-  margin-top: 2px;
-  letter-spacing: 0.5px;
-  min-width: 180px;
-}
-.chamber-badge:hover .chamber-medal {
-  box-shadow: 0 8px 32px rgba(30,78,140,0.18);
-  transform: scale(1.08);
-}
-@media (max-width: 900px) {
-  .chambers-ribbon {
-    gap: 24px;
-  }
-  .chamber-medal {
-    width: 60px;
-    height: 60px;
-    font-size: 1.6rem;
-  }
-  .chamber-badge-name {
-    font-size: 0.95rem;
-    padding: 6px 10px;
-    min-width: 120px;
-  }
-}
-@media (max-width: 600px) {
-  .chambers-ribbon {
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
-  }
-}
-</style>
-<script>
-(function() {
-  const track = document.getElementById('chambersTrack');
-  const prevBtn = document.getElementById('chambersPrev');
-  const nextBtn = document.getElementById('chambersNext');
-  const cards = Array.from(track.children);
-  const cardsPerSlide = 3;
-  let currentIndex = 0;
-  let autoSlideInterval;
+ 
 
-  function updateCarousel() {
-    const cardWidth = cards[0].offsetWidth + 32; // card width + gap
-    track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-  }
+  </script>
+  <script>
+const sidebar = document.getElementById('sidebar');
+const toggle = document.getElementById('sidebarToggle');
 
-  function showNext() {
-    if (currentIndex < cards.length - cardsPerSlide) {
-      currentIndex++;
-    } else {
-      currentIndex = 0;
-    }
-    updateCarousel();
-  }
+toggle.addEventListener('click', () => {
+  sidebar.classList.toggle('open');
+});
 
-  function showPrev() {
-    if (currentIndex > 0) {
-      currentIndex--;
-    } else {
-      currentIndex = cards.length - cardsPerSlide;
-    }
-    updateCarousel();
-  }
-
-  function startAutoSlide() {
-    autoSlideInterval = setInterval(showNext, 3500);
-  }
-
-  function stopAutoSlide() {
-    clearInterval(autoSlideInterval);
-  }
-
-  prevBtn.addEventListener('click', function() {
-    stopAutoSlide();
-    showPrev();
-    startAutoSlide();
-  });
-  nextBtn.addEventListener('click', function() {
-    stopAutoSlide();
-    showNext();
-    startAutoSlide();
-  });
-
-  window.addEventListener('resize', updateCarousel);
-
-  // Initialize
-  updateCarousel();
-  startAutoSlide();
-})();
 </script>
 
-    <section id ="contact" class="contact-us-section">
-  <div class="contact-us-wrapper">
-    <h2 class="contact-us-heading">Contact Us</h2>
-
-    <!-- Contact Details -->
-    
-     <div class="form-row">
-   <div class="form-group">
-  <div class="contact-info-block">
-    <h3>Tax-Centre Main Office 4974 Kabelenga Rd, Lusaka Zambia</h3>
-    <div id="map"></div>
-  </div>
-</div>
-          
-          <div class="form-group">
-      <div class="contact-info-block">
-        <i class="fas fa-phone-alt contact-icon"></i>
-        <div>
-          <h3 class="contact-info-title">Phone</h3>
-          <p class="contact-info-text"> Office: +26 211 232 022 </p>
-          <p class="contact-info-text">  Mobile: +260 976 152 586</p>
-        </div>
-      </div>
-      </div>
-      
-      
-      <!-- Email -->
-      <div class="form-group">
-      <div class="contact-info-block">
-        <i class="fas fa-envelope contact-icon"></i>
-        <div>
-          <h3 class="contact-info-title">Email</h3>
-          <p class="contact-info-text">info@tax-centre.com</p>
-          <p class="contact-info-text"></p>
-          <p class="contact-info-text"></p>
-        </div>
-      </div>
-       </div>
-    </div>
-  </section>
-
-    <!-- ===== FOOTER START ===== -->
-    <footer>
-      <!-- ===== TOP FOOTER ===== -->
-      <div class="footer-top">
-        <!-- Left Column (e.g., Organization Details) -->
-        <div class="footer-column">
-         
-  <!-- Contact Section -->
-  <section id="contact" data-aos="fade-up">
-    <h2>Contact Us</h2>
-    <h3>Taxman of Websites</h3>
-          <p> Main Office, Lewis Construction,</p>
-          <p>4974 Kabelenga Rd, Lusaka</p>
-   <p>
-            Email:
-            <a href="mailto:info@tax-centre.com">info@tax-centre.com</a>
-          </p>
-    <p>Phone: +26 211 232 022 | +260 976 152 586</p>
-  </section>
-
-        </div>
-
-        <!-- Middle Column (e.g., Navigation Links) -->
-        <div class="footer-column">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="forms.html">Commitment Form</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-           
-            
-            
-          </ul>
-        </div>
-
-        <!-- Right Column (e.g., Additional Links/Icons) -->
-        
-      </div>
-
-   <!-- ===== BOTTOM FOOTER ===== -->
-<div class="footer-bottom">
-        <div class="footer-bottom-left">
-          &copy; 2025 Tax Return Online Solutions. <a href="https://tax-centre.com/">All Rights Reserved</a> |
-          
-        </div>
-        <div class="footer-bottom-right">Courtesy of <strong> <a href="tax-centre.com/">Systems Modelling and Artificial Integration Tools Developers</strong></a></div>
-      </div>
-     
-  
-    </footer>
-    <!-- ===== FOOTER END ===== -->
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script>
-	    function toggleNav() {
-    const navLinks = document.getElementById("navLinks");
-    navLinks.classList.toggle("show");
-}
-
-if (document.getElementById('map')) {
-  const map = L.map('map').setView([-17.857, 25.856], 13);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-  L.marker([-15.41110392790975, 28.28612199973927]).addTo(map)
-.bindPopup('Main Office , Taxman Zambia')
-.openPopup();
-}
-    </script>
-  </body>
+</body>
 </html>
+
+      
+   
