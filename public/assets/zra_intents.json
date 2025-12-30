@@ -26,8 +26,7 @@
                 "Mulishani",
                 "Mwaiseni",
                 "Mwashibukeni",
-                "Chungulo mukwai",
-                "Ndi bwino"
+                "Chungulo mukwai"
             ],
             "responses": [
                 "Ndi bwino, ngaiwe? Mwaiseni mukwai.",
@@ -35,12 +34,22 @@
             ]
         },
         {
+            "id": "greeting.bemba.fine",
+            "training_phrases": [
+                "Ndi bwino",
+                "Ndi fye bwino"
+            ],
+            "responses": [
+                "Cawama. Kuti namwafwa shani na ZRA?",
+                "Natotela. Mungepusha pa Smart Invoice nangu imisonkho."
+            ]
+        },
+        {
             "id": "greeting.nyanja",
             "training_phrases": [
                 "Moni",
                 "Muli bwanji",
-                "Muli bwanji?",
-                "Ndili bwino"
+                "Muli bwanji?"
             ],
             "responses": [
                 "Ndili bwino, kaya inu? Zikomo.",
@@ -48,16 +57,37 @@
             ]
         },
         {
+            "id": "greeting.nyanja.fine",
+            "training_phrases": [
+                "Ndili bwino",
+                "Ndili bwino zikomo"
+            ],
+            "responses": [
+                "Zikomo. Mungafunse za misonkho kapena Smart Invoice.",
+                "Chabwino. Ndingakuthandizeni bwanji lero?"
+            ]
+        },
+        {
             "id": "greeting.tonga",
             "training_phrases": [
                 "Mwalumezi",
                 "Mwabuka buti",
-                "Mwabuka buti?",
-                "Ndililabotu"
+                "Mwabuka buti?"
             ],
             "responses": [
                 "Ndililabotu. Mwapona buti?",
                 "Ndililabotu. Ingamugwasya buti sunu?"
+            ]
+        },
+        {
+            "id": "greeting.tonga.fine",
+            "training_phrases": [
+                "Ndililabotu",
+                "Ndililabotu zikomo"
+            ],
+            "responses": [
+                "Kabotu. Ingamugwasya buti sunu?",
+                "Zikomo. Amubuzye zya Smart Invoice."
             ]
         },
         {
@@ -68,12 +98,22 @@
                 "U pila cwang",
                 "U zuhile cwang",
                 "Mutozi chwani",
-                "Muzuhile",
-                "Na pila hande"
+                "Muzuhile"
             ],
             "responses": [
                 "Na pila hande, wena u pila cwang?",
                 "Ni itumezi. Mutozi cwani?"
+            ]
+        },
+        {
+            "id": "greeting.lozi.fine",
+            "training_phrases": [
+                "Na pila hande",
+                "Na pila hande zikomo"
+            ],
+            "responses": [
+                "Ni itumezi. Mwakona kubuza za Smart Invoice kapa mitelo.",
+                "Hande. Mwakona kubuza za ZRA."
             ]
         },
         {
