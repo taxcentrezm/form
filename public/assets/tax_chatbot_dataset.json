@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "documentTitle": "PRACTICE NOTE NO. 1/2025",
+    "authority": "Zambia Revenue Authority",
+    "effectiveDate": "1st January 2025",
+    "commissionerGeneral": "Dingani Banda",
+    "lastUpdated": "2025-12-30T12:18:24.576Z"
+  },
+  "smartInvoicing": {
+    "regulations": [
+      "Restricts input tax claims to invoices issued from smart invoice",
+      "(c) an invoice issued from the electronic invoicing system or an invoice issued, as"
+    ],
+    "requirements": [
+      "Only invoices issued from the Electronic Invoicing System (Smart Invoice) or those issued\nby taxable suppliers exempted from using Smart Invoice, are allowed"
+    ],
+    "exemptions": [],
+    "penalties": [],
+    "effectiveDate": "1st January 2025"
+  },
+  "taxAmendments": {
+    "incomeTax": [],
+    "vat": [],
+    "customs": [],
+    "other": []
+  },
+  "vatTreatment": {
+    "services": [
+      " (c) an invoice issued from the electronic invoicing system or an invoice issued, as prescribed, by a taxable supplier who is exempt from the use of the electronic invoicing system under section 7A(2); ",
+      "The amendment restricts the claim of input tax to invoices meeting specific requirements. Only invoices issued from the Electronic Invoicing System (Smart Invoice) or those issued by taxable suppliers exempted from using Smart Invoice, are allowed as documentary evidence to support input tax claims. ",
+      " Effective 1st January 2025, input tax claims are restricted to invoices issued from the Smart Invoice system or those issued by taxable suppliers exempted from using Smart Invoice."
+    ],
+    "inputClaims": [
+      "Restricts input tax claims to invoices issued from smart invoice",
+      "The amendment restricts the claim of input tax to invoices meeting specific requirements.",
+      "evidence to support input tax claims.",
+      "Effective 1st January 2025, input tax claims are restricted to invoices issued from the Smart"
+    ],
+    "specialCases": []
+  },
+  "taxRates": {
+    "incomeTax": {},
+    "vat": {
+      "standardRate": "16%",
+      "zeroRate": "0%",
+      "exempt": "Not taxable"
+    },
+    "excise": {},
+    "other": {}
+  },
+  "complianceRequirements": {
+    "tpin": {},
+    "taxClearance": {},
+    "filingRequirements": [],
+    "turnoverThreshold": "K5,000,000"
+  },
+  "contactInformation": {
+    "zraContacts": [
+      "P.O. Box 35710"
+    ],
+    "supportChannels": [
+      {
+        "type": "email",
+        "value": "advice@zra.org.zm.",
+        "purpose": "TaxOnline system support"
+      },
+      {
+        "type": "phone",
+        "value": "960 0911",
+        "purpose": "ZRA contact"
+      },
+      {
+        "type": "phone",
+        "value": "971 2811",
+        "purpose": "ZRA contact"
+      }
+    ]
+  },
+  "chatbotConfig": {
+    "supportedQueries": [
+      "smart invoice requirements",
+      "VAT rates",
+      "tax clearance certificate",
+      "TPIN registration",
+      "input tax claims",
+      "electronic invoicing system",
+      "compliance deadlines",
+      "contact ZRA"
+    ],
+    "dataVersion": "1.0",
+    "lastProcessed": "2025-12-30T12:18:24.593Z"
+  }
+}

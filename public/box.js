@@ -1,27 +1,44 @@
 // Toggle chatbox visibility
 function toggleChatbox() {
   const chatbox = document.getElementById("chatbox-modal");
-  chatbox.style.display = chatbox.style.display === "flex"? "none": "flex";
+  chatbox.style.display = chatbox.style.display === "flex" ? "none" : "flex";
   chatbox.style.flexDirection = "column";
 }
 
-// Load dataset.json and initialize Fuse.js
-let dataset = [];
-let fuse;
+// Load ZRA intents and initialize Fuse.js
+let intentsData = null;
+let intentsFuse = null;
 
-fetch("dataset.json")
-.then(response => response.json())
-.then(data => {
-    dataset = data;
-    fuse = new Fuse(data, {
-      keys: ['title', 'section'],
-      threshold: 0.4
-});
-    console.log("✅ Dataset loaded:", dataset);
-})
-.catch(error => {
-    console.error("❌ Failed to load dataset.json:", error);
-});
+// Load all training phrases for fuzzy matching
+fetch("assets/zra_intents.json")
+  .then(response => response.json())
+  .then(data => {
+    intentsData = data;
+
+    // Create a flat array of all training phrases with their intent info
+    const trainingPhrases = [];
+    data.intents.forEach(intent => {
+      intent.training_phrases.forEach(phrase => {
+        trainingPhrases.push({
+          phrase: phrase,
+          intentId: intent.id,
+          responses: intent.responses
+        });
+      });
+    });
+
+    // Initialize Fuse.js for fuzzy matching on training phrases
+    intentsFuse = new Fuse(trainingPhrases, {
+      keys: ['phrase'],
+      threshold: 0.4,
+      includeScore: true
+    });
+
+    console.log("✅ ZRA Intents loaded:", data.bot_meta.name);
+  })
+  .catch(error => {
+    console.error("❌ Failed to load zra_intents.json:", error);
+  });
 
 // Typing indicator animation
 let typingInterval;
@@ -30,7 +47,7 @@ function showTypingIndicator() {
   const indicator = document.getElementById("typing-indicator");
   const text = document.getElementById("typing-text");
 
-  if (!indicator ||!text) return;
+  if (!indicator || !text) return;
 
   indicator.style.display = "flex";
 
@@ -38,7 +55,7 @@ function showTypingIndicator() {
   typingInterval = setInterval(() => {
     dots = (dots + 1) % 4;
     text.textContent = "⏳ Gathering your answer" + ".".repeat(dots);
-}, 500);
+  }, 500);
 }
 
 function hideTypingIndicator() {
@@ -58,8 +75,8 @@ function loopTooltip() {
 
     setTimeout(() => {
       tooltip.style.animation = "fadeShake 2.5s ease forwards";
-}, 300);
-}, 3000);
+    }, 300);
+  }, 3000);
 }
 
 document.addEventListener("DOMContentLoaded", loopTooltip);
@@ -76,10 +93,10 @@ function sendMessage() {
       const response = getBotResponse(message);
       hideTypingIndicator();
       addMessage("bot", response);
-}, 1000);
+    }, 1000);
 
     input.value = "";
-}
+  }
 }
 
 // Add message to chat window
@@ -90,7 +107,7 @@ function addMessage(sender, text) {
 
   const avatar = document.createElement("img");
   avatar.className = "chat-avatar";
-  avatar.src = sender === "bot"? "bot.png": "user.jpg";
+  avatar.src = sender === "bot" ? "bot.png" : "user.jpg";
 
   const bubble = document.createElement("div");
   bubble.className = "chat-bubble";
@@ -107,51 +124,44 @@ function addMessage(sender, text) {
   // Save to backend
   fetch('/api/chat', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json'},
-    body: JSON.stringify({ sender, text})
-});
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ sender, text })
+  });
 }
 
-  // Play sound
-  const sound = document.getElementById("chat-sound");
-  if (sound) sound.play();
+// Play sound
+const sound = document.getElementById("chat-sound");
+if (sound) sound.play();
 
 
-// Bot response logic with fuzzy matching
+// Bot response logic with intent matching
 function getBotResponse(message) {
-  const lower = message.toLowerCase();
+  if (!intentsData || !intentsFuse) {
+    return "The assistant is still loading. Please try again in a moment.";
+  }
 
-  // Greetings
-  const greetings = ["hi", "hello", "hey", "good morning", "good afternoon"];
-  if (greetings.includes(lower)) {
-    return "👋 Hello! How can I assist you with the Smart Invoice form or ZRA services?";
+  const lower = message.toLowerCase().trim();
+
+  // Use fuzzy matching to find best matching intent
+  const results = intentsFuse.search(lower);
+
+  if (results.length > 0 && results[0].score < 0.5) {
+    // Found a good match
+    const matchedIntent = results[0].item;
+    const responses = matchedIntent.responses;
+
+    // Return random response from the intent's responses
+    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+    return randomResponse;
+  }
+
+  // No good match found - use fallback
+  const fallbackResponses = intentsData.fallback.responses;
+  const fallbackMessage = fallbackResponses[Math.floor(Math.random() * fallbackResponses.length)];
+
+  return `${fallbackMessage}\n\n📞 Call: +260 211 381111\n📧 Email: info@zra.org.zm`;
 }
 
-  if (fuse) {
-    const results = fuse.search(lower);
-    if (results.length> 0) {
-      const item = results[0].item;
-
-      if (item.dataset && Array.isArray(item.dataset)) {
-        const summary = item.dataset
-.map(a => `📌 ${a.reference}: ${Array.isArray(a.change)? a.change.join("; "): a.change || a.changes?.join("; ")}`)
-.slice(0, 3)
-.join("\n");
-
-        return `🗂 *${item.title}*\n${summary}\n\nWant more details? Ask about a specific section.`;
-} else {
-        return `🗂 *${item.title}*\nNo detailed changes found.\n\nWant more details? Ask about a specific section.`;
-}
-}
-}
-
-  // Fallback response
-  return `I'm not sure about that one 🤔. Please contact ZRA for assistance:
-
-📞 Call: +260 211 381111
-📧 Email: info@zra.org.zm
-💬 WhatsApp: +260 97 1223344`;
-}
 
 document.addEventListener("DOMContentLoaded", () => {
   const chatbox = document.getElementById("chatbox-modal");
@@ -164,16 +174,16 @@ document.addEventListener("DOMContentLoaded", () => {
       chatbox.querySelector(".chat-body").style.display = "none";
       chatbox.querySelector(".chat-input").style.display = "none";
       chatbox.querySelector("#typing-indicator").style.display = "none";
-});
+    });
 
     maximizeBtn.addEventListener("click", () => {
       chatbox.style.height = "600px";
       chatbox.querySelector(".chat-body").style.display = "block";
       chatbox.querySelector(".chat-input").style.display = "flex";
-});
-} else {
+    });
+  } else {
     console.warn("Minimize/Maximize buttons not found in DOM.");
-}
+  }
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -191,7 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
     offsetX = e.clientX - chatbox.getBoundingClientRect().left;
     offsetY = e.clientY - chatbox.getBoundingClientRect().top;
     chatbox.style.transition = "none";
-});
+  });
 
   document.addEventListener("mousemove", (e) => {
     if (isDragging) {
@@ -199,11 +209,11 @@ document.addEventListener("DOMContentLoaded", () => {
       chatbox.style.top = `${e.clientY - offsetY}px`;
       chatbox.style.bottom = "auto"; // override bottom positioning
       chatbox.style.right = "auto";  // override right positioning
-}
-});
+    }
+  });
 
   document.addEventListener("mouseup", () => {
     isDragging = false;
     chatbox.style.transition = "all 0.3s ease";
-});
+  });
 });

@@ -1,0 +1,28 @@
+{
+  "quickFacts": {
+    "smartInvoiceEffectiveDate": "1st January 2025",
+    "vatRate": "16%",
+    "turnoverTaxRate": "5%",
+    "turnoverThreshold": "K5,000,000"
+  },
+  "smartInvoiceRequirements": [
+    "Only invoices issued from the Electronic Invoicing System (Smart Invoice) or those issued\nby taxable suppliers exempted from using Smart Invoice, are allowed"
+  ],
+  "commonQueries": [
+    "smart invoice requirements",
+    "VAT rates",
+    "tax clearance certificate",
+    "TPIN registration",
+    "input tax claims",
+    "electronic invoicing system",
+    "compliance deadlines",
+    "contact ZRA"
+  ],
+  "supportContacts": [
+    {
+      "type": "email",
+      "value": "advice@zra.org.zm.",
+      "purpose": "TaxOnline system support"
+    }
+  ]
+}
