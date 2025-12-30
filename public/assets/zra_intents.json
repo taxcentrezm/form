@@ -10,7 +10,6 @@
             "training_phrases": [
                 "Hi",
                 "Hello",
-                "Muli bwanji",
                 "Good morning",
                 "Good afternoon",
                 "Good evening"
@@ -18,6 +17,59 @@
             "responses": [
                 "Hello, welcome to the Zambia Revenue Authority virtual assistant. How can you be helped today?",
                 "Welcome to the ZRA assistant. Ask anything about tax changes for 2025, Smart Invoice, VAT or other ZRA services."
+            ]
+        },
+        {
+            "id": "greeting.bemba",
+            "training_phrases": [
+                "Shani",
+                "Mulishani",
+                "Mwaiseni",
+                "Mwashibukeni",
+                "Chungulo mukwai"
+            ],
+            "responses": [
+                "Ndi bwino, ngaiwe? Mwaiseni mukwai.",
+                "Natotela. Kuti namwafwa shani lelo?"
+            ]
+        },
+        {
+            "id": "greeting.nyanja",
+            "training_phrases": [
+                "Moni",
+                "Muli bwanji",
+                "Muli bwanji?"
+            ],
+            "responses": [
+                "Ndili bwino, kaya inu? Zikomo.",
+                "Ndili bwino. Mungafunse za misonkho kapena Smart Invoice."
+            ]
+        },
+        {
+            "id": "greeting.tonga",
+            "training_phrases": [
+                "Mwalumezi",
+                "Mwabuka buti",
+                "Mwabuka buti?"
+            ],
+            "responses": [
+                "Ndililabotu. Mwapona buti?",
+                "Ndililabotu. Ingamugwasya buti sunu?"
+            ]
+        },
+        {
+            "id": "greeting.lozi",
+            "training_phrases": [
+                "Lumela",
+                "Mlumeleng",
+                "U pila cwang",
+                "U zuhile cwang",
+                "Mutozi chwani",
+                "Muzuhile"
+            ],
+            "responses": [
+                "Na pila hande, wena u pila cwang?",
+                "Ni itumezi. Mutozi cwani?"
             ]
         },
         {
@@ -307,7 +359,7 @@
             ],
             "responses": [
                 "If a taxpayer has no valid TCC, a 15% AIT is charged on: Exports of goods for commercial purposes at the port of entry. Foreign remittances above USD 2,000 (or kwacha equivalent) through a commercial bank.",
-                "This AIT is a credit against future tax, not a final tax, and can be used to offset other liabilities or be refunded if there are none."
+                "This AIT is a credit against future tax, not a final tax, and can be used to offset other liabilities or be refunded if there are no liabilities."
             ]
         },
         {
