@@ -33,6 +33,17 @@
             ]
         },
         {
+            "id": "zra.definition",
+            "training_phrases": [
+                "What is the Zambia Revenue Authority?",
+                "What is ZRA?",
+                "Define ZRA"
+            ],
+            "responses": [
+                "ZRA is the statutory body that administers and collects taxes and related levies in Zambia, including income tax, VAT, customs and excise duties, and specific charges like the mobile money transaction levy."
+            ]
+        },
+        {
             "id": "zra.mission_vision",
             "training_phrases": [
                 "What is ZRA's mission?",
@@ -60,6 +71,40 @@
             ]
         },
         {
+            "id": "zra.key_changes_2025",
+            "training_phrases": [
+                "What are the main tax changes effective 1 January 2025?",
+                "Key tax changes 2025",
+                "Summary of 2025 tax amendments"
+            ],
+            "responses": [
+                "Key changes include: Turnover tax threshold increased to K5,000,000 and rate set at 5% above K12,000 up to that limit. Property transfer tax increased to 8% on land, shares, intellectual property and exploration rights. Advance income tax introduced on certain exports and foreign remittances without a tax clearance certificate at 15%. VAT input tax restricted mainly to Smart Invoice or exempted systems."
+            ]
+        },
+        {
+            "id": "tpin.definition_requirement",
+            "training_phrases": [
+                "What is a TPIN?",
+                "When is a TPIN required?",
+                "Do I need a TPIN for mobile money?",
+                "TPIN requirements"
+            ],
+            "responses": [
+                "A TPIN is a unique tax registration number and is now mandatory for opening and maintaining accounts with water utilities, mobile money and telecom operators, for membership with professional bodies, and for registering land title deeds, among other regulated transactions."
+            ]
+        },
+        {
+            "id": "tpin.application",
+            "training_phrases": [
+                "How do I apply for a TPIN?",
+                "Get a TPIN",
+                "TPIN registration process"
+            ],
+            "responses": [
+                "You can apply: Online via the ZRA website. Through the TaxOnApp mobile application. Using the USSD code *858# on supported networks, after which your TPIN and credentials are sent to your email and phone."
+            ]
+        },
+        {
             "id": "smart_invoice.basic_definition",
             "training_phrases": [
                 "What is Smart Invoice?",
@@ -68,8 +113,19 @@
                 "What do you mean by Smart Invoicing?"
             ],
             "responses": [
-                "Smart Invoice is the electronic invoicing system prescribed under the Value Added Tax Act and its regulations for issuing tax invoices in Zambia.",
+                "Smart Invoice is the electronic invoicing system defined in the VAT framework which issues tax invoices with fiscal memory and transmits data to ZRA in real time, replacing earlier manual and some electronic fiscal device arrangements.",
                 "From 1 January 2025, only invoices issued through the electronic invoicing system (Smart Invoice) or by a taxable supplier that ZRA has exempted from using Smart Invoice can generally be used to support VAT input tax claims."
+            ]
+        },
+        {
+            "id": "smart_invoice.effective_date",
+            "training_phrases": [
+                "From when do the new Smart Invoice rules apply?",
+                "Smart Invoice effective date",
+                "When does Smart Invoice start?"
+            ],
+            "responses": [
+                "The main Smart Invoice and VAT rules discussed in Practice Note No. 1 of 2025 apply from 1 January 2025, which is the commencement date for the relevant amendment legislation."
             ]
         },
         {
@@ -78,12 +134,12 @@
                 "Can I still use manual invoices for input VAT?",
                 "Are invoices outside Smart Invoice allowed for input tax?",
                 "Which invoices qualify for input tax claims?",
-                "Do I need Smart Invoice to claim VAT?"
+                "Do I need Smart Invoice to claim VAT?",
+                "Are any non-Smart-Invoice invoices still valid for input tax?"
             ],
             "responses": [
-                "From 1 January 2025, input tax can only be claimed using invoices issued from the electronic invoicing system (Smart Invoice) or invoices issued by a taxable supplier that has been formally exempted from using Smart Invoice.",
-                "Manual invoices and invoices from non‑approved systems are no longer acceptable documentary evidence for input VAT claims for supplies made from 1 January 2025, except where the supplier is specifically exempt from Smart Invoice.",
-                "Tax invoices issued outside Smart Invoice up to 31 December 2024 remain valid for input tax deduction in 2025, provided they meet the ninety‑day validity period and all mandatory tax invoice features."
+                "For supplies from 1 January 2025, input VAT may generally only be claimed from invoices generated by Smart Invoice or from invoices issued by taxable suppliers formally exempted from using Smart Invoice; other manual invoices will not support input tax claims.",
+                "Yes, tax invoices issued outside Smart Invoice up to 31 December 2024 remain valid for input VAT claims in 2025 if they meet the ninety‑day claim period and all mandatory tax invoice requirements."
             ]
         },
         {
@@ -94,7 +150,7 @@
                 "What if there is a system failure on the e-invoicing platform?"
             ],
             "responses": [
-                "If Smart Invoice or an approved invoicing system is down and transactions are recorded manually, all manually recorded transactions must be uploaded to the electronic invoicing system within 72 hours after restoration of the system."
+                "If Smart Invoice or an approved invoicing system fails, the supplier may record transactions manually, but must upload all such transactions to the electronic invoicing system within 72 hours after the system is restored."
             ]
         },
         {
@@ -102,11 +158,51 @@
             "training_phrases": [
                 "Who can be exempted from Smart Invoice?",
                 "Can ZRA allow me not to use Smart Invoice?",
-                "Conditions for exemption from e-invoicing"
+                "Conditions for exemption from e-invoicing",
+                "Can ZRA exempt a business from using Smart Invoice?"
             ],
             "responses": [
-                "The Commissioner‑General may allow a taxable supplier to use a document, device or equipment other than the electronic invoicing system if prescribed conditions are met.",
-                "Where ZRA has exempted a taxable supplier from using Smart Invoice, invoices issued as prescribed by that supplier can still be used to support input tax claims."
+                "The Commissioner‑General may authorise a taxable supplier to use a different approved document, device or equipment instead of Smart Invoice under prescribed conditions, and invoices issued under such exemption may still be used for input tax purposes."
+            ]
+        },
+        {
+            "id": "smart_invoice.transfer_system",
+            "training_phrases": [
+                "Can I transfer my approved invoicing system to another business?",
+                "Transfer Smart Invoice system"
+            ],
+            "responses": [
+                "No, a taxable supplier that has registered an approved invoicing system for its own use may not transfer that system to another taxable supplier."
+            ]
+        },
+        {
+            "id": "smart_invoice.insurance_levy",
+            "training_phrases": [
+                "How does Smart Invoice affect insurance premium levy?",
+                "Smart Invoice for insurance"
+            ],
+            "responses": [
+                "The Insurance Premium Levy amendments replace references to electronic fiscal devices with electronic invoicing systems, meaning insurers, brokers and agents must use an electronic invoicing system (such as Smart Invoice or an approved equivalent) to record insurance premiums and levy and to issue tax invoices."
+            ]
+        },
+        {
+            "id": "smart_invoice.scope",
+            "training_phrases": [
+                "Does Smart Invoice affect all VAT-registered suppliers?",
+                "Who must use Smart Invoice?"
+            ],
+            "responses": [
+                "Yes, all VAT‑registered suppliers are expected to comply with Smart Invoice or an approved equivalent unless ZRA grants an exemption, and failure to use the prescribed system can invalidate invoices for input tax claims and may attract penalties."
+            ]
+        },
+        {
+            "id": "smart_invoice.support",
+            "training_phrases": [
+                "Where can I get technical support on Smart Invoice?",
+                "Smart Invoice help"
+            ],
+            "responses": [
+                "Practice Note No. 1 of 2025 directs taxpayers to ZRA’s online channels and dedicated Smart Invoice support contacts, and also advises taxpayers to contact the ZRA Call Centre or visit Customer Experience Centres for assistance."
             ]
         },
         {
@@ -169,28 +265,49 @@
         {
             "id": "tax_clearance_certificate.basic",
             "training_phrases": [
-                "What is a tax clearance certificate?",
+                "What is a Tax Clearance Certificate (TCC)?",
                 "When do I need a tax clearance certificate?",
                 "Is tax clearance required for licences?",
                 "Explain the general tax clearance certificate"
             ],
             "responses": [
-                "A tax clearance certificate is a certificate issued by the Commissioner‑General confirming that a person or partnership has met tax obligations or made satisfactory arrangements with ZRA for a specified period.",
-                "From 2025, a valid general tax clearance certificate is mandatory for many transactions, including transfer of property, change of motor vehicle ownership, issuance of various trading and mining licences, and certain government permits or licences.",
+                "A TCC confirms that a person or partnership has met tax obligations or agreed arrangements under laws administered by ZRA, and it is required for transactions like transfer of property, change of motor vehicle ownership, obtaining trading and mining licences, and many government permits.",
                 "Professional bodies and other regulators must also require a tax clearance certificate for registration, renewal and issuance of practising licences, except for students or applicants not carrying on related business."
+            ]
+        },
+        {
+            "id": "tax_clearance_certificate.exemptions",
+            "training_phrases": [
+                "Are there exemptions from needing a TCC?",
+                "Who is exempt from tax clearance certificate?",
+                "TCC exemptions"
+            ],
+            "responses": [
+                "Yes, a TCC is not required for: Students registering with regulatory institutions. Applicants not carrying on business related to the regulator. Supplies of goods and services below ZMW 200 per transaction and agricultural produce up to ZMW 10,000 per transaction."
+            ]
+        },
+        {
+            "id": "tax_clearance_certificate.application",
+            "training_phrases": [
+                "How do I apply for a Tax Clearance Certificate online?",
+                "Apply for TCC",
+                "Get tax clearance certificate"
+            ],
+            "responses": [
+                "Log into the ZRA web portal using your TPIN and password, navigate to the Compliance or Tax Clearance section, submit an application for a TCC, and once approved you can print or download the certificate from the portal."
             ]
         },
         {
             "id": "advance_income_tax.remittances_and_exports",
             "training_phrases": [
-                "What is the advance income tax on remittances?",
+                "What is Advance Income Tax (AIT) on remittances and exports?",
                 "How is AIT on exports charged?",
                 "Do I pay tax when sending money abroad?",
                 "Advance income tax on foreign payments"
             ],
             "responses": [
-                "Where a taxpayer does not have a valid tax clearance certificate, advance income tax at 15 percent applies on exports of goods for commercial purposes and on remittances above 2,000 United States dollars or kwacha equivalent sent outside Zambia through a commercial bank.",
-                "This advance income tax is not a final tax; it sits as a credit on the taxpayer's account and can be used to offset other tax liabilities or be refunded where there are no liabilities."
+                "If a taxpayer has no valid TCC, a 15% AIT is charged on: Exports of goods for commercial purposes at the port of entry. Foreign remittances above USD 2,000 (or kwacha equivalent) through a commercial bank.",
+                "This AIT is a credit against future tax, not a final tax, and can be used to offset other liabilities or be refunded if there are none."
             ]
         },
         {
@@ -269,13 +386,13 @@
         {
             "id": "faq.contact_zra",
             "training_phrases": [
-                "How can I contact ZRA?",
+                "How can I contact ZRA for help?",
                 "Where can I get more help?",
                 "ZRA contact details",
                 "Who do I talk to for clarification?"
             ],
             "responses": [
-                "For clarifications or specific cases, you can contact the ZRA National Call Centre, visit your nearest Customer Experience Centre or any ZRA office.",
+                "You can contact the ZRA National Call Centre, visit the nearest Customer Experience Centre or other ZRA offices, and use the official website for contact numbers, service information and practice notes.",
                 "The practice note emphasises that detailed or disputed matters should be taken up directly with ZRA and that taxpayers retain their right of appeal on tax liability issues."
             ]
         }
