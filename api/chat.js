@@ -1,41 +1,59 @@
-import { put, list} from '@vercel/blob';
-import { NextResponse} from 'next/server';
+// Simple chat logging endpoint for Vercel serverless
+import { put, list } from '@vercel/blob';
 
-export async function GET() {
-  try {
-    const blobs = await list({ prefix: 'chat/'});
-    const messages = [];
+export default async function handler(req, res) {
+  // Set CORS headers
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
-    for (const blob of blobs.blobs) {
-      const res = await fetch(blob.url);
-      const msg = await res.json();
-      messages.push(msg);
-}
+  // Handle OPTIONS request for CORS
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
 
-    return NextResponse.json(messages);
-} catch (error) {
-    console.error("❌ Error in GET /api/chat:", error);
-    return NextResponse.json({ error: 'Failed to load chat messages'}, { status: 500});
-}
-}
+  // GET - Retrieve chat messages
+  if (req.method === 'GET') {
+    try {
+      const blobs = await list({ prefix: 'chat/' });
+      const messages = [];
 
-export async function POST(req) {
-  try {
-    const { sender, text} = await req.json();
-    if (!sender ||!text) {
-      return NextResponse.json({ error: 'Missing sender or text'}, { status: 400});
-}
+      for (const blob of blobs.blobs) {
+        const response = await fetch(blob.url);
+        const msg = await response.json();
+        messages.push(msg);
+      }
 
-    const timestamp = Date.now();
-    const filename = `chat/${timestamp}-${sender}.json`;
+      return res.status(200).json(messages);
+    } catch (error) {
+      console.error('❌ Error in GET /api/chat:', error);
+      return res.status(500).json({ error: 'Failed to load chat messages' });
+    }
+  }
 
-    const blob = await put(filename, JSON.stringify({ sender, text, timestamp}), {
-      access: 'public',
-});
+  // POST - Save chat message
+  if (req.method === 'POST') {
+    try {
+      const { sender, text } = req.body;
 
-    return NextResponse.json({ success: true, url: blob.url});
-} catch (error) {
-    console.error("❌ Error in POST /api/chat:", error);
-    return NextResponse.json({ error: 'Failed to save chat message'}, { status: 500});
-}
+      if (!sender || !text) {
+        return res.status(400).json({ error: 'Missing sender or text' });
+      }
+
+      const timestamp = Date.now();
+      const filename = `chat/${timestamp}-${sender}.json`;
+
+      const blob = await put(filename, JSON.stringify({ sender, text, timestamp }), {
+        access: 'public',
+      });
+
+      return res.status(200).json({ success: true, url: blob.url });
+    } catch (error) {
+      console.error('❌ Error in POST /api/chat:', error);
+      return res.status(500).json({ error: 'Failed to save chat message' });
+    }
+  }
+
+  // Method not allowed
+  return res.status(405).json({ error: 'Method not allowed' });
 }
