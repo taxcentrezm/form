@@ -26,7 +26,8 @@
                 "Mulishani",
                 "Mwaiseni",
                 "Mwashibukeni",
-                "Chungulo mukwai"
+                "Chungulo mukwai",
+                "Ndi bwino"
             ],
             "responses": [
                 "Ndi bwino, ngaiwe? Mwaiseni mukwai.",
@@ -38,7 +39,8 @@
             "training_phrases": [
                 "Moni",
                 "Muli bwanji",
-                "Muli bwanji?"
+                "Muli bwanji?",
+                "Ndili bwino"
             ],
             "responses": [
                 "Ndili bwino, kaya inu? Zikomo.",
@@ -50,7 +52,8 @@
             "training_phrases": [
                 "Mwalumezi",
                 "Mwabuka buti",
-                "Mwabuka buti?"
+                "Mwabuka buti?",
+                "Ndililabotu"
             ],
             "responses": [
                 "Ndililabotu. Mwapona buti?",
@@ -65,7 +68,8 @@
                 "U pila cwang",
                 "U zuhile cwang",
                 "Mutozi chwani",
-                "Muzuhile"
+                "Muzuhile",
+                "Na pila hande"
             ],
             "responses": [
                 "Na pila hande, wena u pila cwang?",
