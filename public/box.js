@@ -30,8 +30,9 @@ fetch("assets/zra_intents.json")
     // Initialize Fuse.js for fuzzy matching on training phrases
     intentsFuse = new Fuse(trainingPhrases, {
       keys: ['phrase'],
-      threshold: 0.4,
-      includeScore: true
+      threshold: 0.5,  // More lenient matching
+      includeScore: true,
+      distance: 100  // Allow more character distance
     });
 
     console.log("✅ ZRA Intents loaded:", data.bot_meta.name);
@@ -145,8 +146,8 @@ function getBotResponse(message) {
   // Use fuzzy matching to find best matching intent
   const results = intentsFuse.search(lower);
 
-  if (results.length > 0 && results[0].score < 0.5) {
-    // Found a good match
+  if (results.length > 0 && results[0].score < 0.6) {
+    // Found a good match (lower score = better match in Fuse.js)
     const matchedIntent = results[0].item;
     const responses = matchedIntent.responses;
 
