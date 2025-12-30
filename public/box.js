@@ -122,11 +122,13 @@ function addMessage(sender, text) {
   const sound = document.getElementById("chat-sound");
   if (sound) sound.play();
 
-  // Save to backend
+  // Save to backend (optional, fails silently if API unavailable)
   fetch('/api/chat', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ sender, text })
+  }).catch(() => {
+    // Silently ignore - backend logging is optional
   });
 }
 
