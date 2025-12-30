@@ -113,9 +113,16 @@
             "id": "vat.thresholds_and_registration",
             "training_phrases": [
                 "What is the VAT registration threshold for 2025?",
+                "What is the VAT threshold for 2025?",
+                "What is the VAT threshold?",
+                "VAT threshold",
+                "VAT registration threshold",
                 "Do I need to register for VAT?",
                 "What is the VAT turnover threshold?",
-                "VAT threshold Zambia 2025"
+                "VAT threshold Zambia 2025",
+                "VAT threshold 2025",
+                "How much to register VAT?",
+                "VAT registration limit"
             ],
             "responses": [
                 "The statutory VAT registration threshold remains at K800,000 annual taxable turnover.",
