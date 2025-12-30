@@ -206,7 +206,9 @@
                 "What is Smart Invoice?",
                 "Explain the electronic invoicing system",
                 "What is the ZRA e-invoicing system?",
-                "What do you mean by Smart Invoicing?"
+                "What do you mean by Smart Invoicing?",
+                "Smart Invoice",
+                "Smart Invoicing"
             ],
             "responses": [
                 "Smart Invoice is the electronic invoicing system defined in the VAT framework which issues tax invoices with fiscal memory and transmits data to ZRA in real time, replacing earlier manual and some electronic fiscal device arrangements.",
@@ -295,7 +297,7 @@
             "id": "smart_invoice.support",
             "training_phrases": [
                 "Where can I get technical support on Smart Invoice?",
-                "Smart Invoice help"
+                "Help with Smart Invoice"
             ],
             "responses": [
                 "Practice Note No. 1 of 2025 directs taxpayers to ZRA’s online channels and dedicated Smart Invoice support contacts, and also advises taxpayers to contact the ZRA Call Centre or visit Customer Experience Centres for assistance."
