@@ -1,0 +1,134 @@
+/* Feature Section Styles */
+.feature-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 5%;
+  background-color: #004d40; /* Deep Green background similar to Grammarly's dark teal */
+  color: #fff;
+  overflow: hidden;
+  gap: 40px;
+}
+
+.feature-content {
+  flex: 1;
+  max-width: 500px;
+  z-index: 2;
+}
+
+.feature-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  text-align: left;
+}
+
+.feature-content p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.feature-list li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  font-size: 1.05rem;
+}
+
+.feature-list li i {
+  color: #ff9800; /* Orange accent */
+  margin-right: 12px;
+  font-size: 1.2rem;
+}
+
+.feature-cta {
+  display: inline-block;
+  background-color: #fff;
+  color: #004d40;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Slideshow Container */
+.feature-visual {
+  flex: 1;
+  position: relative;
+  height: 450px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  background: #000;
+}
+
+.slideshow-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: slideShow 16s infinite;
+}
+
+/* Stagger animations for 4 images */
+.slideshow-image:nth-child(1) { animation-delay: 0s; }
+.slideshow-image:nth-child(2) { animation-delay: 4s; }
+.slideshow-image:nth-child(3) { animation-delay: 8s; }
+.slideshow-image:nth-child(4) { animation-delay: 12s; }
+
+@keyframes slideShow {
+  0% { opacity: 0; }
+  5% { opacity: 1; }
+  25% { opacity: 1; }
+  30% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .feature-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .feature-content {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .feature-content h2 {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .feature-list {
+    display: inline-block;
+    text-align: left;
+  }
+
+  .feature-visual {
+    width: 100%;
+    height: 300px;
+  }
+}
