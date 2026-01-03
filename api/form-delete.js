@@ -1,12 +1,31 @@
-import { del} from '@vercel/blob';
-import { NextResponse} from 'next/server';
+import { del } from '@vercel/blob';
 
-export async function DELETE(req) {
-  const { searchParams} = new URL(req.url);
-  const name = searchParams.get('name');
+export default async function handler(req, res) {
+  // Set CORS headers
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'DELETE, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
-  if (!name) return NextResponse.json({ error: 'Missing blob name'}, { status: 400});
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
 
-  await del(name);
-  return NextResponse.json({ success: true});
+  if (req.method === 'DELETE') {
+    const { searchParams } = new URL(req.url, `http://${req.headers.host}`);
+    const name = searchParams.get('name');
+
+    if (!name) {
+      return res.status(400).json({ error: 'Missing blob name' });
+    }
+
+    try {
+      await del(name);
+      return res.status(200).json({ success: true });
+    } catch (error) {
+      console.error('❌ Error in DELETE /api/form-delete:', error);
+      return res.status(500).json({ error: 'Failed to delete form' });
+    }
+  }
+
+  return res.status(405).json({ error: 'Method not allowed' });
 }
