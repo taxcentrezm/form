@@ -1,8 +1,8 @@
 {
     "bot_meta": {
         "name": "ZRA Assistant",
-        "language": "en",
-        "description": "Chatbot to answer basic Zambia Revenue Authority and Smart Invoicing questions using Practice Note No. 1 of 2025."
+        "language": "en-bem",
+        "description": "Chatbot answering in English and Bemba regarding ZRA and Smart Invoice (Practice Note No. 1 of 2025)."
     },
     "intents": [
         {
@@ -17,6 +17,22 @@
             "responses": [
                 "Hello, welcome to the Zambia Revenue Authority virtual assistant. How can you be helped today?",
                 "Welcome to the ZRA assistant. Ask anything about tax changes for 2025, Smart Invoice, VAT or other ZRA services."
+            ]
+        },
+        {
+            "id": "greeting.general.bemba",
+            "training_phrases": [
+                "Shani",
+                "Mulishani",
+                "Mwashibukeni",
+                "Mwaiseni",
+                "Chungulo mukwai",
+                "Ulishani",
+                "Mwapoleni"
+            ],
+            "responses": [
+                "Mulishani, mwaiseni ku Zambia Revenue Authority virtual assistant. Ungafwa ifyo nafwa ifyo lelo?",
+                "Mwaiseni ku ZRA assistant. Funda ilibantu ifitile ku tax changes ya 2025, Smart Invoice, VAT na ifilomboshi fyi ZRA."
             ]
         },
         {
@@ -129,6 +145,20 @@
             ]
         },
         {
+            "id": "greeting.about_bot.bemba",
+            "training_phrases": [
+                "Ngecita cinshi?",
+                "Ungandi fwila shani?",
+                "Nni ni ni?",
+                "Ichi chatbot ni fi?",
+                "Uli kucita cinshi?",
+                "Njipusheko?"
+            ],
+            "responses": [
+                "Ichi assistant chipapula amafunika yakusowa ku tax changes za Zambian za 2025, pantu income tax, VAT, Smart Invoice requirements, turnover tax, mobile money levy na ifilomboshi fyi Practice Note No. 1 ya 2025. Tachipelela law na official ZRA advice."
+            ]
+        },
+        {
             "id": "zra.definition",
             "training_phrases": [
                 "What is the Zambia Revenue Authority?",
@@ -137,6 +167,19 @@
             ],
             "responses": [
                 "ZRA is the statutory body that administers and collects taxes and related levies in Zambia, including income tax, VAT, customs and excise duties, and specific charges like the mobile money transaction levy."
+            ]
+        },
+        {
+            "id": "zra.definition.bemba",
+            "training_phrases": [
+                "ZRA ni cinshi?",
+                "Zambia Revenue Authority ni cinshi?",
+                "Eleka ZRA",
+                "ZRA yaliba cinshi?",
+                "ZRA icitika cinshi?"
+            ],
+            "responses": [
+                "ZRA ni boma body ifyo ili kukukwata na kulemeka amisonkho na related levies mu Zambia, pantu income tax, VAT, customs na excise duties, na specific charges nga mobile money transaction levy."
             ]
         },
         {
@@ -154,6 +197,21 @@
             ]
         },
         {
+            "id": "zra.mission_vision.bemba",
+            "training_phrases": [
+                "ZRA yakusowa cinshi?",
+                "ZRA mission ni cinshi?",
+                "ZRA vision ni cinshi?",
+                "Fundula ZRA",
+                "ZRA balandako cinshi?"
+            ],
+            "responses": [
+                "ZRA's mission ni kukukwata na kusunga revenue collection na administration for a prosperous Zambia.",
+                "ZRA's vision ni ku ba world class model of excellence mu revenue administration na trade facilitation.",
+                "ZRA tagline ni: \"My Tax, Your Tax, Our Destiny\"."
+            ]
+        },
+        {
             "id": "zra.practice_note_scope",
             "training_phrases": [
                 "What is Practice Note No. 1 of 2025?",
@@ -167,6 +225,20 @@
             ]
         },
         {
+            "id": "zra.practice_note_scope.bemba",
+            "training_phrases": [
+                "Practice Note No. 1 ya 2025 ni cinshi?",
+                "Imilawu ilandapo practice note ni fi?",
+                "Fifine ifitile mu Practice Note 1 2025?",
+                "Practice Note 2025 yaliba cinshi?"
+            ],
+            "responses": [
+                "Practice Note No. 1 ya 2025 ipapula general guidance ku various tax changes ifyo zilandakala ku 1 January 2025.",
+                "Ilandapo amendments ku: Income Tax Amendment Act No. 22 ya 2024, Property Transfer Tax Amendment Act No. 27 ya 2024, Value Added Tax Amendment Act No. 23 ya 2024, VAT Regulations na Electronic Invoicing Regulations, Income Tax Advance Income Tax Regulations, Customs na Excise changes, Insurance Premium Levy changes, na Mobile Money Transaction Levy Act No. 25 ya 2024.",
+                "Ichi practice note ni for general guidance pe na si legal authority, ta kubola umunthu uwe na right of appeal na ZRA's discretion under the law."
+            ]
+        },
+        {
             "id": "zra.key_changes_2025",
             "training_phrases": [
                 "What are the main tax changes effective 1 January 2025?",
@@ -175,6 +247,18 @@
             ],
             "responses": [
                 "Key changes include: Turnover tax threshold increased to K5,000,000 and rate set at 5% above K12,000 up to that limit. Property transfer tax increased to 8% on land, shares, intellectual property and exploration rights. Advance income tax introduced on certain exports and foreign remittances without a tax clearance certificate at 15%. VAT input tax restricted mainly to Smart Invoice or exempted systems."
+            ]
+        },
+        {
+            "id": "zra.key_changes_2025.bemba",
+            "training_phrases": [
+                "Main tax changes za 1 January 2025 ni fi?",
+                "Key tax changes 2025",
+                "Summary ya tax amendments 2025",
+                "Fifine fya tax 2025"
+            ],
+            "responses": [
+                "Key changes ni: Turnover tax threshold yakwatishtwa ku K5,000,000 na rate yakusungwa pa 5% kupalupafye K12,000 kuti leko limit. Property transfer tax yakwatishtwa ku 8% pa land, shares, intellectual property na exploration rights. Advance income tax yakalandwa pa certain exports na foreign remittances tabula TPIN pa 15%. VAT input tax yakatiletwa Smart Invoice na exempted systems."
             ]
         },
         {
@@ -190,6 +274,19 @@
             ]
         },
         {
+            "id": "tpin.definition_requirement.bemba",
+            "training_phrases": [
+                "TPIN ni cinshi?",
+                "TPIN mulefwaya lisa?",
+                "TPIN for mobile money?",
+                "TPIN requirements",
+                "TPIN yafwaya lisa?"
+            ],
+            "responses": [
+                "TPIN ni unique tax registration number ifyo lelo ni mandatory pa opening na maintaining accounts na water utilities, mobile money na telecom operators, for membership na professional bodies, na registering land title deeds, pantu ifilomboshi fyi regulated transactions."
+            ]
+        },
+        {
             "id": "tpin.application",
             "training_phrases": [
                 "How do I apply for a TPIN?",
@@ -198,6 +295,19 @@
             ],
             "responses": [
                 "You can apply: Online via the ZRA website. Through the TaxOnApp mobile application. Using the USSD code *858# on supported networks, after which your TPIN and credentials are sent to your email and phone."
+            ]
+        },
+        {
+            "id": "tpin.application.bemba",
+            "training_phrases": [
+                "Shina TPIN shani?",
+                "Poka TPIN",
+                "TPIN registration process",
+                "How to get TPIN?",
+                "TPIN nga poka?"
+            ],
+            "responses": [
+                "Ungapoka: Online via ZRA website. Through TaxOnApp mobile application. Using USSD *858# pa supported networks, after which TPIN na credentials zipelekwa pa email na phone yako."
             ]
         },
         {
@@ -216,6 +326,21 @@
             ]
         },
         {
+            "id": "smart_invoice.basic_definition.bemba",
+            "training_phrases": [
+                "Smart Invoice ni cinshi?",
+                "Eleka electronic invoicing system",
+                "ZRA e-invoicing system ni cinshi?",
+                "Smart Invoicing mulepilibula shani?",
+                "Smart Invoice",
+                "Smart Invoicing yaliba cinshi?"
+            ],
+            "responses": [
+                "Smart Invoice ni electronic invoicing system ifyo yakusungwa mu VAT framework ifyo ilandapo tax invoices na fiscal memory na itumizha data ku ZRA mu real time, yakusunganisha earlier manual na some electronic fiscal device arrangements.",
+                "Ku 1 January 2025, only invoices yakusungwa through electronic invoicing system (Smart Invoice) na by taxable supplier ZRA yakusunganisha from using Smart Invoice zikupokela VAT input tax claims."
+            ]
+        },
+        {
             "id": "smart_invoice.effective_date",
             "training_phrases": [
                 "From when do the new Smart Invoice rules apply?",
@@ -224,6 +349,18 @@
             ],
             "responses": [
                 "The main Smart Invoice and VAT rules discussed in Practice Note No. 1 of 2025 apply from 1 January 2025, which is the commencement date for the relevant amendment legislation."
+            ]
+        },
+        {
+            "id": "smart_invoice.effective_date.bemba",
+            "training_phrases": [
+                "Smart Invoice rules zilandakala lisa?",
+                "Smart Invoice effective date",
+                "Smart Invoice isa lisa?",
+                "When Smart Invoice start?"
+            ],
+            "responses": [
+                "Main Smart Invoice na VAT rules mu Practice Note No. 1 ya 2025 zilandakala ku 1 January 2025, ifyo ni commencement date for relevant amendment legislation."
             ]
         },
         {
@@ -241,6 +378,20 @@
             ]
         },
         {
+            "id": "smart_invoice.input_tax_restriction.bemba",
+            "training_phrases": [
+                "Manual invoices for input VAT zilandako?",
+                "Invoices outside Smart Invoice for input tax?",
+                "Which invoices for input tax?",
+                "Smart Invoice for VAT claim?",
+                "Non-Smart Invoice valid?"
+            ],
+            "responses": [
+                "For supplies ku 1 January 2025, input VAT yakupokela generally only from invoices yakusungwa by Smart Invoice na from invoices yakusungwa by taxable suppliers yakusunganishwa from using Smart Invoice; other manual invoices tazingapokela input tax claims.",
+                "Yes, tax invoices yakusungwa outside Smart Invoice up to 31 December 2024 zikupokela valid for input VAT claims mu 2025 if zipelele ninety-day claim period na all mandatory tax invoice requirements."
+            ]
+        },
+        {
             "id": "smart_invoice.system_downtime",
             "training_phrases": [
                 "What happens when Smart Invoice is down?",
@@ -249,6 +400,18 @@
             ],
             "responses": [
                 "If Smart Invoice or an approved invoicing system fails, the supplier may record transactions manually, but must upload all such transactions to the electronic invoicing system within 72 hours after the system is restored."
+            ]
+        },
+        {
+            "id": "smart_invoice.system_downtime.bemba",
+            "training_phrases": [
+                "Smart Invoice down shani?",
+                "Manual invoices upload shani?",
+                "System failure e-invoicing?",
+                "Smart Invoice isaya shani?"
+            ],
+            "responses": [
+                "If Smart Invoice na approved invoicing system isaya, supplier yakupokela record transactions manually, pantu must upload all such transactions ku electronic invoicing system within 72 hours after system yakusungwa."
             ]
         },
         {
@@ -264,6 +427,18 @@
             ]
         },
         {
+            "id": "smart_invoice.exemption.bemba",
+            "training_phrases": [
+                "Who exempted Smart Invoice?",
+                "ZRA no Smart Invoice?",
+                "Exemption e-invoicing",
+                "ZRA exempt business Smart Invoice?"
+            ],
+            "responses": [
+                "Commissioner-General yakupokela authorise taxable supplier ku use different approved document, device na equipment instead of Smart Invoice under prescribed conditions, na invoices yakusungwa under such exemption zikupokela used for input tax purposes."
+            ]
+        },
+        {
             "id": "smart_invoice.transfer_system",
             "training_phrases": [
                 "Can I transfer my approved invoicing system to another business?",
@@ -271,6 +446,16 @@
             ],
             "responses": [
                 "No, a taxable supplier that has registered an approved invoicing system for its own use may not transfer that system to another taxable supplier."
+            ]
+        },
+        {
+            "id": "smart_invoice.transfer_system.bemba",
+            "training_phrases": [
+                "Transfer approved invoicing system?",
+                "Transfer Smart Invoice"
+            ],
+            "responses": [
+                "Awe, taxable supplier yakusungwa approved invoicing system for its own use takupokela transfer that system ku another taxable supplier."
             ]
         },
         {
@@ -284,6 +469,16 @@
             ]
         },
         {
+            "id": "smart_invoice.insurance_levy.bemba",
+            "training_phrases": [
+                "Smart Invoice insurance premium levy?",
+                "Smart Invoice insurance"
+            ],
+            "responses": [
+                "Insurance Premium Levy amendments yakusunganisha references ku electronic fiscal devices na electronic invoicing systems, meaning insurers, brokers na agents must use electronic invoicing system (such as Smart Invoice na approved equivalent) ku record insurance premiums na levy na ku issue tax invoices."
+            ]
+        },
+        {
             "id": "smart_invoice.scope",
             "training_phrases": [
                 "Does Smart Invoice affect all VAT-registered suppliers?",
@@ -294,6 +489,17 @@
             ]
         },
         {
+            "id": "smart_invoice.scope.bemba",
+            "training_phrases": [
+                "Smart Invoice all VAT suppliers?",
+                "Who must use Smart Invoice?",
+                "VAT suppliers Smart Invoice?"
+            ],
+            "responses": [
+                "Yes, all VAT-registered suppliers yakusungwa comply na Smart Invoice na approved equivalent unless ZRA grants exemption, na failure ku use prescribed system rikupokela invalidate invoices for input tax claims na may attract penalties."
+            ]
+        },
+        {
             "id": "smart_invoice.support",
             "training_phrases": [
                 "Where can I get technical support on Smart Invoice?",
@@ -301,6 +507,17 @@
             ],
             "responses": [
                 "Practice Note No. 1 of 2025 directs taxpayers to ZRA’s online channels and dedicated Smart Invoice support contacts, and also advises taxpayers to contact the ZRA Call Centre or visit Customer Experience Centres for assistance."
+            ]
+        },
+        {
+            "id": "smart_invoice.support.bemba",
+            "training_phrases": [
+                "Technical support Smart Invoice?",
+                "Help Smart Invoice",
+                "Smart Invoice support kwisa?"
+            ],
+            "responses": [
+                "Practice Note No. 1 ya 2025 ilandapo taxpayers ku ZRA's online channels na dedicated Smart Invoice support contacts, na advises taxpayers ku contact ZRA Call Centre na visit Customer Experience Centres for assistance."
             ]
         },
         {
@@ -324,6 +541,20 @@
             ]
         },
         {
+            "id": "vat.thresholds_and_registration.bemba",
+            "training_phrases": [
+                "VAT registration threshold 2025?",
+                "VAT threshold 2025",
+                "VAT threshold",
+                "Register VAT shani?",
+                "VAT turnover threshold"
+            ],
+            "responses": [
+                "Statutory VAT registration threshold yakusunga pa K800,000 annual taxable turnover.",
+                "If annual taxable turnover yako yakupitile K800,000, mukupokela register for VAT, subject ku normal rules."
+            ]
+        },
+        {
             "id": "turnover_tax.threshold_and_rate",
             "training_phrases": [
                 "What is the turnover tax threshold for 2025?",
@@ -338,6 +569,20 @@
             ]
         },
         {
+            "id": "turnover_tax.threshold_and_rate.bemba",
+            "training_phrases": [
+                "Turnover tax threshold 2025?",
+                "Turnover tax rate 2025",
+                "Qualify turnover tax?",
+                "Turnover tax limits"
+            ],
+            "responses": [
+                "Ku 2025, maximum annual threshold for turnover tax yakwatishtwa from K800,000 ku K5,000,000.",
+                "For turnover between K12,000 na K5,000,000 per annum, turnover tax rate ni 5 percent.",
+                "Taxpayer na annual taxable turnover yakupitile K800,000 pantu takupitile K5,000,000 mukupokela register for both turnover tax na VAT, while above K5,000,000 balandapo under income tax na VAT."
+            ]
+        },
+        {
             "id": "turnover_tax.gig_economy",
             "training_phrases": [
                 "How is the gig economy taxed?",
@@ -346,6 +591,17 @@
             ],
             "responses": [
                 "The annual turnover threshold for turnover tax for persons conducting business through the gig economy has also increased to K5,000,000."
+            ]
+        },
+        {
+            "id": "turnover_tax.gig_economy.bemba",
+            "training_phrases": [
+                "Gig economy taxed shani?",
+                "Gig workers turnover tax?",
+                "Turnover tax gig economy"
+            ],
+            "responses": [
+                "Annual turnover threshold for turnover tax for persons conducting business through gig economy yakusungwa yakwatishtwa ku K5,000,000."
             ]
         },
         {
@@ -358,6 +614,18 @@
             "responses": [
                 "Partnerships, income from consultancy services, mining operations and businesses on voluntary VAT registration remain excluded from turnover tax.",
                 "The rental tax threshold remains at K800,000 and the threshold for artisanal and small‑scale mining licence holders also remains at K800,000."
+            ]
+        },
+        {
+            "id": "turnover_tax.exclusions.bemba",
+            "training_phrases": [
+                "Excluded turnover tax?",
+                "Rental income turnover tax?",
+                "Mining turnover tax?"
+            ],
+            "responses": [
+                "Partnerships, income from consultancy services, mining operations na businesses pa voluntary VAT registration yakusunga excluded from turnover tax.",
+                "Rental tax threshold yakusunga pa K800,000 na threshold for artisanal na small-scale mining licence holders yakusunga pa K800,000."
             ]
         },
         {
@@ -374,6 +642,19 @@
             ]
         },
         {
+            "id": "tax_clearance_certificate.basic.bemba",
+            "training_phrases": [
+                "Tax Clearance Certificate ni cinshi?",
+                "Tax clearance lisa?",
+                "Tax clearance licences?",
+                "Tax clearance certificate"
+            ],
+            "responses": [
+                "TCC ikupokula umboni kuti umunthu na partnership wasungile tax obligations na agreed arrangements under laws administered by ZRA, na ikupokela for transactions nga transfer of property, change of motor vehicle ownership, obtaining trading na mining licences, na many government permits.",
+                "Professional bodies na other regulators must require tax clearance certificate for registration, renewal na issuance of practising licences, except for students na applicants takukaba carrying on related business."
+            ]
+        },
+        {
             "id": "tax_clearance_certificate.exemptions",
             "training_phrases": [
                 "Are there exemptions from needing a TCC?",
@@ -385,6 +666,17 @@
             ]
         },
         {
+            "id": "tax_clearance_certificate.exemptions.bemba",
+            "training_phrases": [
+                "Exemptions TCC?",
+                "Who exempt tax clearance?",
+                "TCC exemptions"
+            ],
+            "responses": [
+                "Yes, TCC takulipelekwa for: Students registering na regulatory institutions. Applicants takukaba carrying on business related ku regulator. Supplies of goods na services below ZMW 200 per transaction na agricultural produce up to ZMW 10,000 per transaction."
+            ]
+        },
+        {
             "id": "tax_clearance_certificate.application",
             "training_phrases": [
                 "How do I apply for a Tax Clearance Certificate online?",
@@ -393,6 +685,17 @@
             ],
             "responses": [
                 "Log into the ZRA web portal using your TPIN and password, navigate to the Compliance or Tax Clearance section, submit an application for a TCC, and once approved you can print or download the certificate from the portal."
+            ]
+        },
+        {
+            "id": "tax_clearance_certificate.application.bemba",
+            "training_phrases": [
+                "Apply Tax Clearance online?",
+                "Poka TCC",
+                "Get tax clearance"
+            ],
+            "responses": [
+                "Log into ZRA web portal using TPIN na password yako, navigate ku Compliance na Tax Clearance section, submit application for TCC, na once approved ungaprint na download certificate from portal."
             ]
         },
         {
@@ -409,6 +712,19 @@
             ]
         },
         {
+            "id": "advance_income_tax.remittances_and_exports.bemba",
+            "training_phrases": [
+                "Advance Income Tax remittances exports?",
+                "AIT exports charged?",
+                "Tax sending money abroad?",
+                "Advance tax foreign payments"
+            ],
+            "responses": [
+                "If taxpayer tabula valid TCC, 15% AIT ikukolelwa pa: Exports of goods for commercial purposes pa port of entry. Foreign remittances above USD 2,000 (na kwacha equivalent) through commercial bank.",
+                "Ichi AIT ni credit against future tax, si final tax, na ikupokela used ku offset other liabilities na be refunded if tabuli liabilities."
+            ]
+        },
+        {
             "id": "mobile_money_levy.basic",
             "training_phrases": [
                 "What is the Mobile Money Transaction Levy?",
@@ -418,6 +734,18 @@
             "responses": [
                 "The Mobile Money Transaction Levy Act No. 25 of 2024 imposes a levy on payment or transfer of electronic money from one person to another, and it is administered by ZRA.",
                 "Mobile money service providers must collect the levy, submit returns, remit the levies to ZRA by the due date, and keep records of their operations, with penalties for non‑compliance."
+            ]
+        },
+        {
+            "id": "mobile_money_levy.basic.bemba",
+            "training_phrases": [
+                "Mobile Money Transaction Levy ni cinshi?",
+                "Who pays mobile money levy?",
+                "Mobile money levy 2025"
+            ],
+            "responses": [
+                "Mobile Money Transaction Levy Act No. 25 ya 2024 ikukolela levy pa payment na transfer of electronic money from one person ku another, na ikukolelwa by ZRA.",
+                "Mobile money service providers must collect levy, submit returns, remit levies ku ZRA by due date, na keep records of operations, na penalties for non-compliance."
             ]
         },
         {
@@ -434,6 +762,19 @@
             ]
         },
         {
+            "id": "pay_as_you_earn.basic.bemba",
+            "training_phrases": [
+                "PAYE Zambia shani?",
+                "Salaries taxed 2025?",
+                "PAYE bands",
+                "Income taxable PAYE?"
+            ],
+            "responses": [
+                "Pay As You Earn (PAYE) ni system under which employers deduct income tax from employees' emoluments using monthly tax bands for each charge year.",
+                "Taxable emoluments include monthly salary, commutation of accrued leave days na accrued service bonuses, while certain payments nga pension benefits, redundancy pay na medical expenses paid by employer may be exempt."
+            ]
+        },
+        {
             "id": "paye.disability_credit",
             "training_phrases": [
                 "Is there a tax credit for persons with disabilities?",
@@ -443,6 +784,18 @@
             "responses": [
                 "An employee registered with the Zambia Agency for Persons with Disabilities is entitled to a disability tax credit of K7,200 per annum, which is K600 per month.",
                 "The employer should apply this credit when computing PAYE so that the employee's monthly tax payable is reduced by the credit amount."
+            ]
+        },
+        {
+            "id": "paye.disability_credit.bemba",
+            "training_phrases": [
+                "Tax credit disabilities?",
+                "Disability tax credit",
+                "Disability credit shinga?"
+            ],
+            "responses": [
+                "Employee yakusungwa na Zambia Agency for Persons with Disabilities entitled ku disability tax credit of K7,200 per annum, ifyo K600 per month.",
+                "Employer should apply ichi credit when computing PAYE so kuti employee's monthly tax payable ikapungule by credit amount."
             ]
         },
         {
@@ -458,6 +811,18 @@
             ]
         },
         {
+            "id": "paye.refunds.bemba",
+            "training_phrases": [
+                "PAYE refunded lisa?",
+                "Get PAYE refund?",
+                "Overpaid PAYE refund?"
+            ],
+            "responses": [
+                "PAYE generally non-refundable, pantu refund may arise where tax yakukolelwa over mu charge year, for example due ku payroll errors, use of wrong tax bands, na taxation of exempt income.",
+                "Refund rikupokela arise if employee astop work during year na makes eligible deductions such as donations ku approved Public Benefit Organisation, subject ku 15 percent limit of taxable income."
+            ]
+        },
+        {
             "id": "property_transfer_tax.basic",
             "training_phrases": [
                 "What is the property transfer tax rate in 2025?",
@@ -467,6 +832,18 @@
             "responses": [
                 "From 1 January 2025, the property transfer tax rate is 8 percent of realised value on land, shares, intellectual property and mining rights for exploration licences.",
                 "Certain other mining rights, such as mining licences and mineral processing licences, attract PTT at 10 percent of the realised value."
+            ]
+        },
+        {
+            "id": "property_transfer_tax.basic.bemba",
+            "training_phrases": [
+                "Property transfer tax rate 2025?",
+                "PTT rate land shares",
+                "PTT shinga?"
+            ],
+            "responses": [
+                "Ku 1 January 2025, property transfer tax rate ni 8 percent of realised value pa land, shares, intellectual property na mining rights for exploration licences.",
+                "Certain other mining rights, such as mining licences na mineral processing licences, attract PTT pa 10 percent of realised value."
             ]
         },
         {
@@ -482,6 +859,18 @@
             ]
         },
         {
+            "id": "vat.imported_services.reverse_vat.bemba",
+            "training_phrases": [
+                "Reverse VAT imported services?",
+                "VAT imported services?",
+                "Reverse VAT rules"
+            ],
+            "responses": [
+                "Reverse VAT ikukolela where taxable supplier mu Zambia imports taxable services from foreign supplier ifyo zilandapo mu scope of VAT, na Zambian recipient accounts for VAT instead of foreign supplier.",
+                "Importation of exempt services by taxable supplier, na importation by person yakukaba makes exempt supplies na si required ku register, outside scope of reverse VAT."
+            ]
+        },
+        {
             "id": "faq.contact_zra",
             "training_phrases": [
                 "How can I contact ZRA for help?",
@@ -493,12 +882,27 @@
                 "You can contact the ZRA National Call Centre, visit the nearest Customer Experience Centre or other ZRA offices, and use the official website for contact numbers, service information and practice notes.",
                 "The practice note emphasises that detailed or disputed matters should be taken up directly with ZRA and that taxpayers retain their right of appeal on tax liability issues."
             ]
+        },
+        {
+            "id": "faq.contact_zra.bemba",
+            "training_phrases": [
+                "Contact ZRA help?",
+                "More help kwisa?",
+                "ZRA contact details",
+                "Clarification ni ni?"
+            ],
+            "responses": [
+                "Ungafunga ZRA National Call Centre, visit nearest Customer Experience Centre na other ZRA offices, na use official website for contact numbers, service information na practice notes.",
+                "Practice note ikusunganisha kuti detailed na disputed matters be taken up directly na ZRA na kuti taxpayers retain right of appeal pa tax liability issues."
+            ]
         }
     ],
     "fallback": {
         "responses": [
             "This question is beyond the scope of the current practice note. Please contact ZRA directly or consult the relevant tax legislation for a definitive position.",
-            "The assistant can only give general guidance. For a detailed or binding position, kindly engage ZRA or a qualified tax advisor."
+            "The assistant can only give general guidance. For a detailed or binding position, kindly engage ZRA or a qualified tax advisor.",
+            "Ichi funika lilelanda pa scope of current practice note. Funda ZRA directly na consult relevant tax legislation for definitive position.",
+            "Assistant ikupokela general guidance pe. For detailed na binding position, engage ZRA na qualified tax advisor."
         ]
     }
 }
