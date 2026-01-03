@@ -1,0 +1,437 @@
+{
+    "bot_meta": {
+        "name": "ZRA Assistant",
+        "language": "en-bem-loz-nya",
+        "description": "Chatbot answering in English, Bemba, Lozi, and Nyanja regarding ZRA and Smart Invoice (Practice Note No. 1 of 2025)."
+    },
+    "intents": [
+        {
+            "id": "greeting.general.nyanja",
+            "training_phrases": [
+                "Moni",
+                "Muli bwanji",
+                "Bwanji",
+                "Mwauka bwanji",
+                "Mwadzuka bwanji",
+                "Masana bwanji",
+                "Madzulo bwanji"
+            ],
+            "responses": [
+                "Moni, muli bwanji? Takulandirani ku Zambia Revenue Authority virtual assistant. Ndingakuthandizeni bwanji lero?",
+                "Takulandirani ku ZRA assistant. Funsani za kusintha kwa misonkho ya 2025, Smart Invoice, VAT kapena ntchito zina za ZRA."
+            ]
+        },
+        {
+            "id": "greeting.nyanja",
+            "training_phrases": [
+                "Moni",
+                "Muli bwanji",
+                "Muli bwanji?",
+                "Bwanji",
+                "Mwauka bwanji",
+                "Mwadzuka bwanji"
+            ],
+            "responses": [
+                "Ndili bwino, kaya inu? Zikomo.",
+                "Ndili bwino. Mungafunse za misonkho kapena Smart Invoice."
+            ]
+        },
+        {
+            "id": "greeting.nyanja.fine",
+            "training_phrases": [
+                "Ndili bwino",
+                "Ndili bwino zikomo",
+                "Ndili bwino, inu bwanji?",
+                "Ndili bwino kaya inu?",
+                "Ndili bwino chomene"
+            ],
+            "responses": [
+                "Zikomo. Mungafunse za misonkho kapena Smart Invoice.",
+                "Chabwino. Ndingakuthandizeni bwanji lero?"
+            ]
+        },
+        {
+            "id": "greeting.about_bot.nyanja",
+            "training_phrases": [
+                "Ungachite chiyani?",
+                "Ungandithandize bwanji?",
+                "Ndani iwe?",
+                "Chatbot iyi ndi yachiyani?",
+                "Iyi system imagwiritsidwa ntchito chiyani?"
+            ],
+            "responses": [
+                "Assistant iyi imapereka malangizo a m’kati pa kusintha kwa misonkho ku Zambia mu 2025, kuphatikiza income tax, VAT, zofunikira za Smart Invoice, turnover tax, mobile money levy ndi mitu ina yomwe ili mu Practice Note No. 1 ya 2025. Simalowa m'malo mwa malamulo kapena upangiri wovomerezeka wa ZRA."
+            ]
+        },
+        {
+            "id": "zra.definition.nyanja",
+            "training_phrases": [
+                "Kodi Zambia Revenue Authority ndi chiyani?",
+                "Kodi ZRA ndi chiyani?",
+                "Fotokozani ZRA",
+                "Ntchito ya ZRA ndi chiyani?"
+            ],
+            "responses": [
+                "ZRA ndi bungwe la boma lomwe limayang'anira ndi kusonkhanitsa misonkho ndi ma levy osiyanasiyana ku Zambia, kuphatikiza income tax, VAT, customs ndi excise duties, komanso ma levy apadera monga mobile money transaction levy."
+            ]
+        },
+        {
+            "id": "zra.mission_vision.nyanja",
+            "training_phrases": [
+                "Mission ya ZRA ndi chiyani?",
+                "Vision ya ZRA ndi chiyani?",
+                "Mission ndi vision ya ZRA",
+                "Ndifotokozereni za ZRA"
+            ],
+            "responses": [
+                "Mission ya ZRA ndi kukonza ndiponso kusunga bwino kusonkhanitsa misonkho ndi kayendetsedwe ka misonkho kuti Zambia ipite patsogolo.",
+                "Vision ya ZRA ndi kukhala chitsanzo chapamwamba padziko lonse pa kayendetsedwe ka misonkho ndi kulimbikitsa malonda.",
+                "Tagline ya ZRA ndi: \"My Tax, Your Tax, Our Destiny\"."
+            ]
+        },
+        {
+            "id": "zra.practice_note_scope.nyanja",
+            "training_phrases": [
+                "Practice Note No. 1 ya 2025 ndi chiyani?",
+                "Malamulo ati ali mu practice note iyi?",
+                "Kodi kusintha kotani kufotokozedwa mu Practice Note 1 2025?"
+            ],
+            "responses": [
+                "Practice Note No. 1 ya 2025 imapereka malangizo a m'kati pa kusintha kosiyanasiyana kwa misonkho komwe kumayamba kugwira ntchito pa 1 January 2025.",
+                "Imaphimba kusintha mu: Income Tax Amendment Act No. 22 of 2024, Property Transfer Tax Amendment Act No. 27 of 2024, Value Added Tax Amendment Act No. 23 of 2024, VAT Regulations ndi Electronic Invoicing Regulations, Income Tax Advance Income Tax Regulations, kusintha kwa Customs ndi Excise, Insurance Premium Levy, ndi Mobile Money Transaction Levy Act No. 25 of 2024.",
+                "Practice note iyi ndi ya malangizo okha ndipo si malamulo enieni, ndipo siyimachotsa ufulu wa wowerengera kupempha kapena ufulu wa ZRA kugwiritsa ntchito kusankha kwawo mogwirizana ndi lamulo."
+            ]
+        },
+        {
+            "id": "zra.key_changes_2025.nyanja",
+            "training_phrases": [
+                "Kodi kusintha kwakukulu kwa misonkho kuyambira 1 January 2025 ndi kotani?",
+                "Key tax changes 2025",
+                "Summary ya 2025 tax amendments",
+                "Sinthani misonkho ya 2025"
+            ],
+            "responses": [
+                "Kusintha kwakukulu kuphatikiza: Turnover tax threshold yakwera kufika K5,000,000 ndipo mlingo wa 5% pa turnover yoposa K12,000 kufika pa malire amenewo. Property transfer tax yakwera kufika 8% pa malo, ma shares, intellectual property ndi exploration rights. Advance income tax ya 15% yaikidwa pa katundu wotumizidwa kunja ndi ndalama zomwe zikupita kunja popanda tax clearance certificate. VAT input tax tsopano imalumikizidwa makamaka ndi ma invoice a Smart Invoice kapena ma system omwe ZRA yawaloletsa kugwiritsa ntchito Smart Invoice."
+            ]
+        },
+        {
+            "id": "tpin.definition_requirement.nyanja",
+            "training_phrases": [
+                "TPIN ndi chiyani?",
+                "TPIN imafunika liti?",
+                "Kodi ndimafunikira TPIN pa mobile money?",
+                "TPIN requirements"
+            ],
+            "responses": [
+                "TPIN ndi nambala yapadera yolembetsa msonkho ndipo tsopano ndi yofunika popereka ndi kusunga ma account ku makampani a madzi, mobile money ndi ma telecom, pa umembala wa ma professional bodies, komanso polembetsa ma title deeds a malo ndi ma transaction ena omwe amalamulidwa."
+            ]
+        },
+        {
+            "id": "tpin.application.nyanja",
+            "training_phrases": [
+                "Kodi ndimapeza TPIN bwanji?",
+                "Ndikufuna TPIN",
+                "TPIN registration process",
+                "Lembetsani TPIN online"
+            ],
+            "responses": [
+                "Mutha kulembetsa TPIN: Pa intaneti kudzera pa ZRA website. Kudzera mu TaxOnApp mobile application. Pogwiritsa ntchito USSD *858# pa ma network omwe amathandizidwa, kenako TPIN ndi ma credential anu zomveka zimatumikizidwa ku email ndi pa foni yanu."
+            ]
+        },
+        {
+            "id": "smart_invoice.basic_definition.nyanja",
+            "training_phrases": [
+                "Smart Invoice ndi chiyani?",
+                "Fotokozani electronic invoicing system",
+                "Kodi ZRA e-invoicing system ndi chiyani?",
+                "Mukutanthauza chiyani ndi Smart Invoicing?",
+                "Smart Invoice",
+                "Smart Invoicing"
+            ],
+            "responses": [
+                "Smart Invoice ndi electronic invoicing system yomwe yafotokozedwa mu VAT framework yomwe imatulutsa ma tax invoice okhala ndi fiscal memory ndikutumiza data ku ZRA nthawi yomweyo, ndipo tsopano ikusintha ma invoice a pamanja ndi ma fiscal devices ena akale.",
+                "Kuyambira pa 1 January 2025, ma invoice omwe amavomerezedwa kwambiri pa VAT input tax ndi omwe atuluka mu Smart Invoice kapena kuchokera kwa taxable suppliers omwe ZRA yawaloletsa kuti asapange Smart Invoice."
+            ]
+        },
+        {
+            "id": "smart_invoice.effective_date.nyanja",
+            "training_phrases": [
+                "Malamulo atsopano a Smart Invoice ayamba liti?",
+                "Smart Invoice effective date",
+                "Smart Invoice imayamba liti?"
+            ],
+            "responses": [
+                "Malamulo akulu a Smart Invoice ndi VAT omwe afotokozedwa mu Practice Note No. 1 ya 2025 ayamba kugwira ntchito pa 1 January 2025, tsiku lotsegulira malamulo atsopanowa."
+            ]
+        },
+        {
+            "id": "smart_invoice.input_tax_restriction.nyanja",
+            "training_phrases": [
+                "Kodi ndingagwiritsenso ntchito ma invoice a pamanja pa input VAT?",
+                "Ma invoice akunja kwa Smart Invoice amalola input tax?",
+                "Ma invoice ati omwe angagwiritsidwe ntchito pa input tax claims?",
+                "Kodi ndimafunikira Smart Invoice kuti ndilandire VAT?",
+                "Kodi pali ma invoice osakhala a Smart Invoice omwe akadalipo pa input tax?"
+            ],
+            "responses": [
+                "Kwa ma supplies kuyambira 1 January 2025, input VAT nthawi zambiri imalipo kokha pa ma invoice opangidwa ndi Smart Invoice kapena ma invoice ochokera kwa taxable suppliers omwe ZRA yawaloletsa kupewa Smart Invoice; ma manual invoice ena sadzathandiza pa input tax claims.",
+                "Inde, ma tax invoice opangidwa osati kudzera mu Smart Invoice mpaka pa 31 December 2024 akadalipo ndipo angagwiritsidwe ntchito pa input VAT claims mu 2025 ngati akukwaniritsa nthawi ya masiku 90 komanso zofunikira zonse za tax invoice."
+            ]
+        },
+        {
+            "id": "smart_invoice.system_downtime.nyanja",
+            "training_phrases": [
+                "Zimachitika chiyani Smart Invoice ikagwa?",
+                "Ndili ndi nthawi yayitali bwanji yoti ndika-upload manual invoices?",
+                "Kodi chimachitika n’chiyani pakakhala kulephera kwa e-invoicing platform?"
+            ],
+            "responses": [
+                "Ngati Smart Invoice kapena invoicing system yovomerezeka yalephera, supplier amaloledwa kulemba ma transaction pamanja, koma ayenera ku-upload ma transaction onsewa ku electronic invoicing system mkati mwa maola 72 atangokonzedwa system."
+            ]
+        },
+        {
+            "id": "smart_invoice.exemption.nyanja",
+            "training_phrases": [
+                "Kodi ndani angaloledwe osagwiritsa ntchito Smart Invoice?",
+                "Kodi ZRA ingandilole osagwiritsa ntchito Smart Invoice?",
+                "Mikhalidwe yololeza exemption pa e-invoicing",
+                "Kodi ZRA ingaloletse bizinesi osagwiritsa ntchito Smart Invoice?"
+            ],
+            "responses": [
+                "Commissioner-General angaloletse taxable supplier kugwiritsa ntchito chikalata, chipangizo kapena equipment china chovomerezeka m'malo mwa Smart Invoice malinga ndi mikhalidwe yomwe yaikidwa, ndipo ma invoice opangidwa pansi pa exemption imeneyo akadalipo pa input tax purposes."
+            ]
+        },
+        {
+            "id": "smart_invoice.transfer_system.nyanja",
+            "training_phrases": [
+                "Kodi ndingasinthe approved invoicing system kupita ku bizinesi ina?",
+                "Transfer Smart Invoice system"
+            ],
+            "responses": [
+                "Ayi, taxable supplier yemwe walembetsa approved invoicing system kuti agwiritse ntchito iye mwini sangasinthe system imeneyo kupita kwa taxable supplier wina."
+            ]
+        },
+        {
+            "id": "smart_invoice.insurance_levy.nyanja",
+            "training_phrases": [
+                "Kodi Smart Invoice imakhudza bwanji insurance premium levy?",
+                "Smart Invoice pa insurance"
+            ],
+            "responses": [
+                "Malamulo atsopano a Insurance Premium Levy asinthira mawu ochokera ku electronic fiscal devices kupita ku electronic invoicing systems, zomwe zikutanthauza kuti ma insurer, ma broker ndi ma agent ayenera kugwiritsa ntchito electronic invoicing system (monga Smart Invoice kapena yofanana) polemba insurance premiums ndi levy komanso potulutsa ma tax invoice."
+            ]
+        },
+        {
+            "id": "smart_invoice.scope.nyanja",
+            "training_phrases": [
+                "Kodi Smart Invoice ikhudza ma VAT-registered suppliers onse?",
+                "Ndani ayenera kugwiritsa ntchito Smart Invoice?"
+            ],
+            "responses": [
+                "Inde, ma VAT-registered suppliers onse akuyembekezeka kutsatira Smart Invoice kapena system yofanana nawo kupatula ngati ZRA yawapatsa exemption; kulephera kugwiritsa ntchito system yomwe yalembedwa kungapangitse kuti ma invoice asavomerezedwe pa input tax ndipo kungabweretse chilango."
+            ]
+        },
+        {
+            "id": "smart_invoice.support.nyanja",
+            "training_phrases": [
+                "Kodi ndingapeze kuti technical support pa Smart Invoice?",
+                "Thandizo pa Smart Invoice"
+            ],
+            "responses": [
+                "Practice Note No. 1 ya 2025 ikusonyeza ogwira ntchito za msonkho kuti agwiritse ntchito ma channel a pa intaneti a ZRA ndi ma contact a Smart Invoice support, komanso kulankhula ndi ZRA Call Centre kapena kukaona Customer Experience Centres kuti alandire thandizo."
+            ]
+        },
+        {
+            "id": "vat.thresholds_and_registration.nyanja",
+            "training_phrases": [
+                "Kodi VAT registration threshold ya 2025 ndi yotani?",
+                "VAT threshold 2025",
+                "Kodi VAT threshold ndi yotani?",
+                "Kodi ndiyenera kulembetsa VAT?",
+                "VAT turnover threshold",
+                "VAT threshold Zambia 2025"
+            ],
+            "responses": [
+                "VAT registration threshold yokhazikitsidwa ndi lamulo ikadali K800,000 ya annual taxable turnover.",
+                "Ngati annual taxable turnover yanu imaposa K800,000, muyenera kulembetsa VAT molingana ndi malamulo ena okhazikitsidwa."
+            ]
+        },
+        {
+            "id": "turnover_tax.threshold_and_rate.nyanja",
+            "training_phrases": [
+                "Turnover tax threshold ya 2025 ndi yotani?",
+                "New turnover tax rate Zambia 2025",
+                "Kodi ndili oyenera turnover tax?",
+                "Turnover tax limits and rate"
+            ],
+            "responses": [
+                "Kuyambira 2025, maximum annual threshold ya turnover tax yakwera kuchokera ku K800,000 kufika ku K5,000,000.",
+                "Kwa turnover pakati pa K12,000 ndi K5,000,000 pachaka, turnover tax rate ili pa 5 percent.",
+                "Wowerengera msonkho yemwe ali ndi annual taxable turnover yoposa K800,000 koma yosaposa K5,000,000 ayenera kulembetsa turnover tax ndi VAT, pamene opitirira K5,000,000 amakhala pansi pa income tax ndi VAT."
+            ]
+        },
+        {
+            "id": "turnover_tax.gig_economy.nyanja",
+            "training_phrases": [
+                "Kodi gig economy imalipitsidwa bwanji?",
+                "Nanga online ndi gig workers pa turnover tax?",
+                "Turnover tax ya gig economy 2025"
+            ],
+            "responses": [
+                "Annual turnover threshold ya turnover tax ya anthu omwe akuchita bizinesi kudzera mu gig economy nayo yakwera kufika ku K5,000,000."
+            ]
+        },
+        {
+            "id": "turnover_tax.exclusions.nyanja",
+            "training_phrases": [
+                "Kodi ndani sakhudzidwa ndi turnover tax?",
+                "Kodi rental income imakhala turnover tax?",
+                "Kodi mining operations ali pa turnover tax?"
+            ],
+            "responses": [
+                "Ma partnership, income yochokera ku consultancy services, mining operations komanso mabizinesi omwe ali pa voluntary VAT registration sakuphatikizidwa mu turnover tax.",
+                "Rental tax threshold yakhalabe pa K800,000 ndipo threshold ya artisanal ndi small-scale mining licence holders nayonso ili pa K800,000."
+            ]
+        },
+        {
+            "id": "tax_clearance_certificate.basic.nyanja",
+            "training_phrases": [
+                "Tax Clearance Certificate (TCC) ndi chiyani?",
+                "Ndimalifuna liti tax clearance certificate?",
+                "Kodi tax clearance imafunika pa ma licence?",
+                "Fotokozani general tax clearance certificate"
+            ],
+            "responses": [
+                "TCC imatsimikizira kuti munthu kapena partnership yakwaniritsa zofunikira za misonkho kapena yachita mgwirizano ndi ZRA pansi pa malamulo oyendetsera misonkho, ndipo imafunika pa ma transaction monga kusamutsa katundu, kusintha mwini wa galimoto, kutenga ma trading ndi mining licences komanso ma permit ambiri a boma.",
+                "Ma professional bodies ndi ma regulator ena ayeneranso kufuna tax clearance certificate poti alembetse, akonzenso kapena kupereka practising licences, kupatula kwa ophunzira kapena omwe sali kuchita bizinesi yofanana ndi bungwe lawo."
+            ]
+        },
+        {
+            "id": "tax_clearance_certificate.exemptions.nyanja",
+            "training_phrases": [
+                "Kodi pali amene safunikira TCC?",
+                "Ndani exempt ku tax clearance certificate?",
+                "TCC exemptions"
+            ],
+            "responses": [
+                "Inde, TCC safunikira kwa: Ophunzira omwe akulembetsa ku ma regulatory institutions; ofunsira omwe sali kuchita bizinesi yofanana ndi regulator; komanso kupereka katundu ndi ntchito zomwe mtengo wake uli pansi pa ZMW 200 pa transaction komanso zokolola za ulimi mpaka ZMW 10,000 pa transaction."
+            ]
+        },
+        {
+            "id": "tax_clearance_certificate.application.nyanja",
+            "training_phrases": [
+                "Kodi ndingalembe bwanji Tax Clearance Certificate online?",
+                "Apply for TCC",
+                "Ndikufuna tax clearance certificate"
+            ],
+            "responses": [
+                "Lowani mu ZRA web portal pogwiritsa ntchito TPIN ndi password yanu, pitani ku gawo la Compliance kapena Tax Clearance, lembani pempho la TCC, ndipo likavomerezedwa mutha kusindikiza kapena kutsitsa certificateyo kuchokera mu portal."
+            ]
+        },
+        {
+            "id": "advance_income_tax.remittances_and_exports.nyanja",
+            "training_phrases": [
+                "Advance Income Tax (AIT) pa remittances ndi exports ndi chiyani?",
+                "Kodi AIT pa exports imalipidwa bwanji?",
+                "Kodi ndimalephera chiyani ndikamatumiza ndalama kunja?",
+                "Advance income tax pa malipiro akunja"
+            ],
+            "responses": [
+                "Ngati wowerengera alibe TCC yovomerezeka, AIT ya 15% imamangidwa pa: Katundu wotumizidwa kunja wa malonda pa port of entry, komanso pa foreign remittances zoposa USD 2,000 (kapena kofanana mu kwacha) kudzera mu commercial bank.",
+                "AIT imeneyi ndi credit yolipirira msonkho wa tsogolo, osati final tax, ndipo ingagwiritsidwe ntchito polipirira misonkho ina kapena kubweza ngati palibe msonkho wina wotsalira."
+            ]
+        },
+        {
+            "id": "mobile_money_levy.basic.nyanja",
+            "training_phrases": [
+                "Mobile Money Transaction Levy ndi chiyani?",
+                "Ndani amalipira mobile money levy?",
+                "Mobile money levy Zambia 2025"
+            ],
+            "responses": [
+                "Mobile Money Transaction Levy Act No. 25 of 2024 imakhazikitsa levy pa kulipira kapena kusamutsa electronic money kuchokera kwa munthu mmodzi kupita kwa wina, ndipo ZRA ndiye imayang'anira levy imeneyi.",
+                "Opereka ma service a mobile money ayenera kusonkhanitsa levy, kulemba ma returns, kupereka levy ku ZRA pa nthawi yake, ndikusunga ma record a ntchito zawo, ndipo pali chilango pakalephera kutero."
+            ]
+        },
+        {
+            "id": "pay_as_you_earn.basic.nyanja",
+            "training_phrases": [
+                "Fotokozani PAYE ku Zambia",
+                "Kodi malipiro a ntchito amalipidwa bwanji msonkho mu 2025?",
+                "PAYE bands 2025",
+                "Ndalama ziti zomwe zimalipidwa msonkho pansi pa PAYE?"
+            ],
+            "responses": [
+                "Pay As You Earn (PAYE) ndi system yomwe a posita ntchito amachekera msonkho mu malipiro a antchito pogwiritsa ntchito ma monthly tax bands pachaka cha msonkho chilichonse.",
+                "Ndalama zomwe zimalipidwa msonkho zikuphatikiza malipiro a mwezi, commutation ya ma leave days omwe asungidwa, ndi ma bonuses a ntchito; pomwe ma payment ena monga ma pension benefits, redundancy pay ndi medical expenses operekedwa ndi employer angakhale exempt."
+            ]
+        },
+        {
+            "id": "paye.disability_credit.nyanja",
+            "training_phrases": [
+                "Kodi pali tax credit kwa anthu olumala?",
+                "Disability tax credit Zambia",
+                "Disability credit ndi yochuluka bwanji?"
+            ],
+            "responses": [
+                "Wogwira ntchito yemwe walembetsedwa ndi Zambia Agency for Persons with Disabilities ali ndi ufulu wa disability tax credit ya K7,200 pachaka, yomwe ndi K600 pamwezi.",
+                "Employer ayenera kugwiritsa ntchito credit imeneyi pokuwerengera PAYE kuti msonkho wa mwezi wa wogwira ntchitoyo uchepe ndi kuchuluka kwa credityo."
+            ]
+        },
+        {
+            "id": "paye.refunds.nyanja",
+            "training_phrases": [
+                "PAYE imatha kubwezedwa liti?",
+                "Kodi ndingapeze PAYE refund bwanji?",
+                "Kodi PAYE yomwe yalipidwa mopitirira imatha kubwezedwa?"
+            ],
+            "responses": [
+                "Nthawi zambiri PAYE siimabwezedwa, koma refund ingachitike ngati msonkho walipidwa mopitirira mu chaka chimodzi cha msonkho, mwachitsanzo chifukwa cha zolakwa za payroll, kugwiritsa ntchito ma tax bands olakwika, kapena kulipira msonkho pa ndalama zomwe ziyenera kukhala exempt.",
+                "Refund imathanso kuchitika ngati wogwira ntchito wasiya ntchito pakati pa chaka kapena wachita ma deductions oyenerera monga zopereka ku Public Benefit Organisation yovomerezeka, motsatira malire a 15 percent ya taxable income."
+            ]
+        },
+        {
+            "id": "property_transfer_tax.basic.nyanja",
+            "training_phrases": [
+                "Property transfer tax rate mu 2025 ndi yotani?",
+                "PTT rate pa malo ndi shares",
+                "Ndilipa PTT yotani?"
+            ],
+            "responses": [
+                "Kuyambira 1 January 2025, property transfer tax rate ili pa 8 percent ya realised value pa malo, ma shares, intellectual property ndi mining rights a exploration licences.",
+                "Mining rights ena monga mining licences ndi mineral processing licences amalipidwa PTT pa 10 percent ya realised value."
+            ]
+        },
+        {
+            "id": "vat.imported_services.reverse_vat.nyanja",
+            "training_phrases": [
+                "Reverse VAT pa imported services ndi chiyani?",
+                "Kodi ndimalipira VAT pa imported services?",
+                "Reverse VAT rules ku Zambia"
+            ],
+            "responses": [
+                "Reverse VAT imagwiritsidwa ntchito pamene taxable supplier ku Zambia walandira taxable services kuchokera ku supplier wakunja zomwe zili mu scope ya VAT, ndipo wolandira ku Zambia ndiye amasamalira VAT m'malo mwa supplier wakunja.",
+                "Kubwera kwa ma services a exempt ndi taxable supplier, kapena kubwera kwa munthu yemwe amapanga ma exempt supplies kapena yemwe safunika kulembetsa VAT, sizili mu scope ya reverse VAT."
+            ]
+        },
+        {
+            "id": "faq.contact_zra.nyanja",
+            "training_phrases": [
+                "Kodi ndingalumikizane bwanji ndi ZRA kuti ndithandizidwe?",
+                "Ndingapeze kuti thandizo lina?",
+                "ZRA contact details",
+                "Ndiyankhule ndi ndani kuti andifotokozere bwino?"
+            ],
+            "responses": [
+                "Mutha kulankhula ndi ZRA National Call Centre, kukaona Customer Experience Centre yapafupi kapena ma office ena a ZRA, komanso kugwiritsa ntchito website yovomerezeka kuti mupeze manambala a kulankhulirana, zambiri za ntchito ndi ma practice notes.",
+                "Practice note imalimbikitsa kuti mafunso ovuta kapena okangana ayende mwachindunji ndi ZRA, ndipo amalemekeza kuti wowerengera akadalibe ufulu wopempha pa nkhani za msonkho."
+            ]
+        }
+    ],
+    "fallback": {
+        "responses": [
+            "Funso limeneli lapitirira zomwe zili mu practice note ino. Chonde funsani ZRA mwachindunji kapena onani malamulo a msonkho oyenera kuti mupeze yankho lolondola.",
+            "Assistant iyi imangopereka malangizo a m'kati okha. Kuti mupeze yankho lolumikizidwa ndi lamulo, funsani ZRA kapena tax advisor wodziwitsa bwino."
+        ]
+    }
+}
