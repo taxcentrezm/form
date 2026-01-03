@@ -65,7 +65,9 @@ export default async function handler(req, res) {
 
       const blob = await put(filename, JSON.stringify(payload), {
         access: 'public',
-        addRandomSuffix: false // We want to control the filename for updates
+        addRandomSuffix: false, // We want to control the filename for updates
+        token: process.env.BLOB_READ_WRITE_TOKEN, // Ensure token is used if needed, though usually auto-injected
+        allowOverwrite: true // Explicitly allow overwriting existing files
       });
 
       return res.status(200).json({ success: true, url: blob.url, id: filename });
