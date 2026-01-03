@@ -1,8 +1,8 @@
 {
     "bot_meta": {
         "name": "ZRA Assistant",
-        "language": "en-bem",
-        "description": "Chatbot answering in English and Bemba regarding ZRA and Smart Invoice (Practice Note No. 1 of 2025)."
+        "language": "en-bem-loz",
+        "description": "Chatbot answering in English, Bemba, and Lozi regarding ZRA and Smart Invoice (Practice Note No. 1 of 2025)."
     },
     "intents": [
         {
@@ -895,6 +895,434 @@
                 "Ungafunga ZRA National Call Centre, visit nearest Customer Experience Centre na other ZRA offices, na use official website for contact numbers, service information na practice notes.",
                 "Practice note ikusunganisha kuti detailed na disputed matters be taken up directly na ZRA na kuti taxpayers retain right of appeal pa tax liability issues."
             ]
+        },
+        {
+            "id": "greeting.general.lozi",
+            "training_phrases": [
+                "Lumela",
+                "Mlumeleng",
+                "U pila cwang?",
+                "U zuhile cwang?",
+                "Mutozi chwani?",
+                "Muzuhile",
+                "Ki musihali",
+                "Lobala ka kozo"
+            ],
+            "responses": [
+                "Lumela, utamboke ku Zambia Revenue Authority virtual assistant. Ninga ku gwase buti luno?",
+                "Mlumeleng, iyi ni ZRA assistant. Buuza buti ka mitelo ya 2025, Smart Invoice, VAT kana minwe ya ZRA."
+            ]
+        },
+        {
+            "id": "greeting.lozi",
+            "training_phrases": [
+                "Lumela",
+                "Mlumeleng",
+                "U pila cwang?",
+                "U zuhile cwang?",
+                "Mutozi chwani?",
+                "Muzuhile",
+                "U pila cwang'i luno?"
+            ],
+            "responses": [
+                "Na pila hande, wena u pila cwang?",
+                "Ni itumezi, mutozi chwani luno?"
+            ]
+        },
+        {
+            "id": "greeting.lozi.fine",
+            "training_phrases": [
+                "Na pila hande",
+                "Ni zuhile sesinde",
+                "Ni hande kozo",
+                "Ni hande",
+                "Kozo, na pila hande"
+            ],
+            "responses": [
+                "Kozo, ni hande. Ninga ku gwase buti ka ZRA luno?",
+                "Ni itumezi. Buuza buti ka Smart Invoice kana mitelo."
+            ]
+        },
+        {
+            "id": "greeting.about_bot.lozi",
+            "training_phrases": [
+                "U ita cinwi?",
+                "Unga niga gwase buti?",
+                "U mang'i?",
+                "Chatbot ye ni yini?",
+                "Iyi system yi itela cinwi?"
+            ],
+            "responses": [
+                "Assistant ye yi pelela manyalo ka mitelo ye shanguluka mu Zambia ka 2025, ki mitelo ya malgashi (income tax), VAT, Smart Invoice, turnover tax, mobile money levy ni minwe, ho ya ka Practice Note No. 1 ya 2025. A si mulayo, bantu ba sa shuwa ku kopa manyalo ka ZRA ka bo ndate ba mitelo."
+            ]
+        },
+        {
+            "id": "zra.definition.lozi",
+            "training_phrases": [
+                "Zambia Revenue Authority ni yini?",
+                "ZRA ni yini?",
+                "U hlalusele ZRA",
+                "ZRA yi ita cinwi?",
+                "ZRA mulimo wa bone ni yini?"
+            ],
+            "responses": [
+                "ZRA ki bulukani ya mmuso ye i bokang ni ku fumanya mitelo ni mabeli a yone mu Zambia, ho akarelwa income tax, VAT, customs ni excise duties ni mabeli a ma transaction ya mobile money."
+            ]
+        },
+        {
+            "id": "zra.mission_vision.lozi",
+            "training_phrases": [
+                "Mission ya ZRA ni yini?",
+                "Vision ya ZRA ni yini?",
+                "Mission le vision ya ZRA",
+                "U boe ka ZRA",
+                "ZRA ba lakanya cinwi mu bulao?"
+            ],
+            "responses": [
+                "Mission ya ZRA ki ku ntumisa ni ku tswaleletsa kupila mitelo ni malango a yone ho u sila Zambia ye lipile hande.",
+                "Vision ya ZRA ki ku ba muenzelo wa boloka mu kupila mitelo ni ho ntumisa bohema.",
+                "Tagline ya ZRA ki: \"My Tax, Your Tax, Our Destiny\"."
+            ]
+        },
+        {
+            "id": "zra.practice_note_scope.lozi",
+            "training_phrases": [
+                "Practice Note No. 1 ya 2025 ni yini?",
+                "Mamulayo afe a katelwa mu practice note?",
+                "Mushintuko afe a hlaloswa mu Practice Note 1 2025?",
+                "Practice Note 2025 e bua ka cinwi?"
+            ],
+            "responses": [
+                "Practice Note No. 1 ya 2025 yi pelela manyalo ka mushintuko wa mitelo ye ya kala ho qala ka 1 January 2025.",
+                "Yi akarelwa mushintuko mu Income Tax Amendment Act No. 22 ya 2024, Property Transfer Tax Amendment Act No. 27 ya 2024, Value Added Tax Amendment Act No. 23 ya 2024, VAT Regulations ni Electronic Invoicing Regulations, Income Tax Advance Income Tax Regulations, le mushintuko mu Customs ni Excise, Insurance Premium Levy, ni Mobile Money Transaction Levy Act No. 25 ya 2024.",
+                "Practice note ye ni manyalo fela, a si mulayo, a ni ko hlolelela tokelo ya motho ya ku ipela ni tokelo ya ZRA ya ku itela ditumelo ka mulayo."
+            ]
+        },
+        {
+            "id": "zra.key_changes_2025.lozi",
+            "training_phrases": [
+                "Mushintuko wa mitelo wa 1 January 2025 ni yini?",
+                "Key tax changes 2025",
+                "Summary ya 2025 tax amendments",
+                "Mitelo e shintse buti 2025?"
+            ],
+            "responses": [
+                "Mushintuko wa bohlokwa: Turnover tax threshold u kwatilela ku K5,000,000 ni rate ya 5% ho tloha holimo K12,000 ho ya ho limit. Property transfer tax u kwatilela ku 8% ho mobu, shares, intellectual property le exploration rights. Advance income tax ya 15% e ho exports le foreign remittances ho sena tax clearance certificate. VAT input tax ka kakonyana e hulwa fela ka Smart Invoice kana suppliers ba lokolotsweng ho Smart Invoice."
+            ]
+        },
+        {
+            "id": "tpin.definition_requirement.lozi",
+            "training_phrases": [
+                "TPIN ni yini?",
+                "TPIN e hlokahala nini?",
+                "Na ke nyaka TPIN ho mobile money?",
+                "Requirements ya TPIN",
+                "TPIN e sebelisetswa cinwi?"
+            ],
+            "responses": [
+                "TPIN ki nomoro ya ku ngodisa mitelo ye iketeng ya motho, ye luno e hlokahala ho bula le ho tswaleletsa account le water utilities, mobile money le ba telecommunication, ho ngodisa ka professional bodies le ho ngodisa title deeds ya mobu, le ditransaction tse dingwe tse di lawiloeng."
+            ]
+        },
+        {
+            "id": "tpin.application.lozi",
+            "training_phrases": [
+                "Ndi fumana TPIN buti?",
+                "Ke nyaka TPIN",
+                "TPIN registration e etswa buti?",
+                "Ngodisa TPIN online",
+                "TPIN nga mpela buti?"
+            ],
+            "responses": [
+                "U ka kopa TPIN online ka website ya ZRA, ka TaxOnApp mobile application, kana ka USSD *858# ho dinetwork tse di tshegetsang, ho fela TPIN le ditlhaka tsa hao di romelelwa ka email le ka phone."
+            ]
+        },
+        {
+            "id": "smart_invoice.basic_definition.lozi",
+            "training_phrases": [
+                "Smart Invoice ni yini?",
+                "Hlalosa electronic invoicing system",
+                "ZRA e-invoicing system ni yini?",
+                "Smart Invoicing o raya cinwi?",
+                "Smart Invoice",
+                "Smart Invoicing"
+            ],
+            "responses": [
+                "Smart Invoice ki electronic invoicing system ye e hlalositswe mu VAT framework, e hlahisa tax invoice le fiscal memory le ho romela data ka nako ya hona jwale ku ZRA, ho nkela manual invoices le diofisi tse dingwe tsa fiscal sebaka.",
+                "Ho tloha ka 1 January 2025, VAT input tax ka kakonyana e tla hulwa fela ka invoices tse tswang mu Smart Invoice kana ho taxable supplier ye ZRA e ba lokolotseng ho Smart Invoice."
+            ]
+        },
+        {
+            "id": "smart_invoice.effective_date.lozi",
+            "training_phrases": [
+                "Smart Invoice rules di qala lini?",
+                "Smart Invoice effective date",
+                "Smart Invoice e qala lini?"
+            ],
+            "responses": [
+                "Main Smart Invoice le VAT rules mu Practice Note No. 1 ya 2025 di qala ho sebetsa ka 1 January 2025, ho latela molao wa mushintuko."
+            ]
+        },
+        {
+            "id": "smart_invoice.input_tax_restriction.lozi",
+            "training_phrases": [
+                "Na nka sa sebedisa manual invoices ho input VAT?",
+                "Invoices tsa ka ntle ho Smart Invoice di a amoheleha?",
+                "Ke dife invoices tse di tshwanetseng ho input tax claims?",
+                "Na ke nyaka Smart Invoice ho claim VAT?",
+                "Non-Smart-Invoice invoices di ntse di valid?"
+            ],
+            "responses": [
+                "Ho tloha ka 1 January 2025, input VAT ka kakonyana e tla hulwa fela ka invoices tse hlahiswang ke Smart Invoice kana invoices tsa suppliers ba lokolotsweng ho Smart Invoice; manual invoices tse dingwe a di sa ka tšehetsa input tax claims.",
+                "Invoices tsa tax tsa ka ntle ho Smart Invoice ho fihla ka 31 December 2024 di sa ntse di ka sebeliswa ho input VAT claims mu 2025 hoba di fihleletse ninety-day claim period le ditlhokego tsohle tsa tax invoice."
+            ]
+        },
+        {
+            "id": "smart_invoice.system_downtime.lozi",
+            "training_phrases": [
+                "Ho etsahala cinwi ha Smart Invoice e wa?",
+                "Ke nale nako e kae ho upload manual invoices?",
+                "System failure ho e-invoicing platform?"
+            ],
+            "responses": [
+                "Ha Smart Invoice kana approved invoicing system e na le problem, supplier a ka ngola ditransaction ka letsoho, empa o tshwanetse ho upload transaction tseo kaofela ku electronic invoicing system mu 72 hours kamora system ho lokiswa."
+            ]
+        },
+        {
+            "id": "smart_invoice.exemption.lozi",
+            "training_phrases": [
+                "Ke mang a ka lokolwang ho Smart Invoice?",
+                "Na ZRA e ka ntshwarela ho sa sebedise Smart Invoice?",
+                "Conditions tsa exemption ho e-invoicing?",
+                "ZRA e ka lokolla business ho Smart Invoice?"
+            ],
+            "responses": [
+                "Commissioner-General a ka dumela taxable supplier ho sebedisa document, device kana equipment ye nngwe e amogelwang sebakeng sa Smart Invoice ka conditions tse behilweng, mme invoices tse hlahiswang ka tsela ye di sa ntse di ka sebediswa ho input tax."
+            ]
+        },
+        {
+            "id": "smart_invoice.transfer_system.lozi",
+            "training_phrases": [
+                "Na nka fetisetsa approved invoicing system ho business ye nngwe?",
+                "Transfer Smart Invoice system"
+            ],
+            "responses": [
+                "Awa, taxable supplier ye e ngodisitseng approved invoicing system bakeng sa yona a ka se e fetisetse ho supplier ye nngwe."
+            ]
+        },
+        {
+            "id": "smart_invoice.insurance_levy.lozi",
+            "training_phrases": [
+                "Smart Invoice e ama insurance premium levy buti?",
+                "Smart Invoice ho insurance"
+            ],
+            "responses": [
+                "Mushintuko mu Insurance Premium Levy o nkile mantsoe a electronic fiscal devices wa a tlotla ka electronic invoicing systems, ho bolelang gore ba insurance, brokers le agents ba tshwanetse ho sebedisa electronic invoicing system (Smart Invoice kana e tshwanang) ho ngodisa insurance premiums le levy le ho hlahisa tax invoices."
+            ]
+        },
+        {
+            "id": "smart_invoice.scope.lozi",
+            "training_phrases": [
+                "Na Smart Invoice e ama VAT-registered suppliers bohle?",
+                "Ke mang a tshwanetseng ho sebedisa Smart Invoice?"
+            ],
+            "responses": [
+                "Eeh, VAT-registered suppliers bohle ba tshwanetse ho latela Smart Invoice kana system e tshwanang le yona ntle le he ZRA e ba file exemption; ho hloka ho sebedisa system ye e laetsweng ho ka etsa gore invoices di se amohelwe ho input tax le ho tlisa dipenaliti."
+            ]
+        },
+        {
+            "id": "smart_invoice.support.lozi",
+            "training_phrases": [
+                "Support ya technical ho Smart Invoice e fumaneha kae?",
+                "Thuso ka Smart Invoice"
+            ],
+            "responses": [
+                "Practice Note No. 1 ya 2025 e supa taxpayers ho ZRA online channels le Smart Invoice support contacts, gape e eletsa gore ba iteanye le ZRA Call Centre kapa ba etele Customer Experience Centres ho kopa thuso."
+            ]
+        },
+        {
+            "id": "vat.thresholds_and_registration.lozi",
+            "training_phrases": [
+                "VAT registration threshold 2025 ke bokae?",
+                "VAT threshold 2025",
+                "VAT threshold ke bokae?",
+                "Do I need to register for VAT?",
+                "VAT turnover threshold Zambia 2025"
+            ],
+            "responses": [
+                "Statutory VAT registration threshold e sa ntse e le K800,000 ya annual taxable turnover.",
+                "Ha turnover ya hao ya selemo e feta K800,000, o tshwanetse ho ngodisa VAT tlas'a melao e tlwaelehileng."
+            ]
+        },
+        {
+            "id": "turnover_tax.threshold_and_rate.lozi",
+            "training_phrases": [
+                "Turnover tax threshold 2025 ke bokae?",
+                "New turnover tax rate Zambia 2025",
+                "Na ke qualify turnover tax?",
+                "Turnover tax limits and rate"
+            ],
+            "responses": [
+                "Ho tloha 2025, maximum annual threshold bakeng sa turnover tax e nyolohetse ho tloha K800,000 ho ea ho K5,000,000.",
+                "Bakeng sa turnover pakeng tsa K12,000 le K5,000,000 ka selemo, turnover tax rate ke 5 percent.",
+                "Taxpayer ya nang le annual taxable turnover e fetang K800,000 empa e sa fete K5,000,000 o tshwanetse ho ngodisa both turnover tax le VAT; ha e feta K5,000,000 o tla ba tlas'a income tax le VAT."
+            ]
+        },
+        {
+            "id": "turnover_tax.gig_economy.lozi",
+            "training_phrases": [
+                "Gig economy e bewa mitelo buti?",
+                "Online le gig workers turnover tax?",
+                "Turnover tax gig economy 2025"
+            ],
+            "responses": [
+                "Annual turnover threshold ya turnover tax bakeng sa batho ba etsang kgwebo ka gig economy le yona e nyolohetse ku K5,000,000."
+            ]
+        },
+        {
+            "id": "turnover_tax.exclusions.lozi",
+            "training_phrases": [
+                "Ke mang a sa akarelwang mu turnover tax?",
+                "Rental income ho turnover tax?",
+                "Mining operations turnover tax?"
+            ],
+            "responses": [
+                "Partnerships, income from consultancy services, mining operations le businesses tse ngodisitsweng ka voluntary VAT registration ga di akarelwa mu turnover tax.",
+                "Rental tax threshold e sa ntse e le K800,000, le threshold bakeng sa artisanal le small-scale mining licence holders e le K800,000."
+            ]
+        },
+        {
+            "id": "tax_clearance_certificate.basic.lozi",
+            "training_phrases": [
+                "Tax Clearance Certificate (TCC) ni yini?",
+                "TCC e hlokahala neng?",
+                "Na tax clearance e hlokahala ka licences?",
+                "Hlalosa general tax clearance certificate"
+            ],
+            "responses": [
+                "TCC ke setlankane se se bontshang gore motho kana partnership e hlomphile ditlhokego tsa mitelo kana e dumellane le ZRA tlas'a melao ya mitelo, mme se hlokahala ho transfer property, ho fetola mong'a motor vehicle, ho fumana trading le mining licences le permits tsa mmuso tse fapaneng.",
+                "Professional bodies le ba regulator ba tshwanetse hape ho kopa TCC bakeng sa registration, renewal le practising licences, ntle le ha e le baithuti kapa batho ba sa etseng kgwebo e amanang le body eo."
+            ]
+        },
+        {
+            "id": "tax_clearance_certificate.exemptions.lozi",
+            "training_phrases": [
+                "Na ho na le ba lokolotsweng ho hloka TCC?",
+                "Ke mang a lokolotsweng ho tax clearance certificate?",
+                "TCC exemptions"
+            ],
+            "responses": [
+                "Eeh, TCC ga e hlokehe bakeng sa: Baithuti ba ngodisang ka regulatory institutions; bakopi ba sa etseng kgwebo e amanang le regulator; le supplies tsa goods le services tse ka tlase ho ZMW 200 ka transaction le agricultural produce ho fihla ho ZMW 10,000 ka transaction."
+            ]
+        },
+        {
+            "id": "tax_clearance_certificate.application.lozi",
+            "training_phrases": [
+                "Apply Tax Clearance Certificate online buti?",
+                "Apply TCC",
+                "Get tax clearance certificate"
+            ],
+            "responses": [
+                "Kena mu ZRA web portal ka TPIN le password ya hao, ya ho Compliance kana Tax Clearance section, romela kopo ya TCC, mme ha e amohetswe o ka printa kapa download certificate ho tswa portal."
+            ]
+        },
+        {
+            "id": "advance_income_tax.remittances_and_exports.lozi",
+            "training_phrases": [
+                "Advance Income Tax (AIT) ho remittances le exports ni yini?",
+                "AIT ho exports e bewa buti?",
+                "Na ke lefa tax ha ke romela chelete kantle?",
+                "Advance income tax ho foreign payments"
+            ],
+            "responses": [
+                "Ha taxpayer a sena TCC e valid, AIT ya 15% e bewa ho: Exports tsa goods bakeng sa kgwebo ka ports tsa ho kena; le foreign remittances tse fetang USD 2,000 (kapa kwacha equivalent) ka commercial bank.",
+                "AIT ke credit khahlanong le tax ya nako e tlang, e se final tax, mme e ka sebeliswa ho fokotsa ditlamo tse ding kapa ho refund-a ha go sena ditlamo."
+            ]
+        },
+        {
+            "id": "mobile_money_levy.basic.lozi",
+            "training_phrases": [
+                "Mobile Money Transaction Levy ni yini?",
+                "Ke mang ya lefang mobile money levy?",
+                "Mobile money levy Zambia 2025"
+            ],
+            "responses": [
+                "Mobile Money Transaction Levy Act No. 25 ya 2024 e beha levy ho payment kapa transfer ya electronic money ho tswa ho motho a le mong ho ya ho yo mongwe, mme ZRA ke yone e e laolang.",
+                "Mobile money service providers ba tshwanetse ho bokela levy, ba romele returns, ba lefe levies ku ZRA ka nako, mme ba boloke direkoto tsa ts'ebetso, ho seng joalo ho na le dipenaliti."
+            ]
+        },
+        {
+            "id": "pay_as_you_earn.basic.lozi",
+            "training_phrases": [
+                "Hlalosa PAYE mu Zambia",
+                "Salaries di bewa tax buti 2025?",
+                "PAYE bands 2025",
+                "Ke dife income tse taxable tlas'a PAYE?"
+            ],
+            "responses": [
+                "Pay As You Earn (PAYE) ke system ye employers ba fokotsang ka yona income tax go tswa ho emoluments ya basebetsi ho sebedisa monthly tax bands bakeng sa selemo sa tax.",
+                "Emoluments tse taxable di akarelwa salary ya khoeli, commutation ya accrued leave days le accrued service bonuses; empa pension benefits, redundancy pay le medical expenses tse duellwang ke employer di ka ba exempt."
+            ]
+        },
+        {
+            "id": "paye.disability_credit.lozi",
+            "training_phrases": [
+                "Na ho na le tax credit bakeng sa batho ba nang le disability?",
+                "Disability tax credit Zambia",
+                "Disability credit ke bokae?"
+            ],
+            "responses": [
+                "Mošomi ya ngodisitsweng le Zambia Agency for Persons with Disabilities o na le tokelo ya disability tax credit ya K7,200 ka selemo, e lego K600 ka khoeli.",
+                "Employer o tshwanetse ho kenya credit ye ha a bala PAYE gore tax ya khoeli ya mošomi e fokotsege ka chelete yeo."
+            ]
+        },
+        {
+            "id": "paye.refunds.lozi",
+            "training_phrases": [
+                "PAYE e ka refund-wa neng?",
+                "Ke fumana PAYE refund buti?",
+                "Na PAYE e feteletseng e ka refund-wa?"
+            ],
+            "responses": [
+                "Ka kakonyana PAYE ga e refund-we, empa refund e ka hlaha ha tax e beilwe go feta se swanetšego mu selemo sa tax, ka mabaka a jaaka diphoso tsa payroll, ho sebedisa tax bands tse fosahetseng, kapa ho beya tax ho income ye e swanetšego go ba exempt.",
+                "Refund e ka hlaha gape ha mošomi a tlogela tiro mu gare ga selemo kapa a dira deductions tse lokelang, tse kang donations ho approved Public Benefit Organisation, tlas'a limit ya 15 percent ya taxable income."
+            ]
+        },
+        {
+            "id": "property_transfer_tax.basic.lozi",
+            "training_phrases": [
+                "Property transfer tax rate 2025 ke bokae?",
+                "PTT rate ho mobu le shares?",
+                "Ke lefa PTT bokae?"
+            ],
+            "responses": [
+                "Ho tloha ka 1 January 2025, property transfer tax rate ke 8 percent ya realised value ho mobu, shares, intellectual property le mining rights bakeng sa exploration licences.",
+                "Mining rights tse dingwe, tse kang mining licences le mineral processing licences, di lefa PTT ya 10 percent ya realised value."
+            ]
+        },
+        {
+            "id": "vat.imported_services.reverse_vat.lozi",
+            "training_phrases": [
+                "Reverse VAT ho imported services ni yini?",
+                "Na ke lefa VAT ha ke import-a services?",
+                "Reverse VAT rules Zambia"
+            ],
+            "responses": [
+                "Reverse VAT e sebetsa ha taxable supplier mu Zambia a reka taxable services ho supplier wa kantle ya tlang ka hare ho scope ya VAT, mme ke Zambian recipient ya tshwanetseng ho bala VAT sebakeng sa supplier wa kantle.",
+                "Importation ya exempt services ke taxable supplier, kapa importation ke motho ya etsang exempt supplies kana a sa hlokahale ho ngodisa VAT, ha e kene mu scope ya reverse VAT."
+            ]
+        },
+        {
+            "id": "faq.contact_zra.lozi",
+            "training_phrases": [
+                "Ndi ka ikopanya buti le ZRA bakeng sa thuso?",
+                "Nka fumana thuso kae e nngwe?",
+                "ZRA contact details",
+                "Ke bolele le mang ka clarification?"
+            ],
+            "responses": [
+                "U ka letsetsa ZRA National Call Centre, wa etela Customer Experience Centre ya haufi kapa diofisi tse dingwe tsa ZRA, mme wa sebedisa website ya semmuso ho fumana dinomoro tsa phone, tshedimoso ya ditshebeletso le practice notes.",
+                "Practice note e gatelela gore dintlha tse rarahaneng kana di sa dumellaneng di loketse ho rarollwa ka ho ikopanya ka bonnete le ZRA, mme taxpayers ba ntse ba na le tokelo ya appeal ka taba tsa tax."
+            ]
         }
     ],
     "fallback": {
@@ -902,7 +1330,9 @@
             "This question is beyond the scope of the current practice note. Please contact ZRA directly or consult the relevant tax legislation for a definitive position.",
             "The assistant can only give general guidance. For a detailed or binding position, kindly engage ZRA or a qualified tax advisor.",
             "Ichi funika lilelanda pa scope of current practice note. Funda ZRA directly na consult relevant tax legislation for definitive position.",
-            "Assistant ikupokela general guidance pe. For detailed na binding position, engage ZRA na qualified tax advisor."
+            "Assistant ikupokela general guidance pe. For detailed na binding position, engage ZRA na qualified tax advisor.",
+            "Potso ye e feta moedi wa practice note ye. Ka kopo ikopanye ka ho toba le ZRA kapa o bone molao wa mitelo bakeng sa karabo e tiileng.",
+            "Assistant ye e fana fela ka manyalo ka kakaretso. Bakeng sa karabo e tlamehang, ikopanye le ZRA kapa tax advisor ya kwalifaiditsweng."
         ]
     }
 }
