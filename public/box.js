@@ -153,6 +153,13 @@ function getBotResponse(message) {
     const matchedIntent = results[0].item;
     const responses = matchedIntent.responses;
 
+    // Check if it's an "unusual" match (e.g., score between 0.4 and 0.6)
+    // 0.0 is perfect match, 1.0 is no match.
+    if (results[0].score > 0.4) {
+      // Record as unusual
+      saveTrainingData(message, "Unusual Match", results[0].score);
+    }
+
     // Return random response from the intent's responses
     const randomResponse = responses[Math.floor(Math.random() * responses.length)];
     return randomResponse;
@@ -162,7 +169,27 @@ function getBotResponse(message) {
   const fallbackResponses = intentsData.fallback.responses;
   const fallbackMessage = fallbackResponses[Math.floor(Math.random() * fallbackResponses.length)];
 
+  // Record as unanswered
+  saveTrainingData(message, "No Answer", 1.0);
+
   return `${fallbackMessage}\n\n📞 Call: +260 211 381111\n📧 Email: info@zra.org.zm`;
+}
+
+// Helper to save training data
+function saveTrainingData(userMessage, type, score) {
+  fetch('/api/training', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      user: userMessage,
+      bot: "Fallback / Low Confidence",
+      intent: type,
+      confidence: score,
+      timestamp: Date.now(),
+      feedback: 0, // Default unrated
+      suggested_reply: ""
+    })
+  }).catch(err => console.error("Failed to save training data:", err));
 }
 
 

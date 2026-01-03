@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>Chat Training Center</title>
@@ -12,38 +12,39 @@
       margin: 0;
       padding: 0;
       color: #333;
-}
+    }
 
-.header {
+    .header {
       background: linear-gradient(to right, #3b82f6, #2563eb);
       color: white;
       padding: 1.5rem;
       text-align: center;
       font-size: 1.6rem;
       font-weight: 600;
-}
+    }
 
-.container {
+    .container {
       padding: 2rem;
       max-width: 1200px;
       margin: auto;
-}
+    }
 
-.search-bar {
+    .search-bar {
       margin-bottom: 1.5rem;
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
       align-items: center;
-}
+    }
 
-    input[type="text"], select {
+    input[type="text"],
+    select {
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 6px;
       font-size: 15px;
       min-width: 220px;
-}
+    }
 
     button {
       background: #2563eb;
@@ -53,32 +54,33 @@
       border-radius: 6px;
       cursor: pointer;
       font-weight: 600;
-}
+    }
 
     button:hover {
       background: #1d4ed8;
-}
+    }
 
     table {
       width: 100%;
       border-collapse: collapse;
       background: white;
       border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
       overflow: hidden;
-}
+    }
 
-    th, td {
+    th,
+    td {
       padding: 12px 14px;
       border-bottom: 1px solid #e5e7eb;
       font-size: 14px;
       vertical-align: top;
-}
+    }
 
     th {
       background: #f9fafb;
       text-align: left;
-}
+    }
 
     textarea {
       width: 100%;
@@ -86,23 +88,26 @@
       padding: 6px;
       border-radius: 4px;
       border: 1px solid #ccc;
-}
+    }
 
-.rating-select {
+    .rating-select {
       width: 60px;
-}
+    }
 
     @media (max-width: 768px) {
-.container {
+      .container {
         padding: 1rem;
-}
+      }
 
-      input[type="text"], select, button {
+      input[type="text"],
+      select,
+      button {
         width: 100%;
-}
-}
+      }
+    }
   </style>
 </head>
+
 <body>
 
   <div class="header">🧠 Chat Training Center</div>
@@ -115,6 +120,8 @@
         <option value="Branch Info">Branch Info</option>
         <option value="Smart Invoice">Smart Invoice</option>
         <option value="General">General</option>
+        <option value="Unusual Match">Unusual Match</option>
+        <option value="No Answer">No Answer</option>
       </select>
       <button onclick="exportTrainingPDF()">Export PDF</button>
     </div>
@@ -134,31 +141,44 @@
     </table>
   </div>
 
-<script>
-const trainingData = JSON.parse(localStorage.getItem("chatTrainingData") || "[]");
+  <script>
+    let trainingData = [];
 
-function renderTrainingTable() {
-  const tbody = document.querySelector("#trainingTable tbody");
-  tbody.innerHTML = "";
+    async function fetchTrainingData() {
+      try {
+        const res = await fetch('/api/training');
+        trainingData = await res.json();
+        renderTrainingTable();
+      } catch (err) {
+        console.error("Failed to load training data", err);
+        alert("Failed to load training data from server.");
+      }
+    }
 
-  trainingData.forEach((entry, index) => {
-    tbody.innerHTML += `
+    function renderTrainingTable() {
+      const tbody = document.querySelector("#trainingTable tbody");
+      tbody.innerHTML = "";
+
+      trainingData.forEach((entry, index) => {
+        tbody.innerHTML += `
       <tr>
         <td>${entry.user}</td>
         <td>${entry.bot}</td>
         <td>
           <select class="intent-select" data-index="${index}">
             <option value="">Choose</option>
-<option ${entry.intent === "TPIN Help"? "selected": ""}>TPIN Help</option>
-            <option ${entry.intent === "Branch Info"? "selected": ""}>Branch Info</option>
-            <option ${entry.intent === "Smart Invoice"? "selected": ""}>Smart Invoice</option>
-            <option ${entry.intent === "General"? "selected": ""}>General</option>
+            <option ${entry.intent === "TPIN Help" ? "selected" : ""}>TPIN Help</option>
+            <option ${entry.intent === "Branch Info" ? "selected" : ""}>Branch Info</option>
+            <option ${entry.intent === "Smart Invoice" ? "selected" : ""}>Smart Invoice</option>
+            <option ${entry.intent === "General" ? "selected" : ""}>General</option>
+            <option ${entry.intent === "Unusual Match" ? "selected" : ""}>Unusual Match</option>
+            <option ${entry.intent === "No Answer" ? "selected" : ""}>No Answer</option>
           </select>
         </td>
         <td>
           <select class="rating-select" data-index="${index}">
             <option value="">Rate</option>
-            ${[1,2,3,4,5].map(r => `<option value="${r}" ${entry.feedback == r? "selected": ""}>${r}</option>`).join("")}
+            ${[1, 2, 3, 4, 5].map(r => `<option value="${r}" ${entry.feedback == r ? "selected" : ""}>${r}</option>`).join("")}
           </select>
         </td>
         <td>
@@ -167,55 +187,76 @@ function renderTrainingTable() {
         <td><button onclick="saveTraining(${index})">Save</button></td>
       </tr>
     `;
-});
-}
+      });
+    }
 
-function saveTraining(index) {
-  const rating = document.querySelector(`.rating-select[data-index="${index}"]`).value;
-  const intent = document.querySelector(`.intent-select[data-index="${index}"]`).value;
-  const reply = document.querySelector(`.reply-edit[data-index="${index}"]`).value.trim();
+    async function saveTraining(index) {
+      const entry = trainingData[index];
+      const rating = document.querySelector(`.rating-select[data-index="${index}"]`).value;
+      const intent = document.querySelector(`.intent-select[data-index="${index}"]`).value;
+      const reply = document.querySelector(`.reply-edit[data-index="${index}"]`).value.trim();
 
-  trainingData[index].feedback = parseInt(rating);
-  trainingData[index].intent = intent;
-  trainingData[index].suggested_reply = reply;
+      const updatedEntry = {
+        ...entry,
+        feedback: parseInt(rating) || 0,
+        intent: intent,
+        suggested_reply: reply
+      };
 
-  localStorage.setItem("chatTrainingData", JSON.stringify(trainingData));
-  alert("Training saved ✅");
-}
+      try {
+        const res = await fetch('/api/training', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(updatedEntry)
+        });
 
-function filterTraining() {
-  const q = document.getElementById("trainingSearch").value.toLowerCase();
-  const intent = document.getElementById("intentFilter").value.toLowerCase();
-  document.querySelectorAll("#trainingTable tbody tr").forEach(row => {
-    const matchText = row.textContent.toLowerCase().includes(q);
-    const matchIntent =!intent || row.textContent.toLowerCase().includes(intent);
-    row.style.display = matchText && matchIntent? "": "none";
-});
-}
+        if (res.ok) {
+          // Update local state to reflect changes
+          trainingData[index] = updatedEntry;
+          alert("Training saved ✅");
+        } else {
+          alert("Failed to save training ❌");
+        }
+      } catch (err) {
+        console.error("Error saving training:", err);
+        alert("Error saving training ❌");
+      }
+    }
 
-async function exportTrainingPDF() {
-  const { jsPDF} = window.jspdf;
-  const doc = new jsPDF();
-  doc.setFontSize(11);
-  let y = 10;
+    function filterTraining() {
+      const q = document.getElementById("trainingSearch").value.toLowerCase();
+      const intent = document.getElementById("intentFilter").value.toLowerCase();
+      document.querySelectorAll("#trainingTable tbody tr").forEach(row => {
+        const matchText = row.textContent.toLowerCase().includes(q);
+        const matchIntent = !intent || row.textContent.toLowerCase().includes(intent);
+        row.style.display = matchText && matchIntent ? "" : "none";
+      });
+    }
 
-  trainingData.forEach(entry => {
-    doc.text(`User: ${entry.user}`, 10, y); y += 6;
-    doc.text(`Bot: ${entry.bot}`, 10, y); y += 6;
-    doc.text(`Intent: ${entry.intent || ""}`, 10, y); y += 6;
-    doc.text(`Rating: ${entry.feedback || "N/A"}`, 10, y); y += 6;
-    if (entry.suggested_reply) {
-      doc.text(`Suggested Reply: ${entry.suggested_reply}`, 10, y); y += 10;
-} else {
-      y += 4;
-}
-});
+    async function exportTrainingPDF() {
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+      doc.setFontSize(11);
+      let y = 10;
 
-  doc.save("chat-training.pdf");
-}
+      trainingData.forEach(entry => {
+        doc.text(`User: ${entry.user}`, 10, y); y += 6;
+        doc.text(`Bot: ${entry.bot}`, 10, y); y += 6;
+        doc.text(`Intent: ${entry.intent || ""}`, 10, y); y += 6;
+        doc.text(`Rating: ${entry.feedback || "N/A"}`, 10, y); y += 6;
+        if (entry.suggested_reply) {
+          doc.text(`Suggested Reply: ${entry.suggested_reply}`, 10, y); y += 10;
+        } else {
+          y += 4;
+        }
+      });
 
-// Load table on init
-renderTrainingTable();
-</script>
+      doc.save("chat-training.pdf");
+    }
+
+    // Load table on init
+    fetchTrainingData();
+  </script>
 </body>
+
 </html>
