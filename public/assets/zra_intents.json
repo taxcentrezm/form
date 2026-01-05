@@ -655,11 +655,26 @@
       ]
     },
     {
+      "id": "smart_invoice.definition",
+      "training_phrases": [
+        "What is Smart Invoice?",
+        "Define Smart Invoice",
+        "How does Smart Invoice work?",
+        "What is the electronic invoicing system?",
+        "Tell me about Smart Invoice"
+      ],
+      "responses": [
+        "Smart Invoice is the Zambia Revenue Authority's electronic invoicing system. It is a software-based solution that allows taxpayers to record transactions and issue tax invoices in real-time, ensuring transparency and efficiency in tax administration. From January 1, 2025, input tax claims are restricted to invoices issued through this system."
+      ]
+    },
+    {
       "id": "vat_commissioner.discretion",
       "training_phrases": [
         "VAT smart invoice exemption",
         "Section 7A Commissioner discretion",
-        "Alternative to electronic invoicing"
+        "Alternative to electronic invoicing",
+        "Can I be exempted from Smart Invoice?",
+        "Exemption from electronic invoicing"
       ],
       "responses": [
         "Section 7A(2): Commissioner-General may allow taxable supplier to use document/device/equipment other than electronic invoicing system upon meeting prescribed conditions."
@@ -681,7 +696,8 @@
       "training_phrases": [
         "Input tax documentation requirements",
         "Section 18 invoices",
-        "Smart invoice requirement"
+        "Smart invoice requirement for input tax",
+        "Valid invoices for VAT claims"
       ],
       "responses": [
         "Section 18 amended:\n1. Manual invoices and invoices from approved computer package deleted as valid input tax evidence\n2. Input tax claims restricted to:\n   • Invoices from electronic invoicing system (Smart Invoice)\n   • Invoices issued by suppliers exempted from Smart Invoice use\n3. Paragraphs renumbered: (c),(d),(e) become (a),(b),(c)\n\nNote: Tax invoices issued outside Smart Invoice up to December 31, 2024 remain valid if meet 90-day validity period."
