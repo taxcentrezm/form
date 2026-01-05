@@ -1,0 +1,1186 @@
+{
+    "intents": [
+        {
+            "id": "zra.mission",
+            "training_phrases": [
+                "What is ZRA's mission?",
+                "Mission of Zambia Revenue Authority",
+                "ZRA mission statement"
+            ],
+            "responses": [
+                "The mission of the Zambia Revenue Authority (ZRA) is to optimise and sustain revenue collection and administration for a prosperous Zambia."
+            ]
+        },
+        {
+            "id": "zra.vision",
+            "training_phrases": [
+                "What is ZRA's vision?",
+                "Vision of Zambia Revenue Authority",
+                "ZRA long term vision"
+            ],
+            "responses": [
+                "ZRA's vision is to be a world class model of excellence in revenue administration and trade facilitation."
+            ]
+        },
+        {
+            "id": "zra.tagline",
+            "training_phrases": [
+                "What is ZRA's tagline?",
+                "ZRA motto",
+                "My Tax Your Tax Our Destiny"
+            ],
+            "responses": [
+                "ZRA's tagline is: 'My Tax, Your Tax, Our Destiny'"
+            ]
+        },
+        {
+            "id": "practice_note.overview",
+            "training_phrases": [
+                "What is Practice Note 1/2025?",
+                "Summary of 2025 tax changes",
+                "What does the practice note cover?",
+                "Key amendments overview"
+            ],
+            "responses": [
+                "Practice Note No. 1/2025 describes changes introduced by 11 Acts/Regulations effective January 1, 2025. Key changes include: Advance Income Tax on remittances, turnover tax threshold increased to K5M, VAT threshold maintained at K800K, input tax restricted to smart invoices, electricity production up to 100kWh without licence."
+            ]
+        },
+        {
+            "id": "legal_disclaimer",
+            "training_phrases": [
+                "Is this practice note legally binding?",
+                "Legal status of practice note",
+                "Can I use this in court?",
+                "Is this a legal authority?"
+            ],
+            "responses": [
+                "The commentary in the Practice Note is for general guidance only and is not to be taken as legal authority in any proceedings. The information is not exhaustive and does not affect any person's right of appeal on tax liability, nor does it preclude any discretionary treatment allowed under the law."
+            ]
+        },
+        {
+            "id": "income_tax.definitions",
+            "training_phrases": [
+                "Definition of approved fund",
+                "What is a private fund?",
+                "Definition of pensionable terms",
+                "Securities and Exchange Commission definition"
+            ],
+            "responses": [
+                "Key definition changes in Income Tax Act:\n1. 'Approved fund' now means a pension scheme registered under Pension Scheme Regulation Act\n2. 'Private fund' means a private fund authorized by Securities and Exchange Commission under Securities Act 2016\n3. 'Pensionable terms' extended to all approved funds (not just pension funds)\n4. Definitions of 'approved annuity contract' and 'approved pension fund' deleted\n5. 'Securities and Exchange Commission' definition added"
+            ]
+        },
+        {
+            "id": "loss_deduction.limitation",
+            "training_phrases": [
+                "Loss limitation rules 2025",
+                "How much loss can I deduct?",
+                "Loss carry forward limitation",
+                "Section 30 changes"
+            ],
+            "responses": [
+                "Section 30 amended: Losses can only be deducted from 50% of taxable income in the charge year. Previously applied only to mining; now applies to ALL businesses.\n\nExample: K800,000 loss in 2024, K150,000 income in 2025:\n• 50% of income: K75,000\n• Loss offset: K75,000\n• Taxable amount: K75,000\n• Loss carried forward: K725,000\n\nAny excess loss carried forward can only offset 50% of income in subsequent years."
+            ]
+        },
+        {
+            "id": "approved_fund.deductions",
+            "training_phrases": [
+                "Employer pension contributions deduction",
+                "Section 37 changes",
+                "Approved fund deductions"
+            ],
+            "responses": [
+                "Section 37 amended to remove reference to the repealed Fourth Schedule. Deduction allowed for any amount paid by employer by way of contribution to an approved fund."
+            ]
+        },
+        {
+            "id": "skills_development.levy",
+            "training_phrases": [
+                "Skills Development Levy deduction",
+                "Section 43E changes",
+                "SDL tax treatment"
+            ],
+            "responses": [
+                "Section 43E amended: Skills Development Levy is deductible even where the levy due has not been paid to ZRA. Previously required actual payment."
+            ]
+        },
+        {
+            "id": "tpin.requirements",
+            "training_phrases": [
+                "Who requires TPIN?",
+                "Section 45B changes",
+                "TPIN for water companies",
+                "TPIN for mobile money"
+            ],
+            "responses": [
+                "Section 45B amended - entities now requiring TPIN:\n• Water utility companies: Account opening/holding\n• Mobile money operators: Account opening/holding\n• Mobile network operators: Account opening/holding\n• Internet service providers: Account opening/holding\n• NHIMA: Account opening/holding\n• NAPSA: Account opening/holding\n• Professional bodies: Membership registration, subscription, renewal\n• Local Authorities: Registration of title deed"
+            ]
+        },
+        {
+            "id": "provisional_income.penalty",
+            "training_phrases": [
+                "Underestimation penalty",
+                "Section 46A penalty waiver",
+                "Provisional return penalties"
+            ],
+            "responses": [
+                "Section 46A(5) amended: Commissioner-General may waive whole or part of 25% penalty for understatement of income in provisional return if satisfied with reasons for understatement."
+            ]
+        },
+        {
+            "id": "turnover_tax.threshold",
+            "training_phrases": [
+                "Turnover tax threshold 2025",
+                "Section 64A changes",
+                "TOT threshold increase",
+                "Gig economy turnover tax"
+            ],
+            "responses": [
+                "Turnover Tax changes:\n• Threshold increased from K800,000 to K5,000,000 (Section 64A)\n• Rate: 5% on turnover above K12,000 up to K5,000,000\n• Applies to persons with annual turnover ≤ K5M\n• Also applies to gig economy with same threshold\n\nExclusions remain: partnerships, consultancy, mining, voluntary VAT registrants.\n\nNote: VAT threshold unchanged at K800,000. Taxpayers with turnover between K800,001-K5M must register for both TOT and VAT."
+            ]
+        },
+        {
+            "id": "tax_clearance.requirements",
+            "training_phrases": [
+                "When is tax clearance certificate required?",
+                "Section 81B requirements",
+                "TCC exemptions",
+                "Tax clearance threshold"
+            ],
+            "responses": [
+                "Tax Clearance Certificate required for:\n1. Property/motor vehicle transfers\n2. Trading licences issuance\n3. Mining/exploration licences\n4. Government permits/licenses\n5. Transactions with suppliers (with exceptions)\n6. Professional membership registration\n\nExemptions:\n• Students registering with regulatory bodies\n• Applicants not carrying on related business\n• Goods/services below ZMW200 per transaction\n• Agricultural produce ≤ ZMW10,000 per transaction\n\nTCC valid for specified period, can be cancelled by Commissioner-General."
+            ]
+        },
+        {
+            "id": "advance_income.tax",
+            "training_phrases": [
+                "Advance Income Tax on remittances",
+                "Section 81C AIT",
+                "Export AIT requirements",
+                "Remittance tax"
+            ],
+            "responses": [
+                "Advance Income Tax (15%) applies where taxpayer without valid TCC:\n1. Exports goods for commercial purposes\n2. Remits >$2,000 (or equivalent) outside Zambia through commercial bank\n\nAIT is not final tax - can be credited against liabilities or refunded. Commercial banks deduct AIT and submit returns within 14 days after month-end.\n\nCommercial purposes: Shipment of goods from Zambia to another country with primary intent of generating revenue/trade."
+            ]
+        },
+        {
+            "id": "royalty_withholding.exemption",
+            "training_phrases": [
+                "Withholding tax exemption on royalties",
+                "Section 82A exemption",
+                "WHT exemption for royalties"
+            ],
+            "responses": [
+                "Section 82A(1E) amended: Commissioner-General may now grant exemption from withholding tax on royalties (previously only interest, commission, management/consultancy fees could be exempted)."
+            ]
+        },
+        {
+            "id": "agent.tax_remittance",
+            "training_phrases": [
+                "Agent tax remittance deadline",
+                "Section 84 agent requirements",
+                "Withholding agent penalties"
+            ],
+            "responses": [
+                "Section 84 amended:\n• Declared agents must remit withheld tax not later than 2 days before due date for respective tax type\n• Penalty: 1% of amount for each month/part month of delay\n• Subsections renumbered: old (6) becomes (8)"
+            ]
+        },
+        {
+            "id": "private_fund.exemption",
+            "training_phrases": [
+                "Private fund tax exemption",
+                "Second Schedule paragraph 5(l)",
+                "Collective investment scheme exemption"
+            ],
+            "responses": [
+                "Second Schedule Para 5(l) amended: Exemption from income tax extended to private funds (private equity, hedge funds, venture capital, real estate funds) to extent income distributed to participants. Previously only applicable to approved collective investment schemes."
+            ]
+        },
+        {
+            "id": "presumptive_tax.motor_vehicles",
+            "training_phrases": [
+                "Presumptive tax on motor vehicles",
+                "Ninth Schedule Part I",
+                "Tax on passenger vehicles"
+            ],
+            "responses": [
+                "Presumptive tax on motor vehicles for carriage of persons increased by 20%:\n• 64+ seater: K15,552 (was K12,960)\n• 50-63 seater: K12,960 (was K10,800)\n• 36-49 seater: K10,368 (was K8,640)\n• 22-35 seater: K7,776 (was K6,480)\n• 18-21 seater: K5,184 (was K4,320)\n• 12-17 seater: K2,592 (was K2,160)\n• Below 12 seater: K1,296 (was K1,080)\n\nApplies to individuals/partnerships (excludes corporate bodies)."
+            ]
+        },
+        {
+            "id": "betting_gaming.tax",
+            "training_phrases": [
+                "Betting and gaming tax rates",
+                "Ninth Schedule Part III",
+                "Presumptive tax on gambling"
+            ],
+            "responses": [
+                "Presumptive tax on betting and gaming:\n• Online casino live games: 20% of gross takings\n• Online casino machine games: 35% of gross takings\n• Casino games (brick & mortar): K5,000 per table\n• Online lottery winnings: 35% of net proceeds\n• Lottery winnings (brick & mortar): 15% of net proceeds\n• Online betting: 25% of gross takings\n• Betting (brick & mortar): 15% of gross takings\n• Gaming machines: K500 per machine\n\nNote: 15% rate on brick & mortar betting/lottery is now substantive (was temporary for 2023-2024)."
+            ]
+        },
+        {
+            "id": "export_tax.rates",
+            "training_phrases": [
+                "Export tax rate increase",
+                "Non-traditional exports tax",
+                "Copper cathode manufacturing tax"
+            ],
+            "responses": [
+                "Income tax rate changes:\n• Non-traditional exports: Increased to 20% from 15% (except farming/agro-processing remains 10%)\n• Rental income: Increased to 16% from 12.5% on gross income >K800,000/year\n• Manufacturing from copper cathodes: Increased to 20% from 15%\n\nRental tax bands:\n• 0-K12,000: 0%\n• K12,001-K800,000: 4%\n• Above K800,000: 16%"
+            ]
+        },
+        {
+            "id": "spp_reduced_rates",
+            "training_phrases": [
+                "Special Purpose Vehicle tax rates",
+                "SPV reduced tax period",
+                "Public-private partnership tax"
+            ],
+            "responses": [
+                "Charging Schedule Para 5(l): Clarifies five-year reduced rate period (15%) for Special Purpose Vehicle undertaking PPP project applies from first year SPV declares profit and the four consecutive years, regardless of whether profit is made in those subsequent years."
+            ]
+        },
+        {
+            "id": "ait_rate",
+            "training_phrases": [
+                "Advance Income Tax rate",
+                "Charging Schedule para 6(2)",
+                "AIT 15% rate"
+            ],
+            "responses": [
+                "Advance Income Tax rate prescribed at 15% of value for:\n1. Import/export for duty purposes\n2. Remittances outside Zambia\n\nEffective January 1, 2025."
+            ]
+        },
+        {
+            "id": "gaming_wht_rate",
+            "training_phrases": [
+                "Withholding tax on gaming winnings",
+                "WHT rate on lottery",
+                "Charging Schedule para 7"
+            ],
+            "responses": [
+                "Withholding tax on winnings from gaming, lotteries and betting reduced to 15% from 20%. Note: 15% rate was temporary for 2023-2024; now permanent."
+            ]
+        },
+        {
+            "id": "ptt_definitions",
+            "training_phrases": [
+                "Property Transfer Tax definitions",
+                "Intellectual property definition PTT",
+                "Building society definition"
+            ],
+            "responses": [
+                "Property Transfer Tax definition changes:\n1. 'Intellectual property' aligned with relevant Acts (Patents, Industrial Designs, Trade Marks, Copyright)\n2. 'Building society' defined as per Building Societies Act\n3. 'Money-lender' defined as per Money-Lenders Act"
+            ]
+        },
+        {
+            "id": "ptt_rate_increase",
+            "training_phrases": [
+                "PTT rate increase 2025",
+                "Property transfer tax 8%",
+                "Section 4 PTT rates"
+            ],
+            "responses": [
+                "Property Transfer Tax rates increased:\n• Land: 8% (was 5%)\n• Shares: 8% (was 5%)\n• Intellectual property: 8% (was 5%)\n• Mining right exploration licence: 8% (was 5%)\n\nOther rates unchanged:\n• Mining right mining licence: 10%\n• Mineral processing licence: 10%"
+            ]
+        },
+        {
+            "id": "foreclosed_property.value",
+            "training_phrases": [
+                "Foreclosed property value",
+                "Realised value for foreclosures",
+                "Section 5 building societies"
+            ],
+            "responses": [
+                "Section 5 amended: Extended use of actual price as realised value for foreclosed property to building societies and money-lenders (previously only financial service providers)."
+            ]
+        },
+        {
+            "id": "vat_commissioner.discretion",
+            "training_phrases": [
+                "VAT smart invoice exemption",
+                "Section 7A Commissioner discretion",
+                "Alternative to electronic invoicing"
+            ],
+            "responses": [
+                "Section 7A(2): Commissioner-General may allow taxable supplier to use document/device/equipment other than electronic invoicing system upon meeting prescribed conditions."
+            ]
+        },
+        {
+            "id": "imported_services.taxation",
+            "training_phrases": [
+                "Imported services VAT",
+                "Section 8(6)(c) reverse VAT",
+                "Cross border electronic services"
+            ],
+            "responses": [
+                "Section 8(6)(c): Clarifies that imported services outside prescribed scope of Cross Border Electronic Services are taxable under reverse VAT mechanism or through appointed agent."
+            ]
+        },
+        {
+            "id": "input_tax.documentation",
+            "training_phrases": [
+                "Input tax documentation requirements",
+                "Section 18 invoices",
+                "Smart invoice requirement"
+            ],
+            "responses": [
+                "Section 18 amended:\n1. Manual invoices and invoices from approved computer package deleted as valid input tax evidence\n2. Input tax claims restricted to:\n   • Invoices from electronic invoicing system (Smart Invoice)\n   • Invoices issued by suppliers exempted from Smart Invoice use\n3. Paragraphs renumbered: (c),(d),(e) become (a),(b),(c)\n\nNote: Tax invoices issued outside Smart Invoice up to December 31, 2024 remain valid if meet 90-day validity period."
+            ]
+        },
+        {
+            "id": "assistant_director.title",
+            "training_phrases": [
+                "Assistant Director title",
+                "Section 38A job title change",
+                "Assistant Commissioner renamed"
+            ],
+            "responses": [
+                "Section 38A: 'Assistant Commissioner' job title replaced with 'Assistant Director'."
+            ]
+        },
+        {
+            "id": "promotional_goods.threshold",
+            "training_phrases": [
+                "Promotional goods threshold",
+                "Regulation 3(1)(b) correction",
+                "Samples not constituting supply"
+            ],
+            "responses": [
+                "Regulation 3(1)(b) corrected: Open market value of items supplied for promotional/publicity purposes should not exceed K100 (not K100,000) in any accounting year. Correction follows currency rebasing (divide by 1,000)."
+            ]
+        },
+        {
+            "id": "zero_rated.returns",
+            "training_phrases": [
+                "Zero-rated supplier returns",
+                "Regulation 15 threshold correction",
+                "Six-month VAT returns"
+            ],
+            "responses": [
+                "Regulation 15 corrected: Registered supplier engaged in making zero-rated supplies with turnover not exceeding K200,000 (not K200 million) per annum shall submit tax return every six months. Correction follows currency rebasing."
+            ]
+        },
+        {
+            "id": "vat_penalties.renumbering",
+            "training_phrases": [
+                "VAT penalties renumbering",
+                "Regulation 19 amendments",
+                "Cash register penalties"
+            ],
+            "responses": [
+                "Regulation 19 amended:\n1. Subregulation (2) deleted (penalties for failure to use cash register)\n2. Subregulation (3) renumbered as (2)"
+            ]
+        },
+        {
+            "id": "manual_transactions.upload",
+            "training_phrases": [
+                "Manual transactions upload",
+                "Regulation 5(3) smart invoice",
+                "72-hour upload requirement"
+            ],
+            "responses": [
+                "Regulation 5(3): Taxable supplier must ensure all manually recorded transactions uploaded to electronic invoice system within 72 hours of system being restored."
+            ]
+        },
+        {
+            "id": "exempt_supplier.invoices",
+            "training_phrases": [
+                "Exempt supplier invoices",
+                "Regulation 6 input tax",
+                "Manual invoices exemption"
+            ],
+            "responses": [
+                "Regulation 6: Extended provision for claiming input tax to include invoices issued manually or computer-generated by taxable supplier exempted from using electronic invoicing system by Commissioner-General."
+            ]
+        },
+        {
+            "id": "invoicing_system.deactivation",
+            "training_phrases": [
+                "Deactivating smart invoice",
+                "Regulation 10 deactivation",
+                "Cessation of business"
+            ],
+            "responses": [
+                "Regulation 10: Taxable supplier discontinuing approved invoicing system (for cessation of business or any other reason) must:\n1. Submit written request to Commissioner-General within 30 days\n2. Keep records from deactivated system for required period\n3. Penalty: Up to 30,000 penalty units for non-compliance"
+            ]
+        },
+        {
+            "id": "system_transfer.prohibition",
+            "training_phrases": [
+                "Smart invoice transfer prohibition",
+                "Regulation 11 system transfer",
+                "Cannot transfer invoicing system"
+            ],
+            "responses": [
+                "Regulation 11: Taxable supplier cannot transfer approved invoicing system registered for own use to another taxable supplier."
+            ]
+        },
+        {
+            "id": "life_policy.definition",
+            "training_phrases": [
+                "Life policy definition removed",
+                "SI 93 of 2024",
+                "VAT exemption order"
+            ],
+            "responses": [
+                "SI 93 of 2024: Definition of 'life policy' removed from Value Added Tax (Exemption) Order as it became redundant following deletion of provisions relating to life policies."
+            ]
+        },
+        {
+            "id": "ait_regulations.overview",
+            "training_phrases": [
+                "AIT regulations",
+                "SI 96 of 2024",
+                "Advance Income Tax regulations"
+            ],
+            "responses": [
+                "Income Tax (Advance Income Tax) Regulations SI 96 of 2024:\n1. Bank must deduct AIT on remittances >$2,000 without TCC\n2. Submit return within 14 days after month-end\n3. Pay tax within 14 days after month-end"
+            ]
+        },
+        {
+            "id": "internet_services.excise",
+            "training_phrases": [
+                "Internet services excise duty",
+                "SI 91 of 2024",
+                "Zambia Research Education Network"
+            ],
+            "responses": [
+                "Customs and Excise (Suspension) (Internet Services) Regulations SI 91 of 2024:\n• Excise duty suspended to 0% on internet services (HS 0000.13.00)\n• Applies when supplied by Zambia Research and Education Network to:\n  - Public institutions (Examinations Council, NHRA, TEVETA, ZICA)\n  - Public research institutions\n  - Public secondary schools\n  - Public higher education institutions\n• Revokes SI 68 of 2023"
+            ]
+        },
+        {
+            "id": "ipl_smart_invoice",
+            "training_phrases": [
+                "Insurance Premium Levy smart invoice",
+                "Act 28 of 2024",
+                "IPL electronic invoicing"
+            ],
+            "responses": [
+                "Insurance Premium Levy (Amendment) Act 28 of 2024:\n1. Deleted 'electronic fiscal device' definition\n2. Introduced 'electronic invoicing system' definition (as in VAT Act)\n3. Requires use of Smart Invoice to record IPL payments and issue tax invoices"
+            ]
+        },
+        {
+            "id": "tax_appeals.tribunal",
+            "training_phrases": [
+                "Tax Appeals Tribunal",
+                "Customs Act Section 2",
+                "Revenue Appeal Tribunal replacement"
+            ],
+            "responses": [
+                "Customs and Excise Act Section 2: 'Tribunal' definition changed from Revenue Appeal Tribunal to Tax Appeals Tribunal established under Tax Appeals Tribunal Act 2015."
+            ]
+        },
+        {
+            "id": "electricity_production.exemption",
+            "training_phrases": [
+                "Electricity production without licence",
+                "Section 94(1)(c)",
+                "100kWh exemption"
+            ],
+            "responses": [
+                "Section 94(1)(c): Production of electrical energy up to 100kWh for personal/domestic use exempt from licensing and excise duty."
+            ]
+        },
+        {
+            "id": "manufacturer.payment_period",
+            "training_phrases": [
+                "Manufacturer payment period",
+                "Section 108(10)",
+                "Three-day payment"
+            ],
+            "responses": [
+                "Section 108(10): Licensed manufacturer required to pay estimated assessments/penalties within 3 days (reduced from 5 days) following notice."
+            ]
+        },
+        {
+            "id": "excisable_value.penalties",
+            "training_phrases": [
+                "Excisable value penalties",
+                "Section 155(4)",
+                "General penalties manufacturer"
+            ],
+            "responses": [
+                "Section 155(4): Clarifies use of excisable value in charging general penalties for licensed manufacturer of excisable goods. Subsections (4) and (5) renumbered as (5) and (6)."
+            ]
+        },
+        {
+            "id": "excise_duty.increases",
+            "training_phrases": [
+                "Excise duty increases 2025",
+                "Non-alcoholic beverages duty",
+                "Tobacco excise duty"
+            ],
+            "responses": [
+                "Excise duty increases:\n1. Non-alcoholic beverages (HS 2009): K1.00/litre (was K0.60)\n2. Mineral waters (HS 2201): K1.00/litre (was K0.30)\n3. Other beverages (HS 2202): K1.00/litre (was K0.30)\n4. Tobacco products: K452 per mille/kg (was K400)\n5. Fuel: Petrol K2.34, Diesel K0.75, Kerosene K0.54, Other fuels K1.05\n\nNote: Locally produced non-alcoholic beverages (HS 2202) pay one-tenth (was one-sixth) of specific duty rate."
+            ]
+        },
+        {
+            "id": "mobile_money.definitions",
+            "training_phrases": [
+                "Mobile money definitions",
+                "Electronic money definition",
+                "Merchant definition"
+            ],
+            "responses": [
+                "Mobile Money Transaction Levy Act definitions:\n• 'Electronic money': Monetary value electronically represented by claim on mobile money service provider\n• 'Merchant': Person registered with ZRA accepting electronic money for goods/services (excludes betting)\n• 'Person-to-person transfer': Transfer from one person to another\n• 'Mobile money service provider': Entity authorized by Bank of Zambia to issue electronic money"
+            ]
+        },
+        {
+            "id": "mobile_money.levy_collection",
+            "training_phrases": [
+                "Mobile money levy collection",
+                "Section 5 levy administration",
+                "MMTL returns"
+            ],
+            "responses": [
+                "Mobile Money Transaction Levy administration:\n• Levy collected by mobile money service provider\n• Paid by sender of electronic money\n• Returns due within 10 days after month-end\n• Levy remittance within 10 days after month-end\n• Penalty: K100,000 penalty units per month for non-compliance\n• Commissioner-General may waive penalty"
+            ]
+        },
+        {
+            "id": "mobile_money.exemptions",
+            "training_phrases": [
+                "Mobile money levy exemptions",
+                "Section 6 exemptions",
+                "MMTL applicability"
+            ],
+            "responses": [
+                "Mobile Money Transaction Levy applies to:\n• Person-to-person transfers\n• Payments to Government\n• Payments from Government\n• Utility bill payments\n• Payments to merchants\n• Bank-to-wallet transfers\n\nMinister may exempt persons by statutory instrument (none issued yet)."
+            ]
+        },
+        {
+            "id": "mobile_money.records",
+            "training_phrases": [
+                "Mobile money record keeping",
+                "Section 7 records",
+                "MMTL documentation"
+            ],
+            "responses": [
+                "Mobile money service providers must:\n• Keep records for 6 years\n• Commissioner-General may extend period\n• Penalty: K200,000 penalty units for non-compliance\n• Commissioner-General may waive penalty"
+            ]
+        },
+        {
+            "id": "mobile_money.inspection",
+            "training_phrases": [
+                "Mobile money inspection powers",
+                "Section 8 inspections",
+                "ZRA access to premises"
+            ],
+            "responses": [
+                "Commissioner-General may:\n• Enter premises without prior notice\n• Inspect records/articles\n• Verify returns\n• Require additional information"
+            ]
+        },
+        {
+            "id": "mobile_money.repeal",
+            "training_phrases": [
+                "Mobile Money Act repeal",
+                "Section 11 transitional",
+                "Bank of Zambia records transfer"
+            ],
+            "responses": [
+                "Mobile Money Transaction Levy Act 2023 repealed. Transitional provisions:\n• Service providers remit levies to ZRA\n• Bank of Zambia transmits records/returns from repealed Act to ZRA"
+            ]
+        },
+        {
+            "id": "employment_benefits.convertible",
+            "training_phrases": [
+                "Convertible benefits tax",
+                "Money or money's worth",
+                "Employee benefits taxation"
+            ],
+            "responses": [
+                "Benefits convertible to money/money's worth:\n• Taxable under PAYE\n• Allowable deduction for employer\n\nExamples: Payment of private bills (electricity, rent, school fees), housing allowances, cash allowances.\n\n'Money or money's worth': Expenditure of direct monetary value (money, securities, property, services reducible to money's value)."
+            ]
+        },
+        {
+            "id": "rental_accommodation.employer",
+            "training_phrases": [
+                "Employer-owned accommodation",
+                "Rental to employee tax"
+            ],
+            "responses": [
+                "Employer-owned accommodation rented to employee:\n• Housing allowance taxable under PAYE\n• Rental income liable to tax for employer\n• Rent should reflect economic value based on structure type and location"
+            ]
+        },
+        {
+            "id": "non_convertible.benefits",
+            "training_phrases": [
+                "Non-convertible benefits",
+                "Benefits not taxable",
+                "Fringe benefits treatment"
+            ],
+            "responses": [
+                "Benefits NOT convertible to money/money's worth:\n• Not taxable on employee\n• NOT deductible for employer (Section 44(l))\n\nFactors (any 3+ apply):\n1. Not convertible to actual money\n2. Not convertible to pecuniary benefit\n3. Not disposable/transferable\n4. Not owned by employee\n5. Restrictive terms/conditions\n6. Use it or forfeit\n\nExamples: Free housing (cannot lease), airtime (sole use), fuel (specific car/type)."
+            ]
+        },
+        {
+            "id": "housing.tax_treatment",
+            "training_phrases": [
+                "Housing tax treatment",
+                "Employer-provided housing",
+                "Rental value disallowance"
+            ],
+            "responses": [
+                "Housing tax treatment:\nA. Employer-owned housing provided to employee:\n   • Free housing: Disallow 37% of employee's taxable income\n   • Below-market rent: Disallow 37% of taxable income\n   • Independent valuation may be used\n\nB. Leased housing provided to employee:\n   • Single occupant: Rentals added to emoluments (PAYE)\n   • Multiple occupants: Total rentals disallowed for employer\n\nUtilities (electricity, water, security) not included in 'free housing'."
+            ]
+        },
+        {
+            "id": "below_market.goods_services",
+            "training_phrases": [
+                "Below market price benefits",
+                "Employee discounts tax"
+            ],
+            "responses": [
+                "Below market price provision:\n• Services below market: Difference disallowed for employer\n• Goods below market: Difference taxable under PAYE (employer may gross up)"
+            ]
+        },
+        {
+            "id": "motor_vehicle.benefits",
+            "training_phrases": [
+                "Company car benefits",
+                "Personal-to-holder vehicle",
+                "Motor vehicle disallowance"
+            ],
+            "responses": [
+                "Motor vehicle provided on personal-to-holder basis (business & personal use):\n• 2800cc+: K57,600/year disallowed\n• 1800-2800cc: K43,200/year disallowed\n• Below 1800cc: K25,200/year disallowed\n\nPersonal-to-holder: Vehicle for both business/personal use with employer paying all running/maintenance expenses."
+            ]
+        },
+        {
+            "id": "cash_allowances.taxable",
+            "training_phrases": [
+                "Cash allowances tax",
+                "Taxable allowances",
+                "PAYE on allowances"
+            ],
+            "responses": [
+                "All cash allowances taxable under PAYE:\n• Education allowance\n• Housing allowance\n• Transport/fuel allowance\n• Domestic utility allowances\n• Commuted car allowance\n• Settling in allowance\n• Professional qualification allowances"
+            ]
+        },
+        {
+            "id": "paye_exempt.payments",
+            "training_phrases": [
+                "PAYE exempt payments",
+                "Non-taxable payments",
+                "Exempt income"
+            ],
+            "responses": [
+                "Payments exempt from PAYE:\n• Ex-gratia to spouse/child/dependant of deceased employee\n• Medical expenses paid/incurred by employer\n• Funeral expenses paid by employer\n• Local Authority sitting allowances for Councillors\n• Labour Day awards (cash/kind)\n• Per diem/travel allowances while working away from office"
+            ]
+        },
+        {
+            "id": "entertainment.expenses",
+            "training_phrases": [
+                "Entertainment expenses deduction",
+                "Hospitality costs",
+                "Gifts tax treatment"
+            ],
+            "responses": [
+                "Entertainment/hospitality/gifts expenses NOT allowable except:\n1. Business providing entertainment/hospitality (hotels, restaurants)\n2. Free entertainment for publicity (free seats for critics)\n3. Employee entertainment (Christmas party, business trip meals)\n4. Advertisement gifts ≤ K100 to any person in charge year (excess disallowed)\n\nEntertainment allowances: Taxable under PAYE, disallowed for employer."
+            ]
+        },
+        {
+            "id": "canteen_meals.tax",
+            "training_phrases": [
+                "Canteen meals tax",
+                "Food rations treatment",
+                "Refreshments for employees"
+            ],
+            "responses": [
+                "Employer-provided refreshments/canteen meals/food rations:\n• Not taxable on employee (cannot convert to money's worth)\n• Fully disallowed for employer (Section 44(l))\n\nException: Where legal obligation to provide meals, cost may be deductible."
+            ]
+        },
+        {
+            "id": "cessation_employment.payments",
+            "training_phrases": [
+                "Termination payments tax",
+                "Retirement payments",
+                "Redundancy pay tax"
+            ],
+            "responses": [
+                "Cessation of employment payments:\n\nEXEMPT (pension benefits):\n• Pension\n• Refund of employee pension contributions\n• Withdrawal of employer pension contributions\n• Gratuity\n• Redundancy pay\n• Severance pay/compensation for loss of office\n• Salary in lieu of notice\n• Repatriation allowance\n• Service bonuses eligible only at end of employment\n\nTAXABLE (PAYE):\n• Monthly salary\n• Commutation of accrued leave days\n• Accrued service bonuses (linked to performance)"
+            ]
+        },
+        {
+            "id": "medical_discharge.payments",
+            "training_phrases": [
+                "Medical discharge payments",
+                "Permanent incapacity",
+                "Medical termination tax"
+            ],
+            "responses": [
+                "Payments on termination due to medical grounds (permanent incapacity certified by registered medical practitioner/institution) are exempt from tax."
+            ]
+        },
+        {
+            "id": "advance_gratuity.tax",
+            "training_phrases": [
+                "Advance against gratuity",
+                "Pension withdrawal tax",
+                "Continuing employment withdrawals"
+            ],
+            "responses": [
+                "Advances against gratuity, pensions, and employee pension withdrawals by individuals continuing in employment are exempt (constitute pension benefits)."
+            ]
+        },
+        {
+            "id": "settling_in.allowance",
+            "training_phrases": [
+                "Settling in allowance tax",
+                "Relocation allowance",
+                "New employee allowance"
+            ],
+            "responses": [
+                "Settling in allowances (by any name) paid to new employees or employees on transfer constitute employment income and are taxable under PAYE."
+            ]
+        },
+        {
+            "id": "rural_enterprise.incentives",
+            "training_phrases": [
+                "Rural enterprise incentives",
+                "Rural area tax reduction",
+                "One-fifth tax reduction"
+            ],
+            "responses": [
+                "Rural enterprise incentive:\n• Reduction by one-fifth of tax payable\n• First five charge years of operation\n• Location: Area not declared city/municipality (excluding Kafue township)\n• Excludes mining/mineral processing\n\nExample: K10,000 taxable income\n• Normal tax: K3,000\n• Incentive: K600 (1/5 of K3,000)\n• Final tax: K2,400"
+            ]
+        },
+        {
+            "id": "share_forfeiture.tax",
+            "training_phrases": [
+                "Share forfeiture tax",
+                "Share surrender PTT",
+                "Forfeited shares transfer"
+            ],
+            "responses": [
+                "Share forfeiture/surrender:\n• No Property Transfer Tax (not a transfer)\n• Shareholder not required to submit provisional return\n• Company selling forfeited/surrendered shares: Submit provisional return, account for PTT\n• PTT assessment based on market value at transfer time\n\nConditions for forfeiture/surrender:\n1. No consideration\n2. Shares not paid up for\n3. Call on shares not paid for"
+            ]
+        },
+        {
+            "id": "paye_refund.calculation",
+            "training_phrases": [
+                "PAYE refund calculation",
+                "Overpaid PAYE",
+                "Tax refund claims"
+            ],
+            "responses": [
+                "PAYE refundable when:\n1. Errors (payroll, wrong bands, arithmetic, taxing exempt income)\n2. Unemployment before year-end\n3. Eligible deductions (donations to approved PBOs ≤15% income)\n\nExample: Employee earning K14,000/month stops in August:\n• Annual income: K112,000\n• Annual tax due: K12,952\n• Tax paid (8 months): K22,448\n• Refund: K9,496\n\nApply using ZRA prescribed forms at year-end."
+            ]
+        },
+        {
+            "id": "donations.tax_relief",
+            "training_phrases": [
+                "Donations tax relief",
+                "PBO contributions",
+                "Charitable donations tax"
+            ],
+            "responses": [
+                "Donations to approved Public Benefit Organisations:\n• Deduction ≤15% of taxable income for charge year\n• Claim at year-end using prescribed forms\n\nExample: K150,000 income, K25,000 donation\n• Max deduction: K22,500 (15% of K150,000)\n• Taxable income: K127,500\n• Tax due: K18,687\n• Tax paid: K27,012\n• Refund: K8,325"
+            ]
+        },
+        {
+            "id": "disability.tax_benefits",
+            "training_phrases": [
+                "Disability tax credit",
+                "Persons with disabilities tax",
+                "Employer disability deduction"
+            ],
+            "responses": [
+                "Disability-related tax benefits:\n\nEMPLOYEES:\n• Tax credit: K7,200/year (K600/month)\n• Granted by employer computing PAYE\n• Must be registered with Zambia Agency for Persons with Disabilities\n• Refund limited to tax actually paid if not claimed during year\n\nEMPLOYERS:\n• Deduction: K2,000/year for each person with disability employed full-time\n• Employee must be registered with Zambia Agency\n• Deductible in computing business profits"
+            ]
+        },
+        {
+            "id": "non_resident.haulage",
+            "training_phrases": [
+                "Non-resident haulage tax",
+                "Foreign transporters",
+                "Haulage operations tax"
+            ],
+            "responses": [
+                "Non-resident haulage contractors:\n1. Zambia to Country A: Zambian source, income tax + WHT (not final)\n2. Country A to B: No Zambian source, no tax\n3. Country C to Zambia: No Zambian source, no tax\n4. Within Zambia: Zambian source, WHT deductible\n   • If PE created: 30% tax on attributed profits\n\nWHT on non-resident contractors: 20% (final tax)"
+            ]
+        },
+        {
+            "id": "non_resident.employer",
+            "training_phrases": [
+                "Non-resident employer PAYE",
+                "Foreign employer tax",
+                "Working in Zambia for foreign company"
+            ],
+            "responses": [
+                "Employment income earned in Zambia subject to PAYE regardless of:\n• Employer's residence\n• Payment location\n• Employee's residence\n\nLegal basis: Section 14 (tax at source) + Section 18(1)(b) (deemed Zambian source for employment/services in Zambia)."
+            ]
+        },
+        {
+            "id": "tot_income.migration",
+            "training_phrases": [
+                "TOT to Income Tax migration",
+                "Exceeding turnover threshold",
+                "Change from TOT to ITX"
+            ],
+            "responses": [
+                "Migration from Turnover Tax to Income Tax:\n• Notify Commissioner-General immediately upon exceeding K5M threshold\n• Continue paying TOT until year-end\n• Deregistered from TOT at beginning of next charge year\n• File annual Income Tax Return by June 21 for preceding year\n• ZRA assesses under income tax, grants TOT credits\n\nNote: Change occurs at beginning of next year unless Commissioner-General specifies other date."
+            ]
+        },
+        {
+            "id": "gaming_prizes.tax",
+            "training_phrases": [
+                "Non-monetary gaming prizes",
+                "Lottery car prize tax",
+                "Gaming winnings valuation"
+            ],
+            "responses": [
+                "Non-monetary gaming prizes (e.g., car):\n• Net proceeds = gross proceeds minus prize value\n• Prize value determined by Commissioner-General\n• Presumptive tax applied to net proceeds\n\nOne-time lottery organizers:\n• NO registration if: Promotes business, entry requires purchasing products\n• MUST register if: Sells lottery tickets\n\nSlot route operations: Gaming machine owner (not location owner) accounts for Presumptive Tax (K500/machine) and WHT (15%)."
+            ]
+        },
+        {
+            "id": "tax_treaty.application",
+            "training_phrases": [
+                "Tax treaty relief application",
+                "Limited Deduction Direction",
+                "Double tax treaty"
+            ],
+            "responses": [
+                "Applying for Double Taxation Treaty Relief (Limited Deduction Direction):\nSubmit to Assistant Director - International Tax Policy:\n1. Contract copy (management, royalties, loan agreement, etc.)\n2. Completed Form WHT-3 from www.zra.org.zm\n3. Tax Residence Certificate OR Part 11 of Form WHT-3 certified by foreign tax authority\n\nFor dividends: Signed board resolution\n\nCommissioner-General issues LDD to apply reduced treaty rates."
+            ]
+        },
+        {
+            "id": "ramp_services.vat",
+            "training_phrases": [
+                "Ramp services VAT",
+                "Aircraft loading VAT",
+                "Cargo handling tax"
+            ],
+            "responses": [
+                "VAT treatment of ramp services:\n• Equipment hire for passenger embark/disembark: Standard-rated\n• Loading cargo for export: Standard-rated (was zero-rated)\n• Offloading imports: Standard-rated\n• Ancillary transit services: Standard-rated (except transshipment)\n• Transshipment: Zero-rated (moving cargo between vessels under customs control)\n• Cold chain services: Standard-rated\n• Clearing/forwarding: Standard-rated"
+            ]
+        },
+        {
+            "id": "finance_lease.apportionment",
+            "training_phrases": [
+                "Finance lease VAT apportionment",
+                "Leasing input tax",
+                "Partial exemption leasing"
+            ],
+            "responses": [
+                "Finance lease VAT apportionment:\n• Principal (capital): Standard-rated\n• Interest: Exempt\n• Taxable supplier must apportion input tax using methods in Second Schedule to VAT Administrative Rules\n• Applies to input tax on asset and related expenses"
+            ]
+        },
+        {
+            "id": "imported_services.vat",
+            "training_phrases": [
+                "Imported services reverse VAT",
+                "Reverse charge mechanism",
+                "Foreign services VAT"
+            ],
+            "responses": [
+                "Imported services (reverse VAT):\n• Applicable if imported by VAT-registered person\n• NOT applicable if:\n  1. Service is exempt\n  2. Importer not eligible for VAT registration (exempt supplies or privileged person)\n  3. Taxable supplier not registered (turnover below threshold)\n• Foreign provider must provide proof of tax payment in export country"
+            ]
+        },
+        {
+            "id": "vat_recovery.incorrect",
+            "training_phrases": [
+                "Recovery of incorrect VAT",
+                "VAT on exempt supplies",
+                "Non-registered supplier VAT"
+            ],
+            "responses": [
+                "Incorrect VAT charges:\n• VAT charged on exempt supplies: Recoverable by Government\n• VAT charged by non-registered supplier: Recoverable as tax due\n• Must be shown on invoice as tax chargeable"
+            ]
+        },
+        {
+            "id": "valid_invoice.requirements",
+            "training_phrases": [
+                "Valid tax invoice",
+                "Input tax documentation",
+                "Invoice requirements"
+            ],
+            "responses": [
+                "Valid tax invoice for input claim:\n• Must have mandatory features prescribed in Commissioner-General's Rules\n• Required at point of filing return"
+            ]
+        },
+        {
+            "id": "vat_lpo.requirements",
+            "training_phrases": [
+                "VAT LPO requirements",
+                "Zero-rating local purchase orders",
+                "Privileged person purchases"
+            ],
+            "responses": [
+                "VAT Zero-Rating Local Purchase Orders:\n• Privileged persons can purchase standard-rated supplies at 0% using VAT LPOs\n• LPO must be availed at time of purchase\n• Without LPO: Supplier must charge 16% VAT (not refundable even if LPO provided later)\n• Goods supplied out of bond: VAT LPOs not applicable"
+            ]
+        },
+        {
+            "id": "insurance_broker.commission",
+            "training_phrases": [
+                "Insurance broker commission",
+                "Brokerage services IPL",
+                "Commission tax treatment"
+            ],
+            "responses": [
+                "Insurance broker commission:\n• NOT subject to Insurance Premium Levy\n• IPL charged on insurance premiums only\n• Commission earned for arranging insurance services is brokerage income"
+            ]
+        },
+        {
+            "id": "government_vouchers.clearing",
+            "training_phrases": [
+                "Government vouchers clearing",
+                "Duty relief vouchers",
+                "Motor vehicle clearance"
+            ],
+            "responses": [
+                "Clearing goods using Government vouchers:\n• Government pays duties/taxes using vouchers\n• Commonly used for clearing motor vehicles from bonded warehouses\n• Goods physically in Zambia but not cleared for local consumption\n• Process similar to border clearance\n• VAT LPOs not applicable for goods out of bond"
+            ]
+        },
+        {
+            "id": "tourism_levy.penalty",
+            "training_phrases": [
+                "Tourism levy penalty",
+                "Underdeclaration penalty",
+                "1.5% tourism levy"
+            ],
+            "responses": [
+                "Tourism Levy penalty example:\nDeclared: Accommodation K1,500 + Conference K1,000 = K2,500 × 1.5% = K37.50\nActual: Accommodation K3,750 + Conference K1,500 = K5,250 × 1.5% = K78.75\nUnderdeclared: K41.25\nPenalty: 5% of omitted amount (K2,750) = K137.50\nTotal payable: K137.50 + K41.25 = K178.75"
+            ]
+        },
+        {
+            "id": "personal_income.tax_rates",
+            "training_phrases": [
+                "Personal income tax rates",
+                "PAYE tax bands",
+                "Individual tax rates"
+            ],
+            "responses": [
+                "Personal Income Tax rates 2025:\n• First K61,200: 0%\n• K61,201 - K85,200: 20%\n• K85,201 - K110,400: 30%\n• Above K110,400: 37%"
+            ]
+        },
+        {
+            "id": "turnover_tax.rates",
+            "training_phrases": [
+                "Turnover tax rates",
+                "TOT rate 2025",
+                "Rental income tax rates"
+            ],
+            "responses": [
+                "Turnover Tax rates:\n• Annual turnover ≤ K12,000: 0%\n• K12,001 - K5,000,000: 5%\n\nRental income tax:\n• ≤ K12,000: 0%\n• K12,001 - K800,000: 4%\n• > K800,000: 16%"
+            ]
+        },
+        {
+            "id": "presumptive_tax.rates",
+            "training_phrases": [
+                "Presumptive tax rates",
+                "Motor vehicle tax",
+                "Artisanal mining tax"
+            ],
+            "responses": [
+                "Presumptive Tax rates:\nMotor vehicles:\n• 64+ seater: K15,552\n• 50-63: K12,960\n• 36-49: K10,368\n• 22-35: K7,776\n• 18-21: K5,184\n• 12-17: K2,592\n• <12: K1,296\n\nArtisanal/small-scale mining: 4% on gross turnover minus mineral royalty"
+            ]
+        },
+        {
+            "id": "base_tax",
+            "training_phrases": [
+                "Base tax amount",
+                "Minimum tax"
+            ],
+            "responses": [
+                "Base Tax: K365 per annum"
+            ]
+        },
+        {
+            "id": "corporate_tax.rates",
+            "training_phrases": [
+                "Corporate tax rates",
+                "Company tax rates",
+                "Special tax rates"
+            ],
+            "responses": [
+                "Corporate Income Tax rates:\n• Standard: 30%\n• Mineral processing: 30%\n• Mining: 30%\n• Manufacturing from copper cathodes: 20%\n• Electronic communication: 35%\n• Lapidary/jewellery: 25%\n• Manufacturing: 30%\n• Approved PBO business income: 15%\n• Agro-processing: 10%\n• Farming: 10%\n• Non-traditional exports (agro/farming): 10%\n• Non-traditional exports (others): 20%\n• Fertilizer manufacture: 15%\n• Trusts/estates: 30%\n• Rural enterprises: 20% reduction for 5 years\n• Cotton: 0% first 5 years\n• Cotton spinning: 0% first 10 years\n• Accommodation/food: 15% (2021-2022)\n• Ceramic manufacturing: 0% (2022-2023)\n• ZDA manufacturing in MFEZ: 0% first 10 years, then 50% reduction years 11-13, 25% reduction years 14-15\n• Priority sector: Various reduced rates based on licence date"
+            ]
+        },
+        {
+            "id": "withholding_tax.rates",
+            "training_phrases": [
+                "Withholding tax rates",
+                "WHT rates 2025",
+                "Dividend WHT"
+            ],
+            "responses": [
+                "Withholding Tax rates:\nResidents:\n• REIT distributions: 15%\n• Dividends: 15%\n• Interest: 15%\n• Royalties: 15%\n• Commissions: 15%\n• Public entertainment: N/A\n• Management/consultancy: 15%\n• Gaming/betting winnings: 15%\n• Commodity royalty: 15%\n\nNon-Residents:\n• Dividends: 20%\n• Interest: 20%\n• Royalties: 20%\n• Commissions: 20% (final)\n• Public entertainment: 20% (final)\n• Management/consultancy: 20%\n• Non-resident contractors: 20% (final)\n• Branch profits: 20%\n• Gaming winnings: 20%\n\nSpecial rates/zero rates apply for specific industries/incentives."
+            ]
+        },
+        {
+            "id": "vat_rates",
+            "training_phrases": [
+                "VAT rates",
+                "Value Added Tax rate",
+                "Standard VAT rate"
+            ],
+            "responses": [
+                "VAT rates:\n• Standard rate: 16%\n• Zero-rate: 0%\n• Exempt: Not taxable"
+            ]
+        },
+        {
+            "id": "excise_tariff",
+            "training_phrases": [
+                "Excise duty tariff",
+                "Local excise rates",
+                "Excise duty amounts"
+            ],
+            "responses": [
+                "Excise Tariff highlights:\n• Tobacco refuse: K452/kg or 145%\n• Cigarettes: K452/mille\n• Pipe tobacco: K452/kg or 145%\n• Clear beer (malt): 60% (suspended to 40%)\n• Cassava beer: 10%\n• Sorghum beer: 20%\n• Opaque beer: K0.25/litre\n• Diesel: K0.75/litre\n• Petrol: K2.34/litre\n• Heavy fuel: K9.30/10kg\n• Hydrocarbon gases: K0.54/litre\n• Aviation spirit: K4.80/dekalitre\n• Jet fuel: K4.80/dekalitre\n• Kerosene: K0.54/litre\n• Ethyl alcohol: 60%\n• Wines: 60%\n• Ciders: 60% (suspended to 40%)\n• Airtime: 17.5%\n• Cosmetics: 20%\n• Plastic bags: 30%\n• Floor coverings: 15%\n• Office supplies: 15%\n• Textile accessories: 15%\n• Furniture fittings: 15%\n• Statuettes: 15%\n• Electricity: 3%\n• Cement: K40/tonne\n• Fruit juices: K1/litre\n• Mineral waters: K1/litre\n• Non-alcoholic beverages: K1/litre\n• Reconstituted milk: K1.50/litre\n• E-cigarettes: 145%"
+            ]
+        },
+        {
+            "id": "property_transfer.rates",
+            "training_phrases": [
+                "Property Transfer Tax rates",
+                "PTT rates 2025",
+                "Transfer tax rates"
+            ],
+            "responses": [
+                "Property Transfer Tax rates:\n• Land: 8%\n• Shares: 8%\n• Intellectual property: 8%\n• Mining right exploration licence: 8%\n• Mining right mining licence: 10%\n• Mineral processing licence: 10%"
+            ]
+        },
+        {
+            "id": "mineral_royalty.rates",
+            "training_phrases": [
+                "Mineral royalty rates",
+                "Copper royalty",
+                "Mining royalty"
+            ],
+            "responses": [
+                "Mineral Royalty rates:\nCOPPER (based on norm price):\n• <$4,000: 4.0%\n• $4,000-$4,999: 6.5%\n• $5,000-$6,999: 8.5%\n• ≥$7,000: 10%\n\nOTHER MINERALS:\n• Base metals (except copper/cobalt/vanadium): 5% norm value\n• Energy/industrial minerals: 5% gross value\n• Gemstones: 6% gross value\n• Precious metals: 6% norm value\n• Cobalt/vanadium: 8% norm value"
+            ]
+        },
+        {
+            "id": "betting_gaming.rates",
+            "training_phrases": [
+                "Betting gaming tax rates",
+                "Gambling tax",
+                "Casino tax"
+            ],
+            "responses": [
+                "Betting and Gaming tax:\n• Online casino live: 20% gross takings\n• Online casino machine: 35% gross takings\n• Casino (brick & mortar): K5,000/table\n• Online lottery: 35% net proceeds\n• Lottery (brick & mortar): 15% net proceeds\n• Online betting: 25% gross takings\n• Betting (brick & mortar): 15% gross takings\n• Gaming machines: K500/machine"
+            ]
+        },
+        {
+            "id": "other_levies.rates",
+            "training_phrases": [
+                "Other levy rates",
+                "IPL rate",
+                "Skills Development Levy",
+                "Tourism Levy"
+            ],
+            "responses": [
+                "Other levy rates:\n• Insurance Premium Levy: 5%\n• Skills Development Levy: 0.5%\n• Tourism Levy: 1.5%\n• Penalty unit: K0.40"
+            ]
+        },
+        {
+            "id": "agricultural_products.local_content",
+            "training_phrases": [
+                "Local content allowance products",
+                "Agricultural products allowance",
+                "Schedule agricultural products"
+            ],
+            "responses": [
+                "Agricultural products allowed for Local Content Allowance:\n1. Cassava\n2. Pineapple\n3. Mango\n4. Tomato\n5. Sorghum\n6. Millet"
+            ]
+        },
+        {
+            "id": "tpin_online.application",
+            "training_phrases": [
+                "Online TPIN application",
+                "Web portal TPIN",
+                "TaxOnline registration"
+            ],
+            "responses": [
+                "Online TPIN application steps:\n1. Visit www.zra.org.zm (use Chrome/Edge/Firefox)\n2. Click 'TaxOnline' bottom left\n3. Select 'Register'\n4. Enter CAPTCHA\n5. Select taxpayer type\n6. Complete information\n7. Select registration reason\n8. Upload documents:\n   • Individual resident: NRC, sketch/map\n   • Individual other: Passport, map\n   • Company: Incorporation certificate, share capital, PACRA Form 3, map\n9. Pin location when uploading\n\nTPINs automatically approved, credentials sent to email/mobile."
+            ]
+        },
+        {
+            "id": "tcc_online.application",
+            "training_phrases": [
+                "Online TCC application",
+                "Tax clearance certificate online"
+            ],
+            "responses": [
+                "Online TCC application:\n1. Login to TaxOnline (www.zra.org.zm)\n2. Go to Compliance section\n3. Select 'Tax Clearance Certificate'\n4. Click 'Apply'\n5. TCC generated with QR code/watermark\n6. Print/save certificate"
+            ]
+        },
+        {
+            "id": "smart_invoice.contact",
+            "training_phrases": [
+                "Smart invoice support",
+                "EFD assistance",
+                "Electronic invoicing help"
+            ],
+            "responses": [
+                "Smart Invoice support: smartinvoice@zra.org.zm"
+            ]
+        },
+        {
+            "id": "taxonline.support",
+            "training_phrases": [
+                "TaxOnline support",
+                "System challenges",
+                "Online portal help"
+            ],
+            "responses": [
+                "TaxOnline support: advice@zra.org.zm"
+            ]
+        },
+        {
+            "id": "tax_information.access",
+            "training_phrases": [
+                "Tax leaflets",
+                "Tax documents",
+                "General tax information"
+            ],
+            "responses": [
+                "Tax information: Visit www.zra.org.zm, click 'General Tax Information'"
+            ]
+        },
+        {
+            "id": "video_tutorials",
+            "training_phrases": [
+                "Tax video tutorials",
+                "Online tutorials",
+                "Training videos"
+            ],
+            "responses": [
+                "Video tutorials: Visit www.zra.org.zm, click 'Tutorials'"
+            ]
+        },
+        {
+            "id": "complaints.procedure",
+            "training_phrases": [
+                "How to complain",
+                "Report unethical behavior",
+                "Integrity complaints"
+            ],
+            "responses": [
+                "Reporting complaints:\n• Write: Chairperson - ZRA Integrity Committee, P.O. Box 35710, Lusaka\n• Email: zraic@zra.org.zm\n• Phone: +260978701701\n• Suggestion boxes at ZRA stations"
+            ]
+        },
+        {
+            "id": "contact_details.zra",
+            "training_phrases": [
+                "ZRA contact details",
+                "Customer service",
+                "Office locations"
+            ],
+            "responses": [
+                "ZRA Contact Addresses:\n1. National Call Centre: (0211) 381111 (Zamtel), 0960 091111 (MTN), 0971 281111 (Airtel), Short code: 5972\n2. Taxpayer Services Centre, Kitwe: (0211) 384529 (Zamtel), 0960 094529 (MTN), 0971 284529 (Airtel)\n3. Assistant Director - Returns/Payments: (0211) 382649 (Zamtel), 0960 092649 (MTN), 0971 282649 (Airtel)\n4. Assistant Director - Domestic Tax Policy: (0211) 382520 (Zamtel), 0960 092520 (MTN), 0971 282520 (Airtel)\n5. Assistant Director - International Tax: (0211) 382544 (Zamtel), 0960 092544 (MTN), 0971 282544 (Airtel)"
+            ]
+        },
+        {
+            "id": "penalty_unit.value",
+            "training_phrases": [
+                "Penalty unit amount",
+                "What is a penalty unit?",
+                "Penalty unit value 2025"
+            ],
+            "responses": [
+                "Penalty unit value: K0.40"
+            ]
+        }
+    ]
+}

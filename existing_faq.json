@@ -1,0 +1,37 @@
+{
+  "intents": [
+    {
+      "id": "zra.mission",
+      "training_phrases": [
+        "What is ZRA's mission?",
+        "Mission of Zambia Revenue Authority",
+        "ZRA mission statement"
+      ],
+      "responses": [
+        "The mission of the Zambia Revenue Authority (ZRA) is to optimise and sustain revenue collection and administration for a prosperous Zambia."
+      ]
+    },
+    {
+      "id": "zra.vision",
+      "training_phrases": [
+        "What is ZRA's vision?",
+        "Vision of Zambia Revenue Authority",
+        "ZRA long term vision"
+      ],
+      "responses": [
+        "ZRA's vision is to be a world class model of excellence in revenue administration and trade facilitation."
+      ]
+    },
+    {
+      "id": "zra.tagline",
+      "training_phrases": [
+        "What is ZRA's tagline?",
+        "ZRA motto",
+        "My Tax Your Tax Our Destiny"
+      ],
+      "responses": [
+        "ZRA's tagline is: 'My Tax, Your Tax, Our Destiny'"
+      ]
+    }
+  ]
+}

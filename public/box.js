@@ -91,9 +91,9 @@ function sendMessage() {
     showTypingIndicator();
 
     setTimeout(() => {
-      const response = getBotResponse(message);
+      const { text, intentId } = getBotResponse(message);
       hideTypingIndicator();
-      addMessage("bot", response);
+      addMessage("bot", text, intentId);
     }, 1000);
 
     input.value = "";
@@ -101,7 +101,7 @@ function sendMessage() {
 }
 
 // Add message to chat window
-function addMessage(sender, text) {
+function addMessage(sender, text, intentId = null) {
   const chatBody = document.getElementById("chat-body");
   const msg = document.createElement("div");
   msg.className = `chat-message ${sender} highlighted`;
@@ -122,6 +122,19 @@ function addMessage(sender, text) {
   const sound = document.getElementById("chat-sound");
   if (sound) sound.play();
 
+  // Voice system: Speak if it's an English bot response
+  if (sender === "bot" && intentId) {
+    // English intents typically don't have a language suffix like .bemba, .nyanja, etc.
+    const isEnglish = !intentId.includes(".bemba") &&
+      !intentId.includes(".nyanja") &&
+      !intentId.includes(".lozi") &&
+      !intentId.includes(".tonga");
+
+    if (isEnglish) {
+      speakText(text);
+    }
+  }
+
   // Save to backend (optional, fails silently if API unavailable)
   fetch('/api/chat', {
     method: 'POST',
@@ -132,6 +145,21 @@ function addMessage(sender, text) {
   });
 }
 
+// Text-to-Speech helper
+function speakText(text) {
+  if ('speechSynthesis' in window) {
+    // Cancel any ongoing speech
+    window.speechSynthesis.cancel();
+
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'en-US';
+    utterance.rate = 1.0;
+    utterance.pitch = 1.0;
+
+    window.speechSynthesis.speak(utterance);
+  }
+}
+
 // Play sound
 const sound = document.getElementById("chat-sound");
 if (sound) sound.play();
@@ -140,7 +168,7 @@ if (sound) sound.play();
 // Bot response logic with intent matching
 function getBotResponse(message) {
   if (!intentsData || !intentsFuse) {
-    return "The assistant is still loading. Please try again in a moment.";
+    return { text: "The assistant is still loading. Please try again in a moment.", intentId: null };
   }
 
   const lower = message.toLowerCase().trim();
@@ -153,26 +181,24 @@ function getBotResponse(message) {
     const matchedIntent = results[0].item;
     const responses = matchedIntent.responses;
 
-    // Check if it's an "unusual" match (e.g., score between 0.4 and 0.6)
-    // 0.0 is perfect match, 1.0 is no match.
     if (results[0].score > 0.4) {
-      // Record as unusual
       saveTrainingData(message, "Unusual Match", results[0].score);
     }
 
-    // Return random response from the intent's responses
     const randomResponse = responses[Math.floor(Math.random() * responses.length)];
-    return randomResponse;
+    return { text: randomResponse, intentId: matchedIntent.intentId };
   }
 
   // No good match found - use fallback
   const fallbackResponses = intentsData.fallback.responses;
   const fallbackMessage = fallbackResponses[Math.floor(Math.random() * fallbackResponses.length)];
 
-  // Record as unanswered
   saveTrainingData(message, "No Answer", 1.0);
 
-  return `${fallbackMessage}\n\n📞 Call: +260 211 381111\n📧 Email: info@zra.org.zm`;
+  return {
+    text: `${fallbackMessage}\n\n📞 Call: +260 211 381111\n📧 Email: info@zra.org.zm`,
+    intentId: "fallback"
+  };
 }
 
 // Helper to save training data
