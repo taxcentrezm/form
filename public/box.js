@@ -121,7 +121,8 @@ function addMessage(sender, text, intentId = null) {
 
   const bubble = document.createElement("div");
   bubble.className = "chat-bubble";
-  bubble.textContent = text;
+  // Render simple markdown bolding
+  bubble.innerHTML = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
 
   msg.appendChild(avatar);
   msg.appendChild(bubble);
