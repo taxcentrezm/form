@@ -189,18 +189,26 @@ function speakText(text, lang = 'en-US') {
 
     // Voice Selection Logic
     const voices = window.speechSynthesis.getVoices();
+    let preferredVoice = null;
 
-    // 1. Try to find Microsoft Leah (South Africa)
-    let preferredVoice = voices.find(v => v.name.includes("Leah") || (v.lang === "en-ZA" && v.name.includes("Microsoft")));
-
-    // 2. Fallback to any en-ZA voice
-    if (!preferredVoice) {
-      preferredVoice = voices.find(v => v.lang === "en-ZA");
+    if (lang === 'sw-TZ') {
+      // For Bemba/Local: Try Swahili first
+      preferredVoice = voices.find(v => v.lang.startsWith("sw"));
     }
 
-    // 3. If no African English voice found, fall back to Swahili for a local phonetic sound
     if (!preferredVoice) {
-      preferredVoice = voices.find(v => v.lang.startsWith("sw"));
+      // 1. Try to find Microsoft Leah (South Africa)
+      preferredVoice = voices.find(v => v.name.includes("Leah") || (v.lang === "en-ZA" && v.name.includes("Microsoft")));
+
+      // 2. Fallback to any en-ZA voice
+      if (!preferredVoice) {
+        preferredVoice = voices.find(v => v.lang === "en-ZA");
+      }
+
+      // 3. Fallback to UK English (en-GB) as requested
+      if (!preferredVoice) {
+        preferredVoice = voices.find(v => v.lang === "en-GB");
+      }
     }
 
     if (preferredVoice) {
