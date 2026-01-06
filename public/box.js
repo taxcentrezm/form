@@ -141,8 +141,8 @@ function addMessage(sender, text, intentId = null) {
       !intentId.includes(".tonga");
 
     if (isEnglish) {
-      // Using Swahili voice for English to provide an African accent as requested
-      speakText(text, 'sw-TZ');
+      // Requesting South African accent (Microsoft Leah preference)
+      speakText(text, 'en-ZA');
     } else if (isBemba) {
       speakText(text, 'sw-TZ');
     }
@@ -186,7 +186,29 @@ function speakText(text, lang = 'en-US') {
     cleanText = cleanText.replace(/[\u{1F300}-\u{1F9FF}]|[\u{2700}-\u{27BF}]|[\u{2600}-\u{26FF}]/gu, '');
 
     const utterance = new SpeechSynthesisUtterance(cleanText);
-    utterance.lang = lang;
+
+    // Voice Selection Logic
+    const voices = window.speechSynthesis.getVoices();
+
+    // 1. Try to find Microsoft Leah (South Africa)
+    let preferredVoice = voices.find(v => v.name.includes("Leah") || (v.lang === "en-ZA" && v.name.includes("Microsoft")));
+
+    // 2. Fallback to any en-ZA voice
+    if (!preferredVoice) {
+      preferredVoice = voices.find(v => v.lang === "en-ZA");
+    }
+
+    // 3. If no African English voice found, fall back to Swahili for a local phonetic sound
+    if (!preferredVoice) {
+      preferredVoice = voices.find(v => v.lang.startsWith("sw"));
+    }
+
+    if (preferredVoice) {
+      utterance.voice = preferredVoice;
+    } else {
+      utterance.lang = lang;
+    }
+
     utterance.rate = 1.0;
     utterance.pitch = 1.0;
 
