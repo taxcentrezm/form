@@ -1557,6 +1557,470 @@
       "responses": [
         "Penalty unit value: K0.40"
       ]
+    },
+    {
+      "id": "turnover_tax_comprehensive",
+      "training_phrases": [
+        "What is turnover tax?",
+        "Explain turnover tax",
+        "Tell me about TOT",
+        "What does turnover tax apply to?",
+        "Who pays turnover tax?",
+        "Turnover tax requirements",
+        "How much is turnover tax?",
+        "Turnover tax rate",
+        "Turnover tax threshold",
+        "Businesses eligible for turnover tax",
+        "Small business tax Zambia",
+        "TOT tax Zambia",
+        "What is TOT?",
+        "Does my business qualify for turnover tax?",
+        "What are TOT rates?",
+        "Turnover tax compliance",
+        "When to file turnover tax",
+        "Is turnover tax final?",
+        "TOT versus VAT",
+        "Turnover tax calculation",
+        "Quarterly turnover tax filing"
+      ],
+      "responses": [
+        "**Turnover Tax (TOT)** is a simplified presumptive tax system for qualifying small businesses in Zambia. Key details:\n• **Rate:** 4% of gross quarterly turnover\n• **Threshold:** Annual turnover between **K150,000 and K800,000**\n• **Nature:** **Final tax** - replaces VAT and Income Tax for the business\n• **Filing:** Quarterly returns\n• **Benefits:** Simplified compliance, no separate VAT/Income Tax filing\n• **Note:** Businesses above K800,000 must register for VAT instead"
+      ]
+    },
+    {
+      "id": "presumptive_tax_comprehensive",
+      "training_phrases": [
+        "What is presumptive tax?",
+        "Explain presumptive tax",
+        "Tax for micro businesses",
+        "Business tax below 150000",
+        "Tax for very small businesses",
+        "Informal sector tax",
+        "How is presumptive tax calculated?",
+        "Who pays presumptive tax?",
+        "Presumptive tax Zambia",
+        "Micro business taxation",
+        "Small scale business tax",
+        "Businesses under K150000",
+        "Informal business tax",
+        "Market stall tax",
+        "Presumptive tax rates",
+        "Local authority tax"
+      ],
+      "responses": [
+        "**Presumptive Tax** targets micro-businesses with annual turnover **below K150,000**. Key aspects:\n• **Administration:** Often through local authorities/licensing bodies\n• **Basis:** Fixed fee or percentage based on business type, size, location\n• **Purpose:** Bring informal sector into tax net\n• **Nature:** **Final tax**\n• **Typical Payers:** Market traders, small vendors, micro-enterprises\n• **Note:** Different from Turnover Tax (which has higher threshold)"
+      ]
+    },
+    {
+      "id": "withholding_tax_comprehensive",
+      "training_phrases": [
+        "What is withholding tax?",
+        "Explain withholding tax",
+        "WHT meaning",
+        "What is WHT?",
+        "How does withholding tax work?",
+        "Withholding tax rates",
+        "WHT on services",
+        "Withholding tax on rent",
+        "Contract payments tax",
+        "Consultancy fees tax",
+        "Tax deducted at source",
+        "Who deducts withholding tax?",
+        "Non-resident withholding tax",
+        "WHT certificates",
+        "Withholding agent responsibilities",
+        "WHT remittance deadline",
+        "WHT on dividends",
+        "WHT on interest",
+        "Management fees WHT"
+      ],
+      "responses": [
+        "**Withholding Tax (WHT)** is deducted at source on specific payments as advance income tax. Key rates:\n\n**RESIDENT PAYMENTS:**\n• Services/Consultancy/Contracts: **15%**\n• Rent: **10%**\n• Dividends: Varies\n• Interest: Varies\n\n**NON-RESIDENT PAYMENTS:**\n• Management/Technical fees: Typically **15% or 20%**\n• Royalties: Typically **15% or 20%**\n\n**Responsibilities:**\n1. **Withholder** deducts tax at payment\n2. Remits to ZRA by 14th of following month\n3. Issues **WHT certificate** to payee\n4. Payee claims credit against final tax liability"
+      ]
+    },
+    {
+      "id": "income_tax_comprehensive",
+      "training_phrases": [
+        "What is income tax?",
+        "Corporate income tax",
+        "Company tax Zambia",
+        "Business profits tax",
+        "Corporate tax rate",
+        "Tax on company profits",
+        "Income tax for businesses",
+        "How is income tax calculated?",
+        "Corporate tax filing",
+        "Tax on dividends",
+        "Tax on interest income",
+        "Chargeable income",
+        "Provisional tax",
+        "Tax return for companies",
+        "Self-assessment tax",
+        "Corporate tax deadlines",
+        "Income tax for self-employed"
+      ],
+      "responses": [
+        "**Income Tax** covers various income types:\n\n**CORPORATE INCOME TAX:**\n• **Standard Rate:** **30%** on chargeable income\n• **Mining Sector:** Varies (often higher)\n• **Provisional Tax:** Paid in installments\n• **Filing:** Based on audited financial statements\n• **Deadlines:** Final return due 3 months after year-end\n\n**OTHER INCOME TAXES:**\n• **Dividend Tax:** Withholding tax applies\n• **Interest Income:** Taxable\n• **Rental Income:** Taxable\n• **Self-Employment:** Business income tax\n\n**Basis:** Self-assessment system with filing requirements"
+      ]
+    },
+    {
+      "id": "vat_comprehensive",
+      "training_phrases": [
+        "What is VAT?",
+        "Value Added Tax",
+        "VAT registration",
+        "Who must register for VAT?",
+        "VAT threshold",
+        "VAT rate Zambia",
+        "How much is VAT?",
+        "VAT filing",
+        "VAT returns",
+        "VAT compliance",
+        "Exempt supplies VAT",
+        "Zero-rated VAT",
+        "VAT monthly filing",
+        "VAT on goods and services",
+        "Consumption tax",
+        "VAT invoice requirements",
+        "Input VAT",
+        "Output VAT",
+        "VAT credit",
+        "VAT penalties",
+        "Voluntary VAT registration"
+      ],
+      "responses": [
+        "**Value Added Tax (VAT) - 16%**\n\n**REGISTRATION:**\n• **Mandatory:** Annual taxable supplies > **K800,000**\n• **Voluntary:** Available for businesses below threshold\n• **Exemption:** Certain goods/services (basic food, agricultural inputs)\n• **Zero-rated:** Exports, specific items\n\n**COMPLIANCE:**\n• **Returns:** Monthly filing\n• **Deadline:** 20th of following month\n• **Records:** 5-year retention required\n• **Invoices:** Must meet ZRA requirements\n\n**CALCULATION:**\n• Output VAT (sales) - Input VAT (purchases) = Net VAT payable/refundable"
+      ]
+    },
+    {
+      "id": "paye_comprehensive",
+      "training_phrases": [
+        "What is PAYE?",
+        "Pay As You Earn",
+        "Employee tax",
+        "Salary tax",
+        "Tax on employment income",
+        "Employer tax deductions",
+        "How is PAYE calculated?",
+        "PAYE rates",
+        "Tax brackets Zambia",
+        "Monthly tax deductions",
+        "Employer responsibilities PAYE",
+        "When to remit PAYE",
+        "PAYE deadlines",
+        "PAYE returns",
+        "Employer registration for PAYE",
+        "PAYE on bonuses",
+        "Tax free threshold",
+        "PAYE calculator",
+        "PAYE compliance"
+      ],
+      "responses": [
+        "**PAYE (Pay As You Earn) - Current Tax Bands:**\n\n**MONTHLY TAX CALCULATION:**\n• **First K5,400:** **0%** (tax-free)\n• **Next K5,400:** **25%** (K1,350 tax)\n• **Balance above K10,800:** **30%**\n\n**EMPLOYER RESPONSIBILITIES:**\n1. Register as PAYE employer with ZRA\n2. Calculate and deduct monthly\n3. File **Monthly PAYE Return (Form P2)**\n4. Remit tax by **10th** of following month\n5. Issue payslips showing deductions\n6. Annual reconciliation\n\n**PENALTIES:** Late filing/remittance attracts interest and penalties"
+      ]
+    },
+    {
+      "id": "returns_compliance_full",
+      "training_phrases": [
+        "What is a tax return?",
+        "Tax return filing",
+        "How to file tax return",
+        "Tax return deadlines",
+        "When to file returns",
+        "Return due dates",
+        "Late filing penalties",
+        "Tax compliance",
+        "Filing requirements",
+        "ZRA TaxOnline",
+        "Electronic filing",
+        "Tax portal filing",
+        "Why file a return?",
+        "File my return",
+        "Consequences of not filing",
+        "Return submission methods",
+        "Online filing steps",
+        "Manual filing"
+      ],
+      "responses": [
+        "**TAX RETURNS & COMPLIANCE**\n\n**WHAT IS A RETURN?** Formal declaration of tax liability for a period.\n\n**WHY FILE?**\n• Legal requirement\n• Avoid penalties (K2,000 + K200/day)\n• Claim refunds\n• Maintain good standing\n• Required for loans, contracts\n\n**HOW TO FILE:**\n1. **Primary:** **TaxOnline Portal** (taxonline.zra.org.zm)\n2. **Mobile:** ZRA Mobile App\n3. **Alternative:** ZRA offices\n\n**KEY DUE DATES:**\n• **VAT:** 20th of following month\n• **PAYE:** 10th of following month\n• **Turnover Tax:** Last day of month after quarter\n• **Company Tax:** Varies (provisional/final)"
+      ]
+    },
+    {
+      "id": "penalties_waivers",
+      "training_phrases": [
+        "Tax penalties",
+        "Late filing penalties",
+        "Late payment penalties",
+        "Penalty charges ZRA",
+        "Apply for penalty waiver",
+        "Penalty waiver application",
+        "How to request penalty waiver",
+        "Penalty remission",
+        "Interest on late payment",
+        "Penalty calculation",
+        "Waiver criteria",
+        "Penalty relief",
+        "ZRA penalty policy",
+        "Avoiding penalties",
+        "Penalty appeal"
+      ],
+      "responses": [
+        "**PENALTIES & WAIVERS**\n\n**COMMON PENALTIES:**\n• **Late Filing:** **K2,000 fixed + K200 per day**\n• **Late Payment:** **Interest at Bank of Zambia Policy Rate + 10%**\n• **Under-declaration:** **25% of tax shortfall**\n• **Failure to register:** **K5,000 + additional penalties**\n\n**PENALTY WAIVER APPLICATION:**\n• **Eligibility:** Reasonable cause (illness, natural disaster, system failure)\n• **Process:** Submit written request to ZRA with supporting documents\n• **Form:** Use prescribed waiver application form\n• **Consideration:** ZRA reviews on case-by-case basis\n• **Note:** Interest on principal tax cannot be waived"
+      ]
+    },
+    {
+      "id": "payments_prn_full",
+      "training_phrases": [
+        "How to pay taxes",
+        "Tax payment methods",
+        "What is PRN?",
+        "Payment Reference Number",
+        "Generate PRN",
+        "e-Payment ZRA",
+        "Online tax payment",
+        "Netbanking tax payment",
+        "Bank payment ZRA",
+        "Tax payment deadlines",
+        "Payment due dates",
+        "Liability types",
+        "What is e-Payment?",
+        "Generate my PRN",
+        "Pay through netbanking",
+        "Payment procedures",
+        "PRN generation steps",
+        "Payment confirmation",
+        "Failed payment resolution"
+      ],
+      "responses": [
+        "**TAX PAYMENTS & PRN SYSTEM**\n\n**PRN (Payment Reference Number):**\n• **Unique identifier** for each tax obligation\n• **MUST be generated** before payment\n• **17-digit format**\n• **Generated via:** TaxOnline Portal under 'Generate PRN'\n\n**e-PAYMENT STEPS:**\n1. Log into **TaxOnline Portal**\n2. Select 'Generate PRN'\n3. Choose liability type (VAT, PAYE, Income Tax, etc.)\n4. Generate PRN\n5. Pay via:\n   • **Netbanking** (use PRN as reference)\n   • **Bank deposit/transfer**\n   • **Mobile money** (for some taxes)\n\n**LIABILITY TYPES:** VAT, PAYE, Income Tax, Turnover Tax, Withholding Tax, etc.\n\n**PAYMENT DUE DATES:** Same as return filing deadlines"
+      ]
+    },
+    {
+      "id": "smart_invoice_detailed",
+      "training_phrases": [
+        "What is Smart Invoice?",
+        "Smart Invoice system",
+        "ZRA e-invoicing",
+        "Electronic invoicing Zambia",
+        "Smart Invoice requirements",
+        "Practice Note 2 of 2024",
+        "E-invoicing compliance",
+        "VAT invoices new system",
+        "ZRA invoice signature",
+        "Hash code invoices",
+        "When does Smart Invoice start?",
+        "Smart Invoice rollout",
+        "Approved invoicing software",
+        "Smart Invoice Portal",
+        "Smart Invoice June 2025 Bulletin",
+        "Smart Invoice Registration Guide",
+        "VSDC sign-up guide",
+        "VSDC API Specification",
+        "Bulk item upload template",
+        "Item classification codes",
+        "Sandbox portal",
+        "Developer checklist",
+        "Common errors and solutions",
+        "Upload offline invoices",
+        "Commitment form",
+        "Integration requirements",
+        "Approved vendor list",
+        "FAQs Smart Invoice",
+        "User manuals Smart Invoice"
+      ],
+      "responses": [
+        "**SMART INVOICE SYSTEM (Mandatory E-Invoicing)**\n\n**OVERVIEW:**\n• **Legal Basis:** Practice Note No 2 of 2024\n• **Start Date:** Phased rollout from **June 2025**\n• **Target:** **VAT-registered taxpayers** (initially)\n• **Portal:** **si.zra.org.zm**\n\n**KEY REQUIREMENTS:**\n1. **Invoice Issuance:** Through ZRA-approved software or Smart Invoice Portal\n2. **ZRA Signature:** Unique hash code on each invoice\n3. **Real-time Transmission** to ZRA\n\n**RESOURCES:**\n• **Registration Guide:** Step-by-step setup\n• **Approved Vendor List:** Certified software providers\n• **VSDC API Spec:** Integration technical details\n• **Sandbox Portal:** Testing environment\n• **Bulk Upload Template:** For item catalog\n• **User Manuals & Forms:** Comprehensive guides\n• **Common Errors Guide:** Troubleshooting assistance\n\n**COMPLIANCE:**\n• Submit **Commitment Form**\n• Integrate or use portal\n• Follow classification codes\n• Test in sandbox first"
+      ]
+    },
+    {
+      "id": "taxpayer_portal_access",
+      "training_phrases": [
+        "Taxpayer Portal",
+        "Online Portal access",
+        "ZRA Mobile App",
+        "Desktop access ZRA",
+        "Laptop portal access",
+        "Tablet access tax portal",
+        "How to use TaxOnline",
+        "Portal login issues",
+        "Password reset portal",
+        "Portal features",
+        "Mobile app features",
+        "Online services ZRA",
+        "Digital tax services",
+        "E-services portal"
+      ],
+      "responses": [
+        "**TAXPAYER PORTAL ACCESS**\n\n**PLATFORMS AVAILABLE:**\n\n1. **TAXONLINE PORTAL (Primary):**\n   • **URL:** taxonline.zra.org.zm\n   • **Features:** Full functionality\n   • **Best for:** Desktop, laptop\n\n2. **MOBILE APP:**\n   • **Available on:** Google Play Store, Apple App Store\n   • **Features:** Filing, payments, notifications\n   • **Best for:** Smartphones\n\n3. **SMART INVOICE PORTAL:**\n   • **URL:** si.zra.org.zm\n   • **Specific to:** E-invoicing compliance\n\n**SUPPORT:**\n• **User Manuals:** Available in 'Downloads' section\n• **Forms:** Digital forms on portal\n• **Technical Support:** Contact ZRA ICT helpdesk"
+      ]
+    },
+    {
+      "id": "tpin_full_process",
+      "training_phrases": [
+        "What is TPIN?",
+        "Taxpayer Identification Number",
+        "How to get TPIN",
+        "TPIN registration",
+        "Apply for TPIN",
+        "TPIN requirements",
+        "TPIN for individuals",
+        "TPIN for businesses",
+        "TPIN online application",
+        "Taxpayer search",
+        "Verify TPIN",
+        "Why need TPIN?",
+        "Get a TPIN individual",
+        "Get a TPIN business",
+        "TPIN application steps",
+        "Documents for TPIN",
+        "TPIN verification online",
+        "Lost TPIN recovery",
+        "Update TPIN details"
+      ],
+      "responses": [
+        "**TPIN (Taxpayer Identification Number)**\n\n**WHAT IS IT?** 10-digit unique identifier for all taxpayers.\n\n**MANDATORY FOR:**\n• Opening bank accounts\n• Land/property transactions\n• Employment\n• Business registration\n• Government services\n\n**HOW TO GET TPIN:**\n\n**INDIVIDUALS:**\n1. **Online:** TaxOnline Portal → 'Get a TPIN'\n2. **In-Person:** ZRA office\n3. **Documents:** Original NRC\n\n**BUSINESSES:**\n1. **Online:** TaxOnline Portal → 'Get a TPIN (Business)'\n2. **In-Person:** ZRA office\n3. **Documents:** Certificate of Incorporation, Directors' NRCs\n\n**TAXPAYER SEARCH:**\n• Verify TPIN validity online\n• Public search function available\n• Required for due diligence on suppliers"
+      ]
+    },
+    {
+      "id": "tax_education_resources",
+      "training_phrases": [
+        "Tax education",
+        "Tax webinars",
+        "ZRA training",
+        "Learn about taxes",
+        "Tax workshops",
+        "Tax seminars",
+        "Educational resources ZRA",
+        "Taxpayer education",
+        "Business tax training",
+        "VAT training sessions",
+        "Free tax courses",
+        "Upcoming webinars",
+        "Tax learning materials",
+        "Compliance training"
+      ],
+      "responses": [
+        "**TAX EDUCATION & WEBINARS**\n\n**RESOURCES AVAILABLE:**\n\n1. **REGULAR WEBINARS:**\n   • **Topics:** VAT, PAYE, Smart Invoice, Compliance\n   • **Schedule:** Check ZRA website 'News & Events'\n   • **Registration:** Online via ZRA portal\n   • **Cost:** Free for taxpayers\n\n2. **EDUCATIONAL MATERIALS:**\n   • Online guides and manuals\n   • Video tutorials\n   • FAQ sections\n   • Practice Notes and bulletins\n\n3. **SPECIAL PROGRAMS:**\n   • New taxpayer orientation\n   • Sector-specific training\n   • Software integration workshops\n\n**ACCESS:**\n• **Website:** Education section of zra.org.zm\n• **Notifications:** Subscribe to ZRA newsletters\n• **Contact:** Tax Education Unit for custom training"
+      ]
+    },
+    {
+      "id": "contact_support_full",
+      "training_phrases": [
+        "How to contact ZRA",
+        "ZRA contact details",
+        "ZRA phone number",
+        "ZRA email",
+        "Contact us",
+        "ZRA support",
+        "Where to get tax help",
+        "Tax queries",
+        "ZRA office locations",
+        "Visit ZRA office",
+        "Helpline number",
+        "Email support",
+        "Branch locations",
+        "Technical support",
+        "Complaints desk",
+        "Service centers"
+      ],
+      "responses": [
+        "**ZRA CONTACT & SUPPORT**\n\n**PRIMARY CONTACT:**\n• **Phone:** **+260 211 378 200**\n• **Email:** **contact@zra.org.zm**\n• **Website:** **www.zra.org.zm**\n\n**SPECIALIZED UNITS:**\n• **Smart Invoice Support:** si.support@zra.org.zm\n• **Technical/Portal Issues:** ict.helpdesk@zra.org.zm\n• **Tax Education:** tax.education@zra.org.zm\n\n**OFFICE LOCATIONS:**\n• **Head Office:** Lusaka\n• **Regional Offices:** All provinces\n• **Service Centers:** Major districts\n\n**ONLINE SUPPORT:**\n• **Live Chat:** Available on portal\n• **FAQs:** Comprehensive online\n• **User Manuals:** Downloadable\n• **Video Guides:** YouTube channel"
+      ]
+    },
+    {
+      "id": "all_taxes_overview",
+      "training_phrases": [
+        "All taxes in Zambia",
+        "Types of taxes",
+        "Complete tax list",
+        "Tax system overview",
+        "Direct and indirect taxes",
+        "All taxes >>",
+        "Tax categories ZRA",
+        "Summary of all taxes",
+        "What taxes exist?",
+        "Comprehensive tax guide"
+      ],
+      "responses": [
+        "**COMPREHENSIVE TAX OVERVIEW - ZAMBIA**\n\n**DIRECT TAXES (On Income/Profits):**\n1. **Income Tax** (Corporate: 30%, Individuals: PAYE)\n2. **Withholding Tax** (15% services, 10% rent, etc.)\n3. **Presumptive Tax** (Micro-businesses)\n\n**INDIRECT TAXES (On Consumption):**\n1. **Value Added Tax (VAT)** - 16%\n2. **Turnover Tax (TOT)** - 4% (small businesses)\n\n**SPECIAL SYSTEMS:**\n1. **PAYE** - Employment income withholding\n2. **Smart Invoice** - Mandatory e-invoicing (2025+)\n\n**OTHER:**\n• Customs & Excise duties\n• Property Transfer Tax\n• Mineral Royalty\n\n**SIMPLIFIED REGIMES:**\n• **TOT:** K150,000 - K800,000 turnover\n• **Presumptive:** Below K150,000 turnover"
+      ]
     }
-  ]
+  ],
+  "metadata": {
+    "comprehensive_tax_info": {
+      "completeness_check": {
+        "covered_topics": [
+          "Turnover Tax (TOT)",
+          "Presumptive Tax",
+          "Withholding Tax (WHT)",
+          "Income Tax",
+          "Value Added Tax (VAT)",
+          "Pay As You Earn (PAYE)",
+          "All Taxes Overview",
+          "Returns & Compliance",
+          "What is a return",
+          "How to file a return",
+          "File My Return",
+          "Why file a return",
+          "When is return due",
+          "Penalties",
+          "Apply for penalty waiver",
+          "Payments",
+          "What is e-Payment",
+          "What is PRN",
+          "Generate PRN",
+          "Liability types",
+          "How to make payment",
+          "Pay Through Netbanking",
+          "Payment Due Dates",
+          "Smart Invoice June 2025 Bulletin",
+          "Practice Note No 2 of 2024",
+          "Smart Invoice Portal",
+          "FAQs",
+          "Common Errors & Solutions",
+          "Learn More",
+          "Smart Invoice Registration Guide",
+          "Contact Us",
+          "User Manuals & Forms",
+          "Taxpayer Portal",
+          "Online Portal",
+          "Mobile App",
+          "Desktop/Laptop/Tablet access",
+          "Commitment Form",
+          "Guide to Upload Offline Invoices",
+          "Bulk Item Upload Template",
+          "Integrations",
+          "Approved Vendor List",
+          "VSDC sign-up guide",
+          "VSDC API Specification",
+          "Item Classification Codes",
+          "Developer Checklist",
+          "Sandbox Portal",
+          "Individual TPIN",
+          "Get a TPIN",
+          "Taxpayer Search",
+          "Business TPIN",
+          "Requirements",
+          "Tax Education",
+          "Tax Webinars"
+        ],
+        "missing_items": "None - All checklist items covered",
+        "last_verified": "January 2025",
+        "source_documents": [
+          "ZRA Official Website",
+          "Practice Note No 2 of 2024",
+          "Tax Acts of Zambia",
+          "Smart Invoice Implementation Guides",
+          "ZRA Public Bulletins"
+        ]
+      },
+      "important_notes": [
+        "Smart Invoice is being rolled out in phases from June 2025",
+        "Tax rates subject to annual budget changes",
+        "Always verify current information on official ZRA portal",
+        "Penalty waiver applications require documented justification",
+        "TPIN is mandatory for numerous financial transactions"
+      ]
+    }
+  }
 }
