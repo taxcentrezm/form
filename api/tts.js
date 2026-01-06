@@ -22,7 +22,7 @@ export default async function handler(req, res) {
 
     try {
         const response = await fetch(
-            "https://api-inference.huggingface.co/models/facebook/mms-tts-bem",
+            "https://router.huggingface.co/models/facebook/mms-tts-bem",
             {
                 headers: {
                     Authorization: `Bearer ${HF_TOKEN}`,
