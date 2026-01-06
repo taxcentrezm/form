@@ -8,6 +8,7 @@ function toggleChatbox() {
 // Load ZRA intents and initialize Fuse.js
 let intentsData = null;
 let intentsFuse = null;
+const HF_TOKEN = "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";
 
 // Load all training phrases for fuzzy matching
 fetch("assets/zra_intents.json")
@@ -122,16 +123,18 @@ function addMessage(sender, text, intentId = null) {
   const sound = document.getElementById("chat-sound");
   if (sound) sound.play();
 
-  // Voice system: Speak if it's an English bot response
+  // Voice system: Speak if it's an English or Bemba bot response
   if (sender === "bot" && intentId) {
-    // English intents typically don't have a language suffix like .bemba, .nyanja, etc.
-    const isEnglish = !intentId.includes(".bemba") &&
+    const isBemba = intentId.includes(".bemba");
+    const isEnglish = !isBemba &&
       !intentId.includes(".nyanja") &&
       !intentId.includes(".lozi") &&
       !intentId.includes(".tonga");
 
     if (isEnglish) {
       speakText(text);
+    } else if (isBemba) {
+      speakBemba(text);
     }
   }
 
@@ -157,6 +160,33 @@ function speakText(text) {
     utterance.pitch = 1.0;
 
     window.speechSynthesis.speak(utterance);
+  }
+}
+
+// Bemba Text-to-Speech using Hugging Face
+async function speakBemba(text) {
+  try {
+    const response = await fetch(
+      "https://api-inference.huggingface.co/models/facebook/mms-tts-bem",
+      {
+        headers: { Authorization: `Bearer ${HF_TOKEN}` },
+        method: "POST",
+        body: JSON.stringify({ inputs: text }),
+      }
+    );
+
+    if (!response.ok) throw new Error("HF API error");
+
+    const blob = await response.blob();
+    const audioUrl = URL.createObjectURL(blob);
+    const audio = new Audio(audioUrl);
+
+    // Cancel any ongoing native speech
+    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+
+    audio.play();
+  } catch (error) {
+    console.error("❌ Bemba TTS failed:", error);
   }
 }
 
