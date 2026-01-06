@@ -18,7 +18,7 @@ export default async function handler(req, res) {
         return res.status(400).json({ error: 'Text is required' });
     }
 
-    const HF_TOKEN = process.env.HF_TOKEN || "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";
+    const HF_TOKEN = process.env.HF_TOKEN || "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";
 
     try {
         const response = await fetch(
