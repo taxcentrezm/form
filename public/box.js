@@ -8,7 +8,7 @@ function toggleChatbox() {
 // Load ZRA intents and initialize Fuse.js
 let intentsData = null;
 let intentsFuse = null;
-const HF_TOKEN = "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";
+let audioEnabled = false;
 
 // Load all training phrases for fuzzy matching
 fetch("assets/zra_intents.json")
@@ -85,6 +85,14 @@ document.addEventListener("DOMContentLoaded", loopTooltip);
 
 // Send message and trigger bot response
 function sendMessage() {
+  // Enable audio on first user interaction
+  if (!audioEnabled) {
+    audioEnabled = true;
+    // Play a silent sound to "unlock" audio on mobile/modern browsers
+    const silentSound = new Audio('data:audio/wav;base64,UklGRigAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQQAAAAAAA==');
+    silentSound.play().catch(() => { });
+  }
+
   const input = document.getElementById("userInput");
   const message = input.value.trim();
   if (message) {
@@ -163,19 +171,21 @@ function speakText(text) {
   }
 }
 
-// Bemba Text-to-Speech using Hugging Face
+// Bemba Text-to-Speech using Backend Proxy
 async function speakBemba(text) {
-  try {
-    const response = await fetch(
-      "https://api-inference.huggingface.co/models/facebook/mms-tts-bem",
-      {
-        headers: { Authorization: `Bearer ${HF_TOKEN}` },
-        method: "POST",
-        body: JSON.stringify({ inputs: text }),
-      }
-    );
+  if (!audioEnabled) {
+    console.warn("⚠️ Audio not enabled yet. User must interact first.");
+    return;
+  }
 
-    if (!response.ok) throw new Error("HF API error");
+  try {
+    const response = await fetch("/api/tts", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text: text }),
+    });
+
+    if (!response.ok) throw new Error("TTS Proxy error");
 
     const blob = await response.blob();
     const audioUrl = URL.createObjectURL(blob);
@@ -184,7 +194,7 @@ async function speakBemba(text) {
     // Cancel any ongoing native speech
     if ('speechSynthesis' in window) window.speechSynthesis.cancel();
 
-    audio.play();
+    audio.play().catch(err => console.error("🔇 Autoplay blocked:", err));
   } catch (error) {
     console.error("❌ Bemba TTS failed:", error);
   }
