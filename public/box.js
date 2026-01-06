@@ -168,8 +168,18 @@ function speakText(text, lang = 'en-US') {
     // Cancel any ongoing speech
     window.speechSynthesis.cancel();
 
-    // Strip asterisks and expand ZRA for cleaner speech
-    const cleanText = text.replace(/\*/g, '').replace(/\bZRA\b/gi, 'Zambia Revenue Authority');
+    // Clean text for speech
+    let cleanText = text.replace(/\*/g, ''); // Strip asterisks
+
+    // Expand ZRA
+    cleanText = cleanText.replace(/\bZRA\b/gi, 'Zambia Revenue Authority');
+
+    // Handle Currency (K200 -> 200 Kwacha)
+    // Matches K followed by digits, potentially with commas
+    cleanText = cleanText.replace(/\bK(\d{1,3}(,\d{3})*(\.\d+)?)\b/g, '$1 Kwacha');
+
+    // Remove commas from numbers so the AI reads them as full numbers (e.g., 2,000 -> 2000)
+    cleanText = cleanText.replace(/(\d),(?=\d)/g, '$1');
 
     const utterance = new SpeechSynthesisUtterance(cleanText);
     utterance.lang = lang;

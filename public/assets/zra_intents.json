@@ -2210,5 +2210,13 @@
         "last_updated": "January 2025"
       }
     }
+  },
+  "fallback": {
+    "responses": [
+      "I'm sorry, I didn't quite understand that. Could you rephrase your question?",
+      "I'm still learning! Could you try asking that in a different way?",
+      "I'm not sure about that. You can ask me about Smart Invoice, TPIN, or tax registration.",
+      "I couldn't find a specific answer for that. Please try using different keywords or contact the Zambia Revenue Authority support."
+    ]
   }
 }
