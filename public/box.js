@@ -141,7 +141,8 @@ function addMessage(sender, text, intentId = null) {
       !intentId.includes(".tonga");
 
     if (isEnglish) {
-      speakText(text, 'en-US');
+      // Using Swahili voice for English to provide an African accent as requested
+      speakText(text, 'sw-TZ');
     } else if (isBemba) {
       speakText(text, 'sw-TZ');
     }
@@ -180,6 +181,9 @@ function speakText(text, lang = 'en-US') {
 
     // Remove commas from numbers so the AI reads them as full numbers (e.g., 2,000 -> 2000)
     cleanText = cleanText.replace(/(\d),(?=\d)/g, '$1');
+
+    // Strip Emojis (e.g., 📜, 🔍, ✅)
+    cleanText = cleanText.replace(/[\u{1F300}-\u{1F9FF}]|[\u{2700}-\u{27BF}]|[\u{2600}-\u{26FF}]/gu, '');
 
     const utterance = new SpeechSynthesisUtterance(cleanText);
     utterance.lang = lang;
