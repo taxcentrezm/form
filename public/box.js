@@ -140,9 +140,9 @@ function addMessage(sender, text, intentId = null) {
       !intentId.includes(".tonga");
 
     if (isEnglish) {
-      speakText(text);
+      speakText(text, 'en-US');
     } else if (isBemba) {
-      speakBemba(text);
+      speakText(text, 'sw-TZ');
     }
   }
 
@@ -157,53 +157,24 @@ function addMessage(sender, text, intentId = null) {
 }
 
 // Text-to-Speech helper
-function speakText(text) {
+function speakText(text, lang = 'en-US') {
+  if (!audioEnabled) {
+    console.warn("⚠️ Audio not enabled yet. User must interact first.");
+    return;
+  }
+
   if ('speechSynthesis' in window) {
     // Cancel any ongoing speech
     window.speechSynthesis.cancel();
 
     const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'en-US';
+    utterance.lang = lang;
     utterance.rate = 1.0;
     utterance.pitch = 1.0;
 
     window.speechSynthesis.speak(utterance);
   }
 }
-
-// Bemba Text-to-Speech using Backend Proxy
-async function speakBemba(text) {
-  if (!audioEnabled) {
-    console.warn("⚠️ Audio not enabled yet. User must interact first.");
-    return;
-  }
-
-  try {
-    const response = await fetch("/api/tts", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ text: text }),
-    });
-
-    if (!response.ok) throw new Error("TTS Proxy error");
-
-    const blob = await response.blob();
-    const audioUrl = URL.createObjectURL(blob);
-    const audio = new Audio(audioUrl);
-
-    // Cancel any ongoing native speech
-    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
-
-    audio.play().catch(err => console.error("🔇 Autoplay blocked:", err));
-  } catch (error) {
-    console.error("❌ Bemba TTS failed:", error);
-  }
-}
-
-// Play sound
-const sound = document.getElementById("chat-sound");
-if (sound) sound.play();
-
 
 // Bot response logic with intent matching
 function getBotResponse(message) {
