@@ -168,7 +168,10 @@ function speakText(text, lang = 'en-US') {
     // Cancel any ongoing speech
     window.speechSynthesis.cancel();
 
-    const utterance = new SpeechSynthesisUtterance(text);
+    // Strip asterisks and other formatting for cleaner speech
+    const cleanText = text.replace(/\*/g, '');
+
+    const utterance = new SpeechSynthesisUtterance(cleanText);
     utterance.lang = lang;
     utterance.rate = 1.0;
     utterance.pitch = 1.0;

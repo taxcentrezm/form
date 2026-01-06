@@ -1944,6 +1944,187 @@
       "responses": [
         "**COMPREHENSIVE TAX OVERVIEW - ZAMBIA**\n\n**DIRECT TAXES (On Income/Profits):**\n1. **Income Tax** (Corporate: 30%, Individuals: PAYE)\n2. **Withholding Tax** (15% services, 10% rent, etc.)\n3. **Presumptive Tax** (Micro-businesses)\n\n**INDIRECT TAXES (On Consumption):**\n1. **Value Added Tax (VAT)** - 16%\n2. **Turnover Tax (TOT)** - 4% (small businesses)\n\n**SPECIAL SYSTEMS:**\n1. **PAYE** - Employment income withholding\n2. **Smart Invoice** - Mandatory e-invoicing (2025+)\n\n**OTHER:**\n• Customs & Excise duties\n• Property Transfer Tax\n• Mineral Royalty\n\n**SIMPLIFIED REGIMES:**\n• **TOT:** K150,000 - K800,000 turnover\n• **Presumptive:** Below K150,000 turnover"
       ]
+    },
+    {
+      "id": "registration_categories",
+      "training_phrases": [
+        "What types of registration does ZRA handle?",
+        "Different registration categories",
+        "Categories under composition act",
+        "Business names registration",
+        "Cooperatives registration",
+        "NCRA registration",
+        "What is NCRA?",
+        "Registered associations",
+        "Military associations registration",
+        "Foreign entity registration",
+        "Registration under different acts"
+      ],
+      "responses": [
+        "ZRA handles several registration categories under different Acts. Let me break these down for you:\n\n**📋 REGISTRATION CATEGORIES:**\n\n1️⃣ **Companies under the Companies Act**\n• For formal incorporated businesses\n• Provides limited liability protection\n\n2️⃣ **Business Names under the Business Names Act**\n• For sole proprietorships/partnerships using a business name\n• Doesn't create separate legal entity\n\n3️⃣ **Societies under the Societies Act**\n• For clubs, associations, NGOs\n• Requires specific society registration\n\n4️⃣ **Individuals (without formal registration)**\n• Natural persons in business\n• Only need NRC/NIN (National Registration Number)\n\n5️⃣ **Cooperatives under the Cooperative Societies Act**\n• For cooperative businesses\n• Special tax treatment available\n\n6️⃣ **NCRA Associations & Military/State entities**\n• Special categories with unique requirements\n\n7️⃣ **Foreign entities registered in Zambia**\n• Foreign companies/branches operating locally\n\nWhich category might apply to your situation?"
+      ]
+    },
+    {
+      "id": "returns_definition",
+      "training_phrases": [
+        "What exactly is a tax return?",
+        "Define tax return",
+        "What does return mean in taxes?",
+        "Legally binding declaration",
+        "Tax liability declaration",
+        "Purpose of tax return",
+        "What am I declaring in a return?"
+      ],
+      "responses": [
+        "Great question! A **tax return** isn't just a form - it's actually a **legally binding declaration** 📜\n\nThink of it like this: It's your official statement to ZRA saying:\n• **'This is what I earned'** (income/value)\n• **'This is what I owe'** (tax liability)\n• **'For this specific period'** (tax period)\n• **'For this specific tax type'** (VAT, Income Tax, etc.)\n\n**Why is it legally binding?** Because you're essentially giving your word to the government about your financial situation. That's why accuracy is so important!\n\n**Key point:** Every tax type requires a return when tax is due. No exceptions! Even if you owe zero tax, you often still need to file (what we call a 'nil return')."
+      ]
+    },
+    {
+      "id": "why_file_returns",
+      "training_phrases": [
+        "Why must I file returns?",
+        "Why is filing returns important?",
+        "Obligation to file returns",
+        "Consequences of not filing",
+        "Is return filing mandatory?",
+        "Why can't I just pay without filing?"
+      ],
+      "responses": [
+        "I get this question a lot! Filing returns isn't just paperwork - it's about **transparency and compliance** 🔍\n\n**Here's why it matters:**\n\n✅ **Legal Requirement:** It's your duty as a taxpayer under Zambian law\n✅ **Accurate Assessment:** ZRA needs to verify your declared income matches your payments\n✅ **Record Keeping:** Creates an official trail of your business activities\n✅ **Future Reference:** Helps with loan applications, audits, and business growth\n✅ **Avoid Penalties:** Late or non-filing leads to automatic penalties\n\n**Think of it this way:** Your tax return is like your business's 'report card' to the government. It shows you're playing by the rules and contributing fairly to national development.\n\nRemember: You need to declare **ALL taxable income** from business or employment, not just what you think you can 'get away with'!"
+      ]
+    },
+    {
+      "id": "how_file_returns",
+      "training_phrases": [
+        "How do I file my tax return?",
+        "Methods to file returns",
+        "Electronic filing vs manual",
+        "File at ZRA office",
+        "TaxOnline filing process",
+        "Step by step return filing",
+        "Can I file manually?"
+      ],
+      "responses": [
+        "You've got options! Here's how you can file your tax returns:\n\n**🖥️ ELECTRONIC FILING (Recommended)**\n• **Platform:** ZRA TaxOnline Web Portal\n• **Benefits:** Faster, more efficient, available 24/7\n• **Process:** Log in, select return type, fill electronically, submit\n• **Confirmation:** Immediate receipt and acknowledgement\n\n**📄 MANUAL FILING**\n• **Where:** Any ZRA tax office\n• **Process:** Collect form, fill manually, submit to officer\n• **Considerations:** Longer queues, office hours only\n\n**🌟 My strong recommendation:** Go **electronic** if you can! It's:\n• More accurate (system does calculations)\n• Faster processing\n• Immediate confirmation\n• Available anytime\n• Reduces human error\n\n**Pro tip:** Even if you're not tech-savvy, the TaxOnline portal is quite user-friendly. Most taxpayers master it after their first try!"
+      ]
+    },
+    {
+      "id": "return_due_dates",
+      "training_phrases": [
+        "When is my return due?",
+        "Due dates for returns",
+        "Tax return deadlines",
+        "When to file different returns",
+        "VAT return due date",
+        "PAYE return deadline",
+        "Income tax filing date",
+        "Monthly vs quarterly deadlines"
+      ],
+      "responses": [
+        "Deadlines vary by tax type - here's the breakdown:\n\n**📅 KEY RETURN DUE DATES:**\n\n**Monthly Returns:**\n• **VAT Returns:** 20th of following month\n• **PAYE Returns:** 10th of following month\n\n**Quarterly Returns:**\n• **Turnover Tax (TOT):** End of month following quarter\n\n**Annual/Periodic:**\n• **Income Tax Returns:** Varies (check specific deadlines)\n\n**⚠️ Important:** These dates are **legally mandated** - missing them triggers automatic penalties! The due date is when ZRA must **receive** your return, not when you start preparing it.\n\n**My advice:**\n1. Mark these dates on your calendar\n2. Aim to file 3-5 days BEFORE the deadline\n3. Set reminders for recurring filings\n4. Keep all supporting documents ready\n\nNeed specific dates for a particular tax type?"
+      ]
+    },
+    {
+      "id": "epayment_eligibility",
+      "training_phrases": [
+        "Who can use e-payment?",
+        "E-payment eligibility",
+        "Can all taxpayers pay electronically?",
+        "Qualify for online payment",
+        "Who qualifies for ePayment?",
+        "Electronic payment requirements"
+      ],
+      "responses": [
+        "Good news! **E-payment is available to ALL taxpayers** in Zambia! ✅\n\nWhether you're:\n• A large corporation\n• A small business owner\n• An individual taxpayer\n• A foreign entity\n• Any registered taxpayer\n\n**You can use e-payment** if you have:\n1. A valid TPIN\n2. Internet access\n3. A bank account or mobile money\n\n**No special registration needed** for e-payment itself - it's built into the TaxOnline system for everyone!\n\nThink of it as Zambia's move toward a digital tax system where everyone gets equal access to convenient payment methods. Much better than standing in long queues, right?"
+      ]
+    },
+    {
+      "id": "prn_explained",
+      "training_phrases": [
+        "What is PRN?",
+        "Payment Reference Number explained",
+        "What does PRN stand for?",
+        "Purpose of PRN",
+        "Why do I need PRN?",
+        "PRN meaning in taxes",
+        "Unique reference number"
+      ],
+      "responses": [
+        "PRN stands for **Payment Reference Number** - think of it as your tax payment's 'tracking number' 🚚\n\n**Here's how it works:**\n1. **Generate PRN:** From TaxOnline (or ZRA cash office)\n2. **17-digit code:** Unique to YOUR specific payment\n3. **7-day validity:** Expires if not used within a week\n4. **Payment reference:** You quote it when paying\n5. **ZRA matching:** They use it to allocate your payment\n\n**Why is it so important?**\nWithout a PRN, your payment is like a package without an address label - ZRA won't know whose account to credit! \n\n**💡 Key facts:**\n• One PRN per payment (don't reuse)\n• Generate BEFORE going to bank\n• Quote EXACTLY as generated\n• Keep the PRN for your records\n• If it expires, just generate a new one\n\nIt's actually a smart system that prevents payment mix-ups!"
+      ]
+    },
+    {
+      "id": "payment_methods",
+      "training_phrases": [
+        "How to make tax payments",
+        "Payment options available",
+        "Pay through bank",
+        "Mobile money payments",
+        "Airtel Money for taxes",
+        "ZRA cash offices",
+        "Bank transfer for taxes",
+        "Online payment methods"
+      ],
+      "responses": [
+        "You've got several convenient options to pay your taxes:\n\n**🏦 1. COMMERCIAL BANKS**\n• Visit any participating bank branch\n• Use the PRN as reference\n• Get payment confirmation\n\n**📱 2. MOBILE MONEY**\n• **Airtel Money** currently supported\n• Quick and convenient\n• Available 24/7\n\n**🏛️ 3. ZRA CASH OFFICES**\n• Visit any ZRA office\n• Pay cash or card\n• Get immediate receipt\n\n**💻 4. ONLINE BANKING**\n• Through your bank's internet banking\n• Use PRN as beneficiary reference\n• Electronic transfer\n\n**✅ SUPPORTED BANKS:**\nABSA, Access Bank, Bank of China, Cavmont, CITI Bank, First Alliance Bank, First Capital Bank, FNB, Investrust, Indo Zambia Bank, NATSAVE, Stanbic, UBA, Zambia Industrial Commercial Bank, ZANACO\n\n**Pro tip:** For fastest processing, use your bank's internet banking with the PRN - it's usually the quickest way!"
+      ]
+    },
+    {
+      "id": "bank_connection_issues",
+      "training_phrases": [
+        "Why can't I see my bank?",
+        "Bank not listed in TaxOnline",
+        "My bank not connected",
+        "Bank missing from payment options",
+        "Why isn't my bank supported?",
+        "Bank integration issues"
+      ],
+      "responses": [
+        "Ah, the bank visibility issue! This happens because:\n\n**🏦 NOT ALL BANKS ARE CONNECTED YET**\nThe TaxOnline system only shows banks that have completed integration with ZRA's payment gateway.\n\n**Possible reasons your bank isn't showing:**\n1. **Not yet integrated** - Still working on technical connection\n2. **Integration in progress** - Might be available soon\n3. **Temporary technical issue** - Could be system maintenance\n\n**🚨 What to do if your bank isn't listed:**\n1. **Check the supported list** (I can show you which banks ARE connected)\n2. **Contact your bank** - Ask about TaxOnline integration plans\n3. **Use an alternative** - Another bank account or mobile money\n4. **Visit ZRA office** - Pay directly at cash office\n\n**Good news:** More banks are joining regularly as Zambia digitizes its tax system. Your bank might be available soon!"
+      ]
+    },
+    {
+      "id": "liability_types",
+      "training_phrases": [
+        "What are liability types?",
+        "Types of tax liabilities",
+        "Principal tax vs penalties",
+        "What is interest on tax?",
+        "Different payment categories",
+        "Tax payment breakdown"
+      ],
+      "responses": [
+        "When you make tax payments, you're actually paying different 'types' of liabilities. Here's the breakdown:\n\n**💰 3 MAIN LIABILITY TYPES:**\n\n1️⃣ **PRINCIPAL TAX**\n• The actual tax amount you owe\n• Based on your income/sales\n• The 'main' tax debt\n\n2️⃣ **PENALTIES**\n• Charges for late filing\n• Charges for late payment\n• Fixed amounts + daily penalties\n\n3️⃣ **INTEREST**\n• Charged on overdue amounts\n• Based on Bank of Zambia rate + 10%\n• Compounded daily\n\n**💡 Important:** When you generate a PRN, you can choose which liability to pay. Sometimes it's smart to pay the **principal first** since penalties/interest are calculated on outstanding principal!\n\n**Example:** If you owe K10,000 tax + K500 penalty, you might want to clear the K10,000 first to stop more interest accruing!"
+      ]
+    },
+    {
+      "id": "late_filing_consequences",
+      "training_phrases": [
+        "What if I file late?",
+        "Consequences of late filing",
+        "Penalties for late returns",
+        "What happens if I don't file?",
+        "Missed filing deadline",
+        "Late submission penalties",
+        "Filing after due date"
+      ],
+      "responses": [
+        "⚠️ **Warning about late filing:** This is important!\n\nIf you file your returns late (or not at all), here's what happens:\n\n**📛 AUTOMATIC PENALTIES:**\n• **Fixed penalty:** K2,000 (just for being late)\n• **Daily penalty:** K200 per day until you file\n• **Example:** 10 days late = K2,000 + (10 × K200) = K4,000 total penalty!\n\n**💰 ADDITIONAL CONSEQUENCES:**\n1. **Interest accrues** on unpaid tax\n2. **Risk of audit** increases significantly\n3. **Business reputation** damage\n4. **Difficulty getting loans** or contracts\n5. **Possible prosecution** for severe cases\n\n**😊 The good news?**\nYou can often **avoid or reduce** penalties by:\n1. Filing ASAP (stop the daily penalty)\n2. Applying for penalty waiver (if you have valid reason)\n3. Setting up payment plan if owed amounts are large\n\n**My advice:** Even if you can't pay immediately, **ALWAYS FILE ON TIME** to avoid those daily penalties!"
+      ]
+    },
+    {
+      "id": "registration_requirements",
+      "training_phrases": [
+        "What do I need to register?",
+        "Registration requirements",
+        "Documents needed for registration",
+        "Requirements for TPIN",
+        "What to bring for registration",
+        "Prerequisites for tax registration"
+      ],
+      "responses": [
+        "Registration requirements vary by entity type. Here's what you typically need:\n\n**👤 INDIVIDUALS:**\n• Original NRC (National Registration Card)\n• Proof of address (utility bill, etc.)\n• Business details (if registering a business)\n\n**🏢 COMPANIES:**\n• Certificate of Incorporation\n• Articles of Association\n• Directors' NRCs\n• Company physical address\n• Business activities description\n\n**📇 BUSINESS NAMES:**\n• Owner's NRC\n• Proposed business name\n• Business activities\n• Physical address\n\n**🤝 SOCIETIES/ASSOCIATIONS:**\n• Constitution/rules\n• Office bearers' details\n• Membership list\n• Registration certificate\n\n**🌍 FOREIGN ENTITIES:**\n• Certified copies of foreign registration\n• Local representative details\n• Zambian physical address\n• Tax residence certificate\n\n**💡 Pro tip:** For the smoothest registration, bring ORIGINALS and COPIES of everything. Better to be over-prepared than making multiple trips!"
+      ]
     }
   ],
   "metadata": {
@@ -2021,6 +2202,13 @@
         "Penalty waiver applications require documented justification",
         "TPIN is mandatory for numerous financial transactions"
       ]
+    },
+    "additional_tax_info": {
+      "additional_info": {
+        "coverage": "Registration categories, Returns, Payments, and Penalties",
+        "style": "Conversational with emojis",
+        "last_updated": "January 2025"
+      }
     }
   }
 }
