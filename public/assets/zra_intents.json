@@ -16,7 +16,7 @@
       ],
       "responses": [
         "Hello, welcome to the Zambia Revenue Authority virtual assistant. How can you be helped today?",
-        "Welcome to the ZRA assistant. Ask anything about tax changes for 2025, Smart Invoice, VAT or other ZRA services."
+        "Welcome to the Zambia Revenue Authority assistant. Ask anything about tax changes for 2025, Smart Invoice, VAT or other Zambia Revenue Authority services."
       ]
     },
     {
@@ -32,7 +32,7 @@
       ],
       "responses": [
         "Mulishani, mwaiseni ku Zambia Revenue Authority virtual assistant. Ungafwa ifyo nafwa ifyo lelo?",
-        "Mwaiseni ku ZRA assistant. Funda ilibantu ifitile ku tax changes ya 2025, Smart Invoice, VAT na ifilomboshi fyi ZRA."
+        "Mwaiseni ku Zambia Revenue Authority assistant. Funda ilibantu ifitile ku tax changes ya 2025, Smart Invoice, VAT na ifilomboshi fyi Zambia Revenue Authority."
       ]
     },
     {
@@ -56,7 +56,7 @@
         "Ndi fye bwino"
       ],
       "responses": [
-        "Cawama. Kuti namwafwa shani na ZRA?",
+        "Cawama. Kuti namwafwa shani na Zambia Revenue Authority?",
         "Natotela. Mungepusha pa Smart Invoice nangu imisonkho."
       ]
     },
@@ -135,7 +135,7 @@
       ],
       "responses": [
         "Ni itumezi. Mwakona kubuza za Smart Invoice kapa mitelo.",
-        "Hande. Mwakona kubuza za ZRA."
+        "Hande. Mwakona kubuza za Zambia Revenue Authority."
       ]
     },
     {
@@ -147,7 +147,7 @@
         "What is this chatbot for?"
       ],
       "responses": [
-        "This assistant provides general guidance on recent Zambian tax changes for 2025, including income tax, VAT, Smart Invoice requirements, turnover tax, mobile money levy and other topics covered in Practice Note No. 1 of 2025. It does not replace the law or official ZRA advice."
+        "This assistant provides general guidance on recent Zambian tax changes for 2025, including income tax, VAT, Smart Invoice requirements, turnover tax, mobile money levy and other topics covered in Practice Note No. 1 of 2025. It does not replace the law or official Zambia Revenue Authority advice."
       ]
     },
     {
@@ -161,7 +161,7 @@
         "Njipusheko?"
       ],
       "responses": [
-        "Ichi assistant chipapula amafunika yakusowa ku tax changes za Zambian za 2025, pantu income tax, VAT, Smart Invoice requirements, turnover tax, mobile money levy na ifilomboshi fyi Practice Note No. 1 ya 2025. Tachipelela law na official ZRA advice."
+        "Ichi assistant chipapula amafunika yakusowa ku tax changes za Zambian za 2025, pantu income tax, VAT, Smart Invoice requirements, turnover tax, mobile money levy na ifilomboshi fyi Practice Note No. 1 ya 2025. Tachipelela law na official Zambia Revenue Authority advice."
       ]
     },
     {
@@ -172,7 +172,7 @@
         "Define ZRA"
       ],
       "responses": [
-        "ZRA is the statutory body that administers and collects taxes and related levies in Zambia, including income tax, VAT, customs and excise duties, and specific charges like the mobile money transaction levy."
+        "Zambia Revenue Authority is the statutory body that administers and collects taxes and related levies in Zambia, including income tax, VAT, customs and excise duties, and specific charges like the mobile money transaction levy."
       ]
     },
     {
@@ -185,7 +185,7 @@
         "ZRA icitika cinshi?"
       ],
       "responses": [
-        "ZRA ni boma body ifyo ili kukukwata na kulemeka amisonkho na related levies mu Zambia, pantu income tax, VAT, customs na excise duties, na specific charges nga mobile money transaction levy."
+        "Zambia Revenue Authority ni boma body ifyo ili kukukwata na kulemeka amisonkho na related levies mu Zambia, pantu income tax, VAT, customs na excise duties, na specific charges nga mobile money transaction levy."
       ]
     },
     {
@@ -197,9 +197,9 @@
         "Tell me about ZRA"
       ],
       "responses": [
-        "ZRA's mission is to optimise and sustain revenue collection and administration for a prosperous Zambia.",
-        "ZRA's vision is to be a world class model of excellence in revenue administration and trade facilitation.",
-        "The ZRA tagline is: \"My Tax, Your Tax, Our Destiny\"."
+        "Zambia Revenue Authority's mission is to optimise and sustain revenue collection and administration for a prosperous Zambia.",
+        "Zambia Revenue Authority's vision is to be a world class model of excellence in revenue administration and trade facilitation.",
+        "The Zambia Revenue Authority tagline is: \"My Tax, Your Tax, Our Destiny\"."
       ]
     },
     {
@@ -212,9 +212,9 @@
         "ZRA balandako cinshi?"
       ],
       "responses": [
-        "ZRA's mission ni kukukwata na kusunga revenue collection na administration for a prosperous Zambia.",
-        "ZRA's vision ni ku ba world class model of excellence mu revenue administration na trade facilitation.",
-        "ZRA tagline ni: \"My Tax, Your Tax, Our Destiny\"."
+        "Zambia Revenue Authority's mission ni kukukwata na kusunga revenue collection na administration for a prosperous Zambia.",
+        "Zambia Revenue Authority's vision ni ku ba world class model of excellence mu revenue administration na trade facilitation.",
+        "Zambia Revenue Authority tagline ni: \"My Tax, Your Tax, Our Destiny\"."
       ]
     },
     {
@@ -231,7 +231,7 @@
       ],
       "responses": [
         "Lumela, utamboke ku Zambia Revenue Authority virtual assistant. Ninga ku gwase buti luno?",
-        "Mlumeleng, iyi ni ZRA assistant. Buuza buti ka mitelo ya 2025, Smart Invoice, VAT kana minwe ya ZRA."
+        "Mlumeleng, iyi ni Zambia Revenue Authority assistant. Buuza buti ka mitelo ya 2025, Smart Invoice, VAT kana minwe ya Zambia Revenue Authority."
       ]
     },
     {
@@ -260,7 +260,7 @@
         "Kozo, na pila hande"
       ],
       "responses": [
-        "Kozo, ni hande. Ninga ku gwase buti ka ZRA luno?",
+        "Kozo, ni hande. Ninga ku gwase buti ka Zambia Revenue Authority luno?",
         "Ni itumezi. Buuza buti ka Smart Invoice kana mitelo."
       ]
     },
@@ -274,7 +274,7 @@
         "Iyi system yi itela cinwi?"
       ],
       "responses": [
-        "Assistant ye yi pelela manyalo ka mitelo ye shanguluka mu Zambia ka 2025, ki mitelo ya malgashi (income tax), VAT, Smart Invoice, turnover tax, mobile money levy ni minwe, ho ya ka Practice Note No. 1 ya 2025. A si mulayo, bantu ba sa shuwa ku kopa manyalo ka ZRA ka bo ndate ba mitelo."
+        "Assistant ye yi pelela manyalo ka mitelo ye shanguluka mu Zambia ka 2025, ki mitelo ya malgashi (income tax), VAT, Smart Invoice, turnover tax, mobile money levy ni minwe, ho ya ka Practice Note No. 1 ya 2025. A si mulayo, bantu ba sa shuwa ku kopa manyalo ka Zambia Revenue Authority ka bo ndate ba mitelo."
       ]
     },
     {
@@ -287,7 +287,7 @@
         "ZRA mulimo wa bone ni yini?"
       ],
       "responses": [
-        "ZRA ki bulukani ya mmuso ye i bokang ni ku fumanya mitelo ni mabeli a yone mu Zambia, ho akarelwa income tax, VAT, customs ni excise duties ni mabeli a ma transaction ya mobile money."
+        "Zambia Revenue Authority ki bulukani ya mmuso ye i bokang ni ku fumanya mitelo ni mabeli a yone mu Zambia, ho akarelwa income tax, VAT, customs ni excise duties ni mabeli a ma transaction ya mobile money."
       ]
     },
     {
@@ -300,9 +300,9 @@
         "ZRA ba lakanya cinwi mu bulao?"
       ],
       "responses": [
-        "Mission ya ZRA ki ku ntumisa ni ku tswaleletsa kupila mitelo ni malango a yone ho u sila Zambia ye lipile hande.",
-        "Vision ya ZRA ki ku ba muenzelo wa boloka mu kupila mitelo ni ho ntumisa bohema.",
-        "Tagline ya ZRA ki: \"My Tax, Your Tax, Our Destiny\"."
+        "Mission ya Zambia Revenue Authority ki ku ntumisa ni ku tswaleletsa kupila mitelo ni malango a yone ho u sila Zambia ye lipile hande.",
+        "Vision ya Zambia Revenue Authority ki ku ba muenzelo wa boloka mu kupila mitelo ni ho ntumisa bohema.",
+        "Tagline ya Zambia Revenue Authority ki: \"My Tax, Your Tax, Our Destiny\"."
       ]
     },
     {
@@ -318,7 +318,7 @@
       ],
       "responses": [
         "Moni, muli bwanji? Takulandirani ku Zambia Revenue Authority virtual assistant. Ndingakuthandizeni bwanji lero?",
-        "Takulandirani ku ZRA assistant. Funsani za kusintha kwa misonkho ya 2025, Smart Invoice, VAT kapena ntchito zina za ZRA."
+        "Takulandirani ku Zambia Revenue Authority assistant. Funsani za kusintha kwa misonkho ya 2025, Smart Invoice, VAT kapena ntchito zina za Zambia Revenue Authority."
       ]
     },
     {
@@ -331,7 +331,7 @@
         "Iyi system imagwiritsidwa ntchito chiyani?"
       ],
       "responses": [
-        "Assistant iyi imapereka malangizo a mâ€™kati pa kusintha kwa misonkho ku Zambia mu 2025, kuphatikiza income tax, VAT, zofunikira za Smart Invoice, turnover tax, mobile money levy ndi mitu ina yomwe ili mu Practice Note No. 1 ya 2025. Simalowa m'malo mwa malamulo kapena upangiri wovomerezeka wa ZRA."
+        "Assistant iyi imapereka malangizo a mâ€™kati pa kusintha kwa misonkho ku Zambia mu 2025, kuphatikiza income tax, VAT, zofunikira za Smart Invoice, turnover tax, mobile money levy ndi mitu ina yomwe ili mu Practice Note No. 1 ya 2025. Simalowa m'malo mwa malamulo kapena upangiri wovomerezeka wa Zambia Revenue Authority."
       ]
     },
     {
@@ -343,7 +343,7 @@
         "Ntchito ya ZRA ndi chiyani?"
       ],
       "responses": [
-        "ZRA ndi bungwe la boma lomwe limayang'anira ndi kusonkhanitsa misonkho ndi ma levy osiyanasiyana ku Zambia, kuphatikiza income tax, VAT, customs ndi excise duties, komanso ma levy apadera monga mobile money transaction levy."
+        "Zambia Revenue Authority ndi bungwe la boma lomwe limayang'anira ndi kusonkhanitsa misonkho ndi ma levy osiyanasiyana ku Zambia, kuphatikiza income tax, VAT, customs ndi excise duties, komanso ma levy apadera monga mobile money transaction levy."
       ]
     },
     {
@@ -355,9 +355,9 @@
         "Ndifotokozereni za ZRA"
       ],
       "responses": [
-        "Mission ya ZRA ndi kukonza ndiponso kusunga bwino kusonkhanitsa misonkho ndi kayendetsedwe ka misonkho kuti Zambia ipite patsogolo.",
-        "Vision ya ZRA ndi kukhala chitsanzo chapamwamba padziko lonse pa kayendetsedwe ka misonkho ndi kulimbikitsa malonda.",
-        "Tagline ya ZRA ndi: \"My Tax, Your Tax, Our Destiny\"."
+        "Mission ya Zambia Revenue Authority ndi kukonza ndiponso kusunga bwino kusonkhanitsa misonkho ndi kayendetsedwe ka misonkho kuti Zambia ipite patsogolo.",
+        "Vision ya Zambia Revenue Authority ndi kukhala chitsanzo chapamwamba padziko lonse pa kayendetsedwe ka misonkho ndi kulimbikitsa malonda.",
+        "Tagline ya Zambia Revenue Authority ndi: \"My Tax, Your Tax, Our Destiny\"."
       ]
     },
     {
@@ -368,7 +368,7 @@
         "ZRA mission statement"
       ],
       "responses": [
-        "The mission of the Zambia Revenue Authority (ZRA) is to optimise and sustain revenue collection and administration for a prosperous Zambia."
+        "The mission of the Zambia Revenue Authority (Zambia Revenue Authority) is to optimise and sustain revenue collection and administration for a prosperous Zambia."
       ]
     },
     {
@@ -379,7 +379,7 @@
         "ZRA long term vision"
       ],
       "responses": [
-        "ZRA's vision is to be a world class model of excellence in revenue administration and trade facilitation."
+        "Zambia Revenue Authority's vision is to be a world class model of excellence in revenue administration and trade facilitation."
       ]
     },
     {
@@ -390,7 +390,7 @@
         "My Tax Your Tax Our Destiny"
       ],
       "responses": [
-        "ZRA's tagline is: 'My Tax, Your Tax, Our Destiny'"
+        "Zambia Revenue Authority's tagline is: 'My Tax, Your Tax, Our Destiny'"
       ]
     },
     {
@@ -460,7 +460,7 @@
         "SDL tax treatment"
       ],
       "responses": [
-        "Section 43E amended: Skills Development Levy is deductible even where the levy due has not been paid to ZRA. Previously required actual payment."
+        "Section 43E amended: Skills Development Levy is deductible even where the levy due has not been paid to Zambia Revenue Authority. Previously required actual payment."
       ]
     },
     {
@@ -898,7 +898,7 @@
         "Merchant definition"
       ],
       "responses": [
-        "Mobile Money Transaction Levy Act definitions:\n• 'Electronic money': Monetary value electronically represented by claim on mobile money service provider\n• 'Merchant': Person registered with ZRA accepting electronic money for goods/services (excludes betting)\n• 'Person-to-person transfer': Transfer from one person to another\n• 'Mobile money service provider': Entity authorized by Bank of Zambia to issue electronic money"
+        "Mobile Money Transaction Levy Act definitions:\n• 'Electronic money': Monetary value electronically represented by claim on mobile money service provider\n• 'Merchant': Person registered with Zambia Revenue Authority accepting electronic money for goods/services (excludes betting)\n• 'Person-to-person transfer': Transfer from one person to another\n• 'Mobile money service provider': Entity authorized by Bank of Zambia to issue electronic money"
       ]
     },
     {
@@ -953,7 +953,7 @@
         "Bank of Zambia records transfer"
       ],
       "responses": [
-        "Mobile Money Transaction Levy Act 2023 repealed. Transitional provisions:\n• Service providers remit levies to ZRA\n• Bank of Zambia transmits records/returns from repealed Act to ZRA"
+        "Mobile Money Transaction Levy Act 2023 repealed. Transitional provisions:\n• Service providers remit levies to Zambia Revenue Authority\n• Bank of Zambia transmits records/returns from repealed Act to Zambia Revenue Authority"
       ]
     },
     {
@@ -1138,7 +1138,7 @@
         "Tax refund claims"
       ],
       "responses": [
-        "PAYE refundable when:\n1. Errors (payroll, wrong bands, arithmetic, taxing exempt income)\n2. Unemployment before year-end\n3. Eligible deductions (donations to approved PBOs ≤15% income)\n\nExample: Employee earning K14,000/month stops in August:\n• Annual income: K112,000\n• Annual tax due: K12,952\n• Tax paid (8 months): K22,448\n• Refund: K9,496\n\nApply using ZRA prescribed forms at year-end."
+        "PAYE refundable when:\n1. Errors (payroll, wrong bands, arithmetic, taxing exempt income)\n2. Unemployment before year-end\n3. Eligible deductions (donations to approved PBOs ≤15% income)\n\nExample: Employee earning K14,000/month stops in August:\n• Annual income: K112,000\n• Annual tax due: K12,952\n• Tax paid (8 months): K22,448\n• Refund: K9,496\n\nApply using Zambia Revenue Authority prescribed forms at year-end."
       ]
     },
     {
@@ -1193,7 +1193,7 @@
         "Change from TOT to ITX"
       ],
       "responses": [
-        "Migration from Turnover Tax to Income Tax:\n• Notify Commissioner-General immediately upon exceeding K5M threshold\n• Continue paying TOT until year-end\n• Deregistered from TOT at beginning of next charge year\n• File annual Income Tax Return by June 21 for preceding year\n• ZRA assesses under income tax, grants TOT credits\n\nNote: Change occurs at beginning of next year unless Commissioner-General specifies other date."
+        "Migration from Turnover Tax to Income Tax:\n• Notify Commissioner-General immediately upon exceeding K5M threshold\n• Continue paying TOT until year-end\n• Deregistered from TOT at beginning of next charge year\n• File annual Income Tax Return by June 21 for preceding year\n• Zambia Revenue Authority assesses under income tax, grants TOT credits\n\nNote: Change occurs at beginning of next year unless Commissioner-General specifies other date."
       ]
     },
     {
@@ -1533,7 +1533,7 @@
         "Integrity complaints"
       ],
       "responses": [
-        "Reporting complaints:\n• Write: Chairperson - ZRA Integrity Committee, P.O. Box 35710, Lusaka\n• Email: zraic@zra.org.zm\n• Phone: +260978701701\n• Suggestion boxes at ZRA stations"
+        "Reporting complaints:\n• Write: Chairperson - Zambia Revenue Authority Integrity Committee, P.O. Box 35710, Lusaka\n• Email: zraic@zra.org.zm\n• Phone: +260978701701\n• Suggestion boxes at Zambia Revenue Authority stations"
       ]
     },
     {
@@ -1544,7 +1544,7 @@
         "Office locations"
       ],
       "responses": [
-        "ZRA Contact Addresses:\n1. National Call Centre: (0211) 381111 (Zamtel), 0960 091111 (MTN), 0971 281111 (Airtel), Short code: 5972\n2. Taxpayer Services Centre, Kitwe: (0211) 384529 (Zamtel), 0960 094529 (MTN), 0971 284529 (Airtel)\n3. Assistant Director - Returns/Payments: (0211) 382649 (Zamtel), 0960 092649 (MTN), 0971 282649 (Airtel)\n4. Assistant Director - Domestic Tax Policy: (0211) 382520 (Zamtel), 0960 092520 (MTN), 0971 282520 (Airtel)\n5. Assistant Director - International Tax: (0211) 382544 (Zamtel), 0960 092544 (MTN), 0971 282544 (Airtel)"
+        "Zambia Revenue Authority Contact Addresses:\n1. National Call Centre: (0211) 381111 (Zamtel), 0960 091111 (MTN), 0971 281111 (Airtel), Short code: 5972\n2. Taxpayer Services Centre, Kitwe: (0211) 384529 (Zamtel), 0960 094529 (MTN), 0971 284529 (Airtel)\n3. Assistant Director - Returns/Payments: (0211) 382649 (Zamtel), 0960 092649 (MTN), 0971 282649 (Airtel)\n4. Assistant Director - Domestic Tax Policy: (0211) 382520 (Zamtel), 0960 092520 (MTN), 0971 282520 (Airtel)\n5. Assistant Director - International Tax: (0211) 382544 (Zamtel), 0960 092544 (MTN), 0971 282544 (Airtel)"
       ]
     },
     {
@@ -1635,7 +1635,7 @@
         "Management fees WHT"
       ],
       "responses": [
-        "**Withholding Tax (WHT)** is deducted at source on specific payments as advance income tax. Key rates:\n\n**RESIDENT PAYMENTS:**\n• Services/Consultancy/Contracts: **15%**\n• Rent: **10%**\n• Dividends: Varies\n• Interest: Varies\n\n**NON-RESIDENT PAYMENTS:**\n• Management/Technical fees: Typically **15% or 20%**\n• Royalties: Typically **15% or 20%**\n\n**Responsibilities:**\n1. **Withholder** deducts tax at payment\n2. Remits to ZRA by 14th of following month\n3. Issues **WHT certificate** to payee\n4. Payee claims credit against final tax liability"
+        "**Withholding Tax (WHT)** is deducted at source on specific payments as advance income tax. Key rates:\n\n**RESIDENT PAYMENTS:**\n• Services/Consultancy/Contracts: **15%**\n• Rent: **10%**\n• Dividends: Varies\n• Interest: Varies\n\n**NON-RESIDENT PAYMENTS:**\n• Management/Technical fees: Typically **15% or 20%**\n• Royalties: Typically **15% or 20%**\n\n**Responsibilities:**\n1. **Withholder** deducts tax at payment\n2. Remits to Zambia Revenue Authority by 14th of following month\n3. Issues **WHT certificate** to payee\n4. Payee claims credit against final tax liability"
       ]
     },
     {
@@ -1689,7 +1689,7 @@
         "Voluntary VAT registration"
       ],
       "responses": [
-        "**Value Added Tax (VAT) - 16%**\n\n**REGISTRATION:**\n• **Mandatory:** Annual taxable supplies > **K800,000**\n• **Voluntary:** Available for businesses below threshold\n• **Exemption:** Certain goods/services (basic food, agricultural inputs)\n• **Zero-rated:** Exports, specific items\n\n**COMPLIANCE:**\n• **Returns:** Monthly filing\n• **Deadline:** 20th of following month\n• **Records:** 5-year retention required\n• **Invoices:** Must meet ZRA requirements\n\n**CALCULATION:**\n• Output VAT (sales) - Input VAT (purchases) = Net VAT payable/refundable"
+        "**Value Added Tax (VAT) - 16%**\n\n**REGISTRATION:**\n• **Mandatory:** Annual taxable supplies > **K800,000**\n• **Voluntary:** Available for businesses below threshold\n• **Exemption:** Certain goods/services (basic food, agricultural inputs)\n• **Zero-rated:** Exports, specific items\n\n**COMPLIANCE:**\n• **Returns:** Monthly filing\n• **Deadline:** 20th of following month\n• **Records:** 5-year retention required\n• **Invoices:** Must meet Zambia Revenue Authority requirements\n\n**CALCULATION:**\n• Output VAT (sales) - Input VAT (purchases) = Net VAT payable/refundable"
       ]
     },
     {
@@ -1716,7 +1716,7 @@
         "PAYE compliance"
       ],
       "responses": [
-        "**PAYE (Pay As You Earn) - Current Tax Bands:**\n\n**MONTHLY TAX CALCULATION:**\n• **First K5,400:** **0%** (tax-free)\n• **Next K5,400:** **25%** (K1,350 tax)\n• **Balance above K10,800:** **30%**\n\n**EMPLOYER RESPONSIBILITIES:**\n1. Register as PAYE employer with ZRA\n2. Calculate and deduct monthly\n3. File **Monthly PAYE Return (Form P2)**\n4. Remit tax by **10th** of following month\n5. Issue payslips showing deductions\n6. Annual reconciliation\n\n**PENALTIES:** Late filing/remittance attracts interest and penalties"
+        "**PAYE (Pay As You Earn) - Current Tax Bands:**\n\n**MONTHLY TAX CALCULATION:**\n• **First K5,400:** **0%** (tax-free)\n• **Next K5,400:** **25%** (K1,350 tax)\n• **Balance above K10,800:** **30%**\n\n**EMPLOYER RESPONSIBILITIES:**\n1. Register as PAYE employer with Zambia Revenue Authority\n2. Calculate and deduct monthly\n3. File **Monthly PAYE Return (Form P2)**\n4. Remit tax by **10th** of following month\n5. Issue payslips showing deductions\n6. Annual reconciliation\n\n**PENALTIES:** Late filing/remittance attracts interest and penalties"
       ]
     },
     {
@@ -1742,7 +1742,7 @@
         "Manual filing"
       ],
       "responses": [
-        "**TAX RETURNS & COMPLIANCE**\n\n**WHAT IS A RETURN?** Formal declaration of tax liability for a period.\n\n**WHY FILE?**\n• Legal requirement\n• Avoid penalties (K2,000 + K200/day)\n• Claim refunds\n• Maintain good standing\n• Required for loans, contracts\n\n**HOW TO FILE:**\n1. **Primary:** **TaxOnline Portal** (taxonline.zra.org.zm)\n2. **Mobile:** ZRA Mobile App\n3. **Alternative:** ZRA offices\n\n**KEY DUE DATES:**\n• **VAT:** 20th of following month\n• **PAYE:** 10th of following month\n• **Turnover Tax:** Last day of month after quarter\n• **Company Tax:** Varies (provisional/final)"
+        "**TAX RETURNS & COMPLIANCE**\n\n**WHAT IS A RETURN?** Formal declaration of tax liability for a period.\n\n**WHY FILE?**\n• Legal requirement\n• Avoid penalties (K2,000 + K200/day)\n• Claim refunds\n• Maintain good standing\n• Required for loans, contracts\n\n**HOW TO FILE:**\n1. **Primary:** **TaxOnline Portal** (taxonline.zra.org.zm)\n2. **Mobile:** Zambia Revenue Authority Mobile App\n3. **Alternative:** Zambia Revenue Authority offices\n\n**KEY DUE DATES:**\n• **VAT:** 20th of following month\n• **PAYE:** 10th of following month\n• **Turnover Tax:** Last day of month after quarter\n• **Company Tax:** Varies (provisional/final)"
       ]
     },
     {
@@ -1765,7 +1765,7 @@
         "Penalty appeal"
       ],
       "responses": [
-        "**PENALTIES & WAIVERS**\n\n**COMMON PENALTIES:**\n• **Late Filing:** **K2,000 fixed + K200 per day**\n• **Late Payment:** **Interest at Bank of Zambia Policy Rate + 10%**\n• **Under-declaration:** **25% of tax shortfall**\n• **Failure to register:** **K5,000 + additional penalties**\n\n**PENALTY WAIVER APPLICATION:**\n• **Eligibility:** Reasonable cause (illness, natural disaster, system failure)\n• **Process:** Submit written request to ZRA with supporting documents\n• **Form:** Use prescribed waiver application form\n• **Consideration:** ZRA reviews on case-by-case basis\n• **Note:** Interest on principal tax cannot be waived"
+        "**PENALTIES & WAIVERS**\n\n**COMMON PENALTIES:**\n• **Late Filing:** **K2,000 fixed + K200 per day**\n• **Late Payment:** **Interest at Bank of Zambia Policy Rate + 10%**\n• **Under-declaration:** **25% of tax shortfall**\n• **Failure to register:** **K5,000 + additional penalties**\n\n**PENALTY WAIVER APPLICATION:**\n• **Eligibility:** Reasonable cause (illness, natural disaster, system failure)\n• **Process:** Submit written request to Zambia Revenue Authority with supporting documents\n• **Form:** Use prescribed waiver application form\n• **Consideration:** Zambia Revenue Authority reviews on case-by-case basis\n• **Note:** Interest on principal tax cannot be waived"
       ]
     },
     {
@@ -1829,7 +1829,7 @@
         "User manuals Smart Invoice"
       ],
       "responses": [
-        "**SMART INVOICE SYSTEM (Mandatory E-Invoicing)**\n\n**OVERVIEW:**\n• **Legal Basis:** Practice Note No 2 of 2024\n• **Start Date:** Phased rollout from **June 2025**\n• **Target:** **VAT-registered taxpayers** (initially)\n• **Portal:** **si.zra.org.zm**\n\n**KEY REQUIREMENTS:**\n1. **Invoice Issuance:** Through ZRA-approved software or Smart Invoice Portal\n2. **ZRA Signature:** Unique hash code on each invoice\n3. **Real-time Transmission** to ZRA\n\n**RESOURCES:**\n• **Registration Guide:** Step-by-step setup\n• **Approved Vendor List:** Certified software providers\n• **VSDC API Spec:** Integration technical details\n• **Sandbox Portal:** Testing environment\n• **Bulk Upload Template:** For item catalog\n• **User Manuals & Forms:** Comprehensive guides\n• **Common Errors Guide:** Troubleshooting assistance\n\n**COMPLIANCE:**\n• Submit **Commitment Form**\n• Integrate or use portal\n• Follow classification codes\n• Test in sandbox first"
+        "**SMART INVOICE SYSTEM (Mandatory E-Invoicing)**\n\n**OVERVIEW:**\n• **Legal Basis:** Practice Note No 2 of 2024\n• **Start Date:** Phased rollout from **June 2025**\n• **Target:** **VAT-registered taxpayers** (initially)\n• **Portal:** **si.zra.org.zm**\n\n**KEY REQUIREMENTS:**\n1. **Invoice Issuance:** Through Zambia Revenue Authority-approved software or Smart Invoice Portal\n2. **Zambia Revenue Authority Signature:** Unique hash code on each invoice\n3. **Real-time Transmission** to Zambia Revenue Authority\n\n**RESOURCES:**\n• **Registration Guide:** Step-by-step setup\n• **Approved Vendor List:** Certified software providers\n• **VSDC API Spec:** Integration technical details\n• **Sandbox Portal:** Testing environment\n• **Bulk Upload Template:** For item catalog\n• **User Manuals & Forms:** Comprehensive guides\n• **Common Errors Guide:** Troubleshooting assistance\n\n**COMPLIANCE:**\n• Submit **Commitment Form**\n• Integrate or use portal\n• Follow classification codes\n• Test in sandbox first"
       ]
     },
     {
@@ -1851,7 +1851,7 @@
         "E-services portal"
       ],
       "responses": [
-        "**TAXPAYER PORTAL ACCESS**\n\n**PLATFORMS AVAILABLE:**\n\n1. **TAXONLINE PORTAL (Primary):**\n   • **URL:** taxonline.zra.org.zm\n   • **Features:** Full functionality\n   • **Best for:** Desktop, laptop\n\n2. **MOBILE APP:**\n   • **Available on:** Google Play Store, Apple App Store\n   • **Features:** Filing, payments, notifications\n   • **Best for:** Smartphones\n\n3. **SMART INVOICE PORTAL:**\n   • **URL:** si.zra.org.zm\n   • **Specific to:** E-invoicing compliance\n\n**SUPPORT:**\n• **User Manuals:** Available in 'Downloads' section\n• **Forms:** Digital forms on portal\n• **Technical Support:** Contact ZRA ICT helpdesk"
+        "**TAXPAYER PORTAL ACCESS**\n\n**PLATFORMS AVAILABLE:**\n\n1. **TAXONLINE PORTAL (Primary):**\n   • **URL:** taxonline.zra.org.zm\n   • **Features:** Full functionality\n   • **Best for:** Desktop, laptop\n\n2. **MOBILE APP:**\n   • **Available on:** Google Play Store, Apple App Store\n   • **Features:** Filing, payments, notifications\n   • **Best for:** Smartphones\n\n3. **SMART INVOICE PORTAL:**\n   • **URL:** si.zra.org.zm\n   • **Specific to:** E-invoicing compliance\n\n**SUPPORT:**\n• **User Manuals:** Available in 'Downloads' section\n• **Forms:** Digital forms on portal\n• **Technical Support:** Contact Zambia Revenue Authority ICT helpdesk"
       ]
     },
     {
@@ -1878,7 +1878,7 @@
         "Update TPIN details"
       ],
       "responses": [
-        "**TPIN (Taxpayer Identification Number)**\n\n**WHAT IS IT?** 10-digit unique identifier for all taxpayers.\n\n**MANDATORY FOR:**\n• Opening bank accounts\n• Land/property transactions\n• Employment\n• Business registration\n• Government services\n\n**HOW TO GET TPIN:**\n\n**INDIVIDUALS:**\n1. **Online:** TaxOnline Portal → 'Get a TPIN'\n2. **In-Person:** ZRA office\n3. **Documents:** Original NRC\n\n**BUSINESSES:**\n1. **Online:** TaxOnline Portal → 'Get a TPIN (Business)'\n2. **In-Person:** ZRA office\n3. **Documents:** Certificate of Incorporation, Directors' NRCs\n\n**TAXPAYER SEARCH:**\n• Verify TPIN validity online\n• Public search function available\n• Required for due diligence on suppliers"
+        "**TPIN (Taxpayer Identification Number)**\n\n**WHAT IS IT?** 10-digit unique identifier for all taxpayers.\n\n**MANDATORY FOR:**\n• Opening bank accounts\n• Land/property transactions\n• Employment\n• Business registration\n• Government services\n\n**HOW TO GET TPIN:**\n\n**INDIVIDUALS:**\n1. **Online:** TaxOnline Portal → 'Get a TPIN'\n2. **In-Person:** Zambia Revenue Authority office\n3. **Documents:** Original NRC\n\n**BUSINESSES:**\n1. **Online:** TaxOnline Portal → 'Get a TPIN (Business)'\n2. **In-Person:** Zambia Revenue Authority office\n3. **Documents:** Certificate of Incorporation, Directors' NRCs\n\n**TAXPAYER SEARCH:**\n• Verify TPIN validity online\n• Public search function available\n• Required for due diligence on suppliers"
       ]
     },
     {
@@ -1900,7 +1900,7 @@
         "Compliance training"
       ],
       "responses": [
-        "**TAX EDUCATION & WEBINARS**\n\n**RESOURCES AVAILABLE:**\n\n1. **REGULAR WEBINARS:**\n   • **Topics:** VAT, PAYE, Smart Invoice, Compliance\n   • **Schedule:** Check ZRA website 'News & Events'\n   • **Registration:** Online via ZRA portal\n   • **Cost:** Free for taxpayers\n\n2. **EDUCATIONAL MATERIALS:**\n   • Online guides and manuals\n   • Video tutorials\n   • FAQ sections\n   • Practice Notes and bulletins\n\n3. **SPECIAL PROGRAMS:**\n   • New taxpayer orientation\n   • Sector-specific training\n   • Software integration workshops\n\n**ACCESS:**\n• **Website:** Education section of zra.org.zm\n• **Notifications:** Subscribe to ZRA newsletters\n• **Contact:** Tax Education Unit for custom training"
+        "**TAX EDUCATION & WEBINARS**\n\n**RESOURCES AVAILABLE:**\n\n1. **REGULAR WEBINARS:**\n   • **Topics:** VAT, PAYE, Smart Invoice, Compliance\n   • **Schedule:** Check Zambia Revenue Authority website 'News & Events'\n   • **Registration:** Online via Zambia Revenue Authority portal\n   • **Cost:** Free for taxpayers\n\n2. **EDUCATIONAL MATERIALS:**\n   • Online guides and manuals\n   • Video tutorials\n   • FAQ sections\n   • Practice Notes and bulletins\n\n3. **SPECIAL PROGRAMS:**\n   • New taxpayer orientation\n   • Sector-specific training\n   • Software integration workshops\n\n**ACCESS:**\n• **Website:** Education section of zra.org.zm\n• **Notifications:** Subscribe to Zambia Revenue Authority newsletters\n• **Contact:** Tax Education Unit for custom training"
       ]
     },
     {
@@ -1924,7 +1924,7 @@
         "Service centers"
       ],
       "responses": [
-        "**ZRA CONTACT & SUPPORT**\n\n**PRIMARY CONTACT:**\n• **Phone:** **+260 211 378 200**\n• **Email:** **contact@zra.org.zm**\n• **Website:** **www.zra.org.zm**\n\n**SPECIALIZED UNITS:**\n• **Smart Invoice Support:** si.support@zra.org.zm\n• **Technical/Portal Issues:** ict.helpdesk@zra.org.zm\n• **Tax Education:** tax.education@zra.org.zm\n\n**OFFICE LOCATIONS:**\n• **Head Office:** Lusaka\n• **Regional Offices:** All provinces\n• **Service Centers:** Major districts\n\n**ONLINE SUPPORT:**\n• **Live Chat:** Available on portal\n• **FAQs:** Comprehensive online\n• **User Manuals:** Downloadable\n• **Video Guides:** YouTube channel"
+        "**Zambia Revenue Authority CONTACT & SUPPORT**\n\n**PRIMARY CONTACT:**\n• **Phone:** **+260 211 378 200**\n• **Email:** **contact@zra.org.zm**\n• **Website:** **www.zra.org.zm**\n\n**SPECIALIZED UNITS:**\n• **Smart Invoice Support:** si.support@zra.org.zm\n• **Technical/Portal Issues:** ict.helpdesk@zra.org.zm\n• **Tax Education:** tax.education@zra.org.zm\n\n**OFFICE LOCATIONS:**\n• **Head Office:** Lusaka\n• **Regional Offices:** All provinces\n• **Service Centers:** Major districts\n\n**ONLINE SUPPORT:**\n• **Live Chat:** Available on portal\n• **FAQs:** Comprehensive online\n• **User Manuals:** Downloadable\n• **Video Guides:** YouTube channel"
       ]
     },
     {
@@ -1961,7 +1961,7 @@
         "Registration under different acts"
       ],
       "responses": [
-        "ZRA handles several registration categories under different Acts. Let me break these down for you:\n\n**📋 REGISTRATION CATEGORIES:**\n\n1️⃣ **Companies under the Companies Act**\n• For formal incorporated businesses\n• Provides limited liability protection\n\n2️⃣ **Business Names under the Business Names Act**\n• For sole proprietorships/partnerships using a business name\n• Doesn't create separate legal entity\n\n3️⃣ **Societies under the Societies Act**\n• For clubs, associations, NGOs\n• Requires specific society registration\n\n4️⃣ **Individuals (without formal registration)**\n• Natural persons in business\n• Only need NRC/NIN (National Registration Number)\n\n5️⃣ **Cooperatives under the Cooperative Societies Act**\n• For cooperative businesses\n• Special tax treatment available\n\n6️⃣ **NCRA Associations & Military/State entities**\n• Special categories with unique requirements\n\n7️⃣ **Foreign entities registered in Zambia**\n• Foreign companies/branches operating locally\n\nWhich category might apply to your situation?"
+        "Zambia Revenue Authority handles several registration categories under different Acts. Let me break these down for you:\n\n**📋 REGISTRATION CATEGORIES:**\n\n1️⃣ **Companies under the Companies Act**\n• For formal incorporated businesses\n• Provides limited liability protection\n\n2️⃣ **Business Names under the Business Names Act**\n• For sole proprietorships/partnerships using a business name\n• Doesn't create separate legal entity\n\n3️⃣ **Societies under the Societies Act**\n• For clubs, associations, NGOs\n• Requires specific society registration\n\n4️⃣ **Individuals (without formal registration)**\n• Natural persons in business\n• Only need NRC/NIN (National Registration Number)\n\n5️⃣ **Cooperatives under the Cooperative Societies Act**\n• For cooperative businesses\n• Special tax treatment available\n\n6️⃣ **NCRA Associations & Military/State entities**\n• Special categories with unique requirements\n\n7️⃣ **Foreign entities registered in Zambia**\n• Foreign companies/branches operating locally\n\nWhich category might apply to your situation?"
       ]
     },
     {
@@ -1976,7 +1976,7 @@
         "What am I declaring in a return?"
       ],
       "responses": [
-        "Great question! A **tax return** isn't just a form - it's actually a **legally binding declaration** 📜\n\nThink of it like this: It's your official statement to ZRA saying:\n• **'This is what I earned'** (income/value)\n• **'This is what I owe'** (tax liability)\n• **'For this specific period'** (tax period)\n• **'For this specific tax type'** (VAT, Income Tax, etc.)\n\n**Why is it legally binding?** Because you're essentially giving your word to the government about your financial situation. That's why accuracy is so important!\n\n**Key point:** Every tax type requires a return when tax is due. No exceptions! Even if you owe zero tax, you often still need to file (what we call a 'nil return')."
+        "Great question! A **tax return** isn't just a form - it's actually a **legally binding declaration** 📜\n\nThink of it like this: It's your official statement to Zambia Revenue Authority saying:\n• **'This is what I earned'** (income/value)\n• **'This is what I owe'** (tax liability)\n• **'For this specific period'** (tax period)\n• **'For this specific tax type'** (VAT, Income Tax, etc.)\n\n**Why is it legally binding?** Because you're essentially giving your word to the government about your financial situation. That's why accuracy is so important!\n\n**Key point:** Every tax type requires a return when tax is due. No exceptions! Even if you owe zero tax, you often still need to file (what we call a 'nil return')."
       ]
     },
     {
@@ -1990,7 +1990,7 @@
         "Why can't I just pay without filing?"
       ],
       "responses": [
-        "I get this question a lot! Filing returns isn't just paperwork - it's about **transparency and compliance** 🔍\n\n**Here's why it matters:**\n\n✅ **Legal Requirement:** It's your duty as a taxpayer under Zambian law\n✅ **Accurate Assessment:** ZRA needs to verify your declared income matches your payments\n✅ **Record Keeping:** Creates an official trail of your business activities\n✅ **Future Reference:** Helps with loan applications, audits, and business growth\n✅ **Avoid Penalties:** Late or non-filing leads to automatic penalties\n\n**Think of it this way:** Your tax return is like your business's 'report card' to the government. It shows you're playing by the rules and contributing fairly to national development.\n\nRemember: You need to declare **ALL taxable income** from business or employment, not just what you think you can 'get away with'!"
+        "I get this question a lot! Filing returns isn't just paperwork - it's about **transparency and compliance** 🔍\n\n**Here's why it matters:**\n\n✅ **Legal Requirement:** It's your duty as a taxpayer under Zambian law\n✅ **Accurate Assessment:** Zambia Revenue Authority needs to verify your declared income matches your payments\n✅ **Record Keeping:** Creates an official trail of your business activities\n✅ **Future Reference:** Helps with loan applications, audits, and business growth\n✅ **Avoid Penalties:** Late or non-filing leads to automatic penalties\n\n**Think of it this way:** Your tax return is like your business's 'report card' to the government. It shows you're playing by the rules and contributing fairly to national development.\n\nRemember: You need to declare **ALL taxable income** from business or employment, not just what you think you can 'get away with'!"
       ]
     },
     {
@@ -2005,7 +2005,7 @@
         "Can I file manually?"
       ],
       "responses": [
-        "You've got options! Here's how you can file your tax returns:\n\n**🖥️ ELECTRONIC FILING (Recommended)**\n• **Platform:** ZRA TaxOnline Web Portal\n• **Benefits:** Faster, more efficient, available 24/7\n• **Process:** Log in, select return type, fill electronically, submit\n• **Confirmation:** Immediate receipt and acknowledgement\n\n**📄 MANUAL FILING**\n• **Where:** Any ZRA tax office\n• **Process:** Collect form, fill manually, submit to officer\n• **Considerations:** Longer queues, office hours only\n\n**🌟 My strong recommendation:** Go **electronic** if you can! It's:\n• More accurate (system does calculations)\n• Faster processing\n• Immediate confirmation\n• Available anytime\n• Reduces human error\n\n**Pro tip:** Even if you're not tech-savvy, the TaxOnline portal is quite user-friendly. Most taxpayers master it after their first try!"
+        "You've got options! Here's how you can file your tax returns:\n\n**🖥️ ELECTRONIC FILING (Recommended)**\n• **Platform:** Zambia Revenue Authority TaxOnline Web Portal\n• **Benefits:** Faster, more efficient, available 24/7\n• **Process:** Log in, select return type, fill electronically, submit\n• **Confirmation:** Immediate receipt and acknowledgement\n\n**📄 MANUAL FILING**\n• **Where:** Any Zambia Revenue Authority tax office\n• **Process:** Collect form, fill manually, submit to officer\n• **Considerations:** Longer queues, office hours only\n\n**🌟 My strong recommendation:** Go **electronic** if you can! It's:\n• More accurate (system does calculations)\n• Faster processing\n• Immediate confirmation\n• Available anytime\n• Reduces human error\n\n**Pro tip:** Even if you're not tech-savvy, the TaxOnline portal is quite user-friendly. Most taxpayers master it after their first try!"
       ]
     },
     {
@@ -2021,7 +2021,7 @@
         "Monthly vs quarterly deadlines"
       ],
       "responses": [
-        "Deadlines vary by tax type - here's the breakdown:\n\n**📅 KEY RETURN DUE DATES:**\n\n**Monthly Returns:**\n• **VAT Returns:** 20th of following month\n• **PAYE Returns:** 10th of following month\n\n**Quarterly Returns:**\n• **Turnover Tax (TOT):** End of month following quarter\n\n**Annual/Periodic:**\n• **Income Tax Returns:** Varies (check specific deadlines)\n\n**⚠️ Important:** These dates are **legally mandated** - missing them triggers automatic penalties! The due date is when ZRA must **receive** your return, not when you start preparing it.\n\n**My advice:**\n1. Mark these dates on your calendar\n2. Aim to file 3-5 days BEFORE the deadline\n3. Set reminders for recurring filings\n4. Keep all supporting documents ready\n\nNeed specific dates for a particular tax type?"
+        "Deadlines vary by tax type - here's the breakdown:\n\n**📅 KEY RETURN DUE DATES:**\n\n**Monthly Returns:**\n• **VAT Returns:** 20th of following month\n• **PAYE Returns:** 10th of following month\n\n**Quarterly Returns:**\n• **Turnover Tax (TOT):** End of month following quarter\n\n**Annual/Periodic:**\n• **Income Tax Returns:** Varies (check specific deadlines)\n\n**⚠️ Important:** These dates are **legally mandated** - missing them triggers automatic penalties! The due date is when Zambia Revenue Authority must **receive** your return, not when you start preparing it.\n\n**My advice:**\n1. Mark these dates on your calendar\n2. Aim to file 3-5 days BEFORE the deadline\n3. Set reminders for recurring filings\n4. Keep all supporting documents ready\n\nNeed specific dates for a particular tax type?"
       ]
     },
     {
@@ -2050,7 +2050,7 @@
         "Unique reference number"
       ],
       "responses": [
-        "PRN stands for **Payment Reference Number** - think of it as your tax payment's 'tracking number' 🚚\n\n**Here's how it works:**\n1. **Generate PRN:** From TaxOnline (or ZRA cash office)\n2. **17-digit code:** Unique to YOUR specific payment\n3. **7-day validity:** Expires if not used within a week\n4. **Payment reference:** You quote it when paying\n5. **ZRA matching:** They use it to allocate your payment\n\n**Why is it so important?**\nWithout a PRN, your payment is like a package without an address label - ZRA won't know whose account to credit! \n\n**💡 Key facts:**\n• One PRN per payment (don't reuse)\n• Generate BEFORE going to bank\n• Quote EXACTLY as generated\n• Keep the PRN for your records\n• If it expires, just generate a new one\n\nIt's actually a smart system that prevents payment mix-ups!"
+        "PRN stands for **Payment Reference Number** - think of it as your tax payment's 'tracking number' 🚚\n\n**Here's how it works:**\n1. **Generate PRN:** From TaxOnline (or Zambia Revenue Authority cash office)\n2. **17-digit code:** Unique to YOUR specific payment\n3. **7-day validity:** Expires if not used within a week\n4. **Payment reference:** You quote it when paying\n5. **Zambia Revenue Authority matching:** They use it to allocate your payment\n\n**Why is it so important?**\nWithout a PRN, your payment is like a package without an address label - Zambia Revenue Authority won't know whose account to credit! \n\n**💡 Key facts:**\n• One PRN per payment (don't reuse)\n• Generate BEFORE going to bank\n• Quote EXACTLY as generated\n• Keep the PRN for your records\n• If it expires, just generate a new one\n\nIt's actually a smart system that prevents payment mix-ups!"
       ]
     },
     {
@@ -2066,7 +2066,7 @@
         "Online payment methods"
       ],
       "responses": [
-        "You've got several convenient options to pay your taxes:\n\n**🏦 1. COMMERCIAL BANKS**\n• Visit any participating bank branch\n• Use the PRN as reference\n• Get payment confirmation\n\n**📱 2. MOBILE MONEY**\n• **Airtel Money** currently supported\n• Quick and convenient\n• Available 24/7\n\n**🏛️ 3. ZRA CASH OFFICES**\n• Visit any ZRA office\n• Pay cash or card\n• Get immediate receipt\n\n**💻 4. ONLINE BANKING**\n• Through your bank's internet banking\n• Use PRN as beneficiary reference\n• Electronic transfer\n\n**✅ SUPPORTED BANKS:**\nABSA, Access Bank, Bank of China, Cavmont, CITI Bank, First Alliance Bank, First Capital Bank, FNB, Investrust, Indo Zambia Bank, NATSAVE, Stanbic, UBA, Zambia Industrial Commercial Bank, ZANACO\n\n**Pro tip:** For fastest processing, use your bank's internet banking with the PRN - it's usually the quickest way!"
+        "You've got several convenient options to pay your taxes:\n\n**🏦 1. COMMERCIAL BANKS**\n• Visit any participating bank branch\n• Use the PRN as reference\n• Get payment confirmation\n\n**📱 2. MOBILE MONEY**\n• **Airtel Money** currently supported\n• Quick and convenient\n• Available 24/7\n\n**🏛️ 3. Zambia Revenue Authority CASH OFFICES**\n• Visit any Zambia Revenue Authority office\n• Pay cash or card\n• Get immediate receipt\n\n**💻 4. ONLINE BANKING**\n• Through your bank's internet banking\n• Use PRN as beneficiary reference\n• Electronic transfer\n\n**✅ SUPPORTED BANKS:**\nABSA, Access Bank, Bank of China, Cavmont, CITI Bank, First Alliance Bank, First Capital Bank, FNB, Investrust, Indo Zambia Bank, NATSAVE, Stanbic, UBA, Zambia Industrial Commercial Bank, ZANACO\n\n**Pro tip:** For fastest processing, use your bank's internet banking with the PRN - it's usually the quickest way!"
       ]
     },
     {
@@ -2080,7 +2080,7 @@
         "Bank integration issues"
       ],
       "responses": [
-        "Ah, the bank visibility issue! This happens because:\n\n**🏦 NOT ALL BANKS ARE CONNECTED YET**\nThe TaxOnline system only shows banks that have completed integration with ZRA's payment gateway.\n\n**Possible reasons your bank isn't showing:**\n1. **Not yet integrated** - Still working on technical connection\n2. **Integration in progress** - Might be available soon\n3. **Temporary technical issue** - Could be system maintenance\n\n**🚨 What to do if your bank isn't listed:**\n1. **Check the supported list** (I can show you which banks ARE connected)\n2. **Contact your bank** - Ask about TaxOnline integration plans\n3. **Use an alternative** - Another bank account or mobile money\n4. **Visit ZRA office** - Pay directly at cash office\n\n**Good news:** More banks are joining regularly as Zambia digitizes its tax system. Your bank might be available soon!"
+        "Ah, the bank visibility issue! This happens because:\n\n**🏦 NOT ALL BANKS ARE CONNECTED YET**\nThe TaxOnline system only shows banks that have completed integration with Zambia Revenue Authority's payment gateway.\n\n**Possible reasons your bank isn't showing:**\n1. **Not yet integrated** - Still working on technical connection\n2. **Integration in progress** - Might be available soon\n3. **Temporary technical issue** - Could be system maintenance\n\n**🚨 What to do if your bank isn't listed:**\n1. **Check the supported list** (I can show you which banks ARE connected)\n2. **Contact your bank** - Ask about TaxOnline integration plans\n3. **Use an alternative** - Another bank account or mobile money\n4. **Visit Zambia Revenue Authority office** - Pay directly at cash office\n\n**Good news:** More banks are joining regularly as Zambia digitizes its tax system. Your bank might be available soon!"
       ]
     },
     {

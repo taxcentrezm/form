@@ -168,8 +168,8 @@ function speakText(text, lang = 'en-US') {
     // Cancel any ongoing speech
     window.speechSynthesis.cancel();
 
-    // Strip asterisks and other formatting for cleaner speech
-    const cleanText = text.replace(/\*/g, '');
+    // Strip asterisks and expand ZRA for cleaner speech
+    const cleanText = text.replace(/\*/g, '').replace(/\bZRA\b/gi, 'Zambia Revenue Authority');
 
     const utterance = new SpeechSynthesisUtterance(cleanText);
     utterance.lang = lang;
