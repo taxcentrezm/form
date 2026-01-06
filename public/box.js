@@ -147,7 +147,7 @@ function addMessage(sender, text, intentId = null) {
   }
 
   // Save to backend (optional, fails silently if API unavailable)
-  fetch('/api/chat', {
+  fetch('api/chat', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ sender, text })
@@ -214,7 +214,7 @@ function getBotResponse(message) {
 
 // Helper to save training data
 function saveTrainingData(userMessage, type, score) {
-  fetch('/api/training', {
+  fetch('api/training', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
